@@ -4,7 +4,9 @@ metaLinks: {}
 
 # Memulai
 
-<div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>Chloros adalah aplikasi perangkat lunak dari [MAPIR](https://www.mapir.camera) untuk memproses gambar dan data sensor lainnya.
+<div data-full-width="false"><figure><img src=".gitbook/assets/chloros_logo_transparent.png" alt=""><figcaption></figcaption></figure></div>
+
+Chloros adalah aplikasi perangkat lunak dari [MAPIR](https://www.mapir.camera) untuk memproses gambar dan data sensor lainnya.
 
 ***
 
