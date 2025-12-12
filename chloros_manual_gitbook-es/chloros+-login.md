@@ -1,43 +1,43 @@
-# Chloros+ Login
+# Kloro+ Masuk
 
-## Chloros and Chloros (Browser) Login
+## Login Kloros dan Kloros (Peramban).
 
-The user <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> sidebar menu allows you to log into your Chloros+ account and unlock additional features.
+Menu sidebar <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> pengguna memungkinkan Anda masuk ke akun Chloros+ dan membuka fitur tambahan.
 
-When logged in your account details will be shown:
+Saat masuk, detail akun Anda akan ditampilkan:
 
 <figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
 
-## CLI Login
+## Masuk CLI
 
-Login with your Chloros+ credentials to enable CLI processing.
+Masuk dengan kredensial Chloros+ Anda untuk mengaktifkan pemrosesan CLI.
 
-**Syntax:**
+**Sintaksis:**
 
 ```bash
 chloros-cli login <email> <password>
 ```
 
-**Example:**
+**Contoh:**
 
 ```powershell
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{% hint style="warning" %}
-**Special Characters**: Use single quotes around passwords containing characters like `$`, `!`, or spaces.
-{% endhint %}
+{% petunjuk style="peringatan" %}
+**Karakter Khusus**: Gunakan tanda kutip tunggal di sekitar kata sandi yang berisi karakter seperti `$`, `!`, atau spasi.
+{% petunjuk akhir %}
 
-**Output:**
+**Keluaran:**
 
 <figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
 
-### Plan Expiration
+### Kedaluwarsa Rencana
 
-The plan expiration in the GUI shows when your license will become invalid. For recurring monthly subscriptions the expiration is at the end of the month. For yearly subscriptions it is a year after you started the subscription. The license check requires a monthly internet connection to verify, with a 30 day grace period.
+Kedaluwarsa paket di GUI menunjukkan kapan lisensi Anda menjadi tidak valid. Untuk langganan bulanan berulang, masa berlakunya adalah pada akhir bulan. Untuk langganan tahunan, ini adalah satu tahun setelah Anda mulai berlangganan. Pemeriksaan lisensi memerlukan koneksi internet bulanan untuk memverifikasi, dengan masa tenggang 30 hari.
 
-### Device Limit
+### Batas Perangkat
 
-Each Chloros+ plan offers a different number of registered devices. Each device you log into with a Chloros+ account will count towards your number of registered devices. You can rename and remove a device on your MAPIR Cloud account page.
+Setiap paket Chloros+ menawarkan jumlah perangkat terdaftar yang berbeda. Setiap perangkat yang Anda masuki dengan akun Chloros+ akan diperhitungkan dalam jumlah perangkat terdaftar Anda. Anda dapat mengganti nama dan menghapus perangkat di halaman akun MAPIR Cloud Anda.
 
-<table><thead><tr><th width="168.5999755859375" align="right">Chloros+ Plan</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Devices Supported</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
+<table><thead><tr><th width="168.5999755859375" align="right">Kloro+ Paket</th><th align="center">TEMBAGA</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Perangkat Didukung</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>

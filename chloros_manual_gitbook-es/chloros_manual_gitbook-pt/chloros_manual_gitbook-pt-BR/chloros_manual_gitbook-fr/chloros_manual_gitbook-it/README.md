@@ -1,41 +1,41 @@
-﻿# Chloros User Manual - Italian
+﻿# Panduan Pengguna Kloros - Italia
 
-This is the Italian translation of the Chloros Professional Multispectral Image Processing Software user manual.
+Ini adalah terjemahan bahasa Italia dari panduan pengguna Perangkat Lunak Pemrosesan Gambar Multispektral Profesional Chloros.
 
-## About Chloros
+## Tentang Kloro
 
-Chloros is professional multispectral image processing software that transforms imagery into actionable insights with powerful desktop software, command-line tools, and Python API.
+Chloros adalah perangkat lunak pemrosesan gambar multispektral profesional yang mengubah citra menjadi wawasan yang dapat ditindaklanjuti dengan perangkat lunak desktop yang canggih, alat baris perintah, dan API Python.
 
-### Features
-- Desktop and Browser interfaces
-- CLI and Python SDK (Chloros+)
-- Available in 28 languages
-- 24+ vegetation indices
-- Reflectance calibration
-- Ambient light sensor support
+### Fitur
+- Antarmuka Desktop dan Browser
+- CLI dan Python SDK (Chloros+)
+- Tersedia dalam 28 bahasa
+- 24+ indeks vegetasi
+- Kalibrasi reflektansi
+- Dukungan sensor cahaya sekitar
 
-## Documentation
+## Dokumentasi
 
-This manual is synchronized with GitBook. The documentation covers:
-- Installation and setup
-- Image processing workflows
-- Calibration procedures
-- Vegetation index calculations
-- CLI and Python SDK usage
-- API reference
+Manual ini disinkronkan dengan GitBook. Dokumentasinya meliputi:
+- Instalasi dan pengaturan
+- Alur kerja pemrosesan gambar
+- Prosedur kalibrasi
+- Perhitungan indeks vegetasi
+- Penggunaan CLI dan Python SDK
+- Referensi API
 
-## Links
+## Tautan
 
-- [Main Website](https://www.mapir.camera)
-- [Chloros Download](https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link)
-- [Chloros+ Plans](https://cloud.mapir.camera/pricing)
-- [English Documentation](https://mapir.gitbook.io/chloros)
-- [Support](https://www.mapir.camera/community/contact)
+- [Situs Web Utama](https://www.mapir.camera)
+- [Unduh Kloro](https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link)
+- [Paket Kloro+](https://cloud.mapir.camera/pricing)
+- [Dokumentasi Bahasa Inggris](https://mapir.gitbook.io/chloros)
+- [Mendukung](https://www.mapir.camera/community/contact)
 
-## Translation Status
+## Status Terjemahan
 
-Translation in progress - This manual will be translated to Italian soon.
+Terjemahan sedang berlangsung - Panduan ini akan segera diterjemahkan ke bahasa Italia.
 
-## License
+## Lisensi
 
-Copyright MAPIR Camera. All rights reserved.
+Hak Cipta Kamera MAPIR. Semua hak dilindungi undang-undang.

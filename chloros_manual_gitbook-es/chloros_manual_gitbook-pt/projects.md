@@ -1,17 +1,17 @@
-# Projects
+# Proyek
 
-Chloros allows you to create projects which can be reopened in the future.
+Chloros memungkinkan Anda membuat proyek yang dapat dibuka kembali di masa mendatang.
 
-## New Project
+## Proyek Baru
 
 <figure><img src=".gitbook/assets/project_new.JPG" alt=""><figcaption></figcaption></figure>
 
-Select "New Project" from the main menu and enter a unique name for your project.
+Pilih "Proyek Baru" dari menu utama dan masukkan nama unik untuk proyek Anda.
 
-## Open Project
+## Buka Proyek
 
 <figure><img src=".gitbook/assets/project_open.JPG" alt=""><figcaption></figcaption></figure>
 
-Select "Open Project" to see a list of existing projects in the Project Folder. If no projects exist the secondary side menu will not open. You can see some GUI created projects (t1, t2, t3) listed in the above photo. The DATE\_TIME projects were created by the CLI using the default project naming scheme. Clicking any project name will open it.
+Pilih "Buka Proyek" untuk melihat daftar proyek yang ada di Folder Proyek. Jika tidak ada proyek, menu samping sekunder tidak akan terbuka. Anda dapat melihat beberapa proyek yang dibuat GUI (t1, t2, t3) tercantum pada foto di atas. Proyek DATE\_TIME dibuat oleh CLI menggunakan skema penamaan proyek default. Mengklik nama proyek mana pun akan membukanya.
 
-Clicking the "Open Project Folder" button opens your computer's file explorer at the project path. You can adjust the project path in the [Project Settings](project-settings/page-2.md).
+Mengklik tombol "Buka Folder Proyek" akan membuka penjelajah file komputer Anda di jalur proyek. Anda dapat menyesuaikan jalur proyek di [Pengaturan Proyek](project-settings/page-2.md).
