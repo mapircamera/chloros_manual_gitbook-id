@@ -38,6 +38,6 @@ Kedaluwarsa langganan yang ditampilkan di antarmuka pengguna (GUI) menunjukkan k
 
 ### Batas Perangkat
 
-Setiap rencana Chloros+ menawarkan jumlah perangkat terdaftar yang berbeda. Setiap perangkat yang Anda akses dengan akun Chloros+ akan dihitung dalam jumlah perangkat terdaftar Anda. Anda dapat mengganti nama dan menghapus perangkat di halaman akun MAPIR Cloud Anda.
+Setiap rencana Chloros+ menawarkan jumlah perangkat terdaftar yang berbeda. Setiap perangkat yang Anda login dengan akun Chloros+ akan dihitung sebagai bagian dari jumlah perangkat terdaftar Anda. Anda dapat mengganti nama dan menghapus perangkat di halaman akun MAPIR Cloud Anda.
 
 <table><thead><tr><th width="168.5999755859375" align="right">Paket Chloros+</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Perangkat yang Didukung</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>

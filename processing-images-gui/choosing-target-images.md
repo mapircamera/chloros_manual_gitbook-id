@@ -38,7 +38,7 @@ Lihat gambar yang diimpor di File Browser dan identifikasi gambar mana yang meng
 
 * **Target pra-perekaman**: Diambil sebelum memulai sesi
 * **Target pasca-perekaman**: Diambil setelah menyelesaikan sesi
-* **Target di lapangan**: Target yang ditempatkan di area perekaman
+* **Target di area perekaman**: Target yang ditempatkan di area perekaman
 * **Target ganda**: 2-3 gambar target per sesi (disarankan)
 
 ### Langkah 2: Periksa Kolom Target
@@ -56,7 +56,7 @@ Sebelum pemrosesan, periksa kembali:
 
 * [ ] Semua gambar dengan target kalibrasi telah dicentang
 * [ ] Tidak ada gambar non-target yang tercentang secara tidak sengaja
-* [ ] Target terlihat jelas di gambar yang telah dicentang
+* [ ] Target terlihat jelas di gambar yang dicentang
 
 ***
 
@@ -157,7 +157,7 @@ Jika Chloros tidak mendeteksi target Anda dengan benar, sesuaikan pengaturan ini
 
 **Solusi:**
 
-1. Verifikasi kolom Target telah dicentang untuk gambar yang benar
+1. Pastikan kolom Target dicentang untuk gambar yang benar
 2. Periksa kualitas gambar target di pratinjau
 3. Ambil ulang target jika kualitas buruk
 4. Sesuaikan pengaturan deteksi target jika diperlukan
@@ -197,7 +197,7 @@ Sebelum memulai pemrosesan, verifikasi pemilihan gambar target Anda:
 
 ### Pemrosesan Tanpa Target Kalibrasi
 
-Meskipun tidak direkomendasikan untuk pekerjaan ilmiah, Anda dapat memproses tanpa target:
+Meskipun tidak disarankan untuk pekerjaan ilmiah, Anda dapat memproses tanpa target:
 
 1. Biarkan semua kotak centang kolom Target tidak dicentang
 2. **Nonaktifkan** &quot;Kalibrasi reflektansi&quot; di Pengaturan Proyek

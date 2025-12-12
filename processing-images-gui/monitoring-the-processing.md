@@ -1,6 +1,6 @@
 # Pemantauan Proses
 
-Setelah proses dimulai, Chloros menyediakan beberapa cara untuk memantau kemajuan, memeriksa masalah, dan memahami apa yang terjadi dengan dataset Anda. Halaman ini menjelaskan cara melacak proses Anda dan menafsirkan informasi yang disediakan oleh Chloros.
+Setelah proses dimulai, Chloros menyediakan beberapa cara untuk memantau kemajuan, memeriksa masalah, dan memahami apa yang terjadi dengan dataset Anda. Halaman ini menjelaskan cara melacak proses Anda dan menginterpretasikan informasi yang disediakan oleh Chloros.
 
 ## Ringkasan Bar Kemajuan
 
@@ -34,7 +34,7 @@ Untuk pengguna dengan lisensi Chloros+:
 
 **Fitur Interaktif:**
 
-* **Arahkan kursor ke** bilah kemajuan untuk melihat panel 4 tahap yang diperluas
+* **Arahkan kursor** ke bilah kemajuan untuk melihat panel 4 tahap yang diperluas
 * **Klik** bilah kemajuan untuk membekukan/menancapkan panel yang diperluas
 * **Klik lagi** untuk membatalkan pembekuan dan menyembunyikan otomatis saat mouse meninggalkan area
 * Setiap tahap menampilkan kemajuan individu (0-100%)
@@ -112,7 +112,7 @@ Untuk pengguna dengan lisensi Chloros+:
 
 * **Mode bebas**: Memproses satu gambar sekaligus secara berurutan
 * **Mode Chloros+**: Memproses hingga 16 gambar secara bersamaan
-* **Percepatan GPU**: Secara signifikan mempercepat tahap ini
+* **Peningkatan GPU**: Secara signifikan mempercepat tahap ini
 
 **Hal yang perlu diperhatikan:**
 
@@ -317,14 +317,14 @@ Hentikan proses jika Anda melihat:
 **Cara menghentikan:**
 
 1. Klik tombol **Stop/Cancel** (menggantikan tombol Start)
-2. Pemrosesan berhenti, progres hilang
+2. Proses dihentikan, progres hilang
 3. Perbaiki masalah dan mulai ulang dari awal
 
 ***
 
-## Pemecahan Masalah Selama Pemrosesan
+## Pemecahan Masalah Selama Proses
 
-### Pemrosesan Sangat Lambat
+### Proses Sangat Lambat
 
 **Penyebab kemungkinan:**
 
@@ -384,7 +384,7 @@ Saat pemrosesan selesai:
 
 Setelah pemrosesan selesai:
 
-1. **Periksa hasil** - Lihat [Menyelesaikan Pemrosesan](finishing-the-processing.md)
+1. **Review hasil** - Lihat [Menyelesaikan Pemrosesan](finishing-the-processing.md)
 2. **Periksa folder output** - Pastikan semua file diekspor dengan benar
 3. **Periksa Debug Log** - Periksa apakah ada peringatan atau kesalahan
 4. **Pratinjau gambar yang diproses** - Gunakan Image Viewer atau perangkat lunak eksternal

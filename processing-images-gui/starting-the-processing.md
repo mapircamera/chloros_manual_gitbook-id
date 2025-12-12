@@ -6,7 +6,7 @@ Setelah Anda mengimpor gambar, menandai target kalibrasi, dan mengonfigurasi pen
 
 Sebelum mengklik tombol Mulai, pastikan semuanya siap:
 
-* [ ] **Berkas diimpor** - Semua gambar muncul di Penjelajah Berkas
+* [ ] **Berkas diimpor** - Semua gambar muncul di File Browser
 * [ ] **Gambar target ditandai** - Kolom Target dicentang untuk gambar kalibrasi
 * [ ] **Model kamera terdeteksi** - Kolom Model Kamera menampilkan kamera yang benar
 * [ ] **Pengaturan dikonfigurasi** - Pengaturan Proyek telah ditinjau dan disesuaikan
@@ -14,7 +14,7 @@ Sebelum mengklik tombol Mulai, pastikan semuanya siap:
 * [ ] **Format ekspor dipilih** - Format output sesuai dengan alur kerja Anda
 
 {% hint style=&quot;info&quot; %}
-**Tips**: Klik beberapa gambar di File Browser untuk memverifikasi bahwa gambar-gambar tersebut dimuat dengan benar sebelum pemrosesan.
+**Tips**: Klik beberapa gambar di File Browser untuk memverifikasi bahwa mereka dimuat dengan benar sebelum pemrosesan.
 {% endhint %}
 
 ***
@@ -64,7 +64,7 @@ Chloros beroperasi dalam dua mode pemrosesan berbeda tergantung pada lisensi And
 **Waktu pemrosesan:**
 
 * Jauh lebih lambat daripada mode paralel Chloros+
-* Cocok untuk dataset kecil hingga menengah (&lt; 200 gambar)
+* Cocok untuk dataset kecil hingga sedang (&lt; 200 gambar)
 
 ### Mode Chloros+ (Pemrosesan Paralel)
 
@@ -185,7 +185,7 @@ Setelah dimulai, seluruh jalur pemrosesan berjalan secara otomatis:
 * Hindari memulai tugas CPU-intensif lainnya
 
 {% hint style=&quot;warning&quot; %}
-**Tips Kinerja**: Untuk kinerja optimal Chloros+, tutup aplikasi lain dan biarkan Chloros menggunakan sumber daya sistem penuh.
+**Tips Kinerja**: Untuk kinerja terbaik Chloros+, tutup aplikasi lain dan biarkan Chloros menggunakan sumber daya sistem penuh.
 {% endhint %}
 
 ### Pemrosesan Tidak Dapat Dihentikan
@@ -195,7 +195,7 @@ Setelah dimulai, seluruh jalur pemrosesan berjalan secara otomatis:
 * Setelah dimulai, pemrosesan tidak dapat dihentikan
 * Anda dapat membatalkan pemrosesan, tetapi progres akan hilang
 * Hasil parsial tidak disimpan
-* Harus memulai dari awal jika dibatalkan
+* Harus memulai ulang dari awal jika dibatalkan
 
 **Tips perencanaan:** Untuk proyek yang sangat besar, pertimbangkan untuk memproses dalam batch atau menggunakan CLI untuk kontrol yang lebih baik.
 
@@ -223,7 +223,7 @@ Jika Anda perlu menghentikan pemrosesan:
 1. Temukan tombol **Stop/Cancel** (menggantikan tombol Start selama pemrosesan)
 2. Klik tombol Stop
 3. Pemrosesan dihentikan segera
-4. Hasil parsial akan dihapus
+4. Hasil sebagian akan dibuang
 
 ### Kapan Harus Membatalkan
 
@@ -271,7 +271,7 @@ Waktu pemrosesan aktual bervariasi secara signifikan berdasarkan:
 | 1000 gambar | 4-6 jam   | 1,5-2 jam      | 40-60 menit      |
 
 {% hint style=&quot;info&quot; %}
-**Pertama Kali Dijalankan**: Pemrosesan awal mungkin memakan waktu lebih lama karena Chloros membangun cache dan profil. Pemrosesan dataset serupa selanjutnya akan lebih cepat.
+**Pertama Kali**: Pemrosesan awal mungkin memakan waktu lebih lama karena Chloros membangun cache dan profil. Pemrosesan dataset serupa selanjutnya akan lebih cepat.
 {% endhint %}
 
 ***

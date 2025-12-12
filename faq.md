@@ -67,6 +67,6 @@ Jika Anda berencana mengunggah ke platform pemrosesan online kami [MAPIR Cloud](
 
 <summary>Apakah MAPIR akan pernah mendukung fitur X? Saya benar-benar berharap MAPIR menawarkan fitur X.</summary>
 
-Kami selalu tertarik untuk menerima umpan balik tentang produk kami. Jika Anda menemukan masalah dengan produk kami, atau memiliki saran tentang cara kami dapat meningkatkan produk kami, silakan [HUBUNGI KAMI](https://www.mapir.camera/community/contact) untuk berbagi pemikiran Anda. Sebagian besar R&amp;D kami dipandu oleh mendengarkan kebutuhan terbesar pelanggan kami.
+Kami selalu tertarik untuk menerima umpan balik tentang produk kami. Jika Anda menemukan masalah dengan produk kami, atau memiliki saran tentang cara kami dapat meningkatkan produk kami, silakan [HUBUNGI KAMI](https://www.mapir.camera/community/contact) untuk berbagi pemikiran Anda. Sebagian besar penelitian dan pengembangan (R&amp;D) kami dipandu oleh mendengarkan kebutuhan terbesar pelanggan kami.
 
 </details>

@@ -2,7 +2,7 @@
 
 Chloros Image Viewer menyediakan antarmuka layar penuh khusus untuk melihat, menganalisis, dan memanipulasi gambar multispektral Anda. Baik saat melihat gambar asli maupun hasil pemrosesan, Image Viewer menawarkan alat-alat canggih untuk inspeksi dan analisis.
 
-## Akses ke Image Viewer
+## Mengakses Image Viewer
 
 ### Dari File Browser
 
@@ -31,7 +31,7 @@ Bagian terbesar layar menampilkan gambar Anda:
 
 * **Resolusi penuh**: Gambar ditampilkan pada resolusi asli
 * **Dapat diperbesar/perkecil**: Gunakan kontrol atau roda mouse untuk memperbesar/perkecil
-* **Dapat digeser**: Klik dan seret untuk berpindah saat diperbesar
+* **Dapat digeser**: Klik dan seret untuk berpindah saat diperbesar/perkecil
 * **Perbandingan aspek terjaga**: Gambar diskalakan secara proporsional
 
 ***
@@ -134,7 +134,7 @@ Terapkan indeks multispektral dan tabel warna LUT:
 
 1. Temukan **Index/LUT Sandbox** di **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di bilah sisi
 2. Pilih indeks vegetasi (NDVI, NDRE, dll.)
-3. Pilih rumus multispektral, atau buat rumus kustom Anda sendiri (hanya Chloros+)
+3. Pilih rumus multispektral, atau buat rumus kustom sendiri (hanya Chloros+)
 4. Terapkan gradien LUT warna untuk visualisasi
 5. Sesuaikan rentang nilai dan ambang batas
 
@@ -162,7 +162,7 @@ Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk petunjuk detail.
 
 * **P**: Aktifkan/nonaktifkan mode persentase piksel
 * **L**: Aktifkan/nonaktifkan panel lapisan
-* **Esc**: Tutup mode layar penuh atau kembali ke Penjelajah File
+* **Esc**: Tutup mode layar penuh atau kembali ke Penjelajah Berkas
 
 ### Lainnya
 
@@ -186,7 +186,7 @@ Pastikan indeks dihitung dengan benar:
 
 ***
 
-## Pemecahan Masalah Masalah Tampilan
+## Pemecahan Masalah Tampilan
 
 ### Gambar Tidak Bisa Dibuka
 

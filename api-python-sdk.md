@@ -129,7 +129,7 @@ SDK menggunakan lisensi yang sama dengan Chloros, Chloros (Browser), dan Chloros
 
 1. Buka **Chloros atau Chloros (Browser)** dan masuk ke tab Pengguna <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> . Atau, buka **CLI**.  
 2. Masukkan kredensial Chloros+ Anda dan masuk  
-3. Lisensi disimpan secara lokal (tetap ada setelah reboot)
+3. Lisensi disimpan secara lokal (tetap ada setelah reboot)  
 
 {% hint style=&quot;success&quot; %}
 **Pengaturan Satu Kali**: Setelah masuk melalui antarmuka pengguna (GUI) atau CLI, SDK secara otomatis menggunakan lisensi yang disimpan. Tidak diperlukan otentikasi tambahan!
@@ -209,7 +209,7 @@ Buat proyek Chloros baru.
 | Parameter      | Tipe | Diperlukan | Deskripsi                                              |
 | -------------- | ---- | -------- | -------------------------------------------------------- |
 | `project_name` | str  | Ya      | Nama proyek                                     |
-| `camera`       | str  | Tidak | Template kamera (misalnya, &quot;Survey3N\_RGN&quot;, &quot;Survey3W\_OCN&quot;) |
+| `camera`       | str  | Tidak       | Template kamera (misalnya, &quot;Survey3N\_RGN&quot;, &quot;Survey3W\_OCN&quot;) |
 
 **Mengembalikan:** `dict` - Respons pembuatan proyek
 
@@ -234,9 +234,9 @@ Impor gambar dari folder.
 | Parameter     | Tipe     | Diperlukan | Deskripsi                        |
 | ------------- | -------- | -------- | ---------------------------------- |
 | `folder_path` | str/Path | Ya      | Jalan ke folder dengan gambar         |
-| `recursive`   | bool     | Tidak      | Mencari subfolder (default: False) |
+| `recursive`   | bool     | Tidak      | Cari subfolder (default: False) |
 
-**Mengembalikan:** `dict` - Hasil impor dengan jumlah file
+**Hasil:** `dict` - Hasil impor dengan jumlah file
 
 **Contoh:**
 
@@ -270,10 +270,10 @@ Konfigurasi pengaturan pemrosesan.
 
 * `"TIFF (16-bit)"` - Direkomendasikan untuk GIS/fotogrametri
 * `"TIFF (32-bit, Percent)"` - Analisis ilmiah
-* `"PNG (8-bit)"` - Pemeriksaan visual
+* `"PNG (8-bit)"` - Inspeksi visual
 * `"JPG (8-bit)"` - Output terkompresi
 
-**Indeks yang Tersedia:**
+**Indeks Tersedia:**
 
 NDVI, NDRE, GNDVI, OSAVI, CIG, EVI, SAVI, MSAVI, MTVI2, dan lainnya.
 
@@ -316,7 +316,7 @@ Proses gambar proyek.
 **Mengembalikan:** `dict` - Hasil pemrosesan
 
 {% hint style=&quot;warning&quot; %}
-**Mode Paralel**: Membutuhkan lisensi Chloros+. Otomatis menyesuaikan dengan inti CPU Anda (hingga 16 pekerja).
+**Mode Paralel**: Membutuhkan lisensi Chloros+. Secara otomatis menyesuaikan dengan inti CPU Anda (hingga 16 pekerja).
 {% endhint %}
 
 **Contoh:**
@@ -397,7 +397,7 @@ Fungsi kemudahan satu baris untuk memproses folder.
 | `folder_path`             | str/Path | Diperlukan        | Jalan ke folder dengan gambar     |
 | `project_name`            | str      | Dibuat otomatis  | Nama proyek                   |
 | `camera`                  | str      | `None`          | Template kamera                |
-| `indices`                 | daftar     | `["NDVI"]`      | Indeks untuk perhitungan           |
+| `indices`                 | list     | `["NDVI"]`      | Indeks untuk perhitungan           |
 | `vignette_correction`     | bool     | `True`          | Aktifkan koreksi vignette     |
 | `reflectance_calibration` | bool     | `True`          | Aktifkan kalibrasi reflektansi |
 | `export_format`           | str      | &quot;TIFF (16-bit)&quot; | Format output                  |
@@ -472,7 +472,7 @@ print(f"Processing complete: {results}")
 
 ### Contoh 2: Alur Kerja Kustom
 
-Kontrol penuh atas alur kerja pemrosesan:
+Kontrol penuh atas alur pemrosesan:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -564,7 +564,7 @@ print("All flights processed!")
 
 ***
 
-### Contoh 4: Integrasi Jalur Kerja Penelitian
+### Contoh 4: Integrasi Alur Kerja Penelitian
 
 Integrasikan Chloros dengan analisis data:
 
@@ -783,11 +783,11 @@ python my_processor.py "C:\Flight001" "C:\Flight002" --indices NDVI NDRE GNDVI
 
 ***
 
-## Penanganan Kecelakaan
+## Penanganan Kecuali
 
-SDK menyediakan kelas kecelakaan khusus untuk jenis kesalahan yang berbeda:
+SDK menyediakan kelas kecuali khusus untuk jenis kesalahan yang berbeda:
 
-### Hierarki Kecelakaan
+### Hierarki Kecuali
 
 ```python
 ChlorosError                    # Base exception
@@ -896,7 +896,7 @@ for i in range(0, len(images), batch_size):
 
 **Solusi:**
 
-1. Pastikan Chloros Desktop terinstal:
+1. Verifikasi Chloros Desktop terinstal:
 
 ```python
 import os
@@ -904,7 +904,7 @@ backend_path = r"C:\Program Files\MAPIR\Chloros\resources\backend\chloros-backen
 print(f"Backend exists: {os.path.exists(backend_path)}")
 ```
 
-2. Periksa apakah firewall Windows tidak memblokir
+2. Periksa apakah Windows Firewall tidak memblokir
 3. Coba jalur backend manual:
 
 ```python
@@ -915,12 +915,12 @@ chloros = ChlorosLocal(backend_exe="C:\\Path\\To\\chloros-backend.exe")
 
 ### Lisensi Tidak Terdeteksi
 
-**Masalah:** SDK memperingatkan tentang lisensi yang hilang
+**Masalah:** SDK menampilkan peringatan tentang lisensi yang hilang
 
 **Solusi:**
 
 1. Buka Chloros, Chloros (Browser) atau Chloros CLI dan login.
-2. Verifikasi lisensi tersimpan:
+2. Verifikasi lisensi tersimpan di cache:
 
 ```python
 from pathlib import Path
@@ -1127,19 +1127,19 @@ chloros.process(progress_callback=notebook_progress)
 
 ***
 
-### Q: Apakah saya dapat menggunakan SDK di server tanpa antarmuka grafis (GUI)?
+### Q: Apakah saya dapat menggunakan SDK pada server tanpa antarmuka grafis (GUI)?  
 
-**A:** Ya! Persyaratan:
+**A:** Ya! Persyaratan:  
 
-* Windows Server 2016 atau versi terbaru
-* Chloros terinstal (sekali saja)
-* Lisensi diaktifkan di mesin mana pun (lisensi yang disimpan di cache disalin ke server)
+* Windows Server 2016 atau versi terbaru  
+* Chloros terinstal (sekali saja)  
+* Lisensi diaktifkan pada mesin mana pun (lisensi yang disimpan di cache disalin ke server)
 
 ***
 
 ### Q: Apa perbedaan antara Desktop, CLI, dan SDK?
 
-| Fitur         | Antarmuka Desktop | CLI Baris Perintah | Python SDK  |
+| Fitur         | Antarmuka Desktop | Baris Perintah CLI | Python SDK  |
 | --------------- | ----------- | ---------------- | ----------- |
 | **Antarmuka**   | Klik dan pilih | Perintah          | Python API  |
 | **Terbaik untuk**    | Pekerjaan visual | Pemrograman        | Integrasi |
@@ -1181,7 +1181,7 @@ Project_Path/
 
 ***
 
-### Q: Bisakah saya memproses gambar dari skrip Python yang berjalan secara terjadwal?
+### Q: Apakah saya dapat memproses gambar dari skrip Python yang berjalan secara terjadwal?
 
 **A:** Ya! Gunakan Windows Task Scheduler dengan skrip Python:
 

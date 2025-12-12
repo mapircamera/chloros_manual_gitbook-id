@@ -2,7 +2,7 @@
 
 Setelah Anda membuat atau membuka proyek di Chloros, langkah berikutnya adalah menambahkan gambar multispektral Anda untuk memulai pemrosesan. Pengelola Berkas<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> memudahkan Anda untuk mengimpor gambar dan mengelola dataset Anda.
 
-## Akses File Browser
+## Mengakses File Browser
 
 1. Buka atau buat proyek di Chloros
 2. Klik ikon **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> di bilah sisi kiri
@@ -104,7 +104,7 @@ Klik thumbnail gambar apa pun di File Browser untuk menampilkannya di area prati
 * **Gambar Sebelumnya**: Klik panah kiri atau tekan tombol ←
 * **Gambar Berikutnya**: Klik panah kanan atau tekan tombol →
 * **Zoom In/Out**: Gunakan roda mouse atau tombol zoom
-* **Geser**: Klik dan seret pada gambar saat diperbesar
+* **Pan**: Klik dan seret pada gambar saat diperbesar
 
 ***
 
@@ -158,7 +158,7 @@ Jika proyek Anda mengandung gambar dari beberapa kamera MAPIR:
 
 ***
 
-## Masalah Umum dan Solusi
+## Masalah Umum dan Solusinya
 
 ### Gambar Tidak Muncul Setelah Impor
 
@@ -166,7 +166,7 @@ Jika proyek Anda mengandung gambar dari beberapa kamera MAPIR:
 
 * Format file tidak didukung (hanya RAW+JPG dan JPG dari kamera MAPIR)
 * Gambar berasal dari kamera non-MAPIR (lihat [Kamera yang Didukung](../supported-cameras.md))
-* Korupsi file atau transfer tidak lengkap dari kartu SD
+* File rusak atau transfer tidak lengkap dari kartu SD
 
 **Solusi:** Verifikasi kompatibilitas format file dan model kamera
 

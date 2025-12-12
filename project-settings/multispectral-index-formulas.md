@@ -12,19 +12,19 @@ Rumus indeks di bawah ini menggunakan kombinasi rentang transmisi rata-rata filt
 
 <table><thead><tr><th align="center">Survey3 Warna Filter</th><th width="196.199951171875" align="center">Nama Filter Survey3</th><th width="159.800048828125" align="center">Rentang Transmisi (FWHM)</th><th align="center">Transmisi Rata-Rata</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483 nm</td><td align="center">475 nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476-512 nm</td><td align="center">494 nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543-558 nm</td><td align="center">547 nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598-640 nm</td><td align="center">619 nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653-668 nm</td><td align="center">661nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re - RedEdge</td><td align="center">712-735 nm</td><td align="center">724 nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798-848 nm</td><td align="center">823 nm</td></tr><tr><td align="center">NIR2</td><td align="center">RGN | NGB | NIR - NIR2</td><td align="center">835-865 nm</td><td align="center">850nm</td></tr></tbody></table>
 
-Ketika rumus-rumus ini digunakan, nama mungkin berakhir dengan &quot;\_1&quot; atau &quot;\_2&quot;, yang sesuai dengan filter NIR mana yang digunakan, baik NIR1 atau NIR2.
+Ketika rumus-rumus ini digunakan, nama dapat berakhir dengan &quot;\_1&quot; atau &quot;\_2&quot;, yang sesuai dengan filter NIR mana yang digunakan, baik NIR1 atau NIR2.
 
 ***
 
 ## EVI - Indeks Vegetasi Terperbaiki
 
-Indeks ini awalnya dikembangkan untuk digunakan dengan data MODIS sebagai perbaikan atas NDVI dengan mengoptimalkan sinyal vegetasi di daerah dengan indeks luas daun tinggi (LAI). Indeks ini paling berguna di wilayah dengan LAI tinggi di mana NDVI mungkin mengalami saturasi. Indeks ini menggunakan wilayah reflektansi biru untuk mengoreksi sinyal latar belakang tanah dan mengurangi pengaruh atmosfer, termasuk penyebaran aerosol.
+Indeks ini awalnya dikembangkan untuk digunakan dengan data MODIS sebagai perbaikan atas NDVI dengan mengoptimalkan sinyal vegetasi di area dengan indeks luas daun tinggi (LAI). Indeks ini paling berguna di wilayah dengan nilai LAI tinggi di mana NDVI mungkin mengalami saturasi. Indeks ini menggunakan wilayah reflektansi biru untuk mengoreksi sinyal latar belakang tanah dan mengurangi pengaruh atmosfer, termasuk penyebaran aerosol.
 
 $$
 EVI = 2.5 *  {(NIR - Red) \over (NIR + 6 * Red - 7.5 * Blue + 1)}
 $$
 
-Nilai EVI harus berkisar antara 0 hingga 1 untuk piksel vegetasi. Fitur terang seperti awan dan bangunan putih, serta fitur gelap seperti air, dapat menyebabkan nilai piksel abnormal dalam gambar EVI. Sebelum membuat gambar EVI, Anda harus menyaring awan dan fitur terang dari gambar reflektansi, dan secara opsional menetapkan ambang batas nilai piksel dari 0 hingga 1.
+Nilai EVI harus berkisar antara 0 hingga 1 untuk piksel vegetasi. Fitur terang seperti awan dan bangunan putih, serta fitur gelap seperti air, dapat menyebabkan nilai piksel anomali dalam gambar EVI. Sebelum membuat gambar EVI, Anda harus menyaring awan dan fitur terang dari gambar reflektansi, dan secara opsional menetapkan ambang batas nilai piksel dari 0 hingga 1.
 
 _Referensi: Huete, A., dkk. &quot;Ringkasan Kinerja Radiometrik dan Biofisik Indeks Vegetasi MODIS.&quot; Remote Sensing of Environment 83 (2002):195–213._
 
@@ -66,7 +66,7 @@ $$
 GEMI = eta (1 - 0.25 * eta) - {Red - 0.125 \over 1 - Red}
 $$
 
-Di mana:
+Dimana:
 
 $$
 eta = {2(NIR^{2}-Red^{2}) + 1.5 * NIR + 0.5 *  Red \over NIR + Red + 0.5}
@@ -76,7 +76,7 @@ _Referensi: Pinty, B., dan M. Verstraete. GEMI: Sebuah Indeks Non-Linier untuk M
 
 ***
 
-## GARI - Green Indeks Tahan Atmosfer
+## GARI - Green Indeks yang Tahan Terhadap Atmosfer
 
 Indeks ini lebih sensitif terhadap rentang konsentrasi klorofil yang luas dan kurang sensitif terhadap efek atmosfer dibandingkan NDVI.
 
@@ -130,9 +130,9 @@ _Referensi: Gitelson, A., dan M. Merzlyak. &quot;Pemantauan Jarak Jauh Konsentra
 
 ***
 
-## GOSAVI - Green Indeks Vegetasi yang Dioptimalkan dengan Penyesuaian Tanah
+## GOSAVI - Green Indeks Vegetasi yang Disesuaikan dengan Tanah yang Dioptimalkan
 
-Indeks ini awalnya dirancang menggunakan fotografi warna-inframerah untuk memprediksi kebutuhan nitrogen pada jagung. Indeks ini mirip dengan OSAVI, tetapi mengganti band hijau dengan band merah.
+Indeks ini awalnya dirancang menggunakan fotografi warna-inframerah untuk memprediksi kebutuhan nitrogen jagung. Mirip dengan OSAVI, tetapi mengganti band hijau dengan band merah.
 
 $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
@@ -150,13 +150,13 @@ $$
 GRVI = {NIR \over Green }
 $$
 
-_Referensi: Sripada, R., dkk. &quot;Fotografi Warna-Infrared Udara untuk Menentukan Kebutuhan Nitrogen Awal Selama Musim Tanam pada Jagung.&quot; Jurnal Agronomi 98 (2006): 968-977._
+_Referensi: Sripada, R., dkk. &quot;Fotografi Warna-Infrared Udara untuk Menentukan Kebutuhan Nitrogen Awal Musim pada Jagung.&quot; Jurnal Agronomi 98 (2006): 968-977._
 
 ***
 
 ## GSAVI - Green Indeks Vegetasi yang Disesuaikan dengan Tanah
 
-Indeks ini awalnya dirancang dengan fotografi warna-inframerah untuk memprediksi kebutuhan nitrogen jagung. Mirip dengan SAVI, tetapi mengganti band hijau dengan band merah.
+Indeks ini awalnya dirancang menggunakan fotografi warna-inframerah untuk memprediksi kebutuhan nitrogen jagung. Mirip dengan SAVI, tetapi mengganti band hijau dengan band merah.
 
 $$
 GSAVI = 1.5 * {(NIR - Green) \over (NIR + Green + 0.5)  }
@@ -174,7 +174,7 @@ $$
 LAI = 3.618 * EVI - 0.118
 $$
 
-Dimana EVI adalah:
+Di mana EVI adalah:
 
 $$
 EVI = 2.5 *  {(NIR - Red) \over (NIR + 6 * Red - 7.5 * Blue + 1)}
@@ -194,7 +194,7 @@ $$
 LCI = {NIR2 - RedEdge \over NIR2 + Red}
 $$
 
-_Referensi: Datt, B. &quot;Penginderaan Jauh Kandungan Air pada Daun Eucalyptus.&quot; Journal of Plant Physiology 154, no. 1 (1999): 30-36._
+_Referensi: Datt, B. &quot;Pemantauan Jarak Jauh Kandungan Air pada Daun Eucalyptus.&quot; Journal of Plant Physiology 154, no. 1 (1999): 30-36._
 
 ***
 
@@ -210,9 +210,9 @@ _Referensi: Yang, Z., P. Willis, dan R. Mueller. &quot;Dampak Rasio Band yang Di
 
 ***
 
-## MSAVI2 - Indeks Vegetasi yang Disesuaikan Tanah yang Dimodifikasi 2
+## MSAVI2 - Indeks Vegetasi yang Disesuaikan dengan Tanah 2
 
-Indeks ini adalah versi yang lebih sederhana dari indeks MSAVI yang diusulkan oleh Qi, dkk. (1994), yang memperbaiki Indeks Vegetasi yang Disesuaikan Tanah (SAVI). Indeks ini mengurangi kebisingan tanah dan meningkatkan rentang dinamis sinyal vegetasi. MSAVI2 didasarkan pada metode induktif yang tidak menggunakan nilai _L_ konstan (seperti pada SAVI) untuk menonjolkan vegetasi yang sehat.
+Indeks ini merupakan versi yang lebih sederhana dari indeks MSAVI yang diusulkan oleh Qi, dkk. (1994), yang memperbaiki Indeks Vegetasi yang Disesuaikan Tanah (SAVI). Indeks ini mengurangi noise tanah dan meningkatkan rentang dinamis sinyal vegetasi. MSAVI2 didasarkan pada metode induktif yang tidak menggunakan nilai _L_ konstan (seperti pada SAVI) untuk menonjolkan vegetasi yang sehat.
 
 $$
 MSAVI2 = {2 * NIR + 1 - \sqrt{(2 * NIR + 1)^{2} - 8(NIR - Red)} \over 2}
@@ -234,7 +234,7 @@ $$
 
 ## NDVI - Indeks Perbedaan Normalized Vegetasi
 
-Indeks ini merupakan ukuran vegetasi hijau yang sehat. Kombinasi formulasi perbedaan normalisednya dan penggunaan wilayah penyerapan dan refleksi tertinggi klorofil membuatnya tangguh dalam berbagai kondisi. Namun, indeks ini dapat jenuh dalam kondisi vegetasi padat ketika LAI menjadi tinggi.
+Indeks ini merupakan ukuran vegetasi hijau yang sehat. Kombinasi formulasi perbedaan normalisednya dan penggunaan wilayah penyerapan dan pantulan tertinggi klorofil membuatnya tangguh dalam berbagai kondisi. Namun, indeks ini dapat jenuh dalam kondisi vegetasi padat ketika LAI menjadi tinggi.
 
 $$
 NDVI = {NIR - Red \over NIR + Red  }
@@ -258,9 +258,9 @@ _Referensi: Goel, N., dan W. Qin. &quot;Pengaruh Arsitektur Kanopi terhadap Hubu
 
 ***
 
-## OSAVI - Indeks Vegetasi yang Dioptimalkan dengan Penyesuaian Tanah
+## OSAVI - Indeks Vegetasi yang Disesuaikan dengan Tanah yang Dioptimalkan
 
-Indeks ini didasarkan pada Indeks Vegetasi yang Disesuaikan dengan Tanah (SAVI). Ia menggunakan nilai standar 0,16 untuk faktor penyesuaian latar belakang kanopi. Rondeaux (1996) menentukan bahwa nilai ini memberikan variasi tanah yang lebih besar daripada SAVI untuk tutupan vegetasi rendah, sambil menunjukkan sensitivitas yang lebih tinggi terhadap tutupan vegetasi di atas 50%. Indeks ini paling baik digunakan di daerah dengan vegetasi yang relatif jarang di mana tanah terlihat melalui kanopi.
+Indeks ini didasarkan pada Indeks Vegetasi yang Disesuaikan dengan Tanah (SAVI). Indeks ini menggunakan nilai standar 0,16 untuk faktor penyesuaian latar belakang kanopi. Rondeaux (1996) menentukan bahwa nilai ini memberikan variasi tanah yang lebih besar daripada SAVI untuk tutupan vegetasi rendah, sambil menunjukkan sensitivitas yang lebih tinggi terhadap tutupan vegetasi di atas 50%. Indeks ini paling cocok digunakan di daerah dengan vegetasi yang relatif jarang di mana tanah terlihat melalui kanopi.
 
 $$
 OSAVI = {(NIR - Red) \over (NIR + Red + 0.16)  }
@@ -272,7 +272,7 @@ _Referensi: Rondeaux, G., M. Steven, dan F. Baret. &quot;Optimization of Soil-Ad
 
 ## RDVI - Indeks Vegetasi Perbedaan Renormalisasi
 
-Indeks ini menggunakan perbedaan antara panjang gelombang inframerah dekat dan merah, bersama dengan NDVI, untuk menyoroti vegetasi yang sehat. Indeks ini tidak terpengaruh oleh efek tanah dan geometri pemantauan matahari.
+Indeks ini menggunakan perbedaan antara panjang gelombang inframerah dekat dan merah, bersama dengan NDVI, untuk menyoroti vegetasi yang sehat. Indeks ini tidak terpengaruh oleh efek tanah dan geometri pengamatan matahari.
 
 $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
@@ -302,7 +302,7 @@ $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
 $$
 
-_Referensi: Bannari, A., H. Asalhi, dan P. Teillet. &quot;Transformed Difference Vegetation Index (TDVI) untuk Pemetaan Tutupan Vegetasi&quot; Dalam Prosiding Simposium Geosains dan Penginderaan Jauh, IGARSS &#x27;02, IEEE International, Volume 5 (2002)._
+_Referensi: Bannari, A., H. Asalhi, dan P. Teillet. &quot;Indeks Vegetasi Perbedaan Terubah (TDVI) untuk Pemetaan Tutupan Vegetasi&quot; Dalam Prosiding Simposium Geosains dan Penginderaan Jauh, IGARSS &#x27;02, IEEE Internasional, Volume 5 (2002)._
 
 ***
 
@@ -314,13 +314,13 @@ $$
 VARI = {Green - Red \over Green + Red - Blue  }
 $$
 
-_Referensi: Gitelson, A., dkk. &quot;Garis Vegetasi dan Tanah dalam Ruang Spektral Visibel: Konsep dan Teknik untuk Estimasi Jarak Jauh Fraksi Vegetasi. Jurnal Internasional Penginderaan Jauh 23 (2002): 2537−2562._
+_Referensi: Gitelson, A., dkk. &quot;Garis Vegetasi dan Tanah dalam Ruang Spektral Visibel: Konsep dan Teknik untuk Perkiraan Jarak Jauh Fraksi Vegetasi. Jurnal Internasional Penginderaan Jauh 23 (2002): 2537−2562._
 
 ***
 
 ## WDRVI - Indeks Vegetasi Rentang Dinamis Lebar
 
-Indeks ini mirip dengan NDVI, tetapi menggunakan koefisien bobot (_a_) untuk mengurangi perbedaan kontribusi sinyal inframerah dekat dan merah terhadap NDVI. WDRVI sangat efektif dalam adegan dengan kepadatan vegetasi sedang hingga tinggi ketika NDVI melebihi 0,6. NDVI cenderung stabil saat fraksi vegetasi dan indeks luas daun (LAI) meningkat, sedangkan WDRVI lebih sensitif terhadap rentang fraksi vegetasi yang lebih luas dan perubahan dalam LAI.
+Indeks ini serupa dengan NDVI, tetapi menggunakan koefisien bobot (_a_) untuk mengurangi perbedaan antara kontribusi sinyal inframerah dekat dan merah terhadap NDVI. WDRVI sangat efektif dalam adegan dengan kepadatan vegetasi sedang hingga tinggi ketika NDVI melebihi 0,6. NDVI cenderung stabil saat fraksi vegetasi dan indeks luas daun (LAI) meningkat, sedangkan WDRVI lebih sensitif terhadap rentang fraksi vegetasi yang lebih luas dan perubahan dalam LAI.
 
 $$
 WDRVI = {(\alpha * NIR- Red) \over (\alpha * NIR + Red)}

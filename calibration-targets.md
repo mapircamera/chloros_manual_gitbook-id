@@ -7,7 +7,7 @@ metaLinks:
 
 # Target Kalibrasi
 
-MAPIR menyediakan berbagai target kalibrasi untuk berbagai aplikasi. T4-R50 yang kompak di bawah ini mengandung 4 panel yang telah diukur untuk reflektansi cahaya dari 250 hingga 2.500 nm.
+MAPIR menyediakan berbagai target kalibrasi untuk berbagai aplikasi. T4-R50 yang kompak di bawah ini mengandung 4 panel yang telah diukur untuk reflektansi cahaya dari 250 - 2.500 nm.
 
 <figure><img src=".gitbook/assets/t4-r50_2.jpg" alt=""><figcaption><p>MAPIR T4-R50</p></figcaption></figure>
 

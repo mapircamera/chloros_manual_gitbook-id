@@ -99,7 +99,7 @@ Mengontrol format dan kualitas file output.
 **Format yang tersedia:**
 
 * **TIFF (16-bit)**: Direkomendasikan untuk analisis GIS dan ilmiah (rentang 0-65.535)
-* **TIFF (32-bit, Persentase)**: Nilai reflektansi bilangan floating-point (rentang 0,0-1,0)
+* **TIFF (32-bit, Persen)**: Nilai reflektansi bilangan floating-point (rentang 0,0-1,0)
 * **PNG (8-bit)**: Kompresi tanpa kehilangan data untuk visualisasi (rentang 0-255)
 * **JPG (8-bit)**: Ukuran file terkecil, kompresi dengan kehilangan data (rentang 0-255)
 
@@ -129,7 +129,7 @@ Saat membuat proyek baru:
 1. Pilih **&quot;Proyek Baru&quot;** dari menu utama
 2. Pilih opsi **&quot;Memuat dari template&quot;**
 3. Pilih template yang telah disimpan
-4. Semua pengaturan diterapkan secara otomatis
+4. Semua pengaturan akan diterapkan secara otomatis
 
 ### Direktori Kerja
 
@@ -159,11 +159,11 @@ Jika menggunakan perekam DAQ MAPIR dengan GPS untuk penentuan lokasi geografis y
 1. Letakkan berkas log .daq di folder proyek Anda
 2. Di Pengaturan Proyek, aktifkan kotak centang **&quot;Terapkan koreksi PPK&quot;**
 3. Atur **&quot;Pergeseran zona waktu sensor cahaya&quot;** jika diperlukan (default: 0 untuk UTC)
-4. Atur kamera ke pin eksposur:
+4. Tetapkan kamera ke pin eksposur:
    * **Kamera tunggal**: Ditetapkan secara otomatis ke Pin 1
    * **Dua kamera**: Tetapkan setiap kamera ke pin yang benar secara manual
 
-**Penetapan Pin Eksposur:**
+**Penugasan Pin Eksposur:**
 
 * **Pin Eksposur 1**: Pilih model kamera dari daftar dropdown
 * **Pin Eksposur 2**: Pilih kamera kedua atau &quot;Jangan Digunakan&quot;
@@ -198,7 +198,7 @@ Untuk survei berulang di area yang sama sepanjang waktu:
 4. Gunakan pengaturan yang identik untuk hasil yang dapat dibandingkan
 5. Ekspor dalam format yang sama untuk analisis temporal
 
-### Set Data Besar
+### Data Set Besar
 
 Untuk proyek dengan banyak gambar (500+):
 

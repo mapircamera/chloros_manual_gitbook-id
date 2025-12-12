@@ -9,7 +9,7 @@ Ketika pengolahan selesai dengan sukses, Anda akan melihat beberapa indikator:
 * ✅ **Progress bar**: Mencapai 100% penyelesaian
 * ✅ **Debug Log**: Menampilkan pesan &quot;Processing Complete&quot;
 * ✅ **Tombol Mulai**: Menjadi aktif kembali (siap untuk pengolahan berikutnya)
-* ✅ **File output**: Semua gambar yang diproses disimpan ke subfolder model kamera
+* ✅ **File output**: Semua gambar yang diproses disimpan di subfolder model kamera
 
 ***
 
@@ -86,7 +86,7 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 **Penyebab kemungkinan:**
 
 * File tidak memenuhi kriteria pemrosesan
-* Gambar target saja (dieksekusi dari ekspor)
+* Gambar target saja (dieksepsi dari ekspor)
 * Ruang disk habis selama ekspor
 * Korupsi file selama pemrosesan
 
@@ -107,9 +107,9 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 
 **Solusi:**
 
-1. Pastikan koreksi vignetting diaktifkan di Pengaturan Proyek
-2. Periksa apakah model kamera terdeteksi dengan benar
-3. Hubungi dukungan MAPIR jika vignetting tetap terjadi
+1. Verifikasi koreksi vignetting diaktifkan di Pengaturan Proyek
+2. Periksa model kamera terdeteksi dengan benar
+3. Hubungi dukungan MAPIR jika vignetting tetap ada
 
 ### Masalah: Warna atau Nilai yang Salah
 
@@ -159,8 +159,8 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
    * WebODM
 2. **Pertahankan metadata EXIF**: Pastikan data GPS terjaga untuk geotagging
 3. **Alur kerja yang dikalibrasi**: Gunakan gambar reflektansi untuk akurasi ilmiah
-4. **Proses mosaik indeks**: Buat orthomosaik NDVI dari gambar indeks individu
-5. **Ekspor GeoTIFF yang di-georeferensi**: Untuk digunakan dalam aplikasi GIS
+4. **Proses mosaik indeks**: Buat mosaik orto NDVI dari gambar indeks individu
+5. **Ekspor mosaik georeferensi GeoTIFF**: Untuk penggunaan dalam aplikasi GIS
 
 ### Untuk Analisis GIS
 
@@ -192,25 +192,25 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 * ✅ **Gambar RAW/JPG asli** - Arsipkan di drive terpisah/cloud
 * ✅ **Hasil pemrosesan** - Simpan gambar yang dikalibrasi dan indeks
 * ✅ **Berkas proyek** - Mengandung semua pengaturan untuk pemrosesan ulang jika diperlukan
-* ✅ **Catatan debug** - Mendokumentasikan detail pemrosesan
+* ✅ **Catatan debug** - Mencatat detail pemrosesan
 * ✅ **Gambar target kalibrasi** - Untuk verifikasi dan pemrosesan ulang
 
 **Rekomendasi penyimpanan:**
 
 * **Cadangan segera**: Drive eksternal
-* **Arsip jangka panjang**: Penyimpanan cloud (Google Drive, Dropbox, dll.)
+* **Arsip jangka panjang**: Penyimpanan awan (Google Drive, Dropbox, dll.)
 * **Data kritis**: Simpan 2-3 salinan di lokasi yang berbeda
 
 ***
 
-## Pengolahan Berikutnya
+## Pemrosesan Berikutnya
 
 ### Menggunakan Ulang Pengaturan Proyek
 
-Jika mengolah dataset serupa di masa depan:
+Jika memproses dataset serupa di masa depan:
 
 1. **Simpan Template Proyek** (jika belum dilakukan)
-2. **Buat proyek baru** menggunakan template yang disimpan
+2. **Buat proyek baru** menggunakan templat yang disimpan
 3. **Impor gambar baru**
 4. **Proses** dengan pengaturan yang sama untuk konsistensi
 

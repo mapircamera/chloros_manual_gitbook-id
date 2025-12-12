@@ -1,6 +1,6 @@
 # Bahasa yang Didukung
 
-Chloros menyediakan dukungan antarmuka penuh dalam **38 bahasa di seluruh dunia**, sehingga dapat diakses oleh pengguna di seluruh dunia. Anda dapat mengganti bahasa secara instan di semua antarmuka: Desktop, Browser, CLI, dan Python SDK.
+Chloros menyediakan dukungan antarmuka penuh dalam **38 bahasa di seluruh dunia**, sehingga dapat diakses oleh pengguna di seluruh dunia. Anda dapat beralih bahasa secara instan di semua antarmuka: Desktop, Browser, CLI, dan Python SDK.
 
 Chloros mendukung bahasa-bahasa berikut:
 

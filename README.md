@@ -18,7 +18,7 @@ Chloros tersedia dalam 4 mode aplikasi:
 
 ## Chloros (Browser): Antarmuka pengguna berbasis web
 
-Berjalan di browser web Anda (Chrome/Edge). Cocok untuk komputer dengan kecepatan rendah dan VRAM &lt;4GB.
+Berjalan di peramban web Anda (Chrome/Edge). Cocok untuk komputer dengan kecepatan rendah dan VRAM &lt;4GB.
 
 ## [Chloros CLI: Antarmuka baris perintah](CLI.md)
 
@@ -35,7 +35,7 @@ Antarmuka programatik Python untuk otomatisasi dan alur kerja kustom. Ideal untu
 Meskipun Chloros gratis untuk sebagian besar tugas, Anda mungkin memerlukan fitur tambahan. Di sinilah lisensi berbayar untuk Chloros+ dapat memberikan manfaat bagi Anda. Dengan lisensi Chloros+, Anda dapat mengakses fitur-fitur baru seperti:
 
 * **Pemrosesan Multi-threaded**: mempercepat pemrosesan gambar untuk proyek besar dengan memproses gambar secara bersamaan melalui pipeline.
-* **Peningkatan GPU (CUDA)**: manfaatkan opsi memori GPU yang lebih tinggi saat ini untuk mempercepat lebih lanjut pipeline pemrosesan gambar. Kami merekomendasikan 4GB atau lebih VRAM untuk hasil terbaik.
+* **Percepatan GPU (CUDA)**: manfaatkan opsi memori GPU yang lebih tinggi saat ini untuk mempercepat lebih lanjut pipeline pemrosesan gambar. Kami merekomendasikan 4GB atau lebih VRAM untuk hasil terbaik.
 * **Chloros+** [**CLI**](CLI.md) **Akses**: jalankan Chloros+ dari baris perintah untuk mengotomatisasi dan mengintegrasikan ke dalam perangkat lunak Anda sendiri.
 * **Chloros+** [**API**](api-python-sdk.md) **Akses:** Jalankan Chloros+ dari Python untuk kontrol programatik, memungkinkan integrasi yang mulus dengan alur kerja penelitian, analisis data, dan aplikasi kustom Anda.
 * **Penggunaan Multi-Perangkat**: setiap lisensi Chloros+ memungkinkan pendaftaran 2+ perangkat. Gunakan akun MAPIR Cloud Anda untuk mengelola perangkat yang terdaftar. Tambahkan dukungan untuk lebih banyak perangkat dengan meng-upgrade lisensi Chloros+ Anda.

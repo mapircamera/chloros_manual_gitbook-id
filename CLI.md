@@ -5,7 +5,7 @@
 ### Fitur Utama
 
 * 🚀 **Otomatisasi** - Pengolahan batch skrip untuk beberapa dataset
-* 🔗 **Integrasi** - Terintegrasi dalam alur kerja dan pipa kerja yang sudah ada
+* 🔗 **Integrasi** - Terintegrasi ke dalam alur kerja dan pipa kerja yang sudah ada
 * 💻 **Operasi Tanpa Antarmuka Pengguna** - Berjalan tanpa antarmuka pengguna
 * 🌍 **Multi-Bahasa** - Dukungan untuk 38 bahasa
 * ⚡ **Pemrosesan Paralel** - Skalabilitas dinamis sesuai CPU (hingga 16 pekerja paralel)
@@ -21,7 +21,7 @@
 | **Ruang Disk**       | Bervariasi tergantung ukuran proyek                                              |
 
 {% hint style=&quot;warning&quot; %}
-**Persyaratan Lisensi**: CLI memerlukan langganan berbayar Chloros+. Rencana standar (gratis) tidak memiliki akses ke CLI. Kunjungi [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) untuk melakukan upgrade.
+**Persyaratan Lisensi**: CLI memerlukan langganan berbayar Chloros+. Rencana standar (gratis) tidak memiliki akses ke CLI. Kunjungi [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) untuk upgrade.
 {% endhint %}
 
 ## Panduan Cepat
@@ -106,8 +106,8 @@ chloros-cli process "C:\Datasets\Survey_001" --vignette --reflectance
 | `--format`            | Pilihan  | TIFF (16-bit)  | Format output: `TIFF (16-bit)`, `TIFF (32-bit, Percent)`, `PNG (8-bit)`, `JPG (8-bit)` |
 | `--min-target-size`   | Bilangan bulat | Otomatis           | Ukuran target minimum dalam piksel untuk deteksi panel kalibrasi                          |
 | `--target-clustering` | Bilangan bulat | Otomatis           | Ambang batas pengelompokan target (0-100)                                                    |
-| `--exposure-pin-1`    | String  | None           | Kunci eksposur untuk model kamera (Pin 1)                                                 |
-| `--exposure-pin-2`    | String  | None           | Kunci eksposur untuk model kamera (Pin 2)                                                 |
+| `--exposure-pin-1`    | String  | None           | Mengunci eksposur untuk model kamera (Pin 1)                                                 |
+| `--exposure-pin-2`    | String  | None           | Mengunci eksposur untuk model kamera (Pin 2)                                                 |
 | `--recal-interval`    | Bilangan bulat | Otomatis           | Interval kalibrasi ulang dalam detik                                                      |
 | `--timezone-offset`   | Bilangan bulat | 0              | Pergeseran zona waktu dalam jam                                                               |
 
@@ -337,9 +337,9 @@ chloros-cli get-project-folder
 
 ***
 
-### `reset-project-folder` - Kembalikan ke Default
+### `reset-project-folder` - Reset ke Default
 
-Kembalikan folder proyek ke lokasi default.
+Reset folder proyek ke lokasi default.
 
 **Sintaks:**
 
@@ -351,7 +351,7 @@ chloros-cli reset-project-folder
 
 ## Opsi Global
 
-Opsi ini berlaku untuk semua perintah:
+Opsi-opsi ini berlaku untuk semua perintah:
 
 | Opsi          | Tipe    | Default       | Deskripsi                                      |
 | --------------- | ------- | ------------- | ------------------------------------------------ |
@@ -373,7 +373,7 @@ chloros-cli --port 5001 process "C:\Datasets\Survey_001"
 
 ### Pemrosesan Paralel
 
-Chloros+ CLI **otomatis menyesuaikan** pemrosesan paralel sesuai dengan kemampuan komputer Anda:
+Chloros+ CLI **secara otomatis menyesuaikan** pemrosesan paralel sesuai dengan kemampuan komputer Anda:
 
 **Cara Kerjanya:**
 
@@ -578,8 +578,8 @@ if __name__ == '__main__':
 
 1. **Masukan**: Folder yang berisi pasangan gambar RAW/JPG
 2. **Penemuan**: CLI secara otomatis memindai file gambar yang didukung
-3. **Pemrosesan**: Mode paralel menyesuaikan dengan jumlah inti CPU Anda (Chloros+)
-4. **Output**: Membuat subfolder berdasarkan model kamera dengan gambar yang telah diproses
+3. **Pemrosesan**: Mode paralel menyesuaikan dengan inti CPU Anda (Chloros+)
+4. **Output**: Membuat subfolder model kamera dengan gambar yang diproses
 
 ### Struktur Output Contoh
 
@@ -746,7 +746,7 @@ chloros-cli --port 5001 process "C:\Datasets\Field_A"
 **A:** Ya! CLI memerlukan lisensi berbayar **Chloros+**.
 
 * ❌ Rencana Standar (gratis): CLI dinonaktifkan
-* ✅ Paket Chloros+ (berbayar): CLI sepenuhnya diaktifkan
+* ✅ Paket Chloros+ (berbayar): CLI diaktifkan sepenuhnya
 
 Berlangganan di: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
@@ -801,7 +801,7 @@ chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
 
 **A:** CLI akan:
 
-1. Menghentikan pemrosesan dengan lancar
+1. Berhenti memproses dengan lancar
 2. Mematikan backend
 3. Keluar dengan kode 130
 
@@ -809,7 +809,7 @@ Gambar yang diproses sebagian mungkin tetap ada di folder output.
 
 ***
 
-### Q: Apakah saya dapat mengotomatisasi pemrosesan CLI?
+### Q: Bisakah saya mengotomatisasi pemrosesan CLI?
 
 **A:** Tentu saja! CLI dirancang untuk otomatisasi. Lihat [Automation &amp; Scripting](CLI.md#automation--scripting) untuk contoh PowerShell, Batch, dan Python.
 

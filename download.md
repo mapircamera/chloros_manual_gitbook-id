@@ -28,13 +28,11 @@ Unduh versi terbaru Chloros untuk Windows agar dapat memulai pemrosesan gambar m
 
 ## Unduh Chloros
 
-### <a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button primary">Unduh Chloros di</a>
-
-S<a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button primary">ini</a>
+### <a href="https://drive.google.com/file/d/1HjwrUY4M7HGxDbMybO7iPe_6JoHnUGr4/view?usp=drive_link" class="button primary">Unduh Chloros di Sini</a>
 
 ### Rilis Stabil Terbaru
 
-**Pemasang Chloros untuk Windows**
+**Chloros Penginstal untuk Windows**
 
 * **Versi**: 1.0.3
 * **Tanggal Rilis**: Desember ?, 2025
@@ -89,9 +87,9 @@ Pemasangan Chloros mencakup:
 Buka fitur lanjutan dengan langganan Chloros+:
 
 * 🚀 **Pemrosesan Multi-threaded** - Memproses gambar secara paralel
-* ⚡ **Percepatan GPU (CUDA)** - Manfaatkan kekuatan GPU NVIDIA
+* ⚡ **Peningkatan GPU (CUDA)** - Manfaatkan kekuatan GPU NVIDIA
 * 💻 **Akses CLI** - Otomatisasi dengan alat baris perintah
-* 🐍 **Python SDK** - Akses API secara programatik
+* 🐍 **Python SDK** - Akses programatik API
 * 📱 **Perangkat Multi** - Gunakan pada 2-10+ perangkat (tergantung paket)
 * 🧮 **Rumus Kustom** - Buat indeks multispektral kustom
 
