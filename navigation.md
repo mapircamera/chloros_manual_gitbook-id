@@ -14,7 +14,9 @@ Dari menu utama, Anda dapat memulai proyek baru, membuka proyek yang sudah ada, 
 
 Ketika diaktifkan, tombol mulai pemrosesan akan memulai alur pemrosesan gambar.
 
-### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Bar Kemajuan <img src=".gitbook/assets/image (5).png" alt="" data-size="line">Dalam mode gratis Chloros, yang memproses semua file secara berurutan, bilah kemajuan akan menampilkan 2 tahap: Deteksi Target dan Pemrosesan.
+### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Bar Kemajuan <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
+
+Dalam mode gratis Chloros, yang memproses semua file secara berurutan, bilah kemajuan akan menampilkan 2 tahap: Deteksi Target dan Pemrosesan.
 
 Dalam mode berlisensi berbayar Chloros+, yang memproses semua file secara bersamaan, bilah kemajuan menampilkan 4 tahap: Deteksi, Analisis, Kalibrasi, Ekspor. Jika Anda mengarahkan kursor mouse ke bilah kemajuan Chloros+, panel bilah kemajuan yang diperluas akan muncul sehingga Anda dapat mengikuti prosesnya. Mengklik bilah kemajuan atas akan membekukan panel dropdown, mengklik lagi akan membukanya kembali.
 

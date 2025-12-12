@@ -6,7 +6,9 @@ Pengguna <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> memun
 
 Setelah masuk, detail akun Anda akan ditampilkan:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Masuk
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
+
+## CLI Masuk
 
 Masuk dengan kredensial Chloros+ Anda untuk mengaktifkan pemrosesan CLI.
 
@@ -28,7 +30,9 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 **Output:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>### Kedaluwarsa Langganan
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
+
+### Kedaluwarsa Langganan
 
 Kedaluwarsa langganan yang ditampilkan di antarmuka pengguna (GUI) menunjukkan kapan lisensi Anda akan menjadi tidak valid. Untuk langganan bulanan berulang, kedaluwarsa terjadi pada akhir bulan. Untuk langganan tahunan, kedaluwarsa terjadi satu tahun setelah Anda memulai langganan. Pemeriksaan lisensi memerlukan koneksi internet bulanan untuk verifikasi, dengan masa tenggang 30 hari.
 
