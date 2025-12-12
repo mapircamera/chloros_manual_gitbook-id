@@ -16,7 +16,7 @@
 ## Memproses Gambar (GUI)
 
 * [Menyesuaikan Pengaturan Proyek](processing-images-gui/adjusting-project-settings.md)
-* [Menambahkan File ke Proyek](processing-images-gui/page-1.md)
+* [Menambahkan File ke Proyek](processing-images-gui/adding-files-to-a-project.md)
 * [Memilih Gambar Sasaran](processing-images-gui/choosing-target-images.md)
 * [Memulai Pemrosesan](processing-images-gui/starting-the-processing.md)
 * [Memantau Pemrosesan](processing-images-gui/monitoring-the-processing.md)
@@ -24,11 +24,11 @@
 
 ## PENGATURAN PROYEK
 
-* [Pengaturan Proyek](project-settings/page-2.md)
+* [Pengaturan Proyek](project-settings/project-settings.md)
 * [Rumus Indeks Multispektral](project-settings/multispectral-index-formulas.md)
 
 ## PENAMPIL GAMBAR (GUI)
 
-* [Membuka Gambar Layar Penuh](image-viewer-gui/page-3.md)
+* [Membuka Gambar Layar Penuh](image-viewer-gui/opening-an-image-full-screen.md)
 * [Lapisan Gambar](image-viewer-gui/image-layers.md)
 * [Kotak Pasir Indeks/LUT](image-viewer-gui/index-lut-sandbox.md)
