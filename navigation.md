@@ -1,24 +1,22 @@
-# GUI: Navigasi
+# Antarmuka Pengguna Grafis (GUI): Navigasi
 
-Saat Anda pertama kali meluncurkan Kloros dan Kloros (Peramban), backendnya akan dimulai. Setelah siap, ikon menu utama kiri atas akan terlihat <img src=".gitbook/assets/image (1).png" alt="" data-size="line"> .
+Saat pertama kali meluncurkan Chloros dan Chloros (Browser), sistem akan memulai proses backend-nya. Setelah siap, ikon menu utama di pojok kiri atas akan muncul <img src=".gitbook/assets/image (1).png" alt="" data-size="line"> .
 
 <figure><img src=".gitbook/assets/header.JPG" alt=""><figcaption></figcaption></figure>
 
-Dari kiri ke kanan header atas berisi:
+Dari kiri ke kanan, header atas berisi:
 
 ### <img src=".gitbook/assets/image (1) (1).png" alt="" data-size="line"> Menu Utama
 
-Dari menu utama Anda dapat memulai proyek baru, membuka proyek yang sudah ada, atau membuka folder proyek.
+Dari menu utama, Anda dapat memulai proyek baru, membuka proyek yang sudah ada, atau membuka folder proyek.
 
 ### <img src=".gitbook/assets/image (2).png" alt="" data-size="line"> Tombol Putar/Mulai
 
-Jika diaktifkan, tombol mulai pemrosesan memulai alur pemrosesan gambar.
+Ketika diaktifkan, tombol mulai pemrosesan akan memulai alur pemrosesan gambar.
 
-### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Bilah Kemajuan <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
+### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Bar Kemajuan <img src=".gitbook/assets/image (5).png" alt="" data-size="line">Dalam mode gratis Chloros, yang memproses semua file secara berurutan, bilah kemajuan akan menampilkan 2 tahap: Deteksi Target dan Pemrosesan.
 
-Dalam mode Chloros gratis, yang memproses semua file secara berurutan, bilah kemajuan akan menampilkan 2 tahap: Deteksi Target dan Pemrosesan.
-
-Dalam mode berlisensi Chloros+ berbayar, yang memproses semua file secara bersamaan, bilah kemajuan menunjukkan 4 tahap: Mendeteksi, Menganalisis, Mengkalibrasi, Mengekspor. Jika Anda mengarahkan kursor mouse ke bilah kemajuan Kloros+, panel bilah kemajuan 4 yang diperluas akan turun ke bawah sehingga Anda dapat mengikutinya. Mengklik bilah kemajuan atas akan membekukan panel tarik-turun, mengeklik lagi akan membatalkan pembekuannya.
+Dalam mode berlisensi berbayar Chloros+, yang memproses semua file secara bersamaan, bilah kemajuan menampilkan 4 tahap: Deteksi, Analisis, Kalibrasi, Ekspor. Jika Anda mengarahkan kursor mouse ke bilah kemajuan Chloros+, panel bilah kemajuan yang diperluas akan muncul sehingga Anda dapat mengikuti prosesnya. Mengklik bilah kemajuan atas akan membekukan panel dropdown, mengklik lagi akan membukanya kembali.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
@@ -26,22 +24,22 @@ Dalam mode berlisensi Chloros+ berbayar, yang memproses semua file secara bersam
 
 Menu sidebar kiri berisi berbagai ikon untuk berinteraksi:
 
-#### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Pengaturan Proyek](pengaturan proyek/halaman-2.md)
+#### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Pengaturan Proyek](project-settings/project-settings.md)
 
-Tab Pengaturan Proyek memungkinkan Anda menyesuaikan pengaturan global proyek dan pemrosesan proyek. Sesuaikan ini sebelum mulai memproses file Anda.
+Tab Pengaturan Proyek memungkinkan Anda menyesuaikan pengaturan global proyek dan pengaturan pemrosesan proyek. Sesuaikan pengaturan ini sebelum memulai pemrosesan file Anda.
 
-#### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Peramban File
+#### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Penjelajah File
 
-Tambahkan file/folder dan hapus file dari proyek. File duplikat diabaikan. Centang kotak kolom target untuk setiap gambar target, dan pemrosesan hanya akan melihat gambar yang dicentang sebagai target, sehingga sangat mempercepat waktu pemrosesan Anda.
+Tambahkan file/folder dan hapus file dari proyek. File duplikat diabaikan. Centang kotak kolom target untuk gambar target, dan pemrosesan hanya akan memeriksa gambar yang dicentang sebagai target, sehingga mempercepat waktu pemrosesan Anda.
 
-#### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Penampil Gambar](image-viewer-gui/page-3.md)
+#### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Penerima Gambar](image-viewer-gui/opening-an-image-full-screen.md)
 
-Saat gambar diklik di penampil gambar utama, gambar tersebut akan dibuka dalam layar penuh di tab Penampil Gambar.
+Ketika gambar diklik di penerima gambar utama, gambar tersebut akan dibuka layar penuh di tab Penerima Gambar.
 
-#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Log Debug
+#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Catatan Debug
 
-Tinjau log untuk cetakan debug ketika masalah terjadi. Salin/unduh log dan kirim ke [Dukungan MAPIR](https://www.mapir.camera/community/contact) untuk bantuan.
+Periksa catatan debug saat terjadi masalah. Salin/unduh catatan dan kirim ke [MAPIR Support](https://www.mapir.camera/community/contact) untuk bantuan.
 
-#### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Login Pengguna](chloros+-login.md)
+#### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Masuk Pengguna](chloros+-login.md)
 
-Sidebar login pengguna memungkinkan Anda masuk ke akun Chloros+ Anda untuk membuka fitur-fitur lanjutan. Anda juga dapat melihat versi aplikasi saat ini, serta menyesuaikan bahasa teks yang ditampilkan di Chloros GUI dan CLI.
+Sidebar login pengguna memungkinkan Anda masuk ke akun Chloros+ untuk mengakses fitur lanjutan. Anda juga dapat melihat versi aplikasi saat ini, serta mengatur bahasa teks yang ditampilkan di antarmuka pengguna Chloros dan CLI.

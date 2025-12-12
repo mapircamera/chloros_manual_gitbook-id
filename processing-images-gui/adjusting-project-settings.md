@@ -1,234 +1,234 @@
-# Adjusting Project Settings
+# Mengatur Pengaturan Proyek
 
-Before processing your images, it's important to configure your project settings to match your workflow requirements. The Project Settings <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> panel provides comprehensive control over calibration, processing options, multispectral indices, and export formats.
+Sebelum memproses gambar Anda, penting untuk mengonfigurasi pengaturan proyek agar sesuai dengan kebutuhan alur kerja Anda. Panel Pengaturan Proyek <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> memberikan kontrol komprehensif atas kalibrasi, opsi pemrosesan, indeks multispektral, dan format ekspor.
 
-## Accessing Project Settings
+## Mengakses Pengaturan Proyek
 
-1. Open your project in Chloros
-2. Click the **Project Settings** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> icon in the left sidebar
-3. The Project Settings panel displays all configuration options
+1. Buka proyek Anda di Chloros
+2. Klik ikon **Pengaturan Proyek** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> di bilah sisi kiri
+3. Panel Pengaturan Proyek menampilkan semua opsi konfigurasi
 
-{% hint style="info" %}
-**Settings are saved automatically** with your project. When you reopen a project, all settings are restored.
+{% hint style=&quot;info&quot; %}
+**Pengaturan disimpan secara otomatis** bersama proyek Anda. Saat Anda membuka kembali proyek, semua pengaturan akan dipulihkan.
 {% endhint %}
 
 ***
 
-## Quick Setup for Common Workflows
+## Pengaturan Cepat untuk Alur Kerja Umum
 
-### Default Settings (Recommended for Most Users)
+### Pengaturan Default (Disarankan untuk Kebanyakan Pengguna)
 
-For typical MAPIR Survey3 camera workflows, the default settings work well:
+Untuk alur kerja kamera MAPIR Survey3 yang umum, pengaturan default berfungsi dengan baik:
 
-* ✅ **Vignette correction**: Enabled
-* ✅ **Reflectance calibration**: Enabled (requires images of MAPIR targets)
-* ✅ **Debayer method**: High Quality (Faster)
-* ✅ **Export format**: TIFF (16-bit)
+* ✅ **Koreksi vignette**: Diaktifkan
+* ✅ **Kalibrasi reflektansi**: Diaktifkan (membutuhkan gambar target MAPIR)
+* ✅ **Metode Debayer**: Kualitas Tinggi (Lebih Cepat)
+* ✅ **Format Ekspor**: TIFF (16-bit)
 
-Simply import your images and start processing with these defaults.
-
-***
-
-## Project Settings Overview
-
-The Project Settings panel is organized into several categories. Below is a summary of each section. For complete documentation, see [Project Settings](../project-settings/page-2.md).
-
-### Target Detection
-
-Controls how Chloros identifies calibration targets in your images.
-
-**Key settings:**
-
-* **Minimum calibration sample area**: Size threshold for target detection (default: 25 pixels)
-* **Minimum target clustering**: Similarity threshold for grouping target regions (default: 60)
-
-**When to adjust:**
-
-* Increase sample area if getting false detections
-* Decrease if targets aren't being detected
-* Adjust clustering if targets are being split into multiple detections
-
-### Processing
-
-Main image processing and calibration options.
-
-**Key settings:**
-
-* **Vignette correction**: Compensates for lens darkening at edges ✅ Recommended
-* **Reflectance calibration**: Normalizes values using calibration targets ✅ Recommended
-* **Debayer method**: Algorithm for converting RAW to 3-channels multi-spectral
-* **Minimum recalibration interval**: Time between using calibration targets (0 = use all)
-
-**Advanced settings:**
-
-* **Light sensor timezone offset**: For PPK time synchronization (default: 0)
-* **Apply PPK corrections**: Uses GPS/exposure pin data from .daq files
-* **Exposure Pin 1/2**: Assigns cameras to exposure pins for dual-camera setups
-
-### Index (Multispectral Indices)
-
-Configure which vegetation indices to calculate and export.
-
-**How to add indices:**
-
-1. Click **"Add index"** button
-2. Select an index from the dropdown menu (NDVI, NDRE, GNDVI, etc.)
-3. Configure visualization settings (LUT colors, value ranges)
-4. Add multiple indices as needed
-
-**Popular indices:**
-
-* **NDVI**: General vegetation health (most common)
-* **NDRE**: Early stress detection with RedEdge
-* **GNDVI**: Chlorophyll concentration sensitive
-* **OSAVI**: Works well with visible soil
-* **EVI**: High leaf area index (LAI) regions
-
-**Custom formulas (Chloros+ only):**
-
-* Create custom multispectral index formulas
-* Use band math with all image channels
-* Save custom formulas for reuse
-
-For all available indices and formulas, see [Multispectral Index Formulas](../project-settings/multispectral-index-formulas.md).
-
-### Export
-
-Controls output file format and quality.
-
-**Available formats:**
-
-* **TIFF (16-bit)**: Recommended for GIS and scientific analysis (0-65,535 range)
-* **TIFF (32-bit, Percent)**: Floating-point reflectance values (0.0-1.0 range)
-* **PNG (8-bit)**: Lossless compression for visualization (0-255 range)
-* **JPG (8-bit)**: Smallest files, lossy compression (0-255 range)
+Cukup impor gambar Anda dan mulai pemrosesan dengan pengaturan default ini.
 
 ***
 
-## Saving and Loading Settings
+## Ringkasan Pengaturan Proyek
 
-### Save Project Template
+Panel Pengaturan Proyek dibagi menjadi beberapa kategori. Berikut adalah ringkasan setiap bagian. Untuk dokumentasi lengkap, lihat [Pengaturan Proyek](../project-settings/project-settings.md).
 
-Create reusable templates for consistent workflows:
+### Deteksi Target
 
-1. Configure all desired settings in the Project Settings panel
-2. Scroll to **"Save Project Template"** section at the bottom
-3. Enter a descriptive template name (e.g., "Survey3N\_RGN\_Agriculture")
-4. Click the save icon
+Mengontrol cara Chloros mengidentifikasi target kalibrasi dalam gambar Anda.
 
-**Benefits:**
+**Pengaturan utama:**
 
-* Apply identical settings across multiple projects
-* Share configurations with team members
-* Maintain consistency for repeated surveys
+* **Area sampel kalibrasi minimum**: Ambang batas ukuran untuk deteksi target (default: 25 piksel)
+* **Pengelompokan target minimum**: Ambang batas kesamaan untuk mengelompokkan wilayah target (default: 60)
 
-### Load Template on New Project
+**Kapan menyesuaikan:**
 
-When creating a new project:
+* Tingkatkan area sampel jika terjadi deteksi palsu
+* Kurangi jika target tidak terdeteksi
+* Sesuaikan pengelompokan jika target terbagi menjadi beberapa deteksi
 
-1. Select **"New Project"** from main menu
-2. Choose **"Load from template"** option
-3. Select your saved template
-4. All settings are automatically applied
+### Pemrosesan
 
-### Working Directory
+Opsi pemrosesan dan kalibrasi gambar utama.
 
-The **"Save Project Folder"** setting specifies where new projects are created by default:
+**Pengaturan utama:**
 
-* **Default location**: `C:\Users\[Username]\Chloros Projects`
-* **Change location**: Click edit icon and select new folder
-* **When to change**:
-  * Network drive for team collaboration
-  * Different drive with more storage space
-  * Organized folder structure by year/client
+* **Koreksi vignette**: Mengkompensasi penggelapan lensa di tepi ✅ Direkomendasikan
+* **Kalibrasi reflektansi**: Menormalkan nilai menggunakan target kalibrasi ✅ Direkomendasikan
+* **Metode debayer**: Algoritma untuk mengonversi RAW menjadi multi-spektral 3-saluran
+* **Interval kalibrasi minimum**: Waktu antara penggunaan target kalibrasi (0 = gunakan semua)
+
+**Pengaturan lanjutan:**
+
+* **Pergeseran zona waktu sensor cahaya**: Untuk sinkronisasi waktu PPK (default: 0)
+* **Terapkan koreksi PPK**: Menggunakan data GPS/pin eksposur dari file .daq
+* **Pin Eksposur 1/2**: Menugaskan kamera ke pin eksposur untuk pengaturan dua kamera
+
+### Indeks (Indeks Multispektral)
+
+Konfigurasikan indeks vegetasi mana yang akan dihitung dan diekspor.
+
+**Cara menambahkan indeks:**
+
+1. Klik tombol **&quot;Tambah indeks&quot;**
+2. Pilih indeks dari menu dropdown (NDVI, NDRE, GNDVI, dll.)
+3. Konfigurasikan pengaturan visualisasi (warna LUT, rentang nilai)
+4. Tambahkan indeks tambahan sesuai kebutuhan
+
+**Indeks populer:**
+
+* **NDVI**: Kesehatan vegetasi umum (paling umum)
+* **NDRE**: Deteksi stres dini dengan RedEdge
+* **GNDVI**: Sensitif terhadap konsentrasi klorofil
+* **OSAVI**: Berfungsi baik dengan tanah yang terlihat
+* **EVI**: Wilayah dengan indeks area daun tinggi (LAI)
+
+**Rumus kustom (hanya Chloros+):**
+
+* Buat formula indeks multispektral kustom
+* Gunakan perhitungan band dengan semua kanal gambar
+* Simpan formula kustom untuk penggunaan ulang
+
+Untuk semua indeks dan formula yang tersedia, lihat [Formula Indeks Multispektral](../project-settings/multispectral-index-formulas.md).
+
+### Ekspor
+
+Mengontrol format dan kualitas file output.
+
+**Format yang tersedia:**
+
+* **TIFF (16-bit)**: Direkomendasikan untuk analisis GIS dan ilmiah (rentang 0-65.535)
+* **TIFF (32-bit, Persentase)**: Nilai reflektansi bilangan floating-point (rentang 0,0-1,0)
+* **PNG (8-bit)**: Kompresi tanpa kehilangan data untuk visualisasi (rentang 0-255)
+* **JPG (8-bit)**: Ukuran file terkecil, kompresi dengan kehilangan data (rentang 0-255)
 
 ***
 
-## PPK (Post-Processed Kinematic) Setup
+## Menyimpan dan Memuat Pengaturan
 
-If using MAPIR DAQ recorders with GPS for precise geolocation:
+### Simpan Template Proyek
 
-### Prerequisites
+Buat templat yang dapat digunakan ulang untuk alur kerja yang konsisten:
 
-* MAPIR DAQ with GPS (GNSS) module
-* .daq log file with exposure pin entries
-* Camera connected to DAQ exposure pins during capture session
+1. Konfigurasikan semua pengaturan yang diinginkan di panel Pengaturan Proyek
+2. Gulir ke bagian **&quot;Simpan Templat Proyek&quot;** di bagian bawah
+3. Masukkan nama templat yang deskriptif (misalnya, &quot;Survey3N\_RGN\_Agriculture&quot;)
+4. Klik ikon simpan
 
-### Configuration Steps
+**Manfaat:**
 
-1. Place the .daq log file in your project folder
-2. In Project Settings, enable **"Apply PPK corrections"** checkbox
-3. Set **"Light sensor timezone offset"** if needed (default: 0 for UTC)
-4. Assign cameras to exposure pins:
-   * **Single camera**: Automatically assigned to Pin 1
-   * **Dual cameras**: Manually assign each camera to correct pin
+* Terapkan pengaturan yang sama di beberapa proyek
+* Bagikan konfigurasi dengan anggota tim
+* Pertahankan konsistensi untuk survei berulang
 
-**Exposure Pin Assignment:**
+### Memuat Template pada Proyek Baru
 
-* **Exposure Pin 1**: Select camera model from dropdown
-* **Exposure Pin 2**: Select second camera or "Do Not Use"
-* Same camera cannot be assigned to both pins
+Saat membuat proyek baru:
 
-{% hint style="warning" %}
-**Important**: Exposure pins must be correctly assigned to their respective cameras. Incorrect assignment will result in wrong geolocation data.
+1. Pilih **&quot;Proyek Baru&quot;** dari menu utama
+2. Pilih opsi **&quot;Memuat dari template&quot;**
+3. Pilih template yang telah disimpan
+4. Semua pengaturan diterapkan secara otomatis
+
+### Direktori Kerja
+
+Pengaturan **&quot;Folder Penyimpanan Proyek&quot;** menentukan lokasi default untuk membuat proyek baru:
+
+* **Lokasi default**: `C:\Users\[Username]\Chloros Projects`
+* **Ubah lokasi**: Klik ikon edit dan pilih folder baru
+* **Kapan mengubah**:
+  * Drive jaringan untuk kolaborasi tim
+  * Drive lain dengan ruang penyimpanan lebih besar
+  * Struktur folder terorganisir berdasarkan tahun/klien
+
+***
+
+## Pengaturan PPK (Post-Processed Kinematic)
+
+Jika menggunakan perekam DAQ MAPIR dengan GPS untuk penentuan lokasi geografis yang presisi:
+
+### Persyaratan
+
+* Perekam DAQ MAPIR dengan modul GPS (GNSS)
+* Berkas log .daq dengan entri pin eksposur
+* Kamera terhubung ke pin eksposur DAQ selama sesi perekaman
+
+### Langkah Konfigurasi
+
+1. Letakkan berkas log .daq di folder proyek Anda
+2. Di Pengaturan Proyek, aktifkan kotak centang **&quot;Terapkan koreksi PPK&quot;**
+3. Atur **&quot;Pergeseran zona waktu sensor cahaya&quot;** jika diperlukan (default: 0 untuk UTC)
+4. Atur kamera ke pin eksposur:
+   * **Kamera tunggal**: Ditetapkan secara otomatis ke Pin 1
+   * **Dua kamera**: Tetapkan setiap kamera ke pin yang benar secara manual
+
+**Penetapan Pin Eksposur:**
+
+* **Pin Eksposur 1**: Pilih model kamera dari daftar dropdown
+* **Pin Eksposur 2**: Pilih kamera kedua atau &quot;Jangan Digunakan&quot;
+* Kamera yang sama tidak dapat ditugaskan ke kedua pin
+
+{% hint style=&quot;warning&quot; %}
+**Penting**: Pin eksposur harus ditugaskan dengan benar ke kamera masing-masing. Penugasan yang salah akan menghasilkan data geolokasi yang salah.
 {% endhint %}
 
 ***
 
-## Advanced Scenarios
+## Skenario Lanjutan
 
-### Multi-Camera Projects
+### Proyek Multi-Kamera
 
-When processing images from multiple MAPIR cameras in one project:
+Saat memproses gambar dari beberapa kamera MAPIR dalam satu proyek:
 
-1. Chloros automatically detects each camera model
-2. Each camera gets appropriate processing profile
-3. PPK: Manually assign each camera to correct exposure pin
-4. All cameras use same export format and indices
+1. Chloros secara otomatis mendeteksi model setiap kamera
+2. Setiap kamera mendapatkan profil pemrosesan yang sesuai
+3. PPK: Tetapkan secara manual setiap kamera ke pin eksposur yang benar
+4. Semua kamera menggunakan format ekspor dan indeks yang sama
 
-**Example**: Survey3W RGN + Survey3N OCN dual-camera rig
+**Contoh**: Survey3W RGN + Survey3N OCN rig kamera ganda
 
-### Time-Lapse or Multi-Date Surveys
+### Survei Time-Lapse atau Multi-Tanggal
 
-For repeated surveys of the same area over time:
+Untuk survei berulang di area yang sama sepanjang waktu:
 
-1. Create a template with your standard settings
-2. Use consistent calibration target setup each session
-3. Process each date as a separate project
-4. Use identical settings for comparable results
-5. Export in same format for temporal analysis
+1. Buat templat dengan pengaturan standar Anda
+2. Gunakan pengaturan target kalibrasi yang konsisten setiap sesi
+3. Proses setiap tanggal sebagai proyek terpisah
+4. Gunakan pengaturan yang identik untuk hasil yang dapat dibandingkan
+5. Ekspor dalam format yang sama untuk analisis temporal
 
-### Large Datasets
+### Set Data Besar
 
-For projects with many images (500+):
+Untuk proyek dengan banyak gambar (500+):
 
-* Consider breaking into smaller projects by date or area
-* Use Chloros+ parallel processing for faster results
-* Consider CLI or API for batch automation
-* Adjust minimum recalibration interval to reduce target detection time
-
-***
-
-## Verifying Your Settings
-
-Before starting to process, review these key settings:
-
-* [ ] Camera model correctly detected in File Browser
-* [ ] Vignette correction enabled
-* [ ] Reflectance calibration enabled
-* [ ] At least one calibration target image imported
-* [ ] Desired multispectral indices added
-* [ ] Export format appropriate for your workflow
-* [ ] PPK settings configured (if using .daq with expposure events)
+* Pertimbangkan untuk membagi menjadi proyek-proyek kecil berdasarkan tanggal atau area
+* Gunakan pemrosesan paralel Chloros+ untuk hasil lebih cepat
+* Pertimbangkan CLI atau API untuk otomatisasi batch
+* Sesuaikan interval kalibrasi minimum untuk mengurangi waktu deteksi target
 
 ***
 
-## Next Steps
+## Memverifikasi Pengaturan Anda
 
-Once your settings are configured:
+Sebelum memulai pemrosesan, periksa pengaturan kunci berikut:
 
-1. **Mark calibration target images** - See [Choosing Target Images](choosing-target-images.md)
-2. **Start processing** - See [Starting the Processing](starting-the-processing.md)
-3. **Monitor progress** - See [Monitoring the Processing](monitoring-the-processing.md)
+* [ ] Model kamera terdeteksi dengan benar di File Browser
+* [ ] Koreksi vignette diaktifkan
+* [ ] Kalibrasi reflektansi diaktifkan
+* [ ] Setidaknya satu gambar target kalibrasi telah diimpor
+* [ ] Indeks multispektral yang diinginkan telah ditambahkan
+* [ ] Format ekspor sesuai dengan alur kerja Anda
+* [ ] Pengaturan PPK dikonfigurasi (jika menggunakan .daq dengan peristiwa eksposur)
 
-For complete details on all available settings, see the [Project Settings](../project-settings/page-2.md) reference documentation.
+***
+
+## Langkah Selanjutnya
+
+Setelah pengaturan Anda dikonfigurasi:
+
+1. **Tandai gambar target kalibrasi** - Lihat [Memilih Gambar Target](choosing-target-images.md)
+2. **Mulai pemrosesan** - Lihat [Memulai Pemrosesan](starting-the-processing.md)
+3. **Pantau kemajuan** - Lihat [Memantau Pemrosesan](monitoring-the-processing.md)
+
+Untuk detail lengkap tentang semua pengaturan yang tersedia, lihat dokumentasi referensi [Pengaturan Proyek](../project-settings/project-settings.md).

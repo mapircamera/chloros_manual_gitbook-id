@@ -1,306 +1,306 @@
-# Finishing the Processing
+# Menyelesaikan Pemrosesan
 
-Once Chloros completes processing, it's time to review your results, verify output quality, and prepare your processed images for use in your workflow. This page guides you through the final steps and next actions.
+Setelah Chloros menyelesaikan pemrosesan, saatnya untuk meninjau hasil Anda, memverifikasi kualitas output, dan menyiapkan gambar yang telah diproses untuk digunakan dalam alur kerja Anda. Halaman ini memandu Anda melalui langkah-langkah akhir dan tindakan selanjutnya.
 
-## Processing Complete Indication
+## Indikasi Pengolahan Selesai
 
-When processing finishes successfully, you'll see several indicators:
+Ketika pengolahan selesai dengan sukses, Anda akan melihat beberapa indikator:
 
-* ✅ **Progress bar**: Reaches 100% completion
-* ✅ **Debug Log**: Shows "Processing Complete" message
-* ✅ **Start button**: Becomes enabled again (ready for next processing run)
-* ✅ **Output files**: All processed images saved to camera model subfolder
-
-***
-
-## Locating Your Processed Images
-
-### Opening the Output Folder
-
-1. Click the **Main Menu** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> icon (top left)
-2. Select **"Open Project Folder"**
-3. Your file explorer opens to the project directory
-4. Locate your project by name
+* ✅ **Progress bar**: Mencapai 100% penyelesaian
+* ✅ **Debug Log**: Menampilkan pesan &quot;Processing Complete&quot;
+* ✅ **Tombol Mulai**: Menjadi aktif kembali (siap untuk pengolahan berikutnya)
+* ✅ **File output**: Semua gambar yang diproses disimpan ke subfolder model kamera
 
 ***
 
-## Reviewing Processed Images
+## Menemukan Gambar yang Telah Diproses
 
-### Quick Preview in File Explorer
+### Membuka Folder Output
 
-**Windows built-in preview:**
-
-1. Navigate to camera model subfolder
-2. Select an image file
-3. Preview appears in Windows Explorer preview pane
-4. Use arrow keys to browse through images
-
-### Preview in External Image Viewers
-
-**Recommended viewers:**
-
-* **QGIS** - Free GIS software (best for georeferenced multispectral analysis)
-* **IrfanView** - Fast, lightweight image viewer (supports TIFF)
-* **Adobe Photoshop** - Professional editing (TIFF support)
-* **GIMP** - Free alternative to Photoshop
-* **Windows Photos** - Basic viewing (may not support 16-bit TIFF)
-
-### Preview in Chloros Image Viewer
-
-Use Chloros's built-in Image Viewer for advanced visualization:
-
-1. Click an image thumbnail in the File Browser
-2. Image opens in the main preview area
-3. Click **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab in left sidebar
-4. Use [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) for interactive analysis
-
-See [Image Viewer](../image-viewer-gui/page-3.md) for detailed instructions.
+1. Klik ikon **Menu Utama** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (pojok kiri atas)
+2. Pilih **&quot;Buka Folder Proyek&quot;**
+3. Penjelajah file Anda akan terbuka ke direktori proyek
+4. Temukan proyek Anda berdasarkan nama
 
 ***
 
-## Reviewing the Debug Log
+## Meninjau Gambar yang Diolah
 
-### Check for Warnings or Errors
+### Pratinjau Cepat di File Explorer
 
-1. Open **Debug Log** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> tab
-2. Scroll through messages
-3. Look for yellow warnings or red errors
-4. Review any issues noted
-5. Contact MAPIR support for assistance
+**Pratinjau bawaan Windows:**
 
-### Saving the Log
+1. Navigasi ke subfolder model kamera
+2. Pilih file gambar
+3. Pratinjau muncul di panel pratinjau Windows Explorer
+4. Gunakan tombol panah untuk menjelajahi gambar
 
-To keep a record of processing or to send to MAPIR Support:
+### Pratinjau di Penampil Gambar Eksternal
 
-1. Click **"Copy"** or **"Download"** button
-2. Save as text file in project folder
-3. Include with project documentation
-4. Send to MAPIR support if issues encountered
+**Penampil yang direkomendasikan:**
 
-***
+* **QGIS** - Perangkat lunak GIS gratis (terbaik untuk analisis multispektral yang digeoreferensikan)
+* **IrfanView** - Penampil gambar cepat dan ringan (mendukung TIFF)
+* **Adobe Photoshop** - Pengeditan profesional (mendukung TIFF)
+* **GIMP** - Alternatif gratis untuk Photoshop
+* **Windows Photos** - Tampilan dasar (mungkin tidak mendukung TIFF 16-bit)
 
-## Common Output Issues and Solutions
+### Pratinjau di Chloros Image Viewer
 
-### Issue: Missing Output Files
+Gunakan Image Viewer bawaan Chloros untuk visualisasi lanjutan:
 
-**Possible causes:**
+1. Klik thumbnail gambar di File Browser
+2. Gambar terbuka di area pratinjau utama
+3. Klik tab **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di bilah sisi kiri
+4. Gunakan [Index/LUT Sandbox](../image-viewer-gui/index-lut-sandbox.md) untuk analisis interaktif
 
-* Files didn't meet processing criteria
-* Target-only images (excluded from export)
-* Disk space ran out during export
-* File corruption during processing
-
-**Solutions:**
-
-1. Check Debug Log for skip/error messages
-2. Verify disk space was sufficient
-3. Count files: Should match (original count - target count) × (indices + 1)
-4. Re-import and reprocess any missing files
-
-### Issue: Dark or Bright Edges (Vignetting Still Visible)
-
-**Possible causes:**
-
-* Vignette correction disabled
-* Camera/lens not in Chloros profile database
-* Extreme vignetting beyond correction capability
-
-**Solutions:**
-
-1. Verify vignette correction was enabled in Project Settings
-2. Check camera model correctly detected
-3. Contact MAPIR support if vignetting persists
-
-### Issue: Incorrect Colors or Values
-
-**Possible causes:**
-
-* No calibration targets detected
-* Wrong calibration target model selected
-* Reflectance calibration disabled
-* Poor quality target images
-
-**Solutions:**
-
-1. Verify reflectance calibration was enabled
-2. Check "Target found" messages in Debug Log
-3. Review target image quality
-4. Reprocess with proper targets marked
-
-### Issue: NDVI Values Seem Wrong
-
-**Expected NDVI ranges:**
-
-* **Water, rocks, soil**: -0.1 to 0.2
-* **Sparse/unhealthy vegetation**: 0.2 to 0.4
-* **Moderate vegetation**: 0.4 to 0.6
-* **Healthy, dense vegetation**: 0.6 to 0.9
-
-**If values are outside these ranges:**
-
-1. Verify reflectance calibration was applied
-2. Verify light sensor log was included
-3. Check calibration targets were detected
-4. Ensure correct camera model was detected
-5. Review target image capture timing and conditions
+Lihat [Image Viewer](../image-viewer-gui/opening-an-image-full-screen.md) untuk petunjuk detail.
 
 ***
 
-## Using Your Processed Images
+## Memeriksa Log Debug
 
-### For Photogrammetry / Orthomosaic Creation
+### Periksa Peringatan atau Kesalahan
 
-**Recommended workflow:**
+1. Buka tab **Debug Log** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> tab
+2. Gulir melalui pesan
+3. Cari peringatan kuning atau kesalahan merah
+4. Periksa masalah yang tercatat
+5. Hubungi dukungan MAPIR untuk bantuan
 
-1. **Import calibrated reflectance images** into photogrammetry software:
+### Menyimpan Log
+
+Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
+
+1. Klik tombol **&quot;Salin&quot;** atau **&quot;Unduh&quot;**
+2. Simpan sebagai file teks di folder proyek
+3. Sertakan dalam dokumentasi proyek
+4. Kirim ke dukungan MAPIR jika mengalami masalah
+
+***
+
+## Masalah Keluaran Umum dan Solusinya
+
+### Masalah: File Keluaran Hilang
+
+**Penyebab kemungkinan:**
+
+* File tidak memenuhi kriteria pemrosesan
+* Gambar target saja (dieksekusi dari ekspor)
+* Ruang disk habis selama ekspor
+* Korupsi file selama pemrosesan
+
+**Solusi:**
+
+1. Periksa Log Debug untuk pesan skip/error
+2. Pastikan ruang disk cukup
+3. Hitung file: Harus sesuai (jumlah asli - jumlah target) × (indeks + 1)
+4. Impor ulang dan olah ulang file yang hilang
+
+### Masalah: Tepi Gelap atau Terang (Vignetting Masih Terlihat)
+
+**Penyebab Mungkin:**
+
+* Koreksi vignetting dinonaktifkan
+* Kamera/lensa tidak terdaftar dalam basis data profil Chloros
+* Vignetting ekstrem melebihi kemampuan koreksi
+
+**Solusi:**
+
+1. Pastikan koreksi vignetting diaktifkan di Pengaturan Proyek
+2. Periksa apakah model kamera terdeteksi dengan benar
+3. Hubungi dukungan MAPIR jika vignetting tetap terjadi
+
+### Masalah: Warna atau Nilai yang Salah
+
+**Penyebab kemungkinan:**
+
+* Tidak ada target kalibrasi yang terdeteksi
+* Model target kalibrasi yang salah dipilih
+* Kalibrasi reflektansi dinonaktifkan
+* Gambar target berkualitas buruk
+
+**Solusi:**
+
+1. Pastikan kalibrasi reflektansi diaktifkan
+2. Periksa pesan &quot;Target ditemukan&quot; di Log Debug
+3. Periksa kualitas gambar target
+4. Olah ulang dengan target yang benar ditandai
+
+### Masalah: Nilai NDVI Tampak Salah
+
+**Rentang nilai NDVI yang diharapkan:**
+
+* **Air, batu, tanah**: -0,1 hingga 0,2
+* **Vegetasi jarang/tidak sehat**: 0,2 hingga 0,4
+* **Vegetasi sedang**: 0,4 hingga 0,6
+* **Vegetasi sehat dan padat**: 0,6 hingga 0,9
+
+**Jika nilai berada di luar rentang ini:**
+
+1. Verifikasi kalibrasi reflektansi telah diterapkan
+2. Verifikasi log sensor cahaya telah disertakan
+3. Periksa target kalibrasi terdeteksi
+4. Pastikan model kamera yang benar terdeteksi
+5. Review waktu dan kondisi pengambilan gambar target
+
+***
+
+## Menggunakan Gambar yang Telah Diproses
+
+### Untuk Fotogrametri / Pembuatan Orthomosaik
+
+**Alur kerja yang direkomendasikan:**
+
+1. **Impor gambar reflektansi yang dikalibrasi** ke perangkat lunak fotogrametri:
    * Pix4Dmapper
    * Agisoft Metashape
    * DroneDeploy
    * WebODM
-2. **Keep EXIF metadata**: Ensure GPS data preserved for geotagging
-3. **Calibrated workflows**: Use reflectance images for scientific accuracy
-4. **Process index mosaics**: Create NDVI orthomosaics from individual index images
-5. **Export georeferenced GeoTIFF**: For use in GIS applications
+2. **Pertahankan metadata EXIF**: Pastikan data GPS terjaga untuk geotagging
+3. **Alur kerja yang dikalibrasi**: Gunakan gambar reflektansi untuk akurasi ilmiah
+4. **Proses mosaik indeks**: Buat orthomosaik NDVI dari gambar indeks individu
+5. **Ekspor GeoTIFF yang di-georeferensi**: Untuk digunakan dalam aplikasi GIS
 
-### For GIS Analysis
+### Untuk Analisis GIS
 
-**Recommended workflow:**
+**Alur kerja yang direkomendasikan:**
 
-1. **Load into QGIS, ArcGIS, or similar**
-2. **Use 16-bit TIFF** reflectance images for multi-band analysis
-3. **Use index images** (NDVI, NDRE) as ready-to-use vegetation layers
-4. **Raster calculator**: Combine bands for custom analysis
-5. **Export**: Create classification maps, change detection, vegetation health maps
+1. **Muat ke QGIS, ArcGIS, atau sejenisnya**
+2. **Gunakan gambar reflektansi 16-bit TIFF** untuk analisis multi-band
+3. **Gunakan gambar indeks** (NDVI, NDRE) sebagai lapisan vegetasi siap pakai
+4. **Penghitung raster**: Gabungkan band untuk analisis kustom
+5. **Ekspor**: Buat peta klasifikasi, deteksi perubahan, dan peta kesehatan vegetasi
 
-### For Direct Analysis / Reporting
+### Untuk Analisis Langsung / Pelaporan
 
-**Recommended workflow:**
+**Alur kerja yang direkomendasikan:**
 
-1. **Use index images with LUT colors** for visual reports
-2. **Extract statistics**: Mean NDVI per field/plot
-3. **Time series**: Compare indices across multiple sessions
-4. **Generate reports**: Include maps, statistics, and visualizations
-
-***
-
-## Archiving and Backup
-
-### Recommended Backup Strategy
-
-**What to save:**
-
-* ✅ **Original RAW/JPG images** - Archive on separate drive/cloud
-* ✅ **Processed outputs** - Keep calibrated images and indices
-* ✅ **Project file** - Contains all settings for reprocessing if needed
-* ✅ **Debug Log** - Documents processing details
-* ✅ **Calibration target images** - For verification and reprocessing
-
-**Storage recommendations:**
-
-* **Immediate backup**: External hard drive
-* **Long-term archive**: Cloud storage (Google Drive, Dropbox, etc.)
-* **Critical data**: Keep 2-3 copies in different locations
+1. **Gunakan gambar indeks dengan warna LUT** untuk laporan visual
+2. **Ekstrak statistik**: Rata-rata NDVI per bidang/plot
+3. **Seri waktu**: Bandingkan indeks di beberapa sesi
+4. **Buat laporan**: Sertakan peta, statistik, dan visualisasi
 
 ***
 
-## Next Processing Runs
+## Arsip dan Cadangan
 
-### Reusing Project Settings
+### Strategi Cadangan yang Direkomendasikan
 
-If processing similar datasets in the future:
+**Apa yang harus disimpan:**
 
-1. **Save Project Template** (if not already done)
-2. **Create new project** using saved template
-3. **Import new images**
-4. **Process** with identical settings for consistency
+* ✅ **Gambar RAW/JPG asli** - Arsipkan di drive terpisah/cloud
+* ✅ **Hasil pemrosesan** - Simpan gambar yang dikalibrasi dan indeks
+* ✅ **Berkas proyek** - Mengandung semua pengaturan untuk pemrosesan ulang jika diperlukan
+* ✅ **Catatan debug** - Mendokumentasikan detail pemrosesan
+* ✅ **Gambar target kalibrasi** - Untuk verifikasi dan pemrosesan ulang
 
-### Batch Processing Multiple Sessions
+**Rekomendasi penyimpanan:**
 
-For multiple sessions/datasets:
-
-**Option 1: GUI - Multiple Projects**
-
-* Create separate project for each session
-* Use consistent template settings
-* Process one at a time
-
-**Option 2: Chloros CLI (Chloros+ only)**
-
-* Automate batch processing
-* Process multiple folders with scripts
-* See [CLI Documentation](../CLI.md)
-
-**Option 3: Python SDK (Chloros+ only)**
-
-* Programmatic control
-* Integration with analysis pipelines
-* See [API Documentation](../api-python-sdk.md)
+* **Cadangan segera**: Drive eksternal
+* **Arsip jangka panjang**: Penyimpanan cloud (Google Drive, Dropbox, dll.)
+* **Data kritis**: Simpan 2-3 salinan di lokasi yang berbeda
 
 ***
 
-## Troubleshooting Post-Processing
+## Pengolahan Berikutnya
 
-### Re-Processing with Different Settings
+### Menggunakan Ulang Pengaturan Proyek
 
-If results aren't satisfactory:
+Jika mengolah dataset serupa di masa depan:
 
-1. Keep original images (never delete)
-2. Open same project in Chloros
-3. Adjust settings in Project Settings panel
-4. Process again - outputs will overwrite previous results
+1. **Simpan Template Proyek** (jika belum dilakukan)
+2. **Buat proyek baru** menggunakan template yang disimpan
+3. **Impor gambar baru**
+4. **Proses** dengan pengaturan yang sama untuk konsistensi
 
-### Processing Subset of Images
+### Pemrosesan Berkelompok untuk Beberapa Sesi
 
-To reprocess only specific images:
+Untuk beberapa sesi/dataset:
 
-1. Create new project
-2. Import only the images needing reprocessing
-3. Use same settings template
-4. Process smaller dataset
+**Opsi 1: GUI - Beberapa Proyek**
 
-### Getting Help
+* Buat proyek terpisah untuk setiap sesi
+* Gunakan pengaturan templat yang konsisten
+* Proses satu per satu
 
-If you encounter issues:
+**Opsi 2: Chloros CLI (hanya Chloros+)**
 
-* 📧 **Email**: info@mapir.camera (include Debug Log)
-* 🌐 **Support**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* 📚 **FAQ**: [Frequently Asked Questions](../faq.md)
-* 📖 **Documentation**: [Chloros Manual](../)
+* Otomatisasi pemrosesan batch
+* Proses folder multiple dengan skrip
+* Lihat [Dokumentasi CLI](../CLI.md)
 
-***
+**Opsi 3: Python SDK (hanya untuk Chloros+)**
 
-## Summary: Complete Workflow
-
-You've now completed the full Chloros processing workflow:
-
-1. ✅ **Created project** - See [Projects](../projects.md)
-2. ✅ **Added files** - See [Adding Files](page-1.md)
-3. ✅ **Adjusted settings** - See [Adjusting Project Settings](adjusting-project-settings.md)
-4. ✅ **Marked targets** - See [Choosing Target Images](choosing-target-images.md)
-5. ✅ **Started processing** - See [Starting the Processing](starting-the-processing.md)
-6. ✅ **Monitored progress** - See [Monitoring the Processing](monitoring-the-processing.md)
-7. ✅ **Reviewed results** - This page
-
-**Your calibrated, reflectance-corrected multispectral images are ready for analysis!**
+* Kontrol programatik
+* Integrasi dengan alur kerja analisis
+* Lihat [Dokumentasi API](../api-python-sdk.md)
 
 ***
 
-## Additional Resources
+## Pemecahan Masalah Pasca-Pemrosesan
 
-### Advanced Features
+### Memproses Ulang dengan Pengaturan Berbeda
 
-* [**Image Viewer**](../image-viewer-gui/page-3.md) - Interactive visualization and analysis
-* [**Index/LUT Sandbox**](../image-viewer-gui/index-lut-sandbox.md) - Custom index testing
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Complete index reference
+Jika hasil tidak memuaskan:
 
-### Automation & Integration
+1. Simpan gambar asli (jangan dihapus)
+2. Buka proyek yang sama di Chloros
+3. Sesuaikan pengaturan di panel Pengaturan Proyek
+4. Proses ulang - hasil akan menggantikan hasil sebelumnya
 
-* [**CLI Documentation**](../CLI.md) - Command-line batch processing
-* [**Python SDK**](../api-python-sdk.md) - Programmatic automation
-* [**Chloros+ Features**](../#chloros) - Advanced processing capabilities
+### Memproses Subset Gambar
 
-### Support & Learning
+Untuk memproses ulang hanya gambar tertentu:
 
-* [**FAQ**](../faq.md) - Common questions answered
-* [**Calibration Targets**](../calibration-targets.md) - Understanding reflectance calibration
-* [**Supported Cameras**](../supported-cameras.md) - Compatible hardware
+1. Buat proyek baru
+2. Impor hanya gambar yang memerlukan pemrosesan ulang
+3. Gunakan templat pengaturan yang sama
+4. Proses dataset yang lebih kecil
+
+### Mendapatkan Bantuan
+
+Jika Anda mengalami masalah:
+
+* 📧 **Email**: info@mapir.camera (sertakan Log Debug)
+* 🌐 **Dukungan**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
+* 📚 **FAQ**: [Pertanyaan yang Sering Diajukan](../faq.md)
+* 📖 **Dokumentasi**: [Manual Chloros](../)
+
+***
+
+## Ringkasan: Alur Kerja Lengkap
+
+Anda telah menyelesaikan alur kerja pemrosesan Chloros secara lengkap:
+
+1. ✅ **Proyek dibuat** - Lihat [Proyek](../projects.md)
+2. ✅ **Menambahkan file** - Lihat [Menambahkan File](adding-files-to-a-project.md)
+3. ✅ **Menyesuaikan pengaturan** - Lihat [Menyesuaikan Pengaturan Proyek](adjusting-project-settings.md)
+4. ✅ **Menandai target** - Lihat [Memilih Gambar Target](choosing-target-images.md)
+5. ✅ **Memulai pemrosesan** - Lihat [Memulai Pemrosesan](starting-the-processing.md)
+6. ✅ **Pemantauan kemajuan** - Lihat [Pemantauan Pemrosesan](monitoring-the-processing.md)
+7. ✅ **Pemeriksaan hasil** - Halaman ini
+
+**Gambar multispektral yang telah dikalibrasi dan dikoreksi reflektansi Anda siap untuk dianalisis!**
+
+***
+
+## Sumber Daya Tambahan
+
+### Fitur Lanjutan
+
+* [**Penerima Gambar**](../image-viewer-gui/opening-an-image-full-screen.md) - Visualisasi dan analisis interaktif
+* [**Sandbox Indeks/LUT**](../image-viewer-gui/index-lut-sandbox.md) - Pengujian indeks kustom
+* [**Rumus Indeks Multispektral**](../project-settings/multispectral-index-formulas.md) - Referensi indeks lengkap
+
+### Otomatisasi &amp; Integrasi
+
+* [**Dokumentasi CLI**](../CLI.md) - Pemrosesan batch baris perintah
+* [**Python SDK**](../api-python-sdk.md) - Otomatisasi programatik
+* [**Fitur Chloros+**](../#chloros) - Kemampuan pemrosesan lanjutan
+
+### Dukungan &amp; Pembelajaran
+
+* [**FAQ**](../faq.md) - Pertanyaan umum yang dijawab
+* [**Target Kalibrasi**](../calibration-targets.md) - Memahami kalibrasi reflektansi
+* [**Kamera yang Didukung**](../supported-cameras.md) - Perangkat keras yang kompatibel

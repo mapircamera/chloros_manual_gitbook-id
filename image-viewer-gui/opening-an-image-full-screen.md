@@ -1,247 +1,247 @@
-# Opening an Image Full Screen
+# Membuka Gambar dalam Mode Layar Penuh
 
-The Chloros Image Viewer provides a dedicated full-screen interface for viewing, analyzing, and manipulating your multispectral images. Whether viewing original images or processed outputs, the Image Viewer offers powerful tools for inspection and analysis.
+Chloros Image Viewer menyediakan antarmuka layar penuh khusus untuk melihat, menganalisis, dan memanipulasi gambar multispektral Anda. Baik saat melihat gambar asli maupun hasil pemrosesan, Image Viewer menawarkan alat-alat canggih untuk inspeksi dan analisis.
 
-## Accessing the Image Viewer
+## Akses ke Image Viewer
 
-### From the File Browser
+### Dari File Browser
 
-The most common way to open an image in the Image Viewer:
+Cara paling umum untuk membuka gambar di Image Viewer:
 
-1. Ensure you're in the **File Browser** tab <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
-2. Click any **image thumbnail** in the image grid
-3. The image opens in the **main preview area** (center of screen)
-4. The image is now loaded and ready for full-screen viewing
+1. Pastikan Anda berada di tab **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
+2. Klik thumbnail gambar apa pun di grid gambar
+3. Gambar terbuka di area pratinjau utama (tengah layar)
+4. Gambar sekarang dimuat dan siap untuk ditampilkan dalam mode layar penuh
 
-### Opening the Image Viewer Tab
+### Membuka Tab Image Viewer
 
-Once an image is loaded in the preview area:
+Setelah gambar dimuat di area pratinjau:
 
-1. Click the **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> icon in the left sidebar
-2. The Image Viewer tab opens, displaying the selected image full-screen
-3. Advanced viewing and analysis tools become available in the left sidebar
-
-***
-
-## Image Viewer Interface Overview
-
-### Main Display Area
-
-The largest portion of the screen shows your image:
-
-* **Full resolution**: Images displayed at native resolution
-* **Zoomable**: Use controls or mouse wheel to zoom
-* **Pannable**: Click and drag to move around when zoomed
-* **Aspect ratio maintained**: Images scale proportionally
+1. Klik ikon **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di bilah sisi kiri
+2. Tab Image Viewer terbuka, menampilkan gambar yang dipilih dalam mode layar penuh
+3. Alat tampilan dan analisis lanjutan tersedia di bilah sisi kiri
 
 ***
 
-## Viewing Options
+## Ringkasan Antarmuka Image Viewer
 
-### Basic Image Navigation
+### Area Tampilan Utama
 
-#### Browse Through Images
+Bagian terbesar layar menampilkan gambar Anda:
 
-Navigate through your image set using keyboard shortcuts or buttons:
-
-* **Next image**: Click → button or press **→** (Right Arrow) key
-* **Previous image**: Click ← button or press **←** (Left Arrow) key
-* **Jump to specific image**: Return to File Browser and click desired thumbnail
-
-#### Zoom Controls
-
-Adjust magnification to inspect image details:
-
-**Zoom In:**
-
-* Click **+** (Plus) button
-* Press **+** or **=** key
-* Scroll mouse wheel **up**
-
-**Zoom Out:**
-
-* Click **−** (Minus) button
-* Press **−** (Minus) key
-* Scroll mouse wheel **down**
-
-**Fit to Screen:**
-
-* Click **↔** (Fit) button
-* Press **0** (Zero) key
-* Double-click on image
-
-#### Pan When Zoomed
-
-When zoomed in beyond screen size:
-
-1. Move mouse cursor over image
-2. Click and **hold left mouse button**
-3. **Drag** to move image around
-4. Release to stop panning
-
-**Alternative**: Use arrow keys to pan in small increments
+* **Resolusi penuh**: Gambar ditampilkan pada resolusi asli
+* **Dapat diperbesar/perkecil**: Gunakan kontrol atau roda mouse untuk memperbesar/perkecil
+* **Dapat digeser**: Klik dan seret untuk berpindah saat diperbesar
+* **Perbandingan aspek terjaga**: Gambar diskalakan secara proporsional
 
 ***
 
-## Pixel Value Inspection
+## Opsi Tampilan
 
-### Viewing Pixel Values at Cursor
+### Navigasi Gambar Dasar
 
-As you move your mouse cursor over the image, pixel values display in real-time:
+#### Menjelajahi Gambar
 
-**Value display location:**
+Navigasi melalui set gambar Anda menggunakan pintasan keyboard atau tombol:
 
-* **Floating number and red line in right side index LUT gradient legend**
-* **When zoomed in further, floating value near cursor and highlighted pixel**
-* Shows values for pixel **under cursor or highlighted**
-* Updates as you move mouse
+* **Gambar berikutnya**: Klik tombol → atau tekan tombol **→** (Panah Kanan)
+* **Gambar sebelumnya**: Klik tombol ← atau tekan tombol **←** (Panah Kiri)
+* **Lompat ke gambar tertentu**: Kembali ke File Browser dan klik thumbnail yang diinginkan
 
-***
+#### Kontrol Perbesaran
 
-## Image Types You Can View
+Sesuaikan perbesaran untuk memeriksa detail gambar:
 
-### Original Images (Pre-Processing)
+**Perbesar:**
 
-**RAW + JPG images from camera:**
+* Klik tombol **+** (Plus)
+* Tekan tombol **+** atau **=**
+* Gulir roda mouse ke atas
 
-* Display RAW data as previewed
-* Show original, uncorrected values
-* Useful for checking image quality before processing
+**Perkecil:**
 
-### Calibrated Reflectance Images
+* Klik tombol **−** (Minus)
+* Tekan tombol **−** (Minus)
+* Gulir roda mouse ke bawah
 
-**After processing:**
+**Sesuaikan dengan Layar:**
 
-* Vignette corrected
-* Reflectance calibrated
-* Multi-band TIFF (Red, Green, NIR, etc.)
-* Scientific data ready for analysis
+* Klik tombol **↔** (Sesuaikan)
+* Tekan tombol **0** (Nol)
+* Klik ganda pada gambar
 
-### Index Images
+#### Geser Saat Diperbesar
 
-**NDVI, NDRE, GNDVI, etc. (\_NDVI.tif files):**
+Saat diperbesar melebihi ukuran layar:
 
-* Single-band grayscale images
-* Pixel values represent index calculation results
-* Range typically -1 to +1 for normalized indices
-* Can apply color LUTs for visualization
+1. Pindahkan kursor mouse di atas gambar
+2. Klik dan **tahan tombol mouse kiri**
+3. **Seret** untuk memindahkan gambar
+4. Lepaskan untuk menghentikan pergerakan
 
-***
-
-## Index and LUT Application
-
-Apply multispectral indices and color Look-Up Tables:
-
-1. Locate **Index/LUT Sandbox** in **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar
-2. Select vegetation index (NDVI, NDRE, etc.)
-3. Select multispectral formula, or create your own custom one (Chloros+ only)
-4. Apply color LUT gradient for visualization
-5. Adjust value ranges and thresholds
-
-See [Index/LUT Sandbox](index-lut-sandbox.md) for detailed instructions.
+**Alternatif**: Gunakan tombol panah untuk memindahkan gambar dalam increment kecil
 
 ***
 
-## Keyboard Shortcuts
+## Pemeriksaan Nilai Piksel
 
-### Navigation
+### Menampilkan Nilai Piksel di Kursor
 
-* **→** (Right Arrow): Next image
-* **←** (Left Arrow): Previous image
-* **Home**: First image in list
-* **End**: Last image in list
+Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan secara real-time:
 
-### Zoom
+**Lokasi tampilan nilai:**
 
-* **+** or **=**: Zoom in
-* **−**: Zoom out
-* **0** (Zero): Fit to screen
-* **Mouse Wheel**: Zoom in/out
-
-### View Controls
-
-* **P**: Toggle pixel percent mode
-* **L**: Toggle layers panel
-* **Esc**: Close full-screen or return to File Browser
-
-### Other
-
-* **Ctrl+S**: Save current image
-* **F**: Full-screen mode (if available)
+* **Angka mengambang dan garis merah di legenda gradien LUT indeks sisi kanan**
+* **Saat diperbesar lebih lanjut, nilai mengambang di dekat kursor dan piksel yang ditandai**
+* Menampilkan nilai untuk piksel **di bawah kursor atau yang ditandai**
+* Diperbarui saat Anda menggerakkan mouse
 
 ***
 
-### Verifying Index Calculations
+## Jenis Gambar yang Dapat Ditampilkan
 
-Check that indices calculated correctly:
+### Gambar Asli (Pra-Pemrosesan)
 
-1. Open NDVI or other index image
-2. Check vegetation areas:
-   * **NDVI**: Should show 0.4-0.9 for healthy plants
-   * **NDRE**: Higher values for vigorous growth
-   * **GNDVI**: Similar to NDVI but chlorophyll-sensitive
-3. Check non-vegetation:
-   * **Soil**: Near 0 or slightly negative
-   * **Water**: Negative values (-0.5 to 0)
+**Gambar RAW + JPG dari kamera:**
 
-***
+* Menampilkan data RAW sebagai pratinjau
+* Menampilkan nilai asli yang belum dikoreksi
+* Berguna untuk memeriksa kualitas gambar sebelum pemrosesan
 
-## Troubleshooting Viewing Issues
+### Gambar Reflektansi yang Dikalibrasi
 
-### Image Won't Open
+**Setelah pemrosesan:**
 
-**Possible causes:**
+* Koreksi vignette
+* Reflektansi dikalibrasi
+* Multi-band TIFF (Red, Green, NIR, dll.)
+* Data ilmiah siap untuk analisis
 
-* File corrupted during processing
-* Unsupported file format
-* Insufficient memory for large image
+### Gambar Indeks
 
-**Solutions:**
+**NDVI, NDRE, GNDVI, dll. (berkas \_NDVI.tif):**
 
-1. Try opening in external viewer to verify file integrity
-2. Check file format matches expected type
-3. Close other applications to free memory
-4. Try smaller/different image
-
-### Black or White Image Display
-
-**Possible causes:**
-
-* Value range outside display capability
-* 32-bit float image with unusual values
-* Index calculation error
-
-**Solutions:**
-
-1. Check pixel values - if all very low or very high, adjust display range
-2. Try opening in QGIS or similar with auto-range adjustment
-3. Check Debug Log from processing for errors
-
-### Pixel Values Seem Wrong
-
-**Possible causes:**
-
-* Viewing wrong image (original vs processed)
-* Calibration didn't apply correctly
-* Light sensor data wasn't included in input
-* Percent mode toggled incorrectly
-
-**Solutions:**
-
-1. Verify you're viewing processed output (check filename suffix)
-2. Check percent mode button state
-3. Compare with known-good images from same dataset
+* Gambar monokrom tunggal
+* Nilai piksel mewakili hasil perhitungan indeks
+* Rentang biasanya -1 hingga +1 untuk indeks yang dinormalisasi
+* Dapat menerapkan tabel warna LUT untuk visualisasi
 
 ***
 
-## Next Steps
+## Aplikasi Indeks dan LUT
 
-Now that you can view images full-screen:
+Terapkan indeks multispektral dan tabel warna LUT:
 
-* [**Image Layers**](image-layers.md) - Learn about multi-band visualization
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Apply custom indices and color mapping
-* [**Multispectral Index Formulas**](../project-settings/multispectral-index-formulas.md) - Understand available indices
+1. Temukan **Index/LUT Sandbox** di **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di bilah sisi
+2. Pilih indeks vegetasi (NDVI, NDRE, dll.)
+3. Pilih rumus multispektral, atau buat rumus kustom Anda sendiri (hanya Chloros+)
+4. Terapkan gradien LUT warna untuk visualisasi
+5. Sesuaikan rentang nilai dan ambang batas
 
-For processing workflow, see:
+Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk petunjuk detail.
 
-* [**Processing Images (GUI)**](../processing-images-gui/page-1.md) - Complete processing guide
+***
+
+## Pintasan Keyboard
+
+### Navigasi
+
+* **→** (Panah Kanan): Gambar berikutnya
+* **←** (Panah Kiri): Gambar sebelumnya
+* **Home**: Gambar pertama dalam daftar
+* **End**: Gambar terakhir dalam daftar
+
+### Perbesaran
+
+* **+** atau **=**: Perbesar
+* **−**: Perkecil
+* **0** (Nol): Sesuaikan dengan layar
+* **Roda Mouse**: Perbesar/perkecil
+
+### Kontrol Tampilan
+
+* **P**: Aktifkan/nonaktifkan mode persentase piksel
+* **L**: Aktifkan/nonaktifkan panel lapisan
+* **Esc**: Tutup mode layar penuh atau kembali ke Penjelajah File
+
+### Lainnya
+
+* **Ctrl+S**: Simpan gambar saat ini
+* **F**: Mode layar penuh (jika tersedia)
+
+***
+
+### Verifikasi Perhitungan Indeks
+
+Pastikan indeks dihitung dengan benar:
+
+1. Buka NDVI atau gambar indeks lainnya
+2. Periksa area vegetasi:
+   * **NDVI**: Harus menampilkan 0,4-0,9 untuk tanaman sehat
+   * **NDRE**: Nilai lebih tinggi untuk pertumbuhan yang vigor
+   * **GNDVI**: Mirip dengan NDVI tetapi sensitif terhadap klorofil
+3. Periksa area non-vegetasi:
+   * **Tanah**: Dekat 0 atau sedikit negatif
+   * **Air**: Nilai negatif (-0,5 hingga 0)
+
+***
+
+## Pemecahan Masalah Masalah Tampilan
+
+### Gambar Tidak Bisa Dibuka
+
+**Penyebab kemungkinan:**
+
+* File rusak selama pemrosesan
+* Format file tidak didukung
+* Memori tidak cukup untuk gambar besar
+
+**Solusi:**
+
+1. Coba buka di pemutar eksternal untuk memverifikasi integritas file
+2. Periksa format file sesuai dengan jenis yang diharapkan
+3. Tutup aplikasi lain untuk membebaskan memori
+4. Coba gambar yang lebih kecil/berbeda
+
+### Tampilan Gambar Hitam atau Putih
+
+**Penyebab kemungkinan:**
+
+* Rentang nilai di luar kemampuan tampilan
+* Gambar 32-bit float dengan nilai yang tidak biasa
+* Kesalahan perhitungan indeks
+
+**Solusi:**
+
+1. Periksa nilai piksel - jika semua sangat rendah atau sangat tinggi, sesuaikan rentang tampilan
+2. Coba buka di QGIS atau aplikasi serupa dengan penyesuaian rentang otomatis
+3. Periksa Log Debug dari pemrosesan untuk kesalahan
+
+### Nilai Piksel Tampak Salah
+
+**Penyebab Mungkin:**
+
+* Melihat gambar yang salah (asli vs yang diproses)
+* Kalibrasi tidak diterapkan dengan benar
+* Data sensor cahaya tidak termasuk dalam input
+* Mode persentase diaktifkan secara salah
+
+**Solusi:**
+
+1. Verifikasi bahwa Anda melihat output yang diproses (periksa sufiks nama file)
+2. Periksa status tombol mode persentase
+3. Bandingkan dengan gambar yang diketahui baik dari dataset yang sama
+
+***
+
+## Langkah Selanjutnya
+
+Sekarang Anda dapat melihat gambar dalam mode layar penuh:
+
+* [**Lapisan Gambar**](image-layers.md) - Pelajari tentang visualisasi multi-band
+* [**Sandbox Indeks/LUT**](index-lut-sandbox.md) - Terapkan indeks kustom dan pemetaan warna
+* [**Rumus Indeks Multispektral**](../project-settings/multispectral-index-formulas.md) - Pahami indeks yang tersedia
+
+Untuk alur kerja pemrosesan, lihat:
+
+* [**Pemrosesan Gambar (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Panduan pemrosesan lengkap

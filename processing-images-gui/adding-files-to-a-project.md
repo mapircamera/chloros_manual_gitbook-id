@@ -1,204 +1,204 @@
-# Adding Files to a Project
+# Menambahkan Berkas ke Proyek
 
-Once you've created or opened a project in Chloros, the next step is to add your multispectral images to begin processing. The File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> tab makes it easy to import images and manage your dataset.
+Setelah Anda membuat atau membuka proyek di Chloros, langkah berikutnya adalah menambahkan gambar multispektral Anda untuk memulai pemrosesan. Pengelola Berkas<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> memudahkan Anda untuk mengimpor gambar dan mengelola dataset Anda.
 
-## Accessing the File Browser
+## Akses File Browser
 
-1. Open or create a project in Chloros
-2. Click the **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> icon in the left sidebar
-3. The File Browser panel will display your project's file list
+1. Buka atau buat proyek di Chloros
+2. Klik ikon **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> di bilah sisi kiri
+3. Panel File Browser akan menampilkan daftar file proyek Anda
 
-{% hint style="info" %}
-**Supported File Types**: Chloros supports RAW+JPG and JPG image files from MAPIR Survey3W and Survey3N cameras. Only RAW+JPG are recommended.
+{% hint style=&quot;info&quot; %}
+**Tipe File yang Didukung**: Chloros mendukung file gambar RAW+JPG dan JPG dari kamera MAPIR Survey3W dan Survey3N. Hanya RAW+JPG yang direkomendasikan.
 {% endhint %}
 
 ***
 
-## Adding Images to Your Project
+## Menambahkan Gambar ke Proyek Anda
 
-There are two primary ways to add images to your project:
+Ada dua cara utama untuk menambahkan gambar ke proyek Anda:
 
-### Method 1: Add Files
+### Metode 1: Tambahkan Berkas
 
-Use this option to import individual image files or a small selection of files.
+Gunakan opsi ini untuk mengimpor berkas gambar individu atau sejumlah kecil berkas.
 
-1. Click the **"Add Files"** button at the top of the File Browser panel
-2. Navigate to the folder containing your images
-3. Select one or more image files (hold **Ctrl** to select multiple files)
-4. Click **"Open"** to import the selected files
+1. Klik tombol **&quot;Tambahkan File&quot;** di bagian atas panel File Browser
+2. Navigasi ke folder yang berisi gambar Anda
+3. Pilih satu atau lebih file gambar (tahan **Ctrl** untuk memilih beberapa file)
+4. Klik **&quot;Buka&quot;** untuk mengimpor file yang dipilih
 
-### Method 2: Add Folder
+### Metode 2: Tambahkan Folder
 
-Use this option to import all images from a folder at once.
+Gunakan opsi ini untuk mengimpor semua gambar dari folder sekaligus.
 
-1. Click the **"Add Folder"** button at the top of the File Browser panel
-2. Navigate to and select the folder containing your capture session images
-3. Click **"Select Folder"** to import all supported images from that folder
+1. Klik tombol **&quot;Tambahkan Folder&quot;** di bagian atas panel File Browser
+2. Navigasi ke dan pilih folder yang berisi gambar sesi penangkapan Anda
+3. Klik **&quot;Pilih Folder&quot;** untuk mengimpor semua gambar yang didukung dari folder tersebut
 
 ***
 
-## Understanding the File Browser Table
+## Memahami Tabel File Browser
 
-Once images are imported, they appear in a table with the following columns:
+Setelah gambar diimpor, mereka akan muncul dalam tabel dengan kolom-kolom berikut:
 
 ### Thumbnail
 
-* Small preview of each image
-* Click thumbnail to view full image in the main preview area
+* Pratinjau kecil dari setiap gambar
+* Klik thumbnail untuk melihat gambar penuh di area pratinjau utama
 
-### File Name
+### Nama File
 
-* Original filename from the camera
-* Maintains camera naming convention (e.g., IMG\_0001.RAW)
+* Nama file asli dari kamera
+* Mempertahankan konvensi penamaan kamera (misalnya, IMG\_0001.RAW)
 
-### Timestamp
+### Tanggal dan Waktu
 
-* Date and time the image was captured
-* Extracted from image EXIF metadata
-* Used for PPK synchronization and calibration target detection
+* Tanggal dan waktu gambar diambil
+* Diambil dari metadata EXIF gambar
+* Digunakan untuk sinkronisasi PPK dan deteksi target kalibrasi
 
-### Camera Model
+### Model Kamera
 
-* Automatically detected camera and filter configuration
-* Examples: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
-* Used to apply correct processing profiles
+* Konfigurasi kamera dan filter yang terdeteksi secara otomatis
+* Contoh: Survey3W\_RGN, Survey3N\_OCN, Survey3W\_RGB
+* Digunakan untuk menerapkan profil pemrosesan yang benar
 
-### Target Column (Checkbox)
+### Kolom Target (Kotak Centang)
 
-* Check this box for images that contain calibration targets
-* Greatly speeds up target detection during processing
-* See [Choosing Target Images](choosing-target-images.md) for details
-
-***
-
-## Managing Files in Your Project
-
-### Removing Files
-
-To remove unwanted images from your project:
-
-1. Select one or more images in the File Browser table
-2. Click the **"Remove Selected"** button
-3. Confirm removal (files are not deleted from disk, only removed from the project)
-
-### Sorting and Filtering
-
-* **Sort by column**: Click any column header to sort images
-* **Timestamp sort**: Useful for organizing chronological capture sequences
-* **Camera model filter**: Group images by camera type if using multiple cameras
+* Centang kotak ini untuk gambar yang mengandung target kalibrasi
+* Sangat mempercepat deteksi target selama pemrosesan
+* Lihat [Memilih Gambar Target](choosing-target-images.md) untuk detail
 
 ***
 
-## Image Preview
+## Mengelola File dalam Proyek Anda
 
-### Viewing Full Image
+### Menghapus File
 
-Click any image thumbnail in the File Browser to display it in the main preview area:
+Untuk menghapus gambar yang tidak diinginkan dari proyek Anda:
 
-1. Image appears in the center preview panel
-2. Use zoom controls to inspect image details
-3. Navigate between images using arrow keys
+1. Pilih satu atau lebih gambar di tabel File Browser
+2. Klik tombol **&quot;Hapus yang Terpilih&quot;**
+3. Konfirmasi penghapusan (file tidak dihapus dari disk, hanya dihapus dari proyek)
 
-### Quick Navigation
+### Pengurutan dan Penyaringan
 
-* **Previous Image**: Click left arrow or press ← key
-* **Next Image**: Click right arrow or press → key
-* **Zoom In/Out**: Use mouse wheel or zoom buttons
-* **Pan**: Click and drag on image when zoomed in
+* **Urutkan berdasarkan kolom**: Klik header kolom mana pun untuk mengurutkan gambar
+* **Pemisahan berdasarkan waktu**: Berguna untuk mengorganisir urutan pengambilan gambar secara kronologis
+* **Filter model kamera**: Kelompokkan gambar berdasarkan jenis kamera jika menggunakan beberapa kamera
 
 ***
 
-## Duplicate File Handling
+## Pratinjau Gambar
 
-Chloros automatically detects and ignores duplicate files:
+### Menampilkan Gambar Penuh
 
-* Files with identical filenames are skipped
-* Prevents accidental double-processing
-* Warning message displayed when duplicates are detected
+Klik thumbnail gambar apa pun di File Browser untuk menampilkannya di area pratinjau utama:
 
-{% hint style="warning" %}
-**Important**: Do not rename or modify your original image files before importing. Chloros relies on original filenames and metadata for proper processing.
+1. Gambar muncul di panel pratinjau tengah
+2. Gunakan kontrol zoom untuk memeriksa detail gambar
+3. Navigasi antar gambar menggunakan tombol panah
+
+### Navigasi Cepat
+
+* **Gambar Sebelumnya**: Klik panah kiri atau tekan tombol ←
+* **Gambar Berikutnya**: Klik panah kanan atau tekan tombol →
+* **Zoom In/Out**: Gunakan roda mouse atau tombol zoom
+* **Geser**: Klik dan seret pada gambar saat diperbesar
+
+***
+
+## Penanganan File Duplikat
+
+Chloros secara otomatis mendeteksi dan mengabaikan file duplikat:
+
+* File dengan nama file yang identik akan dilewati
+* Mencegah pemrosesan ganda yang tidak disengaja
+* Pesan peringatan ditampilkan saat duplikat terdeteksi
+
+{% hint style=&quot;warning&quot; %}
+**Penting**: Jangan mengganti nama atau memodifikasi file gambar asli sebelum mengimpor. Chloros bergantung pada nama file asli dan metadata untuk pemrosesan yang benar.
 {% endhint %}
 
 ***
 
-## Mixed Camera Datasets
+## Kumpulan Data Kamera Campuran
 
-If your project contains images from multiple MAPIR cameras:
+Jika proyek Anda mengandung gambar dari beberapa kamera MAPIR:
 
-1. Chloros automatically detects each camera model
-2. Each camera type is processed with its appropriate calibration profile
-3. File Browser displays camera model in the Camera Model column
-4. Processing applies correct settings for each camera type
+1. Chloros secara otomatis mendeteksi setiap model kamera
+2. Setiap jenis kamera diproses dengan profil kalibrasi yang sesuai
+3. File Browser menampilkan model kamera di kolom Model Kamera
+4. Pengolahan menerapkan pengaturan yang benar untuk setiap jenis kamera
 
-**Example scenario**: Survey3W RGN + Survey3N OCN dual-camera setup
-
-***
-
-## Best Practices
-
-### Organize Before Import
-
-* Keep calibration target images in the same folder as survey images
-* Maintain original folder structure from your camera/SD card
-* Don't mix datasets from different sessions in one project
-
-### File Naming
-
-* Preserve original camera filenames (IMG\_0001.RAW, etc.)
-* Don't rename files before import
-* Original names contain important metadata
-
-### Calibration Target Images
-
-* Always include 1-2 calibration target images per session
-* Capture targets before and after the capture session
-* Place targets in the same lighting conditions as capture area
-* Mark target images using the Target checkbox to speed up processing
+**Contoh skenario**: Survey3W RGN + Survey3N OCN konfigurasi kamera ganda
 
 ***
 
-## Common Issues and Solutions
+## Praktik Terbaik
 
-### Images Not Appearing After Import
+### Organisasi Sebelum Impor
 
-**Possible causes:**
+* Simpan gambar target kalibrasi di folder yang sama dengan gambar survei
+* Pertahankan struktur folder asli dari kamera/kartu SD Anda
+* Jangan mencampur dataset dari sesi yang berbeda dalam satu proyek
 
-* File format not supported (only RAW+JPG and JPG from MAPIR cameras)
-* Images are from non-MAPIR cameras (see [Supported Cameras](../supported-cameras.md))
-* File corruption or incomplete transfer from SD card
+### Penamaan File
 
-**Solution**: Verify file format and camera model compatibility
+* Pertahankan nama file kamera asli (IMG\_0001.RAW, dll.)
+* Jangan mengganti nama file sebelum impor
+* Nama asli mengandung metadata penting
 
-### Camera Model Not Detected
+### Gambar Target Kalibrasi
 
-**Possible causes:**
-
-* Modified EXIF metadata
-* Images edited in external software
-* Incomplete file transfer
-
-**Solution**: Re-import original, unmodified files from camera/SD card
-
-### Missing Timestamps
-
-**Possible causes:**
-
-* Camera clock not set correctly
-* EXIF data stripped by external software
-
-**Solution**: Verify camera time settings were correct during capture
+* Selalu sertakan 1-2 gambar target kalibrasi per sesi
+* Ambil target sebelum dan setelah sesi pengambilan gambar
+* Letakkan target dalam kondisi pencahayaan yang sama dengan area pengambilan gambar
+* Tandai gambar target menggunakan kotak centang Target untuk mempercepat pemrosesan
 
 ***
 
-## Next Steps
+## Masalah Umum dan Solusi
 
-Once your files are imported:
+### Gambar Tidak Muncul Setelah Impor
 
-1. **Review the file list** - Ensure all images loaded correctly
-2. **Check camera models** - Verify correct camera detection
-3. **Mark target images** - See [Choosing Target Images](choosing-target-images.md)
-4. **Adjust settings** - Configure processing options in [Project Settings](adjusting-project-settings.md)
-5. **Start processing** - See [Starting the Processing](starting-the-processing.md)
+**Penyebab kemungkinan:**
 
-For detailed information about project configuration, see [Adjusting Project Settings](adjusting-project-settings.md).
+* Format file tidak didukung (hanya RAW+JPG dan JPG dari kamera MAPIR)
+* Gambar berasal dari kamera non-MAPIR (lihat [Kamera yang Didukung](../supported-cameras.md))
+* Korupsi file atau transfer tidak lengkap dari kartu SD
+
+**Solusi:** Verifikasi kompatibilitas format file dan model kamera
+
+### Model Kamera Tidak Terdeteksi
+
+**Penyebab kemungkinan:**
+
+* Metadata EXIF yang dimodifikasi
+* Gambar diedit menggunakan perangkat lunak eksternal
+* Transfer file tidak lengkap
+
+**Solusi:** Impor ulang file asli yang belum dimodifikasi dari kamera/kartu SD
+
+### Tanggal dan Waktu Hilang
+
+**Penyebab kemungkinan:**
+
+* Jam kamera tidak disetel dengan benar
+* Data EXIF dihapus oleh perangkat lunak eksternal
+
+**Solusi**: Verifikasi pengaturan waktu kamera benar saat pengambilan gambar
+
+***
+
+## Langkah Selanjutnya
+
+Setelah file diimpor:
+
+1. **Periksa daftar file** - Pastikan semua gambar dimuat dengan benar
+2. **Periksa model kamera** - Verifikasi deteksi kamera yang benar
+3. **Tandai gambar target** - Lihat [Memilih Gambar Target](choosing-target-images.md)
+4. **Sesuaikan pengaturan** - Konfigurasikan opsi pemrosesan di [Pengaturan Proyek](adjusting-project-settings.md)
+5. **Mulai pemrosesan** - Lihat [Memulai Pemrosesan](starting-the-processing.md)
+
+Untuk informasi detail tentang konfigurasi proyek, lihat [Menyesuaikan Pengaturan Proyek](adjusting-project-settings.md).

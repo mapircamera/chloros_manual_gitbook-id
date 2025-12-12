@@ -1,165 +1,165 @@
-# Monitoring the Processing
+# Pemantauan Proses
 
-Once processing has started, Chloros provides several ways to monitor progress, check for issues, and understand what's happening with your dataset. This page explains how to track your processing and interpret the information Chloros provides.
+Setelah proses dimulai, Chloros menyediakan beberapa cara untuk memantau kemajuan, memeriksa masalah, dan memahami apa yang terjadi dengan dataset Anda. Halaman ini menjelaskan cara melacak proses Anda dan menafsirkan informasi yang disediakan oleh Chloros.
 
-## Progress Bar Overview
+## Ringkasan Bar Kemajuan
 
-The progress bar in the top header shows real-time processing status and completion percentage.
+Bar kemajuan di header atas menampilkan status pemrosesan real-time dan persentase penyelesaian.
 
-### Free Mode Progress Bar
+### Bar Kemajuan Mode Gratis
 
-For users without Chloros+ license:
+Untuk pengguna tanpa lisensi Chloros+:
 
-**2-Stage Progress Display:**
+**Tampilan Kemajuan 2 Tahap:**
 
-1. **Target Detect** - Finding calibration targets in images
-2. **Processing** - Applying corrections and exporting
+1. **Deteksi Target** - Mencari target kalibrasi dalam gambar
+2. **Pemrosesan** - Menerapkan koreksi dan mengekspor
 
-**Progress bar shows:**
+**Progress bar menampilkan:**
 
-* Overall completion percentage (0-100%)
-* Current stage name
-* Simple horizontal bar visualization
+* Persentase penyelesaian keseluruhan (0-100%)
+* Nama tahap saat ini
+* Visualisasi bilah horizontal sederhana
 
-### Chloros+ Progress Bar
+### Progress Bar Chloros+
 
-For users with Chloros+ license:
+Untuk pengguna dengan lisensi Chloros+:
 
-**4-Stage Progress Display:**
+**Tampilan Progres 4 Tahap:**
 
-1. **Detecting** - Finding calibration targets
-2. **Analyzing** - Examining images and preparing pipeline
-3. **Calibrating** - Applying vignette and reflectance corrections
-4. **Exporting** - Saving processed files
+1. **Deteksi** - Mencari target kalibrasi
+2. **Analisis** - Menganalisis gambar dan menyiapkan pipeline
+3. **Kalibrasi** - Menerapkan koreksi vignette dan reflektansi
+4. **Ekspor** - Menyimpan file yang diproses
 
-**Interactive Features:**
+**Fitur Interaktif:**
 
-* **Hover over** progress bar to see expanded 4-stage panel
-* **Click** progress bar to freeze/pin the expanded panel
-* **Click again** to unfreeze and auto-hide on mouse leave
-* Each stage shows individual progress (0-100%)
-
-***
-
-## Understanding Each Processing Stage
-
-### Stage 1: Detecting (Target Detection)
-
-**What's happening:**
-
-* Chloros scans images marked with Target checkbox
-* Computer vision algorithms identify the 4 calibration panels
-* Reflectance values extracted from each panel
-* Target timestamps recorded for proper calibration scheduling
-
-**Duration:**
-
-* With marked targets: 10-60 seconds
-* Without marked targets: 5-30+ minutes (scans all images)
-
-**Progress indicator:**
-
-* Detecting: 0% → 100%
-* Number of images scanned
-* Targets found count
-
-**What to watch for:**
-
-* Should complete quickly if targets properly marked
-* If taking too long, targets may not be marked
-* Check Debug Log for "Target found" messages
-
-### Stage 2: Analyzing
-
-**What's happening:**
-
-* Reading image EXIF metadata (timestamps, exposure settings)
-* Determining calibration strategy based on target timestamps
-* Organizing image processing queue
-* Preparing parallel processing workers (Chloros+ only)
-
-**Duration:** 5-30 seconds
-
-**Progress indicator:**
-
-* Analyzing: 0% → 100%
-* Fast stage, usually completes quickly
-
-**What to watch for:**
-
-* Should progress steadily without pauses
-* Warnings about missing metadata will appear in Debug Log
-
-### Stage 3: Calibrating
-
-**What's happening:**
-
-* **Debayering**: Converting RAW Bayer pattern to 3 channels
-* **Vignette correction**: Removing lens edge darkening
-* **Reflectance calibration**: Normalizing with target values
-* **Index calculation**: Computing multispectral indices
-* Processing each image through the full pipeline
-
-**Duration:** Majority of total processing time (60-80%)
-
-**Progress indicator:**
-
-* Calibrating: 0% → 100%
-* Current image being processed
-* Images completed / Total images
-
-**Processing behavior:**
-
-* **Free mode**: Processes one image at a time sequentially
-* **Chloros+ mode**: Processes up to 16 images simultaneously
-* **GPU acceleration**: Significantly speeds up this stage
-
-**What to watch for:**
-
-* Steady progress through image count
-* Check Debug Log for per-image completion messages
-* Warnings about image quality or calibration issues
-
-### Stage 4: Exporting
-
-**What's happening:**
-
-* Writing calibrated images to disk in selected format
-* Exporting multispectral index images with LUT colors
-* Creating camera model subfolders
-* Preserving original filenames with appropriate suffixes
-
-**Duration:** 10-20% of total processing time
-
-**Progress indicator:**
-
-* Exporting: 0% → 100%
-* Files being written
-* Export format and destination
-
-**What to watch for:**
-
-* Disk space warnings
-* File write errors
-* Completion of all configured outputs
+* **Arahkan kursor ke** bilah kemajuan untuk melihat panel 4 tahap yang diperluas
+* **Klik** bilah kemajuan untuk membekukan/menancapkan panel yang diperluas
+* **Klik lagi** untuk membatalkan pembekuan dan menyembunyikan otomatis saat mouse meninggalkan area
+* Setiap tahap menampilkan kemajuan individu (0-100%)
 
 ***
 
-## Debug Log Tab
+## Memahami Setiap Tahap Pemrosesan
 
-The Debug Log provides detailed information about processing progress and any issues encountered.
+### Tahap 1: Deteksi (Deteksi Target)
 
-### Accessing the Debug Log
+**Apa yang terjadi:**
 
-1. Click the **Debug Log** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> icon in the left sidebar
-2. Log panel opens showing real-time processing messages
-3. Auto-scrolls to show latest messages
+* Chloros memindai gambar yang ditandai dengan kotak centang Target
+* Algoritma penglihatan komputer mengidentifikasi 4 panel kalibrasi
+* Nilai reflektansi diekstraksi dari setiap panel
+* Cap waktu target dicatat untuk penjadwalan kalibrasi yang tepat
 
-### Understanding Log Messages
+**Durasi:**
 
-#### Information Messages (White/Gray)
+* Dengan target yang ditandai: 10-60 detik
+* Tanpa target yang ditandai: 5-30+ menit (memindai semua gambar)
 
-Normal processing updates:
+**Indikator kemajuan:**
+
+* Deteksi: 0% → 100%
+* Jumlah gambar yang dipindai
+* Jumlah target yang ditemukan
+
+**Hal yang perlu diperhatikan:**
+
+* Harus selesai dengan cepat jika target ditandai dengan benar
+* Jika memakan waktu terlalu lama, target mungkin tidak ditandai
+* Periksa Log Debug untuk pesan &quot;Target ditemukan&quot;
+
+### Tahap 2: Analisis
+
+**Apa yang terjadi:**
+
+* Membaca metadata EXIF gambar (cap waktu, pengaturan eksposur)
+* Menentukan strategi kalibrasi berdasarkan cap waktu target
+* Mengorganisir antrian pemrosesan gambar
+* Menyiapkan pekerja pemrosesan paralel (hanya Chloros+)
+
+**Durasi:** 5-30 detik
+
+**Indikator kemajuan:**
+
+* Menganalisis: 0% → 100%
+* Tahap cepat, biasanya selesai dengan cepat
+
+**Hal yang perlu diperhatikan:**
+
+* Harus berjalan secara bertahap tanpa jeda
+* Peringatan tentang metadata yang hilang akan muncul di Debug Log
+
+### Tahap 3: Kalibrasi
+
+**Apa yang terjadi:**
+
+* **Debayering**: Mengonversi pola Bayer RAW menjadi 3 kanal
+* **Koreksi vignette**: Menghapus gelap di tepi lensa
+* **Kalibrasi reflektansi**: Menormalkan dengan nilai target
+* **Perhitungan indeks**: Menghitung indeks multispektral
+* Memproses setiap gambar melalui seluruh pipeline
+
+**Durasi:** Mayoritas waktu pemrosesan total (60-80%)
+
+**Indikator kemajuan:**
+
+* Kalibrasi: 0% → 100%
+* Gambar saat ini sedang diproses
+* Gambar yang selesai / Total gambar
+
+**Perilaku pemrosesan:**
+
+* **Mode bebas**: Memproses satu gambar sekaligus secara berurutan
+* **Mode Chloros+**: Memproses hingga 16 gambar secara bersamaan
+* **Percepatan GPU**: Secara signifikan mempercepat tahap ini
+
+**Hal yang perlu diperhatikan:**
+
+* Kemajuan yang stabil melalui jumlah gambar
+* Periksa Log Debug untuk pesan penyelesaian per gambar
+* Peringatan tentang kualitas gambar atau masalah kalibrasi
+
+### Tahap 4: Ekspor
+
+**Apa yang terjadi:**
+
+* Menulis gambar yang dikalibrasi ke disk dalam format yang dipilih
+* Mengekspor gambar indeks multispektral dengan warna LUT
+* Membuat subfolder model kamera
+* Mempertahankan nama file asli dengan sufiks yang sesuai
+
+**Durasi:** 10-20% dari total waktu pemrosesan
+
+**Indikator kemajuan:**
+
+* Ekspor: 0% → 100%
+* File sedang ditulis
+* Format ekspor dan tujuan
+
+**Hal yang perlu diperhatikan:**
+
+* Peringatan ruang disk
+* Kesalahan penulisan file
+* Selesainya semua output yang dikonfigurasi
+
+***
+
+## Tab Log Debug
+
+Log Debug menyediakan informasi detail tentang kemajuan pemrosesan dan masalah yang ditemui.
+
+### Mengakses Log Debug
+
+1. Klik ikon **Log Debug** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> di bilah sisi kiri
+2. Panel log terbuka menampilkan pesan pemrosesan real-time
+3. Otomatis menggulir untuk menampilkan pesan terbaru
+
+### Memahami Pesan Log
+
+#### Pesan Informasi (Putih/Abu-abu)
+
+Pembaruan pemrosesan normal:
 
 ```
 [INFO] Processing started
@@ -169,9 +169,9 @@ Normal processing updates:
 [INFO] Processing complete
 ```
 
-#### Warning Messages (Yellow)
+#### Pesan Peringatan (Kuning)
 
-Non-critical issues that don't stop processing:
+Masalah non-kritis yang tidak menghentikan pemrosesan:
 
 ```
 [WARN] No GPS data found in IMG_0145.RAW
@@ -179,11 +179,11 @@ Non-critical issues that don't stop processing:
 [WARN] Low contrast in calibration panel - results may vary
 ```
 
-**Action:** Review warnings after processing, but don't interrupt
+**Tindakan:** Periksa peringatan setelah pemrosesan, tetapi jangan hentikan
 
-#### Error Messages (Red)
+#### Pesan Kesalahan (Red)
 
-Critical issues that may cause processing to fail:
+Masalah kritis yang dapat menyebabkan pemrosesan gagal:
 
 ```
 [ERROR] Cannot write file - disk full
@@ -191,202 +191,202 @@ Critical issues that may cause processing to fail:
 [ERROR] No targets detected - enable reflectance calibration or mark target images
 ```
 
-**Action:** Stop processing, resolve error, restart
+**Tindakan:** Hentikan pemrosesan, selesaikan kesalahan, mulai ulang
 
-### Common Log Messages
+### Pesan Log Umum
 
-| Message                          | Meaning                                | Action Needed                                         |
+| Pesan                          | Arti                                | Tindakan yang Diperlukan                                         |
 | -------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| "Target detected in \[filename]" | Calibration target found successfully  | None - normal                                         |
-| "Processing image X of Y"        | Current progress update                | None - normal                                         |
-| "No targets found"               | No calibration targets detected        | Mark target images or disable reflectance calibration |
-| "Insufficient disk space"        | Not enough storage for output          | Free up disk space                                    |
-| "Skipping corrupted file"        | Image file is damaged                  | Re-copy file from SD card                             |
-| "PPK data applied"               | GPS corrections from .daq file applied | None - normal                                         |
+| &quot;Target terdeteksi di \[nama file]&quot; | Target kalibrasi ditemukan dengan sukses  | Tidak ada - normal                                         |
+| &quot;Memproses gambar X dari Y&quot;        | Pembaruan progres saat ini                | Tidak ada - normal                                         |
+| &quot;Tidak ada target yang ditemukan&quot;               | Tidak ada target kalibrasi yang terdeteksi        | Tandai gambar target atau nonaktifkan kalibrasi reflektansi |
+| &quot;Ruang disk tidak cukup&quot;        | Ruang penyimpanan tidak cukup untuk output          | Bebaskan ruang disk                                    |
+| &quot;Melewati file rusak&quot;        | File gambar rusak                  | Salin ulang file dari kartu SD                             |
+| &quot;Data PPK diterapkan&quot;               | Koreksi GPS dari file .daq diterapkan | Tidak ada - normal                                         |
 
-### Copying Log Data
+### Menyalin Data Log
 
-To copy log for troubleshooting or support:
+Untuk menyalin log untuk pemecahan masalah atau dukungan:
 
-1. Open Debug Log panel
-2. Click **"Copy Log"** button (or right-click → Select All)
-3. Paste into text file or email
-4. Send to MAPIR support if needed
+1. Buka panel Debug Log
+2. Klik tombol **&quot;Copy Log&quot;** (atau klik kanan → Pilih Semua)
+3. Tempel ke file teks atau email
+4. Kirim ke dukungan MAPIR jika diperlukan
 
 ***
 
-## System Resource Monitoring
+## Pemantauan Sumber Daya Sistem
 
-### CPU Usage
+### Penggunaan CPU
 
-**Free Mode:**
+**Mode Bebas:**
 
-* 1 CPU core at \~100%
-* Other cores idle or available
-* System remains responsive
+* 1 inti CPU pada \~100%
+* Inti lainnya idle atau tersedia
+* Sistem tetap responsif
 
-**Chloros+ Parallel Mode:**
+**Chloros+ Mode Paralel:**
 
-* Multiple cores at 80-100% (up to 16 cores)
-* High overall CPU utilization
-* System may feel less responsive
+* Beberapa inti pada 80-100% (hingga 16 inti)
+* Penggunaan CPU keseluruhan tinggi
+* Sistem mungkin terasa kurang responsif
 
-**To monitor:**
+**Untuk memantau:**
 
 * Windows Task Manager (Ctrl+Shift+Esc)
-* Performance tab → CPU section
-* Look for "Chloros" or "chloros-backend" processes
+* Tab Kinerja → Bagian CPU
+* Cari proses &quot;Chloros&quot; atau &quot;chloros-backend&quot;
 
-### Memory (RAM) Usage
+### Penggunaan Memori (RAM)
 
-**Typical usage:**
+**Penggunaan tipikal:**
 
-* Small projects (< 100 images): 2-4 GB
-* Medium projects (100-500 images): 4-8 GB
-* Large projects (500+ images): 8-16 GB
-* Chloros+ parallel mode uses more RAM
+* Proyek kecil (&lt; 100 gambar): 2-4 GB
+* Proyek sedang (100-500 gambar): 4-8 GB
+* Proyek besar (500+ gambar): 8-16 GB
+* Mode paralel Chloros+ menggunakan lebih banyak RAM
 
-**If memory is low:**
+**Jika memori rendah:**
 
-* Process smaller batches
-* Close other applications
-* Upgrade RAM if regularly processing large datasets
+* Proses batch yang lebih kecil
+* Tutup aplikasi lain
+* Tingkatkan RAM jika sering memproses dataset besar
 
-### GPU Usage (Chloros+ with CUDA)
+### Penggunaan GPU (Chloros+ dengan CUDA)
 
-When GPU acceleration is enabled:
+Saat akselerasi GPU diaktifkan:
 
-* NVIDIA GPU shows high utilization (60-90%)
-* VRAM usage increases (requires 4GB+ VRAM)
-* Calibrating stage is significantly faster
+* GPU NVIDIA menunjukkan penggunaan tinggi (60-90%)
+* Penggunaan VRAM meningkat (membutuhkan 4GB+ VRAM)
+* Tahap kalibrasi menjadi jauh lebih cepat
 
-**To monitor:**
+**Untuk memantau:**
 
-* NVIDIA System Tray icon
+* Ikon NVIDIA di System Tray
 * Task Manager → Performance → GPU
-* GPU-Z or similar monitoring tool
+* GPU-Z atau alat pemantauan serupa
 
 ### Disk I/O
 
-**What to expect:**
+**Apa yang diharapkan:**
 
-* High disk read during Analyzing stage
-* High disk write during Exporting stage
-* SSD significantly faster than HDD
+* Pembacaan disk tinggi selama tahap Analisis
+* Penulisan disk tinggi selama tahap Ekspor
+* SSD jauh lebih cepat daripada HDD
 
-**Performance tip:**
+**Tips kinerja:**
 
-* Use SSD for project folder when possible
-* Avoid network drives for large datasets
-* Ensure disk isn't near capacity (affects write speed)
-
-***
-
-## Detecting Problems During Processing
-
-### Warning Signs
-
-**Progress stalls (no change for 5+ minutes):**
-
-* Check Debug Log for errors
-* Verify disk space available
-* Check Task Manager to ensure Chloros is running
-
-**Error messages appear frequently:**
-
-* Stop processing and review errors
-* Common causes: disk space, corrupted files, memory issues
-* See Troubleshooting section below
-
-**System becomes unresponsive:**
-
-* Chloros+ parallel mode using too many resources
-* Consider reducing concurrent tasks or upgrading hardware
-* Free mode is less resource-intensive
-
-### When to Stop Processing
-
-Stop processing if you see:
-
-* ❌ "Disk full" or "Cannot write file" errors
-* ❌ Repeated image file corruption errors
-* ❌ System completely frozen (not responding)
-* ❌ Realized wrong settings were configured
-* ❌ Wrong images imported
-
-**How to stop:**
-
-1. Click **Stop/Cancel button** (replaces Start button)
-2. Processing halts, progress is lost
-3. Fix issues and restart from beginning
+* Gunakan SSD untuk folder proyek jika memungkinkan
+* Hindari drive jaringan untuk dataset besar
+* Pastikan disk tidak mendekati kapasitas maksimum (mempengaruhi kecepatan penulisan)
 
 ***
 
-## Troubleshooting During Processing
+## Mendeteksi Masalah Selama Pemrosesan
 
-### Processing is Very Slow
+### Tanda Peringatan
 
-**Possible causes:**
+**Proses terhenti (tidak ada perubahan selama 5+ menit):**
 
-* Unmarked target images (scanning all images)
-* HDD instead of SSD storage
-* Insufficient system resources
-* Many indices configured
-* Network drive access
+* Periksa Log Debug untuk kesalahan
+* Verifikasi ruang disk yang tersedia
+* Periksa Task Manager untuk memastikan Chloros berjalan
 
-**Solutions:**
+**Pesan kesalahan muncul secara berkala:**
 
-1. If just started and in Detecting stage: Cancel, mark targets, restart
-2. For future: Use SSD, reduce indices, upgrade hardware
-3. Consider CLI for batch processing large datasets
+* Hentikan pemrosesan dan tinjau kesalahan
+* Penyebab umum: ruang disk, file rusak, masalah memori
+* Lihat bagian Pemecahan Masalah di bawah
 
-### "Disk Space" Warnings
+**Sistem menjadi tidak responsif:**
 
-**Solutions:**
+* Chloros+ mode paralel menggunakan terlalu banyak sumber daya
+* Pertimbangkan untuk mengurangi tugas bersamaan atau meng-upgrade hardware
+* Mode bebas lebih hemat sumber daya
 
-1. Free up disk space immediately
-2. Move project to drive with more space
-3. Reduce number of indices to export
-4. Use JPG format instead of TIFF (smaller files)
+### Kapan Harus Menghentikan Proses
 
-### Frequent "Corrupted File" Messages
+Hentikan proses jika Anda melihat:
 
-**Solutions:**
+* ❌ Kesalahan &quot;Disk penuh&quot; atau &quot;Tidak dapat menulis file&quot;
+* ❌ Kesalahan kerusakan berulang pada file gambar
+* ❌ Sistem benar-benar macet (tidak merespons)
+* ❌ Menyadari pengaturan yang salah telah dikonfigurasi
+* ❌ Gambar yang salah diimpor
 
-1. Re-copy images from SD card to ensure integrity
-2. Test SD card for errors
-3. Remove corrupted files from project
-4. Continue processing remaining images
+**Cara menghentikan:**
 
-### System Overheating / Throttling
-
-**Solutions:**
-
-1. Ensure adequate ventilation
-2. Clean dust from computer vents
-3. Reduce processing load (use Free mode instead of Chloros+)
-4. Process during cooler times of day
+1. Klik tombol **Stop/Cancel** (menggantikan tombol Start)
+2. Pemrosesan berhenti, progres hilang
+3. Perbaiki masalah dan mulai ulang dari awal
 
 ***
 
-## Processing Complete Notification
+## Pemecahan Masalah Selama Pemrosesan
 
-When processing finishes:
+### Pemrosesan Sangat Lambat
 
-* Progress bar reaches 100%
-* **"Processing Complete"** message appears in Debug Log
-* Start button becomes enabled again
-* All output files are in camera model subfolder
+**Penyebab kemungkinan:**
+
+* Gambar target tidak ditandai (memindai semua gambar)
+* Penyimpanan HDD alih-alih SSD
+* Sumber daya sistem tidak mencukupi
+* Banyak indeks yang dikonfigurasi
+* Akses drive jaringan
+
+**Solusi:**
+
+1. Jika baru dimulai dan berada di tahap Deteksi: Batalkan, tandai target, mulai ulang
+2. Untuk masa depan: Gunakan SSD, kurangi indeks, tingkatkan hardware
+3. Pertimbangkan CLI untuk pemrosesan batch dataset besar
+
+### Peringatan &quot;Ruang Disk&quot;
+
+**Solusi:**
+
+1. Bebaskan ruang disk segera
+2. Pindahkan proyek ke drive dengan ruang lebih besar
+3. Kurangi jumlah indeks yang diekspor
+4. Gunakan format JPG alih-alih TIFF (berkas lebih kecil)
+
+### Pesan &quot;Berkas Rusak&quot; yang Sering Muncul
+
+**Solusi:**
+
+1. Salin ulang gambar dari kartu SD untuk memastikan integritas
+2. Uji kartu SD untuk kesalahan
+3. Hapus berkas rusak dari proyek
+4. Lanjutkan pemrosesan gambar yang tersisa
+
+### Overheating Sistem / Throttling
+
+**Solusi:**
+
+1. Pastikan ventilasi yang cukup
+2. Bersihkan debu dari ventilasi komputer
+3. Kurangi beban pemrosesan (gunakan mode Free alih-alih Chloros+)
+4. Proses pada waktu yang lebih sejuk di siang hari
 
 ***
 
-## Next Steps
+## Pemberitahuan Pemrosesan Selesai
 
-Once processing completes:
+Saat pemrosesan selesai:
 
-1. **Review results** - See [Finishing the Processing](finishing-the-processing.md)
-2. **Check output folder** - Verify all files exported correctly
-3. **Review Debug Log** - Check for any warnings or errors
-4. **Preview processed images** - Use Image Viewer or external software
+* Bar kemajuan mencapai 100%
+* Pesan **&quot;Pemrosesan Selesai&quot;** muncul di Log Debug
+* Tombol Mulai kembali aktif
+* Semua file output berada di subfolder model kamera
 
-For information about reviewing and using your processed results, see [Finishing the Processing](finishing-the-processing.md).
+***
+
+## Langkah Selanjutnya
+
+Setelah pemrosesan selesai:
+
+1. **Periksa hasil** - Lihat [Menyelesaikan Pemrosesan](finishing-the-processing.md)
+2. **Periksa folder output** - Pastikan semua file diekspor dengan benar
+3. **Periksa Debug Log** - Periksa apakah ada peringatan atau kesalahan
+4. **Pratinjau gambar yang diproses** - Gunakan Image Viewer atau perangkat lunak eksternal
+
+Untuk informasi tentang meninjau dan menggunakan hasil pemrosesan Anda, lihat [Finishing the Processing](finishing-the-processing.md).
