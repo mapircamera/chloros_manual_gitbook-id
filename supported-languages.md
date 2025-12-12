@@ -1,47 +1,49 @@
 # Bahasa yang Didukung
 
-Chloros menyediakan dukungan antarmuka penuh dalam **38 bahasa di seluruh dunia**, sehingga dapat diakses oleh pengguna di seluruh dunia. Anda dapat beralih bahasa secara instan di semua antarmuka: Desktop, Browser, CLI, dan Python SDK.
+Chloros menyediakan dukungan antarmuka penuh dalam **38 bahasa di seluruh dunia**, sehingga dapat diakses oleh pengguna di seluruh dunia. Anda dapat mengganti bahasa secara instan di semua antarmuka: Desktop, Browser, CLI, dan Python SDK.
 
 Chloros mendukung bahasa-bahasa berikut:
 
-1. 🇺🇸 **Bahasa Inggris**
-2. 🇪🇸 **Español** (Spanyol)
-3. 🇵🇹 **Português** (Portugis)
-4. 🇫🇷 **Français** (Prancis)
-5. 🇩🇪 **Deutsch** (Jerman)
-6. 🇮🇹 **Italiano** (Italia)
-7. 🇯🇵 **日本語** (Jepang)
-8. 🇰🇷 **한국어** (Korea)
-9. 🇨🇳 **简体中文** (Mandarin Sederhana)
-10. 🇹🇼 **繁體中文** (Mandarin Tradisional)
-11. 🇷🇺 **Русский** (Rusia)
-12. 🇳🇱 **Nederlands** (Belanda)
-13. 🇸🇦 **العربية** (Arab)
-14. 🇵🇱 **Polski** (Polandia)
-15. 🇹🇷 **Türkçe** (Turki)
-16. 🇮🇳 **हिंदी** (Hindi)
-17. 🇮🇩 **Bahasa Indonesia** (Indonesia)
-18. 🇻🇳 **Tiếng Việt** (Vietnam)
-19. 🇹🇭 **ไทย** (Thailand)
-20. 🇸🇪 **Svenska** (Swedia)
-21. 🇩🇰 **Dansk** (Denmark)
-22. 🇳🇴 **Norsk** (Norwegia)
-23. 🇫🇮 **Suomi** (Finlandia)
-24. 🇬🇷 **Ελληνικά** (Yunani)
-25. 🇨🇿 **Čeština** (Ceko)
-26. 🇭🇺 **Magyar** (Hongaria)
-27. 🇷🇴 **Română** (Rumania)
-28. 🇺🇦 **Українська** (Ukraina)
-29. 🇧🇷 **Português Brasileiro** (Portugis Brasil)
-30. 🇭🇰 **粵語** (Cantonese)
-31. 🇲🇾 **Bahasa Melayu** (Melayu)
-32. 🇸🇰 **Slovenčina** (Slovak)
-33. 🇧🇬 **Български** (Bulgaria)
-34. 🇭🇷 **Hrvatski** (Kroasia)
-35. 🇱🇹 **Lietuvių** (Lituania)
-36. 🇱🇻 **Latviešu** (Latvia)
-37. 🇪🇪 **Eesti** (Estonia)
-38. 🇸🇮 **Slovenščina** (Slovenia)
+| # | Bahasa | Nama Asli | Kode CLI |
+|---|----------|-------------|----------|
+| 1 | 🇺🇸 Inggris | Inggris | `en` |
+| 2 | 🇪🇸 Spanyol | Español | `es` |
+| 3 | 🇵🇹 Portugis | Português | `pt` |
+| 4 | 🇫🇷 Prancis | Français | `fr` |
+| 5 | 🇩🇪 Jerman | Deutsch | `de` |
+| 6 | 🇮🇹 Italia | Italiano | `it` |
+| 7 | 🇯🇵 Jepang | 日本語 | `ja` |
+| 8 | 🇰🇷 Korea | 한국어 | `ko` |
+| 9 | 🇨🇳 Tionghoa (Sederhana) | 简体中文 | `zh` |
+| 10 | 🇹🇼 Mandarin (Tradisional) | 繁體中文 | `zh-TW` |
+| 11 | 🇷🇺 Rusia | Русский | `ru` |
+| 12 | 🇳🇱 Belanda | Nederlands | `nl` |
+| 13 | 🇸🇦 Arab | العربية | `ar` |
+| 14 | 🇵🇱 Polandia | Polski | `pl` |
+| 15 | 🇹🇷 Turki | Türkçe | `tr` |
+| 16 | 🇮🇳 Hindi | हिंदी | `hi` |
+| 17 | 🇮🇩 Indonesia | Bahasa Indonesia | `id` |
+| 18 | 🇻🇳 Vietnam | Tiếng Việt | `vi` |
+| 19 | 🇹🇭 Thailand | ไทย | `th` |
+| 20 | 🇸🇪 Swedia | Svenska | `sv` |
+| 21 | 🇩🇰 Denmark | Dansk | `da` |
+| 22 | 🇳🇴 Norwegia | Norsk | `no` |
+| 23 | 🇫🇮 Finlandia | Suomi | `fi` |
+| 24 | 🇬🇷 Yunani | Ελληνικά | `el` |
+| 25 | 🇨🇿 Ceko | Čeština | `cs` |
+| 26 | 🇭🇺 Hongaria | Magyar | `hu` |
+| 27 | 🇷🇴 Rumania | Română | `ro` |
+| 28 | 🇺🇦 Ukraina | Українська | `uk` |
+| 29 | 🇧🇷 Portugis Brasil | Português Brasileiro | `pt-BR` |
+| 30 | 🇭🇰 Kanton | 粵語 | `zh-HK` |
+| 31 | 🇲🇾 Melayu | Bahasa Melayu | `ms` |
+| 32 | 🇸🇰 Slovak | Slovenčina | `sk` |
+| 33 | 🇧🇬 Bulgaria | Български | `bg` |
+| 34 | 🇭🇷 Kroasia | Hrvatski | `hr` |
+| 35 | 🇱🇹 Lithuania | Lietuvių | `lt` |
+| 36 | 🇱🇻 Latvia | Latviešu | `lv` |
+| 37 | 🇪🇪 Estonia | Eesti | `et` |
+| 38 | 🇸🇮 Slovenia | Slovenščina | `sl` |
 
 ## Cara Mengubah Bahasa
 
@@ -54,7 +56,26 @@ Chloros mendukung bahasa-bahasa berikut:
 
 ### Di Chloros CLI
 
-Gunakan parameter bahasa dengan perintah Anda untuk mengatur bahasa antarmuka.
+Gunakan perintah `language` untuk melihat atau mengubah bahasa antarmuka CLI:
+
+```bash
+# View current language
+chloros-cli language
+
+# Change to Spanish
+chloros-cli language es
+
+# Change to Chinese (Simplified)
+chloros-cli language zh
+
+# Change to Brazilian Portuguese
+chloros-cli language pt-BR
+
+# List all available languages
+chloros-cli language --list
+```
+
+Untuk detail lebih lanjut, lihat [dokumentasi CLI](CLI.md).
 
 ### Di Chloros Python SDK
 
