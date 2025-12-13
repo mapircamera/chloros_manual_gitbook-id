@@ -1,17 +1,16 @@
 ---
-description: Frequently Asked Questions
+description: Pertanyaan yang Sering Diajukan
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/faq
 ---
-
-# FAQ
+# Pertanyaan Umum
 
 <details>
 
 <summary>Apakah saya dapat memproses gambar dari kamera yang bukan merek MAPIR menggunakan Chloros?</summary>
 
-Tidak, Chloros hanya mendukung pemrosesan gambar kamera MAPIR. Silakan lihat daftar [model kamera yang didukung](supported-cameras.md) untuk informasi lebih lanjut. Kami juga menawarkan pemrosesan kamera lain di MAPIR Cloud, lihat daftar lengkap [di sini](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
+Tidak, Chloros hanya mendukung pemrosesan gambar dari kamera MAPIR. Silakan lihat daftar [model kamera yang didukung](supported-cameras.md) untuk informasi lebih lanjut. Kami juga menawarkan pemrosesan kamera lain di MAPIR Cloud, lihat daftar lengkap [di sini](https://mapir.gitbook.io/mapir-cloud/supported-cameras).
 
 </details>
 
@@ -43,7 +42,7 @@ Tidak. Set data gambar Survey3 harus memiliki eksposur tetap/terkunci, jadi tida
 
 <summary>Apakah Chloros dapat memproses atau menganalisis gambar ortomosaik?</summary>
 
-Tidak. Hanya gambar kamera MAPIR individu yang didukung, bukan gambar yang disatukan seperti peta orthomosaik.
+Tidak. Hanya gambar kamera MAPIR individu yang didukung, bukan gambar yang disatukan seperti peta orthomosaic.
 
 </details>
 

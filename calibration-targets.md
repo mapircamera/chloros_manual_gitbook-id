@@ -1,13 +1,12 @@
 ---
-description: Lab-measured panels used to calibrate captured data in post processing
+description: Lab-measured panels used to calibrate captured data in post-processing
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/calibration-targets
 ---
-
 # Target Kalibrasi
 
-MAPIR menyediakan berbagai target kalibrasi untuk berbagai aplikasi. T4-R50 yang kompak di bawah ini mengandung 4 panel yang telah diukur untuk reflektansi cahaya dari 250 - 2.500 nm.
+MAPIR menyediakan berbagai target kalibrasi untuk berbagai aplikasi. Target kalibrasi T4-R50 yang kompak di bawah ini terdiri dari 4 panel yang telah diukur untuk reflektansi cahaya pada rentang 250 - 2.500 nm.
 
 <figure><img src=".gitbook/assets/t4-r50_2.jpg" alt=""><figcaption><p>MAPIR T4-R50</p></figcaption></figure>
 
