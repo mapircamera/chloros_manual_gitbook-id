@@ -1,5 +1,5 @@
 ---
-description: Lab-measured panels used to calibrate captured data in post-processing
+description: Panel yang diukur di laboratorium digunakan untuk mengkalibrasi data yang diambil selama pemrosesan pasca.
 metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/calibration-targets
