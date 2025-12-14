@@ -3,7 +3,6 @@ metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/download
 ---
-
 # Unduh
 
 Unduh versi terbaru Chloros untuk Windows agar dapat memulai pemrosesan gambar multispektral.
@@ -21,7 +20,7 @@ Unduh versi terbaru Chloros untuk Windows agar dapat memulai pemrosesan gambar m
 | **Internet**         | Diperlukan untuk aktivasi lisensi | Diperlukan untuk aktivasi lisensi |
 
 {% hint style=&quot;info&quot; %}
-**Accelerasi GPU**: Pengguna Chloros+ dengan GPU NVIDIA (4GB+ VRAM) dapat menggunakan akselerasi CUDA untuk pemrosesan yang jauh lebih cepat.
+**Accelerasi GPU**: Pengguna Chloros+ dengan GPU NVIDIA (VRAM 4GB+) dapat menggunakan akselerasi CUDA untuk pemrosesan yang jauh lebih cepat.
 {% endhint %}
 
 ***
@@ -84,12 +83,12 @@ Pemasangan Chloros mencakup:
 
 ## Upgrade ke Chloros+
 
-Buka fitur lanjutan dengan langganan Chloros+:
+Aktifkan fitur lanjutan dengan langganan Chloros+:
 
 * 🚀 **Pemrosesan Multi-threaded** - Memproses gambar secara paralel
-* ⚡ **Peningkatan GPU (CUDA)** - Manfaatkan kekuatan GPU NVIDIA
+* ⚡ **Percepatan GPU (CUDA)** - Manfaatkan kekuatan GPU NVIDIA
 * 💻 **Akses CLI** - Otomatisasi dengan alat baris perintah
-* 🐍 **Python SDK** - Akses programatik API
+* 🐍 **Python SDK** - Akses API secara programatik
 * 📱 **Perangkat Multi** - Gunakan pada 2-10+ perangkat (tergantung paket)
 * 🧮 **Rumus Kustom** - Buat indeks multispektral kustom
 
@@ -166,3 +165,5 @@ Penggunaan, distribusi, atau modifikasi tanpa izin dilarang.
 **Versi Gratis**: Tersedia untuk penggunaan pribadi dan komersial dengan batasan fitur
 
 **Chloros+**: Lisensi berlangganan untuk fitur lanjutan dan implementasi komersial
+
+<figure><img src=".gitbook/assets/t3-125_2.jpg" alt=""><figcaption></figcaption></figure>

@@ -14,7 +14,7 @@ Sebelum mengklik tombol Mulai, pastikan semuanya siap:
 * [ ] **Format ekspor dipilih** - Format output sesuai dengan alur kerja Anda
 
 {% hint style=&quot;info&quot; %}
-**Tips**: Klik beberapa gambar di File Browser untuk memverifikasi bahwa mereka dimuat dengan benar sebelum pemrosesan.
+**Tips**: Klik beberapa gambar di File Browser untuk memverifikasi bahwa gambar-gambar tersebut dimuat dengan benar sebelum pemrosesan.
 {% endhint %}
 
 ***
@@ -64,7 +64,7 @@ Chloros beroperasi dalam dua mode pemrosesan berbeda tergantung pada lisensi And
 **Waktu pemrosesan:**
 
 * Jauh lebih lambat daripada mode paralel Chloros+
-* Cocok untuk dataset kecil hingga sedang (&lt; 200 gambar)
+* Cocok untuk dataset kecil hingga menengah (&lt; 200 gambar)
 
 ### Mode Chloros+ (Pemrosesan Paralel)
 
@@ -80,7 +80,7 @@ Chloros beroperasi dalam dua mode pemrosesan berbeda tergantung pada lisensi And
 **Bar kemajuan menampilkan 4 tahap:**
 
 1. **Deteksi** - Mencari target kalibrasi
-2. **Analisis** - Menganalisis metadata gambar dan mempersiapkan pipeline
+2. **Analisis** - Memeriksa metadata gambar dan mempersiapkan pipeline
 3. **Kalibrasi** - Menerapkan koreksi dan kalibrasi
 4. **Ekspor** - Menyimpan gambar yang diproses dan indeks
 
@@ -97,7 +97,7 @@ Chloros beroperasi dalam dua mode pemrosesan berbeda tergantung pada lisensi And
 * Akselerasi GPU lebih meningkatkan kecepatan
 
 {% hint style=&quot;info&quot; %}
-**Chloros+ Kecepatan**: Pemrosesan paralel dapat 5-10 kali lebih cepat daripada mode berurutan untuk dataset besar. Proyek 500 gambar yang memakan waktu 2 jam dalam mode gratis dapat diselesaikan dalam 15-20 menit dengan Chloros+.
+**Chloros+ Kecepatan**: Pemrosesan paralel dapat 5-10 kali lebih cepat daripada mode berurutan untuk dataset besar. Proyek 500 gambar yang memakan waktu 2 jam dalam mode gratis dapat selesai dalam 15-20 menit dengan Chloros+.
 {% endhint %}
 
 ***
@@ -161,9 +161,9 @@ Chloros beroperasi dalam dua mode pemrosesan berbeda tergantung pada lisensi And
 
 ## Perilaku Pemrosesan
 
-### Jalur Pemrosesan Otomatis
+### Alur Pemrosesan Otomatis
 
-Setelah dimulai, seluruh jalur pemrosesan berjalan secara otomatis:
+Setelah dimulai, seluruh alur pemrosesan berjalan secara otomatis:
 
 * Tidak memerlukan interaksi pengguna
 * Semua langkah yang dikonfigurasi dieksekusi secara berurutan
@@ -185,7 +185,7 @@ Setelah dimulai, seluruh jalur pemrosesan berjalan secara otomatis:
 * Hindari memulai tugas CPU-intensif lainnya
 
 {% hint style=&quot;warning&quot; %}
-**Tips Kinerja**: Untuk kinerja terbaik Chloros+, tutup aplikasi lain dan biarkan Chloros menggunakan sumber daya sistem penuh.
+**Tips Kinerja**: Untuk kinerja optimal Chloros+, tutup aplikasi lain dan biarkan Chloros menggunakan sumber daya sistem penuh.
 {% endhint %}
 
 ### Pemrosesan Tidak Dapat Dihentikan
@@ -193,9 +193,9 @@ Setelah dimulai, seluruh jalur pemrosesan berjalan secara otomatis:
 **Batasan penting:**
 
 * Setelah dimulai, pemrosesan tidak dapat dihentikan
-* Anda dapat membatalkan pemrosesan, tetapi progres akan hilang
+* Anda dapat membatalkan pemrosesan, tetapi kemajuan akan hilang
 * Hasil parsial tidak disimpan
-* Harus memulai ulang dari awal jika dibatalkan
+* Harus memulai dari awal jika dibatalkan
 
 **Tips perencanaan:** Untuk proyek yang sangat besar, pertimbangkan untuk memproses dalam batch atau menggunakan CLI untuk kontrol yang lebih baik.
 
@@ -222,10 +222,10 @@ Jika Anda perlu menghentikan pemrosesan:
 
 1. Temukan tombol **Stop/Cancel** (menggantikan tombol Start selama pemrosesan)
 2. Klik tombol Stop
-3. Pemrosesan dihentikan segera
-4. Hasil sebagian akan dibuang
+3. Pemrosesan berhenti segera
+4. Hasil sebagian akan dihapus
 
-### Kapan Harus Membatalkan
+### Kapan Membatalkan
 
 **Alasan yang sah untuk membatalkan:**
 
@@ -271,7 +271,7 @@ Waktu pemrosesan aktual bervariasi secara signifikan berdasarkan:
 | 1000 gambar | 4-6 jam   | 1,5-2 jam      | 40-60 menit      |
 
 {% hint style=&quot;info&quot; %}
-**Pertama Kali**: Pemrosesan awal mungkin memakan waktu lebih lama karena Chloros membangun cache dan profil. Pemrosesan dataset serupa selanjutnya akan lebih cepat.
+**Pertama Kali Dijalankan**: Pemrosesan awal mungkin memakan waktu lebih lama karena Chloros membangun cache dan profil. Pemrosesan dataset serupa selanjutnya akan lebih cepat.
 {% endhint %}
 
 ***
@@ -280,7 +280,7 @@ Waktu pemrosesan aktual bervariasi secara signifikan berdasarkan:
 
 ### Tombol Mulai Dinonaktifkan (Berwarna Abu-abu)
 
-**Penyebab kemungkinan:**
+**Penyebab Mungkin:**
 
 * Tidak ada gambar yang diimpor
 * Backend belum sepenuhnya dimulai
@@ -298,7 +298,7 @@ Waktu pemrosesan aktual bervariasi secara signifikan berdasarkan:
 
 **Penyebab kemungkinan:**
 
-* Tidak ada gambar valid dalam proyek
+* Tidak ada gambar yang valid dalam proyek
 * File gambar rusak
 * Ruang disk tidak mencukupi
 * Memori (RAM) tidak mencukupi

@@ -1,6 +1,6 @@
 # Memilih Gambar Target
 
-Menandai gambar yang mengandung target kalibrasi merupakan langkah penting yang secara signifikan mempercepat proses pipa kerja Chloros. Dengan memilih gambar target secara pra-seleksi, Anda menghilangkan kebutuhan Chloros untuk memindai setiap gambar dalam dataset Anda untuk mencari target kalibrasi.
+Menandai gambar yang mengandung target kalibrasi adalah langkah penting yang secara signifikan mempercepat alur kerja pemrosesan Chloros. Dengan memilih gambar target secara pra-seleksi, Anda menghilangkan kebutuhan Chloros untuk memindai setiap gambar dalam dataset Anda untuk mencari target kalibrasi.
 
 ## Mengapa Menandai Gambar Target?
 
@@ -56,7 +56,7 @@ Sebelum pemrosesan, periksa kembali:
 
 * [ ] Semua gambar dengan target kalibrasi telah dicentang
 * [ ] Tidak ada gambar non-target yang tercentang secara tidak sengaja
-* [ ] Target terlihat jelas di gambar yang dicentang
+* [ ] Target terlihat jelas pada gambar yang dicentang
 
 ***
 
@@ -197,7 +197,7 @@ Sebelum memulai pemrosesan, verifikasi pemilihan gambar target Anda:
 
 ### Pemrosesan Tanpa Target Kalibrasi
 
-Meskipun tidak disarankan untuk pekerjaan ilmiah, Anda dapat memproses tanpa target:
+Meskipun tidak direkomendasikan untuk pekerjaan ilmiah, Anda dapat memproses tanpa target:
 
 1. Biarkan semua kotak centang kolom Target tidak dicentang
 2. **Nonaktifkan** &quot;Kalibrasi reflektansi&quot; di Pengaturan Proyek

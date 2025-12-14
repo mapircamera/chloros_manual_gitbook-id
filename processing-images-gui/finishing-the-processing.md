@@ -109,7 +109,7 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 
 1. Verifikasi koreksi vignetting diaktifkan di Pengaturan Proyek
 2. Periksa model kamera terdeteksi dengan benar
-3. Hubungi dukungan MAPIR jika vignetting tetap ada
+3. Hubungi dukungan MAPIR jika vignetting tetap terjadi
 
 ### Masalah: Warna atau Nilai yang Salah
 
@@ -192,7 +192,7 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 * ✅ **Gambar RAW/JPG asli** - Arsipkan di drive terpisah/cloud
 * ✅ **Hasil pemrosesan** - Simpan gambar yang dikalibrasi dan indeks
 * ✅ **Berkas proyek** - Mengandung semua pengaturan untuk pemrosesan ulang jika diperlukan
-* ✅ **Catatan debug** - Mencatat detail pemrosesan
+* ✅ **Catatan debug** - Mendokumentasikan detail pemrosesan
 * ✅ **Gambar target kalibrasi** - Untuk verifikasi dan pemrosesan ulang
 
 **Rekomendasi penyimpanan:**
@@ -203,11 +203,11 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 
 ***
 
-## Pemrosesan Berikutnya
+## Pengolahan Berikutnya
 
 ### Menggunakan Ulang Pengaturan Proyek
 
-Jika memproses dataset serupa di masa depan:
+Jika mengolah dataset serupa di masa depan:
 
 1. **Simpan Template Proyek** (jika belum dilakukan)
 2. **Buat proyek baru** menggunakan templat yang disimpan
@@ -230,7 +230,7 @@ Untuk beberapa sesi/dataset:
 * Proses folder multiple dengan skrip
 * Lihat [Dokumentasi CLI](../CLI.md)
 
-**Opsi 3: Python SDK (hanya untuk Chloros+)**
+**Opsi 3: Python SDK (hanya Chloros+)**
 
 * Kontrol programatik
 * Integrasi dengan alur kerja analisis

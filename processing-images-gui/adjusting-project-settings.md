@@ -39,8 +39,8 @@ Mengontrol cara Chloros mengidentifikasi target kalibrasi dalam gambar Anda.
 
 **Pengaturan utama:**
 
-* **Area sampel kalibrasi minimum**: Ambang batas ukuran untuk deteksi target (default: 25 piksel)
-* **Pengelompokan target minimum**: Ambang batas kesamaan untuk mengelompokkan wilayah target (default: 60)
+* **Area sampel kalibrasi minimum**: Batas ukuran untuk deteksi target (default: 25 piksel)
+* **Pengelompokan target minimum**: Batas kesamaan untuk mengelompokkan wilayah target (default: 60)
 
 **Kapan menyesuaikan:**
 
@@ -101,7 +101,7 @@ Mengontrol format dan kualitas file output.
 * **TIFF (16-bit)**: Direkomendasikan untuk analisis GIS dan ilmiah (rentang 0-65.535)
 * **TIFF (32-bit, Persen)**: Nilai reflektansi bilangan floating-point (rentang 0,0-1,0)
 * **PNG (8-bit)**: Kompresi tanpa kehilangan data untuk visualisasi (rentang 0-255)
-* **JPG (8-bit)**: Ukuran file terkecil, kompresi dengan kehilangan data (rentang 0-255)
+* **JPG (8-bit)**: Berkas terkecil, kompresi dengan kehilangan data (rentang 0-255)
 
 ***
 
@@ -129,7 +129,7 @@ Saat membuat proyek baru:
 1. Pilih **&quot;Proyek Baru&quot;** dari menu utama
 2. Pilih opsi **&quot;Memuat dari template&quot;**
 3. Pilih template yang telah disimpan
-4. Semua pengaturan akan diterapkan secara otomatis
+4. Semua pengaturan diterapkan secara otomatis
 
 ### Direktori Kerja
 
@@ -146,7 +146,7 @@ Pengaturan **&quot;Folder Penyimpanan Proyek&quot;** menentukan lokasi default u
 
 ## Pengaturan PPK (Post-Processed Kinematic)
 
-Jika menggunakan perekam DAQ MAPIR dengan GPS untuk penentuan lokasi geografis yang presisi:
+Jika menggunakan perekam DAQ MAPIR dengan GPS untuk penentuan lokasi geografis yang akurat:
 
 ### Persyaratan
 
@@ -163,7 +163,7 @@ Jika menggunakan perekam DAQ MAPIR dengan GPS untuk penentuan lokasi geografis y
    * **Kamera tunggal**: Ditetapkan secara otomatis ke Pin 1
    * **Dua kamera**: Tetapkan setiap kamera ke pin yang benar secara manual
 
-**Penugasan Pin Eksposur:**
+**Penetapan Pin Eksposur:**
 
 * **Pin Eksposur 1**: Pilih model kamera dari daftar dropdown
 * **Pin Eksposur 2**: Pilih kamera kedua atau &quot;Jangan Digunakan&quot;

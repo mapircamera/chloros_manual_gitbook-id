@@ -1,6 +1,6 @@
 # Pemantauan Proses
 
-Setelah proses dimulai, Chloros menyediakan beberapa cara untuk memantau kemajuan, memeriksa masalah, dan memahami apa yang terjadi dengan dataset Anda. Halaman ini menjelaskan cara melacak proses Anda dan menginterpretasikan informasi yang disediakan oleh Chloros.
+Setelah proses dimulai, Chloros menyediakan beberapa cara untuk memantau kemajuan, memeriksa masalah, dan memahami apa yang terjadi dengan dataset Anda. Halaman ini menjelaskan cara melacak proses Anda dan menafsirkan informasi yang disediakan oleh Chloros.
 
 ## Ringkasan Bar Kemajuan
 
@@ -34,7 +34,7 @@ Untuk pengguna dengan lisensi Chloros+:
 
 **Fitur Interaktif:**
 
-* **Arahkan kursor** ke bilah kemajuan untuk melihat panel 4 tahap yang diperluas
+* **Arahkan kursor ke** bilah kemajuan untuk melihat panel 4 tahap yang diperluas
 * **Klik** bilah kemajuan untuk membekukan/menancapkan panel yang diperluas
 * **Klik lagi** untuk membatalkan pembekuan dan menyembunyikan otomatis saat mouse meninggalkan area
 * Setiap tahap menampilkan kemajuan individu (0-100%)
@@ -87,7 +87,7 @@ Untuk pengguna dengan lisensi Chloros+:
 
 **Hal yang perlu diperhatikan:**
 
-* Harus berjalan secara bertahap tanpa jeda
+* Harus berjalan secara bertahap tanpa henti
 * Peringatan tentang metadata yang hilang akan muncul di Debug Log
 
 ### Tahap 3: Kalibrasi
@@ -112,7 +112,7 @@ Untuk pengguna dengan lisensi Chloros+:
 
 * **Mode bebas**: Memproses satu gambar sekaligus secara berurutan
 * **Mode Chloros+**: Memproses hingga 16 gambar secara bersamaan
-* **Peningkatan GPU**: Secara signifikan mempercepat tahap ini
+* **Percepatan GPU**: Secara signifikan mempercepat tahap ini
 
 **Hal yang perlu diperhatikan:**
 
@@ -141,7 +141,7 @@ Untuk pengguna dengan lisensi Chloros+:
 
 * Peringatan ruang disk
 * Kesalahan penulisan file
-* Selesainya semua output yang dikonfigurasi
+* Selesai semua output yang dikonfigurasi
 
 ***
 
@@ -149,7 +149,7 @@ Untuk pengguna dengan lisensi Chloros+:
 
 Log Debug menyediakan informasi detail tentang kemajuan pemrosesan dan masalah yang ditemui.
 
-### Mengakses Log Debug
+### Akses Log Debug
 
 1. Klik ikon **Log Debug** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> di bilah sisi kiri
 2. Panel log terbuka menampilkan pesan pemrosesan real-time
@@ -326,7 +326,7 @@ Hentikan proses jika Anda melihat:
 
 ### Proses Sangat Lambat
 
-**Penyebab kemungkinan:**
+**Penyebab mungkin:**
 
 * Gambar target tidak ditandai (memindai semua gambar)
 * Penyimpanan HDD alih-alih SSD
@@ -384,9 +384,9 @@ Saat pemrosesan selesai:
 
 Setelah pemrosesan selesai:
 
-1. **Review hasil** - Lihat [Menyelesaikan Pemrosesan](finishing-the-processing.md)
+1. **Periksa hasil** - Lihat [Menyelesaikan Pemrosesan](finishing-the-processing.md)
 2. **Periksa folder output** - Pastikan semua file diekspor dengan benar
 3. **Periksa Debug Log** - Periksa apakah ada peringatan atau kesalahan
 4. **Pratinjau gambar yang diproses** - Gunakan Image Viewer atau perangkat lunak eksternal
 
-Untuk informasi tentang meninjau dan menggunakan hasil pemrosesan Anda, lihat [Finishing the Processing](finishing-the-processing.md).
+Untuk informasi tentang meninjau dan menggunakan hasil pemrosesan Anda, lihat [Menyelesaikan Pemrosesan](finishing-the-processing.md).

@@ -129,7 +129,7 @@ SDK menggunakan lisensi yang sama dengan Chloros, Chloros (Browser), dan Chloros
 
 1. Buka **Chloros atau Chloros (Browser)** dan masuk ke tab Pengguna <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> . Atau, buka **CLI**.  
 2. Masukkan kredensial Chloros+ Anda dan masuk  
-3. Lisensi disimpan secara lokal (tetap ada setelah reboot)  
+3. Lisensi disimpan secara lokal (tetap ada setelah reboot)
 
 {% hint style=&quot;success&quot; %}
 **Pengaturan Satu Kali**: Setelah masuk melalui antarmuka pengguna (GUI) atau CLI, SDK secara otomatis menggunakan lisensi yang disimpan. Tidak diperlukan otentikasi tambahan!
@@ -209,7 +209,7 @@ Buat proyek Chloros baru.
 | Parameter      | Tipe | Diperlukan | Deskripsi                                              |
 | -------------- | ---- | -------- | -------------------------------------------------------- |
 | `project_name` | str  | Ya      | Nama proyek                                     |
-| `camera`       | str  | Tidak       | Template kamera (misalnya, &quot;Survey3N\_RGN&quot;, &quot;Survey3W\_OCN&quot;) |
+| `camera`       | str  | Tidak   | Template kamera (misalnya, &quot;Survey3N\_RGN&quot;, &quot;Survey3W\_OCN&quot;) |
 
 **Mengembalikan:** `dict` - Respons pembuatan proyek
 
@@ -234,9 +234,9 @@ Impor gambar dari folder.
 | Parameter     | Tipe     | Diperlukan | Deskripsi                        |
 | ------------- | -------- | -------- | ---------------------------------- |
 | `folder_path` | str/Path | Ya      | Jalan ke folder dengan gambar         |
-| `recursive`   | bool     | Tidak      | Cari subfolder (default: False) |
+| `recursive`   | bool     | Tidak       | Cari subfolder (default: False) |
 
-**Hasil:** `dict` - Hasil impor dengan jumlah file
+**Mengembalikan:** `dict` - Hasil impor dengan jumlah file
 
 **Contoh:**
 
@@ -258,11 +258,11 @@ Konfigurasi pengaturan pemrosesan.
 
 | Parameter                 | Tipe | Default                 | Deskripsi                     |
 | ------------------------- | ---- | ----------------------- | ------------------------------- |
-| `debayer`                 | str  | &quot;Kualitas Tinggi (Lebih Cepat)&quot; | Metode Debayer                   |
+| `debayer`                 | str  | &quot;Kualitas Tinggi (Lebih Cepat)&quot; | Metode Debayer                  |
 | `vignette_correction`     | bool | `True`                  | Aktifkan koreksi vignette      |
 | `reflectance_calibration` | bool | `True`                  | Aktifkan kalibrasi reflektansi  |
 | `indices`                 | daftar | `None`                  | Indeks vegetasi yang akan dihitung |
-| `export_format`           | string  | &quot;TIFF (16-bit)&quot;         | Format output                   |
+| `export_format`           | string | &quot;TIFF (16-bit)&quot;         | Format output                   |
 | `ppk`                     | bool | `False`                 | Aktifkan koreksi PPK          |
 | `custom_settings`         | dict | `None`                  | Pengaturan kustom lanjutan        |
 
@@ -270,10 +270,10 @@ Konfigurasi pengaturan pemrosesan.
 
 * `"TIFF (16-bit)"` - Direkomendasikan untuk GIS/fotogrametri
 * `"TIFF (32-bit, Percent)"` - Analisis ilmiah
-* `"PNG (8-bit)"` - Inspeksi visual
+* `"PNG (8-bit)"` - Pemeriksaan visual
 * `"JPG (8-bit)"` - Output terkompresi
 
-**Indeks Tersedia:**
+**Indeks yang Tersedia:**
 
 NDVI, NDRE, GNDVI, OSAVI, CIG, EVI, SAVI, MSAVI, MTVI2, dan lainnya.
 
@@ -402,7 +402,7 @@ Fungsi kemudahan satu baris untuk memproses folder.
 | `reflectance_calibration` | bool     | `True`          | Aktifkan kalibrasi reflektansi |
 | `export_format`           | str      | &quot;TIFF (16-bit)&quot; | Format output                  |
 | `mode`                    | str      | `"parallel"`    | Mode pemrosesan                |
-| `progress_callback`       | dapat dipanggil | `None`          | Panggilan balik kemajuan              |
+| `progress_callback`       | callable | `None`          | Panggilan balik kemajuan              |
 
 **Mengembalikan:** `dict` - Hasil pemrosesan
 
@@ -564,9 +564,9 @@ print("All flights processed!")
 
 ***
 
-### Contoh 4: Integrasi Alur Kerja Penelitian
+### Contoh 4: Integrasi Pipeline Riset
 
-Integrasikan Chloros dengan analisis data:
+Mengintegrasikan Chloros dengan analisis data:
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -783,11 +783,11 @@ python my_processor.py "C:\Flight001" "C:\Flight002" --indices NDVI NDRE GNDVI
 
 ***
 
-## Penanganan Kecuali
+## Penanganan Kecelakaan
 
-SDK menyediakan kelas kecuali khusus untuk jenis kesalahan yang berbeda:
+SDK menyediakan kelas pengecualian khusus untuk jenis kesalahan yang berbeda:
 
-### Hierarki Kecuali
+### Hierarki Pengecualian
 
 ```python
 ChlorosError                    # Base exception
@@ -799,7 +799,7 @@ ChlorosError                    # Base exception
 └── ChlorosConfigurationError  # Configuration errors
 ```
 
-### Contoh Kecelakaan
+### Contoh Pengecualian
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -839,7 +839,7 @@ chloros = ChlorosLocal(
 )
 ```
 
-### Pemrosesan Non-Blok
+### Pemrosesan Non-Blokir
 
 Mulai pemrosesan dan lanjutkan dengan tugas lain:
 
@@ -863,7 +863,7 @@ print("Processing complete!")
 
 ### Manajemen Memori
 
-Untuk dataset besar, proses dalam batch:
+Untuk dataset besar, proses secara bertahap:
 
 ```python
 from pathlib import Path
@@ -896,7 +896,7 @@ for i in range(0, len(images), batch_size):
 
 **Solusi:**
 
-1. Verifikasi Chloros Desktop terinstal:
+1. Pastikan Chloros Desktop terinstal:
 
 ```python
 import os
@@ -915,7 +915,7 @@ chloros = ChlorosLocal(backend_exe="C:\\Path\\To\\chloros-backend.exe")
 
 ### Lisensi Tidak Terdeteksi
 
-**Masalah:** SDK menampilkan peringatan tentang lisensi yang hilang
+**Masalah:** SDK memperingatkan tentang lisensi yang hilang
 
 **Solusi:**
 
@@ -1132,8 +1132,8 @@ chloros.process(progress_callback=notebook_progress)
 **A:** Ya! Persyaratan:  
 
 * Windows Server 2016 atau versi terbaru  
-* Chloros terinstal (sekali saja)  
-* Lisensi diaktifkan pada mesin mana pun (lisensi yang disimpan di cache disalin ke server)
+* Chloros terinstal (sekali saja)
+* Lisensi diaktifkan di mesin mana pun (lisensi yang disimpan disalin ke server)
 
 ***
 
@@ -1181,7 +1181,7 @@ Project_Path/
 
 ***
 
-### Q: Apakah saya dapat memproses gambar dari skrip Python yang berjalan secara terjadwal?
+### Q: Apakah saya dapat memproses gambar dari skrip Python yang berjalan sesuai jadwal?
 
 **A:** Ya! Gunakan Windows Task Scheduler dengan skrip Python:
 
@@ -1227,7 +1227,7 @@ thread.start()
 * **Situs Web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * **Harga**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
-### Contoh Kode
+### Kode Contoh
 
 Semua contoh yang tercantum di sini telah diuji dan siap digunakan. Salin dan sesuaikan untuk kasus penggunaan Anda.
 

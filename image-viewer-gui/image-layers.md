@@ -11,7 +11,7 @@ Dalam Chloros, **lapisan** merujuk pada berbagai output gambar yang tersedia unt
 * **Gambar target** (jika gambar mengandung target kalibrasi)
 * **Gambar indeks** (NDVI, NDRE, GNDVI, dll. jika indeks dikonfigurasi)
 
-Menu tarik-turun **Layer Selector** di pojok kanan atas Image Viewer memungkinkan Anda beralih antara versi-versi ini secara instan tanpa meninggalkan viewer.
+Menu tarik-turun **Layer Selector** di pojok kanan atas Image Viewer memungkinkan Anda beralih antara versi-versi ini tanpa meninggalkan viewer.
 
 ***
 
@@ -24,7 +24,7 @@ Menu tarik-turun **Layer Selector** di pojok kanan atas Image Viewer memungkinka
 * Belum diproses, sesuai dengan yang diambil oleh kamera
 * Paling cepat untuk dimuat dan ditampilkan
 
-**Kapan harus dilihat:**
+**Kapan digunakan:**
 
 * Pratinjau cepat dari tangkapan asli
 * Memeriksa komposisi dan bingkai gambar
@@ -33,14 +33,14 @@ Menu tarik-turun **Layer Selector** di pojok kanan atas Image Viewer memungkinka
 ### RAW (Asli)
 
 * Data sensor RAW asli dari kamera Anda
-* Telah di-debayered tanpa pemrosesan pasca
+* Telah di-debayer tanpa pemrosesan tambahan
 * Kedalaman bit lebih tinggi daripada JPG (biasanya data sensor 12-bit atau 14-bit)
 
 **Kapan digunakan:**
 
 * Memeriksa kualitas data sensor asli
 * Memeriksa masalah sensor atau artefak
-* Membandingkan hasil sebelum/sesudah pemrosesan
+* Membandingkan hasil sebelum dan setelah pemrosesan
 
 ### RAW (Target)
 
@@ -55,7 +55,7 @@ Menu tarik-turun **Layer Selector** di pojok kanan atas Image Viewer memungkinka
 * Memecahkan masalah kalibrasi
 
 {% hint style=&quot;info&quot; %}
-**Lapisan Target**: Lapisan ini hanya muncul dalam menu dropdown untuk gambar yang mengandung target kalibrasi. Gambar tangkapan biasa tidak akan memiliki opsi ini.
+**Lapisan Target**: Lapisan ini hanya muncul di menu dropdown untuk gambar yang mengandung target kalibrasi. Gambar tangkapan biasa tidak akan memiliki opsi ini.
 {% endhint %}
 
 ### RAW (Reflektansi)
@@ -69,16 +69,16 @@ Menu tarik-turun **Layer Selector** di pojok kanan atas Image Viewer memungkinka
 
 **Kapan untuk dilihat:**
 
-* Memeriksa hasil kalibrasi
+* Memeriksa hasil yang dikalibrasi
 * Memverifikasi kualitas kalibrasi
 * Memeriksa nilai piksel untuk akurasi ilmiah
 * Membandingkan dengan aslinya untuk melihat efek kalibrasi
 
 {% hint style=&quot;success&quot; %}
-**Disarankan**: Gunakan lapisan RAW (Reflektansi) saat memeriksa nilai piksel untuk pengukuran dan analisis ilmiah.
+**Disarankan**: Gunakan lapisan RAW (Reflectance) saat memeriksa nilai piksel untuk pengukuran dan analisis ilmiah.
 {% endhint %}
 
-### RAW (NDVI Indeks)... dan sejenisnya
+### RAW (NDVI Index)... dan sejenisnya
 
 * Gambar indeks vegetasi yang dihitung (NDVI dalam contoh ini)
 * Nama indeks berubah tergantung pada indeks yang dikonfigurasi selama pemrosesan
@@ -96,36 +96,36 @@ Menu tarik-turun **Layer Selector** di pojok kanan atas Image Viewer memungkinka
 * RAW (SAVI Index)
 * Dan banyak lagi... (lihat [Rumus Indeks Multispektral](../project-settings/multispectral-index-formulas.md))
 
-**Kapan harus dilihat:**
+**Kapan digunakan:**
 
-* Menganalisis hasil perhitungan indeks
+* Memeriksa hasil perhitungan indeks
 * Memeriksa rentang nilai indeks
 * Mengidentifikasi area yang menarik
 * Memverifikasi gambar indeks sebelum digunakan dalam GIS atau analisis
 
 ***
 
-## Menggunakan Pemilih Lapisan
+## Menggunakan Selektor Lapisan
 
 ### Membuka Menu Tarik-Turun
 
 1. Buka gambar dalam mode layar penuh (klik thumbnail apa pun di Penampil Gambar)
-2. Temukan **menu tarik-turun lapisan** di pojok kanan atas penampil
-3. Dropdown menampilkan lapisan yang saat ini dipilih (misalnya, &quot;JPG&quot;)
-4. Klik dropdown untuk melihat semua lapisan yang tersedia
+2. Temukan **menu tarik-turun lapisan** di pojok kanan atas pemutar gambar
+3. Menu tarik-turun menampilkan lapisan yang saat ini dipilih (misalnya, &quot;JPG&quot;)
+4. Klik menu tarik-turun untuk melihat semua lapisan yang tersedia
 
 ### Mengganti Lapisan
 
-1. Klik dropdown lapisan untuk membuka daftar
+1. Klik menu tarik-turun lapisan untuk membuka daftar
 2. Semua lapisan yang tersedia untuk gambar saat ini ditampilkan
 3. Klik nama lapisan mana pun untuk beralih ke versi tersebut
-4. Gambar diperbarui secara instan untuk menampilkan lapisan yang dipilih
+4. Gambar akan diperbarui secara instan untuk menampilkan lapisan yang dipilih
 
 **Peralihan cepat:**
 
 * Menu dropdown mengingat pilihan terakhir Anda
 * Saat beralih ke gambar berikutnya, Chloros mencoba menampilkan jenis lapisan yang sama
-* Jika lapisan tersebut tidak ada pada gambar berikutnya, secara default akan menggunakan JPG
+* Jika lapisan tersebut tidak tersedia di gambar berikutnya, secara default akan menggunakan JPG
 
 ### Ketersediaan Lapisan
 
@@ -139,7 +139,7 @@ Tidak semua lapisan tersedia untuk setiap gambar:
 
 * ⚠️ RAW (Asli) - Hanya jika gambar diambil dalam mode RAW atau RAW+JPG
 * ⚠️ RAW (Target) - Hanya jika gambar mengandung target kalibrasi yang terdeteksi
-* ⚠️ RAW (Reflektansi) - Hanya setelah diproses dengan kalibrasi reflektansi diaktifkan
+* ⚠️ RAW (Reflectance) - Hanya setelah diproses dengan kalibrasi reflectance diaktifkan
 * ⚠️ RAW (\[Index] Index) - Hanya setelah diproses dengan indeks yang dikonfigurasi
 
 ***
@@ -153,13 +153,13 @@ Saat Anda berpindah ke gambar lain (menggunakan tombol panah atau mengklik thumb
 **Preferensi lapisan tetap terjaga:**
 
 * Jika melihat &quot;RAW (Reflektansi)&quot;, gambar berikutnya menampilkan &quot;RAW (Reflektansi)&quot; (jika tersedia)
-* Jika melihat &quot;RAW (NDVI Index)&quot;, gambar berikutnya menampilkan &quot;RAW (NDVI Index)&quot; (jika tersedia)
+* Jika melihat &quot;RAW (NDVI Indeks)&quot;, gambar berikutnya menampilkan &quot;RAW (NDVI Indeks)&quot; (jika tersedia)
 * Jika lapisan yang sama tidak ada, default ke JPG
 
 **Contoh alur kerja:**
 
 1. Buka Gambar 1, beralih ke RAW (NDVI Index)
-2. Tekan → untuk menampilkan Gambar 2
+2. Tekan → untuk melihat Gambar 2
 3. Gambar 2 secara otomatis menampilkan lapisan RAW (NDVI Index)
 4. Lanjutkan navigasi - semua gambar menampilkan lapisan NDVI
 5. Sangat efisien untuk meninjau hasil indeks di banyak gambar
@@ -170,9 +170,9 @@ Saat Anda berpindah ke gambar lain (menggunakan tombol panah atau mengklik thumb
 
 ### Alur Kerja 1: Perbandingan Sebelum/Sesudah
 
-**Tujuan**: Membandingkan gambar asli dengan gambar yang telah dikalibrasi
+**Tujuan**: Membandingkan gambar asli dengan gambar yang dikalibrasi
 
-1. Buka gambar yang telah diproses di Image Viewer
+1. Buka gambar yang diproses di Image Viewer
 2. Pilih **RAW (Asli)** dari menu dropdown
 3. Catat vignetting dan nilai yang belum dikalibrasi
 4. Beralih ke **RAW (Reflektansi)** dari menu dropdown
@@ -186,7 +186,7 @@ Saat Anda berpindah ke gambar lain (menggunakan tombol panah atau mengklik thumb
 2. Pilih **RAW (NDVI Index)** dari menu dropdown
 3. Gunakan tombol panah → untuk berpindah ke gambar berikutnya
 4. Lapisan NDVI tetap aktif secara otomatis
-5. Lanjutkan ke semua gambar, periksa pola NDVI
+5. Lanjutkan melalui semua gambar, periksa pola NDVI
 6. Beralih ke **RAW (NDRE Index)** untuk membandingkan
 
 ### Alur Kerja 3: Verifikasi Target
@@ -201,7 +201,7 @@ Saat Anda berpindah ke gambar lain (menggunakan tombol panah atau mengklik thumb
 
 ### Alur Kerja 4: Pemeriksaan Nilai Piksel
 
-**Tujuan**: Memeriksa nilai reflektansi untuk akurasi ilmiah
+**Tujuan**: Periksa nilai reflektansi untuk akurasi ilmiah
 
 1. Buka gambar yang telah diproses
 2. Pilih lapisan **RAW (Reflektansi)**
@@ -266,7 +266,7 @@ Lapisan yang berbeda menampilkan rentang nilai piksel yang berbeda:
 
 * **Selalu periksa RAW (Asli)**: Verifikasi kualitas data sumber sebelum mempercayai output yang diproses
 * **Bandingkan lapisan**: Gunakan pergantian lapisan untuk memvalidasi pemrosesan berfungsi dengan benar
-* **Periksa rentang indeks**: Gunakan mode Persentase Piksel dengan lapisan indeks untuk memverifikasi nilai-nilai yang wajar
+* **Periksa rentang indeks**: Gunakan mode Persentase Piksel dengan lapisan indeks untuk memverifikasi nilai-nilai masuk akal
 
 ***
 
@@ -276,7 +276,7 @@ Lapisan yang berbeda menampilkan rentang nilai piksel yang berbeda:
 
 **Masalah**: Lapisan yang diharapkan tidak muncul di menu dropdown
 
-**Penyebab kemungkinan:**
+**Penyebab mungkin:**
 
 * Gambar belum diproses (hanya JPG dan RAW (Asli) yang tersedia)
 * Kalibrasi reflektansi dinonaktifkan selama pemrosesan
@@ -289,17 +289,17 @@ Lapisan yang berbeda menampilkan rentang nilai piksel yang berbeda:
 2. Periksa Pengaturan Proyek untuk memastikan indeks telah dikonfigurasi
 3. Proses ulang dengan indeks yang diinginkan diaktifkan
 
-### Lapisan yang Ditampilkan Salah
+### Lapisan yang Salah Ditampilkan
 
 **Masalah**: Gambar terbuka di lapisan yang tidak diharapkan
 
-**Penyebab**: Preferensi lapisan dari gambar sebelumnya dibawa ke gambar saat ini, tetapi lapisan tersebut tidak ada di gambar saat ini
+**Penyebab**: Preferensi lapisan dari gambar sebelumnya diteruskan, tetapi lapisan tersebut tidak ada di gambar saat ini
 
-**Solusi:** Chloros secara otomatis beralih ke JPG saat lapisan yang disukai tidak tersedia - ini adalah perilaku normal
+**Solusi**: Chloros secara otomatis beralih ke JPG saat lapisan yang diinginkan tidak tersedia - ini adalah perilaku normal
 
 ### Tidak Dapat Melihat Target Kalibrasi
 
-**Masalah:** Lapisan RAW (Target) tidak menampilkan deteksi target
+**Masalah**: Lapisan RAW (Target) tidak menampilkan deteksi target
 
 **Penyebab Mungkin:**
 
@@ -318,14 +318,14 @@ Lapisan yang berbeda menampilkan rentang nilai piksel yang berbeda:
 
 ## Fitur Terkait
 
-### Alat Penampil Gambar
+### Alat Pemirsa Gambar
 
 Saat melihat lapisan apa pun, Anda dapat menggunakan:
 
 * **Kontrol zoom**: Perbesar untuk memeriksa detail
-* **Geser**: Klik dan seret untuk berpindah di gambar yang diperbesar
+* **Pan**: Klik dan seret untuk berpindah di gambar yang diperbesar
 * **Pemeriksaan nilai piksel**: Lihat nilai di lokasi kursor
-* **Panah navigasi**: Pindah antar gambar sambil mempertahankan lapisan
+* **Panah navigasi**: Berpindah antara gambar sambil mempertahankan lapisan
 * **Mode Persentase Piksel**: Beralih antara tampilan DN dan persentase
 
 Lihat [Membuka Gambar Penuh Layar](opening-an-image-full-screen.md) untuk dokumentasi lengkap Penampil Gambar.

@@ -24,7 +24,7 @@
 
 ## SETTING PROYEK
 
-* [Setting Proyek](project-settings/project-settings.md)
+* [Pengaturan Proyek](project-settings/project-settings.md)
 * [Rumus Indeks Multispektral](project-settings/multispectral-index-formulas.md)
 
 ## PENAMPIL GAMBAR (GUI)

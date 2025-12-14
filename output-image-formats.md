@@ -3,12 +3,11 @@ metaLinks:
   alternates:
     - https://app.gitbook.com/s/o044KN3Ws0uIDvOmSkcR/output-image-formats
 ---
-
 # Format Gambar Keluaran
 
 ### TIFF (16-bit)
 
-16-bit (nomor digital piksel 0 - 65535) TIFF (.tif) format keluaran.
+Format keluaran 16-bit (nomor digital piksel 0 - 65535) dalam format .tif.
 
 ### TIFF (32-bit, Persentase %)
 
@@ -16,7 +15,7 @@ metaLinks:
 
 ### **JPG (8-bit)**
 
-8-bit (angka digital piksel 0 -255) JPG (.jpg) format output.
+8-bit (nilai digital piksel 0 -255) JPG (.jpg) format output.
 
 ### **PNG (8-bit)**
 
