@@ -6,7 +6,7 @@ Pengguna <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> memun
 
 Setelah masuk, detail akun Anda akan ditampilkan:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Masuk
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" data-size="line"><figcaption></figcaption></figure>## CLI Masuk
 
 Masuk dengan kredensial Chloros+ Anda untuk mengaktifkan pemrosesan CLI.
 

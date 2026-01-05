@@ -88,7 +88,7 @@ Tab Peta mendukung dua penyedia ubin untuk gambar latar belakang peta:
 
 Anda dapat memilih jenis lapisan peta (dari kiri ke kanan):
 
- <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terrain
+ <img src="../.gitbook/assets/image (23).png" alt="" data-size="line">### Terrain
 
 Menampilkan profil elevasi dan ubin peta dengan detail (jalan, dll)
 
