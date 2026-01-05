@@ -9,16 +9,15 @@ Ketika pengolahan selesai dengan sukses, Anda akan melihat beberapa indikator:
 * ✅ **Progress bar**: Mencapai 100% penyelesaian
 * ✅ **Debug Log**: Menampilkan pesan &quot;Processing Complete&quot;
 * ✅ **Tombol Mulai**: Menjadi aktif kembali (siap untuk pengolahan berikutnya)
-* ✅ **File output**: Semua gambar yang diproses disimpan di subfolder model kamera
-
-***
+* ✅ **File output**: Semua gambar yang diproses disimpan di subfolder model kamera***
 
 ## Menemukan Gambar yang Telah Diproses
 
 ### Membuka Folder Output
 
-1. Klik ikon **Menu Utama** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> (pojok kiri atas)
+1. Klik ikon **Menu Utama** <img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> (pojok kiri atas)
 2. Pilih **&quot;Buka Folder Proyek&quot;**
+
 3. Penjelajah file Anda akan terbuka ke direktori proyek
 4. Temukan proyek Anda berdasarkan nama
 
@@ -37,9 +36,7 @@ Ketika pengolahan selesai dengan sukses, Anda akan melihat beberapa indikator:
 
 ### Pratinjau di Penampil Gambar Eksternal
 
-**Penampil yang direkomendasikan:**
-
-* **QGIS** - Perangkat lunak GIS gratis (terbaik untuk analisis multispektral yang digeoreferensikan)
+**Penampil yang direkomendasikan:*** **QGIS** - Perangkat lunak GIS gratis (terbaik untuk analisis multispektral yang digeoreferensikan)
 * **IrfanView** - Penampil gambar cepat dan ringan (mendukung TIFF)
 * **Adobe Photoshop** - Pengeditan profesional (mendukung TIFF)
 * **GIMP** - Alternatif gratis untuk Photoshop
@@ -72,7 +69,8 @@ Lihat [Image Viewer](../image-viewer-gui/opening-an-image-full-screen.md) untuk 
 
 Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 
-1. Klik tombol **&quot;Salin&quot;** atau **&quot;Unduh&quot;**
+1. Klik tombol **&quot;Salin&quot;**atau**&quot;Unduh&quot;**
+
 2. Simpan sebagai file teks di folder proyek
 3. Sertakan dalam dokumentasi proyek
 4. Kirim ke dukungan MAPIR jika mengalami masalah
@@ -86,7 +84,7 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 **Penyebab kemungkinan:**
 
 * File tidak memenuhi kriteria pemrosesan
-* Gambar target saja (dieksepsi dari ekspor)
+* Gambar target saja (dikeluarkan dari ekspor)
 * Ruang disk habis selama ekspor
 * Korupsi file selama pemrosesan
 
@@ -107,8 +105,8 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 
 **Solusi:**
 
-1. Verifikasi koreksi vignetting diaktifkan di Pengaturan Proyek
-2. Periksa model kamera terdeteksi dengan benar
+1. Pastikan koreksi vignetting diaktifkan di Pengaturan Proyek
+2. Periksa apakah model kamera terdeteksi dengan benar
 3. Hubungi dukungan MAPIR jika vignetting tetap terjadi
 
 ### Masalah: Warna atau Nilai yang Salah
@@ -125,18 +123,14 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 1. Pastikan kalibrasi reflektansi diaktifkan
 2. Periksa pesan &quot;Target ditemukan&quot; di Log Debug
 3. Periksa kualitas gambar target
-4. Olah ulang dengan target yang benar ditandai
+4. Proses ulang dengan target yang benar ditandai
 
 ### Masalah: Nilai NDVI Tampak Salah
 
-**Rentang nilai NDVI yang diharapkan:**
-
-* **Air, batu, tanah**: -0,1 hingga 0,2
+**Rentang nilai NDVI yang diharapkan:*** **Air, batu, tanah**: -0,1 hingga 0,2
 * **Vegetasi jarang/tidak sehat**: 0,2 hingga 0,4
 * **Vegetasi sedang**: 0,4 hingga 0,6
-* **Vegetasi sehat dan padat**: 0,6 hingga 0,9
-
-**Jika nilai berada di luar rentang ini:**
+* **Vegetasi sehat dan padat**: 0,6 hingga 0,9**Jika nilai berada di luar rentang ini:**
 
 1. Verifikasi kalibrasi reflektansi telah diterapkan
 2. Verifikasi log sensor cahaya telah disertakan
@@ -152,7 +146,7 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 
 **Alur kerja yang direkomendasikan:**
 
-1. **Impor gambar reflektansi yang dikalibrasi** ke perangkat lunak fotogrametri:
+1.**Impor gambar reflektansi yang dikalibrasi** ke perangkat lunak fotogrametri:
    * Pix4Dmapper
    * Agisoft Metashape
    * DroneDeploy
@@ -160,14 +154,15 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 2. **Pertahankan metadata EXIF**: Pastikan data GPS terjaga untuk geotagging
 3. **Alur kerja yang dikalibrasi**: Gunakan gambar reflektansi untuk akurasi ilmiah
 4. **Proses mosaik indeks**: Buat mosaik orto NDVI dari gambar indeks individu
-5. **Ekspor mosaik georeferensi GeoTIFF**: Untuk penggunaan dalam aplikasi GIS
+5. **Ekspor mosaik georeferensi GeoTIFF**: Untuk digunakan dalam aplikasi GIS
 
 ### Untuk Analisis GIS
 
 **Alur kerja yang direkomendasikan:**
 
-1. **Muat ke QGIS, ArcGIS, atau sejenisnya**
-2. **Gunakan gambar reflektansi 16-bit TIFF** untuk analisis multi-band
+1.**Muat ke QGIS, ArcGIS, atau sejenisnya**
+
+2.**Gunakan gambar reflektansi 16-bit TIFF** untuk analisis multi-band
 3. **Gunakan gambar indeks** (NDVI, NDRE) sebagai lapisan vegetasi siap pakai
 4. **Penghitung raster**: Gabungkan band untuk analisis kustom
 5. **Ekspor**: Buat peta klasifikasi, deteksi perubahan, dan peta kesehatan vegetasi
@@ -176,32 +171,22 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 
 **Alur kerja yang direkomendasikan:**
 
-1. **Gunakan gambar indeks dengan warna LUT** untuk laporan visual
+1.**Gunakan gambar indeks dengan warna LUT** untuk laporan visual
 2. **Ekstrak statistik**: Rata-rata NDVI per bidang/plot
 3. **Seri waktu**: Bandingkan indeks di beberapa sesi
-4. **Buat laporan**: Sertakan peta, statistik, dan visualisasi
-
-***
+4. **Buat laporan**: Sertakan peta, statistik, dan visualisasi***
 
 ## Arsip dan Cadangan
 
 ### Strategi Cadangan yang Direkomendasikan
 
-**Apa yang harus disimpan:**
-
-* ✅ **Gambar RAW/JPG asli** - Arsipkan di drive terpisah/cloud
+**Apa yang harus disimpan:*** ✅ **Gambar RAW/JPG asli** - Arsipkan di drive terpisah/cloud
 * ✅ **Hasil pemrosesan** - Simpan gambar yang dikalibrasi dan indeks
 * ✅ **Berkas proyek** - Mengandung semua pengaturan untuk pemrosesan ulang jika diperlukan
 * ✅ **Catatan debug** - Mendokumentasikan detail pemrosesan
-* ✅ **Gambar target kalibrasi** - Untuk verifikasi dan pemrosesan ulang
-
-**Rekomendasi penyimpanan:**
-
-* **Cadangan segera**: Drive eksternal
-* **Arsip jangka panjang**: Penyimpanan awan (Google Drive, Dropbox, dll.)
-* **Data kritis**: Simpan 2-3 salinan di lokasi yang berbeda
-
-***
+* ✅ **Gambar target kalibrasi** - Untuk verifikasi dan pemrosesan ulang**Rekomendasi penyimpanan:*** **Cadangan segera**: Drive eksternal
+* **Arsip jangka panjang**: Penyimpanan cloud (Google Drive, Dropbox, dll.)
+* **Data kritis**: Simpan 2-3 salinan di lokasi yang berbeda***
 
 ## Pengolahan Berikutnya
 
@@ -210,15 +195,14 @@ Untuk menyimpan catatan pemrosesan atau mengirim ke dukungan MAPIR:
 Jika mengolah dataset serupa di masa depan:
 
 1. **Simpan Template Proyek** (jika belum dilakukan)
-2. **Buat proyek baru** menggunakan templat yang disimpan
+2. **Buat proyek baru** menggunakan template yang disimpan
 3. **Impor gambar baru**
-4. **Proses** dengan pengaturan yang sama untuk konsistensi
+
+4.**Proses**dengan pengaturan yang sama untuk konsistensi
 
 ### Pemrosesan Berkelompok untuk Beberapa Sesi
 
-Untuk beberapa sesi/dataset:
-
-**Opsi 1: GUI - Beberapa Proyek**
+Untuk beberapa sesi/dataset:**Opsi 1: GUI - Beberapa Proyek**
 
 * Buat proyek terpisah untuk setiap sesi
 * Gunakan pengaturan templat yang konsisten
@@ -230,7 +214,7 @@ Untuk beberapa sesi/dataset:
 * Proses folder multiple dengan skrip
 * Lihat [Dokumentasi CLI](../CLI.md)
 
-**Opsi 3: Python SDK (hanya Chloros+)**
+**Opsi 3: Python SDK (hanya untuk Chloros+)**
 
 * Kontrol programatik
 * Integrasi dengan alur kerja analisis
@@ -265,9 +249,7 @@ Jika Anda mengalami masalah:
 * 📧 **Email**: info@mapir.camera (sertakan Log Debug)
 * 🌐 **Dukungan**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **FAQ**: [Pertanyaan yang Sering Diajukan](../faq.md)
-* 📖 **Dokumentasi**: [Manual Chloros](../)
-
-***
+* 📖 **Dokumentasi**: [Manual Chloros](../)***
 
 ## Ringkasan: Alur Kerja Lengkap
 
@@ -279,9 +261,7 @@ Anda telah menyelesaikan alur kerja pemrosesan Chloros secara lengkap:
 4. ✅ **Menandai target** - Lihat [Memilih Gambar Target](choosing-target-images.md)
 5. ✅ **Memulai pemrosesan** - Lihat [Memulai Pemrosesan](starting-the-processing.md)
 6. ✅ **Pemantauan kemajuan** - Lihat [Pemantauan Pemrosesan](monitoring-the-processing.md)
-7. ✅ **Pemeriksaan hasil** - Halaman ini
-
-**Gambar multispektral yang telah dikalibrasi dan dikoreksi reflektansi Anda siap untuk dianalisis!**
+7. ✅ **Pemeriksaan hasil** - Halaman ini**Gambar multispektral yang telah dikalibrasi dan dikoreksi reflektansi Anda siap untuk dianalisis!**
 
 ***
 

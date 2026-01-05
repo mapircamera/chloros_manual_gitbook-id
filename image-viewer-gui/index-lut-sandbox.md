@@ -12,7 +12,7 @@ Sandbox menyediakan:
 * **Penyesuaian LUT interaktif** - Sesuaikan gradien dan rentang warna
 * **Optimasi alur kerja** - Tentukan pengaturan terbaik sebelum pemrosesan batch
 
-### Perbandingan Sandbox dan Pengolahan Proyek
+### Perbandingan Sandbox vs. Pengolahan Proyek
 
 **Index/LUT Sandbox (Interaktif):**
 
@@ -54,7 +54,7 @@ Sandbox memungkinkan Anda untuk:
 Sandbox Indeks/LUT diakses melalui tab **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> :
 
 1. Klik gambar di grid gambar penjelajah file, gambar akan terbuka di tab **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> tab
-2. Klik tab **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> untuk membuka sidebar pop-out kiri jika belum terbuka
+2. Klik **tab Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> untuk membuka sidebar pop-out kiri jika belum terbuka
 
 ### Memilih Gambar untuk Menerapkan Indeks/LUT
 
@@ -62,27 +62,28 @@ Untuk bekerja dengan indeks di sidebar <img src="../.gitbook/assets/icon_image-v
 
 1. **Buka gambar** dari grid gambar utama dengan mengkliknya
 2. Tab **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> akan terbuka
-3. Klik menu tarik-turun **Layer** (pojok kanan atas pemutar)
+3. Klik menu tarik-turun **Layer** (pojok kanan atas pemirsa)
 4. Pilih lapisan dari menu tarik-turun:
    * RAW (Reflektansi)
 
 ### Menerapkan Indeks ke Gambar
 
-Setelah gambar ditampilkan penuh layar dan bilah sisi **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> telah terbuka:
+Setelah gambar ditampilkan penuh layar dan sidebar tab **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> telah terbuka:
 
 1. Centang kotak Indeks di bagian atas sidebar
 2. Pilih filter kamera Anda dari dropdown kiri
 3. Pilih rumus indeks yang diinginkan dari dropdown kanan
 4. Seret lingkaran warna saluran filter ke lokasi yang sesuai dalam rumus indeks di bawah
 5. Setelah rumus valid, gambar akan diperbarui dan menampilkan nilai indeks
-6. Gerakkan kursor mouse untuk melihat nilai di lokasi kursor
+6. Pindahkan kursor mouse untuk melihat nilai di lokasi kursor
 7. Perbesar untuk melihat piksel individu dan nilai terkaitnya
 
-Setiap indeks memiliki rentang nilai dan arti spesifik:
+Setiap indeks memiliki rentang nilai dan makna spesifik:
 
 #### Contoh NDVI
 
 ```
+
 Formula: (NIR - Red) / (NIR + Red)
 
 For Survey3W RGN camera:
@@ -108,9 +109,7 @@ Sebuah **Tabel Pencarian (LUT)** memetakan nilai indeks numerik ke warna untuk v
 
 * **Masukan**: Nilai piksel indeks (misalnya, NDVI 0.65)
 * **Output**: Warna RGB (misalnya, hijau terang)
-* **Tujuan**: Memudahkan pengamatan dan interpretasi pola
-
-**Grayscale vs. Color LUT:**
+* **Tujuan**: Memudahkan pengamatan dan interpretasi pola**Grayscale vs. Color LUT:**
 
 * Grayscale: Ilmiah dan netral, menampilkan data mentah
 * Color LUT: Intuitif dan berdampak, menonjolkan pola dan perbedaan
@@ -123,20 +122,21 @@ Sebuah **Tabel Pencarian (LUT)** memetakan nilai indeks numerik ke warna untuk v
 
 Setelah Anda memiliki gambar indeks yang menampilkan
 
-1. Klik tombol <img src="../.gitbook/assets/image.png" alt="" data-size="line"> &quot;+Tambah LUT&quot;
+1. Klik tombol <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> &quot;+Tambah LUT&quot;
 2. Pilih gradien warna
 3. Sesuaikan titik akhir clipping min/max
 4. Sesuaikan Mode Clipping
-5. Centang kotak Indeks di sidebar **Penerima Gambar** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di bilah sisi untuk menerapkan LUT
+5. Centang kotak Indeks di panel samping **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di bilah sisi untuk menerapkan LUT
 
 ### Memilih Gradien Warna
 
 **Memilih gradien:**
 
-1. Di panel LUT, temukan **bar gradien berwarna**
+1. Di panel LUT, temukan**bar gradien berwarna**
+
 2. Arahkan kursor mouse ke atasnya untuk melihat preset gradien yang tersedia
 3. Pilih gradien yang diinginkan
-4. Gambar **terupdate secara instan** dengan warna baru saat kotak Indeks dicentang
+4. Gambar **segera diperbarui** dengan warna baru saat kotak Indeks dicentang
 
 {% hint style=&quot;success&quot; %}
 **Praktik Terbaik**: Untuk indeks vegetasi seperti NDVI, gradien Red-Yellow-Green paling intuitif karena sesuai dengan asosiasi warna alami (hijau=sehat, kuning=sedang, merah=tertekan).
@@ -144,31 +144,18 @@ Setelah Anda memiliki gambar indeks yang menampilkan
 
 ### Menyesuaikan Kelas Warna
 
-Kontrol **Kelas** menentukan berapa banyak langkah warna diskrit yang muncul dalam gradien Anda:
-
-**Opsi jumlah kelas:**
-
-* **2-5 kelas**: Kategori yang sangat luas, zona yang jelas
+Kontrol **Kelas**menentukan berapa banyak langkah warna diskrit yang muncul dalam gradien Anda:**Opsi jumlah kelas:*** **2-5 kelas**: Kategori yang sangat luas, zona yang jelas
 * **6-10 kelas**: Seimbang, baik untuk klasifikasi
 * **11-20 kelas**: Gradien halus, tampilan kontinu
-* **20+ kelas**: Hampir kontinu, kelembutan maksimum
+* **20+ kelas**: Hampir kontinu, kelembutan maksimal**Cara menyesuaikan:**
 
-**Cara menyesuaikan:**
+1. Di panel LUT, temukan**kotak swatch warna di bawah bilah gradien**
 
-1. Di panel LUT, temukan **kotak swatch warna di bawah bilah gradien**
 2. Sesuaikan jumlah kelas dengan menambahkan menggunakan tombol +
 3. Hapus jumlah kelas dengan mengklik dua kali pada kotak swatch warna
-4. Gradien diperbarui **secara real-time** pada gambar
-
-**Dampak pada visualisasi:**
-
-* **Jumlah kelas sedikit (3-5)**: Membuat zona yang jelas, klasifikasi sederhana, mudah membedakan kategori
+4. Gradien diperbarui **secara real-time** pada gambar**Dampak pada visualisasi:*** **Jumlah kelas sedikit (3-5)**: Membuat zona yang jelas, klasifikasi sederhana, mudah membedakan kategori
 * **Jumlah kelas sedang (6-10)**: Pendekatan seimbang, cocok untuk sebagian besar aplikasi
-* **Jumlah kelas banyak (15-20)**: Transisi halus, variasi detail, tampilan fotorealistik
-
-**Kapan digunakan:**
-
-* **Sedikit kelas (3-5)**: Slide presentasi, peta klasifikasi, laporan sederhana
+* **Jumlah kelas banyak (15-20)**: Transisi halus, variasi detail, tampilan fotorealistik**Kapan digunakan:*** **Sedikit kelas (3-5)**: Slide presentasi, peta klasifikasi, laporan sederhana
 * **Kelas sedang (6-10)**: Analisis umum, detail seimbang, laporan standar
 * **Banyak kelas (15-20)**: Analisis ilmiah, inspeksi detail, output berkualitas publikasi
 
@@ -176,38 +163,29 @@ Kontrol **Kelas** menentukan berapa banyak langkah warna diskrit yang muncul dal
 
 Kontrol rentang nilai menentukan nilai indeks mana yang dipetakan ke warna mana dalam gradien Anda:
 
-**Kontrol rentang di panel LUT:**
-
-* **Nilai minimum**: Batas bawah skala warna
+**Kontrol rentang di panel LUT:*** **Nilai minimum**: Batas bawah skala warna
 * **Nilai maksimum**: Batas atas skala warna
-* **Nilai intermediet**: Didistribusikan secara otomatis antara minimum dan maksimum (berdasarkan jumlah kelas)
+* **Nilai tengah**: Didistribusikan secara otomatis antara nilai minimum dan maksimum (berdasarkan jumlah kelas)
 
 #### Menyesuaikan Nilai Minimum/Maksimum
 
 **Untuk menyesuaikan rentang nilai:**
 
-1. Di panel LUT, temukan bidang masukan **Nilai Minimum** dan **Nilai Maksimum**
-2. Klik bidang **Nilai Minimum**
+1. Di panel LUT, temukan bidang masukan**Nilai Minimum**dan**Nilai Maksimum**
+
+2. Klik bidang**Nilai Minimum**
+
 3. Ketik nilai minimum yang diinginkan (misalnya, `0.2`)
 4. Tekan **Enter** atau klik di luar bidang
-5. Ulangi untuk bidang **Nilai Maks** (misalnya, `0.9`)
-6. Visualisasi **diperbarui secara instan**
-
-{% hint style=&quot;info&quot; %}
-**Auto-Scaling**: Saat pertama kali menerapkan LUT, Chloros secara otomatis mengatur min/max sesuai rentang data aktual dalam gambar. Anda dapat memperkecil rentang ini untuk fokus pada rentang nilai tertentu yang diinginkan.
+5. Ulangi untuk bidang **Nilai Maksimum** (misalnya, `0.9`)
+6. Visualisasi **diperbarui secara instan**{% hint style=&quot;info&quot; %}**Auto-Scaling**: Saat pertama kali menerapkan LUT, Chloros secara otomatis mengatur nilai minimum/maksimum sesuai dengan rentang data aktual dalam gambar. Anda dapat memperkecil rentang ini untuk fokus pada rentang nilai tertentu yang diinginkan.
 {% endhint %}
 
-**Contoh penyesuaian rentang NDVI:**
-
-* **Rentang penuh**: `-1.0` hingga `1.0` (menampilkan semua nilai yang mungkin)
+**Contoh penyesuaian rentang NDVI:*** **Rentang penuh**: `-1.0` hingga `1.0` (menampilkan semua nilai yang mungkin)
 * **Berfokus pada vegetasi**: `0.2` hingga `0.9` (mengecualikan tanah telanjang dan air)
-* **Hanya vegetasi sehat**: `0.5` hingga `0.9` (menyoroti hanya tanaman yang sehat)
+* **Hanya vegetasi sehat**: `0.5` hingga `0.9` (sorot hanya tanaman yang sehat)
 * **Deteksi stres**: `0.2` hingga `0.5` (tekankan area bermasalah)
-* **Rentang kustom**: Sesuaikan berdasarkan nilai piksel yang diamati
-
-**Mengapa menyesuaikan rentang?**
-
-* **Meningkatkan kontras** di area minat Anda
+* **Rentang kustom**: Sesuaikan berdasarkan nilai piksel yang diamati**Mengapa menyesuaikan rentang?*** **Meningkatkan kontras** di area minat Anda
 * **Menghilangkan nilai yang tidak relevan** (misalnya, badan air, tanah telanjang)
 * **Menstandarkan visualisasi** di antara gambar atau tanggal yang berbeda
 * **Menekankan perbedaan halus** dalam rentang nilai yang sempit
@@ -223,12 +201,11 @@ Ketika nilai piksel berada di luar rentang min/maks yang Anda tentukan, Anda dap
 * Piksel **di bawah minimum** → ditampilkan menggunakan warna pertama dalam gradien (misalnya, merah)
 * Piksel **di atas maksimum** → ditampilkan menggunakan warna terakhir dalam gradien (misalnya, hijau)
 * **Kasus penggunaan**: Menonjolkan nilai ekstrem, menampilkan rentang data penuh dengan warna jenuh di batas
-* **Contoh**: Nilai NDVI di bawah 0,2 semuanya berwarna merah, nilai di atas 0,9 semuanya berwarna hijau
+* **Contoh**: Nilai NDVI di bawah 0,2 semuanya ditampilkan merah, nilai di atas 0,9 semuanya ditampilkan hijau
 
 #### 2. Latar Belakang Transparan
 
-* Piksel **di luar rentang** menjadi **sepenuhnya transparan**
-* Hanya piksel **dalam rentang** yang menampilkan gradien warna
+* Piksel **di luar rentang**menjadi**sepenuhnya transparan*** Hanya piksel **dalam rentang** yang menampilkan gradien warna
 * **Kasus penggunaan**: Overlay GIS, mengisolasi rentang nilai spesifik, menyoroti hanya area yang menarik
 * **Contoh**: Tampilkan hanya NDVI 0,4-0,7 dalam warna, sisanya transparan
 
@@ -238,21 +215,18 @@ Ketika nilai piksel berada di luar rentang min/maks yang Anda tentukan, Anda dap
 
 #### 3. Latar Belakang Indeks
 
-* Piksel **di luar rentang** ditampilkan dalam **skala abu-abu** (menampilkan nilai indeks mentah)
-* Piksel **dalam rentang** menampilkan **gradien warna**
-* **Kasus penggunaan**: Penyorotan halus, mempertahankan konteks sambil menonjolkan area yang menarik
-* **Contoh**: Penyorotan warna pada vegetasi yang tertekan (NDVI 0.3-0.5) sementara area sehat ditampilkan dalam abu-abu
+* Piksel **di luar rentang**ditampilkan dalam**skala abu-abu** (menampilkan nilai indeks mentah)
+* Piksel **dalam rentang**menampilkan**gradien warna*** **Kasus penggunaan**: Penyorotan halus, mempertahankan konteks sambil menonjolkan area yang menarik
+* **Contoh**: Menyoroti vegetasi yang tertekan dengan warna (NDVI 0.3-0.5) sementara area sehat ditampilkan dalam abu-abu
 
 #### 4. Latar Belakang Asli
 
-* Piksel **di luar rentang** menampilkan **gambar multispektral asli**
-* Piksel **dalam rentang** menampilkan **gradien warna**
-* **Kasus penggunaan**: Paling intuitif - menggabungkan konteks gambar alami dengan overlay warna analitis
-* **Contoh**: Lihat penampilan sebenarnya lapangan/tanaman dengan area stres yang diwarnai ditimpa
+* Piksel **di luar rentang**menampilkan**gambar multispektral asli*** Piksel **dalam rentang**menampilkan**gradien warna*** **Kasus penggunaan**: Paling intuitif - menggabungkan konteks gambar alami dengan overlay warna analitis
+* **Contoh**: Lihat penampilan sebenarnya lapangan/tanaman dengan area stres yang diwarnai ditampilkan di atas
 
 ### Memilih Mode Pemotongan yang Tepat
 
-| Mode Pemotongan              | Terbaik Untuk                                   | Gaya Visualisasi          |
+| Mode Pemotongan              | Terbaik Untuk                                   | Gaya Visualisasi           |
 | -------------------------- | ------------------------------------------ | ---------------------------- |
 | **Minimum dan Maksimum**    | Tampilan data lengkap, analisis ilmiah     | Semua piksel berwarna           |
 | **Latar Belakang Transparan** | Overlay GIS, mengisolasi rentang spesifik    | Warna pada rentang, kosong di luar |
@@ -261,30 +235,22 @@ Ketika nilai piksel berada di luar rentang min/maks yang Anda tentukan, Anda dap
 
 ### Membuat Warna LUT Kustom
 
-Untuk kontrol penuh atas visualisasi Anda, Anda dapat membuat **gradien warna kustom** dengan mengedit titik warna individu.
+Untuk kontrol penuh atas visualisasi Anda, Anda dapat membuat **gradien warna kustom** dengan mengedit titik warna individu.**Untuk membuat gradien kustom:**
 
-**Untuk membuat gradien kustom:**
+1. Di panel LUT, temukan**bar pratinjau gradien**
 
-1. Di panel LUT, temukan **bar pratinjau gradien**
-2. Cari **kotak sampel warna** di bawah gradien
+2. Cari**kotak sampel warna** di bawah gradien
 3. **Klik titik warna** untuk memilihnya
-4. **Picker warna** akan terbuka
+4. **Picker warna** terbuka
 5. Pilih warna baru menggunakan:
    * **Roda warna**: Pemilihan warna visual
    * **Penggeser RGB/HSV**: Kontrol warna presisi
    * **Masukan kode hex**: Spesifikasi warna tepat (misalnya, `#FF0000` untuk merah)
 6. Klik di luar pemilih warna **untuk menerapkan warna baru**
-7. Gradien **diperbarui secara instan** pada gambar
 
-**Menambahkan atau menghapus titik warna:**
-
-* **Tambahkan titik warna**: Klik ikon + untuk menambahkan swatch baru di akhir
-* **Hapus titik warna**: Klik ganda kotak warna untuk menghapus swatch
-
-**Strategi penyesuaian:**
-
-* **Balik gradien**: Balik urutan warna untuk membalikkan arti (misalnya, hijau=rendah, merah=tinggi)
-* **Warna merek**: Sesuaikan palet warna organisasi Anda untuk laporan
+7. Gradien**terupdate secara instan** pada gambar**Menambahkan atau menghapus titik warna:*** **Tambahkan titik**: Klik ikon + untuk menambahkan swatch baru di akhir
+* **Hapus titik**: Klik ganda kotak warna untuk menghapus swatch**Strategi penyesuaian:*** **Balikkan gradien**: Balik urutan warna untuk membalikkan makna (misalnya, hijau=rendah, merah=tinggi)
+* **Warna merek**: Sesuaikan dengan palet warna organisasi Anda untuk laporan
 * **Ramah bagi penderita buta warna**: Gunakan kombinasi oranye-biru atau ungu-kuning
 * **Optimasi cetak**: Pilih warna yang berfungsi baik dalam cetak warna maupun grayscale
 * **Multi-ambang batas**: Gunakan warna berbeda pada ambang batas nilai tertentu untuk klasifikasi
@@ -301,14 +267,12 @@ Untuk kontrol penuh atas visualisasi Anda, Anda dapat membuat **gradien warna ku
 
 Semua penyesuaian LUT di sandbox memperbarui gambar **secara instan dan interaktif**:
 
-* **Ganti lapisan** → Gambar berubah segera
+* **Ganti lapisan** → Perubahan gambar langsung
 * **Pilih gradien** → Warna diperbarui secara instan
 * **Sesuaikan rentang nilai** → Kontras berubah secara real-time
-* **Ubah kelas** → Kelancaran gradien diperbarui segera
-* **Modifikasi pemotongan** → Tampilan latar belakang berubah segera
-* **Edit warna** → Gradien kustom diterapkan segera
-
-**Tidak perlu tombol &quot;Terapkan&quot;** - semua perubahan langsung dan interaktif!
+* **Ubah kelas** → Kelancaran gradien diperbarui secara instan
+* **Modifikasi pemotongan** → Tampilan latar belakang berubah secara instan
+* **Edit warna** → Gradien kustom diterapkan secara instan**Tidak perlu tombol &quot;Apply&quot;** - semua perubahan langsung dan interaktif!
 
 {% hint style=&quot;success&quot; %}
 **Umpan Balik Langsung**: Umpan balik visual instan memungkinkan Anda bereksperimen dengan pengaturan berbeda secara cepat hingga menemukan visualisasi optimal untuk kebutuhan analisis Anda.
@@ -318,42 +282,32 @@ Semua penyesuaian LUT di sandbox memperbarui gambar **secara instan dan interakt
 
 **Alur kerja optimasi LUT tipikal:**
 
-1. **Pilih lapisan indeks** (misalnya, RAW (Reflektansi))
+1.**Pilih lapisan indeks** (misalnya, RAW (Reflektansi))
 2. **Terapkan indeks** - Pilih filter kamera dan rumus indeks, seret lingkaran berwarna ke lokasi yang sesuai dalam rumus indeks
 3. **Terapkan gradien LUT** - Mulai dengan preset Red-Yellow-Green
 4. **Periksa nilai piksel** - Pindahkan kursor, catat rentang nilai
 5. **Sesuaikan min/max** - Perkecil untuk fokus pada vegetasi (misalnya, 0,2 hingga 0,9)
 6. **Pilih pemotongan** - Coba &quot;Original Background&quot; untuk konteks
 7. **Perbaiki warna** - Sesuaikan gradien jika diperlukan untuk penekanan khusus
-8. **Finalisasi pengaturan** - Dokumen pengaturan dan salin ke Pengaturan Proyek untuk pemrosesan ekspor
+8. **Finalisasi pengaturan**- Dokumen pengaturan dan salin ke Pengaturan Proyek untuk pemrosesan ekspor
 
 ### Pemeriksaan Nilai Piksel
 
-Memahami nilai piksel aktual sangat penting untuk menetapkan rentang LUT yang efektif:
+Memahami nilai piksel aktual sangat penting untuk menetapkan rentang LUT yang efektif:**Cara memeriksa nilai:**
 
-**Cara memeriksa nilai:**
-
-1. Nilai piksel ditampilkan saat gambar memiliki kotak &quot;Index&quot; atau keduanya &quot;Index&quot; dan &quot;LUT&quot; **dicentang**.
-2. **Pindahkan kursor** ke area berbeda pada gambar
+1. Nilai piksel ditampilkan saat gambar memiliki kotak &quot;Index&quot; atau keduanya &quot;Index&quot; dan &quot;LUT&quot; yang dicentang.
+2. **Gerakkan kursor** ke area berbeda pada gambar
 3. **Perhatikan nilai piksel** yang ditampilkan di legenda saat Anda mengarahkan kursor
 4. Perbesar untuk melihat piksel individu yang ditandai dengan nilai mengambang
 5. **Catat** rentang nilai untuk fitur yang berbeda:
    * **Vegetasi sehat**: misalnya, NDVI 0.55-0.85
    * **Vegetasi tertekan**: misalnya, NDVI 0.30-0.50
    * **Tanah telanjang**: misalnya, NDVI 0,05-0,25
-   * **Air** (jika ada): misalnya, NDVI -0,05 hingga 0,10
-
-**Menggunakan nilai piksel untuk menetapkan rentang LUT:**
-
-Setelah memeriksa nilai piksel, sesuaikan batas minimum/maksimum LUT Anda sesuai dengan itu:
-
-**Contoh skenario:**
-
-* **Pengamatan**: Nilai tanah = 0.05-0.25, Tertekan = 0.25-0.50, Sehat = 0.50-0.85
+   * **Air** (jika ada): misalnya, NDVI -0,05 hingga 0,10**Menggunakan nilai piksel untuk mengatur rentang LUT:**Setelah memeriksa nilai piksel, sesuaikan rentang min/max LUT Anda sesuai dengan itu:**Contoh skenario:*** **Pengamatan**: Nilai tanah = 0.05-0.25, Tertekan = 0.25-0.50, Sehat = 0.50-0.85
 * **Tujuan**: Menampilkan hanya kesehatan tanaman (mengabaikan tanah)
 * **Pengaturan LUT**: Min = `0.25`, Max = `0.85`
 * **Pemotongan**: &quot;Latar Belakang Asli&quot; untuk melihat tanah dalam warna alami
-* **Hasil**: Gradien warna hanya berlaku untuk vegetasi, tanah ditampilkan sebagai gambar asli
+* **Hasil**: Gradien warna hanya diterapkan pada vegetasi, tanah ditampilkan sebagai gambar asli
 
 {% hint style=&quot;info&quot; %}
 **Rentang Dinamis**: Tanaman yang berbeda, musim, dan tahap pertumbuhan akan memiliki rentang nilai yang berbeda. Selalu periksa nilai piksel dalam dataset spesifik Anda sebelum menetapkan rentang LUT.
@@ -366,25 +320,27 @@ Setelah memeriksa nilai piksel, sesuaikan batas minimum/maksimum LUT Anda sesuai
 ### Membuat Rumus Indeks Kustom
 
 {% hint style=&quot;info&quot; %}
-**Tempat Pembuatan**: Indeks kustom dapat dikonfigurasi di **Pengaturan Proyek** sebelum pemrosesan, serta di sidebar sandbox Image Viewer.
+**Tempat Membuat**: Indeks kustom dapat dikonfigurasi di**Pengaturan Proyek** sebelum pemrosesan, serta di sidebar sandbox Penampil Gambar.
 {% endhint %}
 
 **Untuk membuat indeks kustom:**
 
-1. **Buka Pengaturan Proyek** (sebelum pemrosesan) atau bilah sisi sandbox Image Viewer
+1.**Buka Pengaturan Proyek** (sebelum pemrosesan) atau bilah sisi sandbox Image Viewer
 2. Navigasi ke menu dropdown **Rumus Indeks**
-3. Cari opsi **&quot;Kustom&quot;** (harus masuk dengan lisensi Chloros+)
+
+3. Cari opsi**&quot;Kustom&quot;** (harus masuk dengan lisensi Chloros+)
 4. **Tentukan rumus Anda** menggunakan variabel band:
    * Nama band: `NIR`, `Red`, `Green`, `Blue`, `RedEdge`, dll.
    * Operator: `+`, `-`, `*`, `/`, `^` (eksponen)
-   * Fungsi: `sqrt()`, `abs()`, dll. (jika didukung)
+   * Fungsi: `sqrt()`, `abs()`, dll. (jika didukung)  
    * Kurung: `()` untuk urutan operasi
 5. **Beri nama indeks Anda** (misalnya, &quot;MyIndex&quot; atau &quot;CustomNDVI&quot;)
-6. **Simpan konfigurasi**  
+6. **Simpan konfigurasi**
 
-**Contoh rumus kustom:**  
+**Contoh rumus kustom:**
 
 ```
+
 Modified NDVI with offset:
 (NIR - Red) / (NIR + Red + 0.5)
 
@@ -396,9 +352,9 @@ Complex multi-band:
 
 Exponential index:
 (NIR / Red) ^ 2
-```  
+```
 
-{% hint style=&quot;warning&quot; %}  
+{% hint style=&quot;warning&quot; %}
 **Validasi Rumus**: Pastikan rumus Anda menggunakan band yang tersedia di kamera Anda. Misalnya, RedEdge hanya tersedia pada kamera dengan filter RedEdge.
 {% endhint %}
 
@@ -409,11 +365,11 @@ Exponential index:
 Sekarang Anda memahami Sandbox Indeks/LUT:
 
 * **Terapkan ke pemrosesan**: Gunakan pengaturan yang ditemukan di [Pengaturan Proyek](../project-settings/project-settings.md)
-* **Pemrosesan batch**: Terapkan indeks yang dioptimalkan ke dataset lengkap
+* **Proses batch**: Terapkan indeks yang dioptimalkan ke dataset lengkap
 * **Pelajari lebih lanjut**: Baca [Rumus Indeks Multispektral](../project-settings/multispectral-index-formulas.md)
 
 Dokumentasi terkait:
 
 * [**Lapisan Gambar**](image-layers.md) - Pengelolaan dan visualisasi lapisan
 * [**Membuka Gambar Penuh Layar**](opening-an-image-full-screen.md) - Dasar-dasar pemirsa gambar
-* [**Pengolahan Gambar (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Alur kerja pengolahan lengkap
+* [**Pemrosesan Gambar (GUI)**](../processing-images-gui/adding-files-to-a-project.md) - Alur kerja pemrosesan lengkap

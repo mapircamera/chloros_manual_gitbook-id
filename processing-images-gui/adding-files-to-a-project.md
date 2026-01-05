@@ -2,7 +2,7 @@
 
 Setelah Anda membuat atau membuka proyek di Chloros, langkah berikutnya adalah menambahkan gambar multispektral Anda untuk memulai pemrosesan. Pengelola Berkas<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> memudahkan Anda untuk mengimpor gambar dan mengelola dataset Anda.
 
-## Mengakses File Browser
+## Akses File Browser
 
 1. Buka atau buat proyek di Chloros
 2. Klik ikon **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> di bilah sisi kiri
@@ -22,7 +22,7 @@ Ada dua cara utama untuk menambahkan gambar ke proyek Anda:
 
 Gunakan opsi ini untuk mengimpor berkas gambar individu atau sejumlah kecil berkas.
 
-1. Klik tombol **&quot;Tambahkan File&quot;** di bagian atas panel File Browser
+1. Klik tombol **&quot;Tambahkan File&quot;** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> di bagian atas panel File Browser
 2. Navigasi ke folder yang berisi gambar Anda
 3. Pilih satu atau lebih file gambar (tahan **Ctrl** untuk memilih beberapa file)
 4. Klik **&quot;Buka&quot;** untuk mengimpor file yang dipilih
@@ -31,20 +31,13 @@ Gunakan opsi ini untuk mengimpor berkas gambar individu atau sejumlah kecil berk
 
 Gunakan opsi ini untuk mengimpor semua gambar dari folder sekaligus.
 
-1. Klik tombol **&quot;Tambahkan Folder&quot;** di bagian atas panel File Browser
+1. Klik tombol **&quot;Tambahkan Folder&quot;** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> di bagian atas panel File Browser
 2. Navigasi ke dan pilih folder yang berisi gambar sesi penangkapan Anda
-3. Klik **&quot;Pilih Folder&quot;** untuk mengimpor semua gambar yang didukung dari folder tersebut
-
-***
+3. Klik **&quot;Pilih Folder&quot;** untuk mengimpor semua gambar yang didukung dari folder tersebut***
 
 ## Memahami Tabel File Browser
 
 Setelah gambar diimpor, mereka akan muncul dalam tabel dengan kolom-kolom berikut:
-
-### Thumbnail
-
-* Pratinjau kecil dari setiap gambar
-* Klik thumbnail untuk melihat gambar penuh di area pratinjau utama
 
 ### Nama File
 
@@ -71,23 +64,20 @@ Setelah gambar diimpor, mereka akan muncul dalam tabel dengan kolom-kolom beriku
 
 ***
 
-## Mengelola File dalam Proyek Anda
+## Mengelola Berkas dalam Proyek Anda
 
-### Menghapus File
+### Menghapus Berkas
 
 Untuk menghapus gambar yang tidak diinginkan dari proyek Anda:
 
-1. Pilih satu atau lebih gambar di tabel File Browser
-2. Klik tombol **&quot;Hapus yang Terpilih&quot;**
-3. Konfirmasi penghapusan (file tidak dihapus dari disk, hanya dihapus dari proyek)
+1. Pilih satu atau lebih gambar di tabel Penjelajah Berkas
+2. Klik tombol **&quot;Hapus yang Terpilih&quot;** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> 3. Konfirmasi penghapusan (berkas tidak dihapus dari disk, hanya dihapus dari proyek)
 
 ### Pengurutan dan Penyaringan
 
 * **Urutkan berdasarkan kolom**: Klik header kolom mana pun untuk mengurutkan gambar
-* **Pemisahan berdasarkan waktu**: Berguna untuk mengorganisir urutan pengambilan gambar secara kronologis
-* **Filter model kamera**: Kelompokkan gambar berdasarkan jenis kamera jika menggunakan beberapa kamera
-
-***
+* **Pengurutan berdasarkan waktu**: Berguna untuk mengorganisir urutan pengambilan gambar secara kronologis
+* **Filter model kamera**: Kelompokkan gambar berdasarkan jenis kamera jika menggunakan beberapa kamera***
 
 ## Pratinjau Gambar
 
@@ -104,9 +94,7 @@ Klik thumbnail gambar apa pun di File Browser untuk menampilkannya di area prati
 * **Gambar Sebelumnya**: Klik panah kiri atau tekan tombol ←
 * **Gambar Berikutnya**: Klik panah kanan atau tekan tombol →
 * **Zoom In/Out**: Gunakan roda mouse atau tombol zoom
-* **Pan**: Klik dan seret pada gambar saat diperbesar
-
-***
+* **Geser**: Klik dan seret pada gambar saat diperbesar***
 
 ## Penanganan File Duplikat
 
@@ -131,9 +119,7 @@ Jika proyek Anda mengandung gambar dari beberapa kamera MAPIR:
 3. File Browser menampilkan model kamera di kolom Model Kamera
 4. Pengolahan menerapkan pengaturan yang benar untuk setiap jenis kamera
 
-**Contoh skenario**: Survey3W RGN + Survey3N OCN konfigurasi kamera ganda
-
-***
+**Contoh skenario**: Survey3W RGN + Survey3N OCN konfigurasi kamera ganda***
 
 ## Praktik Terbaik
 
@@ -165,7 +151,7 @@ Jika proyek Anda mengandung gambar dari beberapa kamera MAPIR:
 **Penyebab kemungkinan:**
 
 * Format file tidak didukung (hanya RAW+JPG dan JPG dari kamera MAPIR)
-* Gambar berasal dari kamera non-MAPIR (lihat [Kamera yang Didukung](../supported-cameras.md))
+* Gambar berasal dari kamera non-MAPIR (lihat [Daftar Kamera yang Didukung](../supported-cameras.md))
 * File rusak atau transfer tidak lengkap dari kartu SD
 
 **Solusi:** Verifikasi kompatibilitas format file dan model kamera
@@ -187,9 +173,7 @@ Jika proyek Anda mengandung gambar dari beberapa kamera MAPIR:
 * Jam kamera tidak disetel dengan benar
 * Data EXIF dihapus oleh perangkat lunak eksternal
 
-**Solusi**: Verifikasi pengaturan waktu kamera benar saat pengambilan gambar
-
-***
+**Solusi**: Verifikasi pengaturan waktu kamera benar saat pengambilan gambar***
 
 ## Langkah Selanjutnya
 

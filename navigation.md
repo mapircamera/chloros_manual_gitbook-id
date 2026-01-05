@@ -1,22 +1,20 @@
 # Antarmuka Pengguna Grafis (GUI): Navigasi
 
-Saat pertama kali meluncurkan Chloros dan Chloros (Browser), sistem akan memulai proses backend-nya. Setelah siap, ikon menu utama di pojok kiri atas akan muncul <img src=".gitbook/assets/image (1).png" alt="" data-size="line"> .
+Saat pertama kali meluncurkan Chloros dan Chloros (Browser), sistem akan memulai proses backend-nya. Setelah siap, ikon menu utama di pojok kiri atas akan muncul <img src=".gitbook/assets/image (1) (1) (1).png" alt="" data-size="line"> .
 
 <figure><img src=".gitbook/assets/header.JPG" alt=""><figcaption></figcaption></figure>
 
 Dari kiri ke kanan, header atas berisi:
 
-### <img src=".gitbook/assets/image (1) (1).png" alt="" data-size="line"> Menu Utama
+### <img src=".gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> Menu Utama
 
 Dari menu utama, Anda dapat memulai proyek baru, membuka proyek yang sudah ada, atau membuka folder proyek.
 
-### <img src=".gitbook/assets/image (2).png" alt="" data-size="line"> Tombol Putar/Mulai
+### <img src=".gitbook/assets/image (2) (1).png" alt="" data-size="line"> Tombol Putar/Mulai
 
 Ketika diaktifkan, tombol mulai pemrosesan akan memulai alur pemrosesan gambar.
 
-### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Bar Kemajuan <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
-
-Dalam mode gratis Chloros, yang memproses semua file secara berurutan, bilah kemajuan akan menampilkan 2 tahap: Deteksi Target dan Pemrosesan.
+### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Bar Progres <img src=".gitbook/assets/image (5).png" alt="" data-size="line">Dalam mode gratis Chloros, yang memproses semua file secara berurutan, bilah kemajuan akan menampilkan 2 tahap: Deteksi Target dan Pemrosesan.
 
 Dalam mode berlisensi berbayar Chloros+, yang memproses semua file secara bersamaan, bilah kemajuan menampilkan 4 tahap: Deteksi, Analisis, Kalibrasi, Ekspor. Jika Anda mengarahkan kursor mouse ke bilah kemajuan Chloros+, panel bilah kemajuan yang diperluas akan muncul sehingga Anda dapat mengikuti prosesnya. Mengklik bilah kemajuan atas akan membekukan panel dropdown, mengklik lagi akan membukanya kembali.
 
@@ -32,11 +30,15 @@ Tab Pengaturan Proyek memungkinkan Anda menyesuaikan pengaturan global proyek da
 
 #### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Penjelajah File
 
-Tambahkan file/folder dan hapus file dari proyek. File duplikat diabaikan. Centang kotak kolom target untuk gambar target, dan pemrosesan hanya akan memeriksa gambar yang dicentang sebagai target, sehingga mempercepat waktu pemrosesan Anda.
+Tambahkan file/folder dan hapus file dari proyek. File duplikat diabaikan. Centang kotak kolom target untuk gambar target, dan pemrosesan hanya akan memeriksa gambar yang dicentang sebagai target, sehingga mempercepat waktu pemrosesan Anda. Gunakan tombol beralih Gambar/Metadata untuk beralih antara tampilan grid thumbnail gambar terpilih dan tabel metadata detail.
 
 #### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Penerima Gambar](image-viewer-gui/opening-an-image-full-screen.md)
 
 Ketika gambar diklik di penerima gambar utama, gambar tersebut akan dibuka layar penuh di tab Penerima Gambar.
+
+#### <img src=".gitbook/assets/image (7).png" alt="" data-size="line"> [Peta](image-viewer-gui/map-markers.md)
+
+Lihat gambar Anda pada peta interaktif 2D berdasarkan koordinat GPS-nya. Mendukung penyedia peta Google Maps dan ESRI, secara otomatis memilih layanan terbaik untuk lokasi Anda. Arahkan kursor ke penanda untuk melihat pratinjau thumbnail gambar.
 
 #### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Catatan Debug
 

@@ -24,11 +24,13 @@
 
 ## SETTING PROYEK
 
-* [Pengaturan Proyek](project-settings/project-settings.md)
+* [Setting Proyek](project-settings/project-settings.md)
 * [Rumus Indeks Multispektral](project-settings/multispectral-index-formulas.md)
 
 ## PENAMPIL GAMBAR (GUI)
 
+* [Grid Gambar](image-viewer-gui/image-grid.md)
 * [Membuka Gambar Penuh Layar](image-viewer-gui/opening-an-image-full-screen.md)
 * [Lapisan Gambar](image-viewer-gui/image-layers.md)
 * [Sandbox Indeks/LUT](image-viewer-gui/index-lut-sandbox.md)
+* [Penanda Peta](image-viewer-gui/map-markers.md)

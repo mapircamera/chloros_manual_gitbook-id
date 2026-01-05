@@ -6,9 +6,7 @@ Pengguna <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> memun
 
 Setelah masuk, detail akun Anda akan ditampilkan:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>
-
-## CLI Masuk
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Masuk
 
 Masuk dengan kredensial Chloros+ Anda untuk mengaktifkan pemrosesan CLI.
 
@@ -17,6 +15,10 @@ Masuk dengan kredensial Chloros+ Anda untuk mengaktifkan pemrosesan CLI.
 ```bash
 chloros-cli login <email> <password>
 ```
+
+{% hint style=&quot;info&quot; %}
+**Pengguna SDK**: Python SDK juga menyediakan metode programatik `logout()` untuk menghapus kredensial yang disimpan dalam cache. Lihat dokumentasi [Python SDK](api-python-sdk.md#logout) untuk detailnya.
+{% endhint %}
 
 **Contoh:**
 
@@ -30,14 +32,12 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 
 **Output:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>
-
-### Kedaluwarsa Langganan
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>### Kedaluwarsa Langganan
 
 Kedaluwarsa langganan yang ditampilkan di antarmuka pengguna (GUI) menunjukkan kapan lisensi Anda akan menjadi tidak valid. Untuk langganan bulanan berulang, kedaluwarsa terjadi pada akhir bulan. Untuk langganan tahunan, kedaluwarsa terjadi satu tahun setelah Anda memulai langganan. Pemeriksaan lisensi memerlukan koneksi internet bulanan untuk verifikasi, dengan masa tenggang 30 hari.
 
 ### Batas Perangkat
 
-Setiap rencana Chloros+ menawarkan jumlah perangkat terdaftar yang berbeda. Setiap perangkat yang Anda login dengan akun Chloros+ akan dihitung sebagai bagian dari jumlah perangkat terdaftar Anda. Anda dapat mengganti nama dan menghapus perangkat di halaman akun MAPIR Cloud Anda.
+Setiap rencana Chloros+ menawarkan jumlah perangkat terdaftar yang berbeda. Setiap perangkat yang Anda akses dengan akun Chloros+ akan dihitung dalam jumlah perangkat terdaftar Anda. Anda dapat mengganti nama dan menghapus perangkat di halaman akun MAPIR Cloud Anda.
 
 <table><thead><tr><th width="168.5999755859375" align="right">Paket Chloros+</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Perangkat yang Didukung</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>

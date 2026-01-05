@@ -5,7 +5,7 @@
 ### Fitur Utama
 
 * 🚀 **Otomatisasi** - Pengolahan batch skrip untuk beberapa dataset
-* 🔗 **Integrasi** - Terintegrasi ke dalam alur kerja dan pipa kerja yang sudah ada
+* 🔗 **Integrasi** - Terintegrasi dalam alur kerja dan pipa yang sudah ada
 * 💻 **Operasi Tanpa Antarmuka Pengguna** - Berjalan tanpa antarmuka pengguna
 * 🌍 **Multi-Bahasa** - Dukungan untuk 38 bahasa
 * ⚡ **Pemrosesan Paralel** - Skalabilitas dinamis sesuai CPU (hingga 16 pekerja paralel)
@@ -21,7 +21,7 @@
 | **Ruang Disk**       | Bervariasi tergantung ukuran proyek                                              |
 
 {% hint style=&quot;warning&quot; %}
-**Persyaratan Lisensi**: CLI memerlukan langganan berbayar Chloros+. Rencana standar (gratis) tidak memiliki akses ke CLI. Kunjungi [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) untuk upgrade.
+**Persyaratan Lisensi**: CLI memerlukan langganan berbayar Chloros+. Rencana standar (gratis) tidak memiliki akses ke CLI. Kunjungi [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing) untuk melakukan upgrade.
 {% endhint %}
 
 ## Panduan Cepat
@@ -31,6 +31,7 @@
 CLI secara otomatis disertakan dalam penginstal Chloros:
 
 1. Unduh dan jalankan **Chloros Installer.exe**
+
 2. Selesaikan wizard instalasi
 3. CLI diinstal ke: `C:\Program Files\Chloros\resources\cli\chloros-cli.exe`
 
@@ -133,9 +134,7 @@ chloros-cli login user@example.com 'MyP@ssw0rd123'
 **Karakter Khusus**: Gunakan tanda kutip tunggal di sekitar kata sandi yang mengandung karakter seperti `$`, `!`, atau spasi.
 {% endhint %}
 
-**Output:**
-
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
+**Output:**<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>***
 
 ### `logout` - Hapus Kredensial
 
@@ -159,6 +158,10 @@ chloros-cli logout
 ✓ Logout successful
 ℹ Credentials cleared from cache
 ```
+
+{% hint style=&quot;info&quot; %}
+**Pengguna SDK:** Python SDK juga menyediakan metode programatik `logout()` untuk menghapus kredensial dalam skrip Python. Lihat dokumentasi [Python SDK](api-python-sdk.md#logout) untuk detailnya.
+{% endhint %}
 
 ***
 
@@ -195,7 +198,7 @@ chloros-cli status
 
 ### `export-status` - Periksa Kemajuan Ekspor
 
-Memantau kemajuan ekspor Thread 4 selama atau setelah pemrosesan.
+Pantau kemajuan ekspor Thread 4 selama atau setelah pemrosesan.
 
 **Sintaks:**
 
@@ -209,9 +212,7 @@ chloros-cli export-status
 chloros-cli export-status
 ```
 
-**Kasus Penggunaan:** Panggil perintah ini saat pemrosesan sedang berjalan untuk memeriksa kemajuan ekspor.
-
-***
+**Kasus Penggunaan:** Panggil perintah ini saat pemrosesan sedang berjalan untuk memeriksa kemajuan ekspor.***
 
 ### `language` - Kelola Bahasa Antarmuka
 
@@ -248,7 +249,7 @@ chloros-cli language ja
 
 #### Bahasa yang Didukung (38 Total)
 
-| Kode    | Bahasa               | Nama Asli      |
+| Kode    | Bahasa               | Nama Asli       |
 | ------- | --------------------- | ---------------- |
 | `en`    | Inggris               | English          |
 | `es`    | Spanyol               | Español          |
@@ -258,8 +259,8 @@ chloros-cli language ja
 | `it`    | Italia               | Italiano         |
 | `ja`    | Jepang              | 日本語              |
 | `ko`    | Korea                | 한국어              |
-| `zh`    | Mandarin (Sederhana)  | 简体中文             |
-| `zh-TW` | Mandarin (Tradisional) | 繁體中文             |
+| `zh`    | Tionghoa (Sederhana)  | 简体中文             |
+| `zh-TW` | Tionghoa (Tradisional) | 繁體中文             |
 | `ru`    | Rusia               | Русский          |
 | `nl`    | Belanda                 | Nederlands       |
 | `ar`    | Arab                 | العربية          |
@@ -313,7 +314,7 @@ chloros-cli set-project-folder "C:\Projects\2025"
 
 ***
 
-### `get-project-folder` - Tampilkan Lokasi Folder Proyek
+### `get-project-folder` - Tampilkan Folder Proyek
 
 Tampilkan lokasi folder proyek default saat ini.
 
@@ -351,7 +352,7 @@ chloros-cli reset-project-folder
 
 ## Opsi Global
 
-Opsi-opsi ini berlaku untuk semua perintah:
+Opsi ini berlaku untuk semua perintah:
 
 | Opsi          | Tipe    | Default       | Deskripsi                                      |
 | --------------- | ------- | ------------- | ------------------------------------------------ |
@@ -373,15 +374,11 @@ chloros-cli --port 5001 process "C:\Datasets\Survey_001"
 
 ### Pemrosesan Paralel
 
-Chloros+ CLI **secara otomatis menyesuaikan** pemrosesan paralel sesuai dengan kemampuan komputer Anda:
-
-**Cara Kerjanya:**
+Chloros+ CLI **secara otomatis menyesuaikan**pemrosesan paralel sesuai dengan kemampuan komputer Anda:**Cara Kerjanya:**
 
 * Mendeteksi inti CPU dan RAM Anda
 * Mengalokasikan pekerja: **2× inti CPU** (menggunakan hyperthreading)
-* **Maksimum: 16 pekerja paralel** (untuk stabilitas)
-
-**Tingkat Sistem:**
+* **Maksimum: 16 pekerja paralel** (untuk stabilitas)**Tingkat Sistem:**
 
 | Tipe Sistem   | CPU        | RAM      | Pekerja  | Kinerja     |
 | ------------- | ---------- | -------- | -------- | --------------- |
@@ -434,13 +431,13 @@ Mengonversi nilai sensor mentah menjadi persentase reflektansi standar menggunak
 
 ### Format Output
 
-<table><thead><tr><th width="197">Format</th><th width="130.20001220703125">Kedalaman Bit</th><th width="116.5999755859375">Ukuran File</th><th>Terbaik untuk</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>Bilangan bulat 16-bit</td><td>Besar</td><td>Analisis GIS, fotogrametri (disarankan)</td></tr><tr><td><strong>TIFF (32-bit, Persen)</strong></td><td>Bilangan floating-point 32-bit</td><td>Sangat besar</td><td>Analisis ilmiah, penelitian</td></tr><tr><td><strong>PNG (8-bit)</strong></td><td>Bilangan bulat 8-bit</td><td>Sedang</td><td>Pemeriksaan visual, berbagi di web</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>Bilangan bulat 8-bit</td><td>Kecil</td><td>Pratinjau cepat, output terkompresi</td></tr></tbody></table>***
+<table><thead><tr><th width="197">Format</th><th width="130.20001220703125">Kedalaman Bit</th><th width="116.5999755859375">Ukuran File</th><th>Terbaik untuk</th></tr></thead><tbody><tr><td><strong>TIFF (16-bit)</strong> ⭐</td><td>Bilangan bulat 16-bit</td><td>Besar</td><td>Analisis GIS, fotogrametri (disarankan)</td></tr><tr><td><strong>TIFF (32-bit, Persen)</strong></td><td>Bilangan floating-point 32-bit</td><td>Sangat besar</td><td>Analisis ilmiah, penelitian</td></tr><tr><td><strong>PNG (8-bit)</strong></td><td>Bilangan bulat 8-bit</td><td>Sedang</td><td>Pemeriksaan visual, berbagi web</td></tr><tr><td><strong>JPG (8-bit)</strong></td><td>Bilangan bulat 8-bit</td><td>Kecil</td><td>Pratinjau cepat, output terkompresi</td></tr></tbody></table>***
 
 ## Otomatisasi &amp; Skrip
 
 ### Pemrosesan Batch PowerShell
 
-Memproses folder dataset secara otomatis:
+Pemrosesan otomatis folder dataset multiple:
 
 ```powershell
 # process_all_datasets.ps1
@@ -578,12 +575,13 @@ if __name__ == '__main__':
 
 1. **Masukan**: Folder yang berisi pasangan gambar RAW/JPG
 2. **Penemuan**: CLI secara otomatis memindai file gambar yang didukung
-3. **Pemrosesan**: Mode paralel menyesuaikan dengan inti CPU Anda (Chloros+)
-4. **Output**: Membuat subfolder model kamera dengan gambar yang diproses
+3. **Pemrosesan**: Mode paralel menyesuaikan dengan jumlah inti CPU Anda (Chloros+)
+4. **Output**: Membuat subfolder berdasarkan model kamera dengan gambar yang telah diproses
 
 ### Struktur Output Contoh
 
 ```
+
 MyProject/
 ├── project.json                             # Project metadata
 ├── 2025_0203_193056_008.JPG                # Original JPG
@@ -641,11 +639,10 @@ dir "C:\Program Files\Chloros\resources\cli\chloros-cli.exe"
 
 ***
 
-### Backend Gagal Dimulai
-
-**Kesalahan:**
+### Backend Gagal Dimulai**Kesalahan:**
 
 ```
+
 Backend failed to start within 30 seconds
 ```
 
@@ -667,11 +664,10 @@ chloros-cli --restart process "C:\Datasets\Field_A"
 
 ***
 
-### Masalah Lisensi / Otentikasi
-
-**Kesalahan:**
+### Masalah Lisensi / Otentikasi**Kesalahan:**
 
 ```
+
 Chloros+ license required for CLI access
 ```
 
@@ -694,11 +690,10 @@ chloros-cli status
 
 ***
 
-### Tidak Ditemukan Gambar
-
-**Kesalahan:**
+### Tidak Ditemukan Gambar**Kesalahan:**
 
 ```
+
 No images found in the specified folder
 ```
 
@@ -711,9 +706,7 @@ No images found in the specified folder
 
 ***
 
-### Proses Terhenti atau Macet
-
-**Solusi:**
+### Proses Terhenti atau Macet**Solusi:**
 
 1. Periksa ruang disk yang tersedia (pastikan cukup untuk output)
 2. Tutup aplikasi lain untuk membebaskan memori
@@ -721,11 +714,10 @@ No images found in the specified folder
 
 ***
 
-### Port Sudah Digunakan
-
-**Kesalahan:**
+### Port Sudah Digunakan**Kesalahan:**
 
 ```
+
 Port 5000 is already in use
 ```
 
@@ -743,18 +735,16 @@ chloros-cli --port 5001 process "C:\Datasets\Field_A"
 
 ### Q: Apakah saya memerlukan lisensi untuk CLI?
 
-**A:** Ya! CLI memerlukan lisensi berbayar **Chloros+**.
+**A:**Ya! CLI memerlukan lisensi berbayar**Chloros+**.
 
 * ❌ Rencana Standar (gratis): CLI dinonaktifkan
-* ✅ Paket Chloros+ (berbayar): CLI diaktifkan sepenuhnya
+* ✅ Paket Chloros+ (berbayar): CLI sepenuhnya diaktifkan
 
 Berlangganan di: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
 
 ***
 
-### Q: Apakah saya dapat menggunakan CLI pada server tanpa antarmuka grafis (GUI)?
-
-**A:** Ya! CLI dapat berjalan sepenuhnya tanpa antarmuka grafis. Persyaratan:
+### Q: Apakah saya dapat menggunakan CLI pada server tanpa antarmuka grafis (GUI)?**A:** Ya! CLI dapat berjalan sepenuhnya tanpa antarmuka grafis. Persyaratan:
 
 * Windows Server 2016 atau versi terbaru
 * Visual C++ Redistributable terinstal
@@ -763,9 +753,7 @@ Berlangganan di: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera
 
 ***
 
-### Q: Di mana gambar yang diproses disimpan?
-
-**A:** Secara default, gambar yang diproses disimpan di folder yang sama dengan input, dalam subfolder model kamera (misalnya, `Survey3N_RGN/`).
+### Q: Di mana gambar yang diproses disimpan?**A:** Secara default, gambar yang diproses disimpan di folder yang sama dengan input, dalam subfolder model kamera (misalnya, `Survey3N_RGN/`).
 
 Gunakan opsi `-o` untuk menentukan folder output yang berbeda:
 
@@ -775,15 +763,9 @@ chloros-cli process "C:\Input" -o "D:\Output"
 
 ***
 
-### Q: Bisakah saya memproses beberapa folder sekaligus?
+### Q: Bisakah saya memproses beberapa folder sekaligus?**A:** Tidak secara langsung dalam satu perintah, tetapi Anda dapat menggunakan skrip untuk memproses folder secara berurutan. Lihat bagian [Automation &amp; Scripting](CLI.md#automation--scripting).***
 
-**A:** Tidak secara langsung dalam satu perintah, tetapi Anda dapat menggunakan skrip untuk memproses folder secara berurutan. Lihat bagian [Automation &amp; Scripting](CLI.md#automation--scripting).
-
-***
-
-### Q: Bagaimana cara menyimpan output CLI ke file log?
-
-**PowerShell:**
+### Q: Bagaimana cara menyimpan output CLI ke file log?**PowerShell:**
 
 ```powershell
 chloros-cli process "C:\Datasets\Field_A" | Tee-Object -FilePath "processing.log"
@@ -797,9 +779,7 @@ chloros-cli process "C:\Datasets\Field_A" > processing.log 2>&1
 
 ***
 
-### Q: Apa yang terjadi jika saya menekan Ctrl+C selama pemrosesan?
-
-**A:** CLI akan:
+### Q: Apa yang terjadi jika saya menekan Ctrl+C selama pemrosesan?**A:** CLI akan:
 
 1. Berhenti memproses dengan lancar
 2. Mematikan backend
@@ -809,15 +789,9 @@ Gambar yang diproses sebagian mungkin tetap ada di folder output.
 
 ***
 
-### Q: Bisakah saya mengotomatisasi pemrosesan CLI?
+### Q: Bisakah saya mengotomatisasi pemrosesan CLI?**A:** Tentu saja! CLI dirancang untuk otomatisasi. Lihat [Automation &amp; Scripting](CLI.md#automation--scripting) untuk contoh PowerShell, Batch, dan Python.***
 
-**A:** Tentu saja! CLI dirancang untuk otomatisasi. Lihat [Automation &amp; Scripting](CLI.md#automation--scripting) untuk contoh PowerShell, Batch, dan Python.
-
-***
-
-### Q: Bagaimana cara memeriksa versi CLI?
-
-**A:**
+### Q: Bagaimana cara memeriksa versi CLI?**A:**
 
 ```powershell
 chloros-cli --version
@@ -826,6 +800,7 @@ chloros-cli --version
 **Output:**
 
 ```
+
 Chloros CLI 1.0.2
 ```
 
@@ -851,9 +826,7 @@ chloros-cli language --help
 
 * **Email**: info@mapir.camera
 * **Situs Web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
-* **Harga**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)
-
-***
+* **Harga**: [https://cloud.mapir.camera/pricing](https://cloud.mapir.camera/pricing)***
 
 ## Contoh Lengkap
 

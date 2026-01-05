@@ -26,7 +26,7 @@ Sebelum mengklik tombol Mulai, pastikan semuanya siap:
 Tombol Mulai/Putar terletak di bilah header atas Chloros:
 
 * Posisi: Tengah atas jendela
-* Ikon: **Tombol Putar/Mulai** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">
+* Ikon: **Tombol Putar/Mulai** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
 * Status: Tombol aktif (terang) saat siap diproses
 
 ### Klik untuk Memulai
@@ -58,10 +58,8 @@ Chloros beroperasi dalam dua mode pemrosesan berbeda tergantung pada lisensi And
 
 **Bar kemajuan menampilkan 2 tahap:**
 
-1. **Deteksi Target** - Pemindaian target kalibrasi
-2. **Pemrosesan** - Penerapan kalibrasi dan ekspor gambar
-
-**Waktu pemrosesan:**
+1.**Deteksi Target** - Pemindaian target kalibrasi
+2. **Pemrosesan** - Penerapan kalibrasi dan ekspor gambar**Waktu pemrosesan:**
 
 * Jauh lebih lambat daripada mode paralel Chloros+
 * Cocok untuk dataset kecil hingga menengah (&lt; 200 gambar)
@@ -79,25 +77,19 @@ Chloros beroperasi dalam dua mode pemrosesan berbeda tergantung pada lisensi And
 
 **Bar kemajuan menampilkan 4 tahap:**
 
-1. **Deteksi** - Mencari target kalibrasi
-2. **Analisis** - Memeriksa metadata gambar dan mempersiapkan pipeline
+1.**Deteksi** - Mencari target kalibrasi
+2. **Analisis** - Menganalisis metadata gambar dan menyiapkan pipeline
 3. **Kalibrasi** - Menerapkan koreksi dan kalibrasi
-4. **Ekspor** - Menyimpan gambar yang diproses dan indeks
-
-**Interaksi bilah kemajuan:**
-
-* **Arahkan kursor mouse** ke bilah untuk melihat panel dropdown 4 tahap yang detail
+4. **Ekspor** - Menyimpan gambar yang diproses dan indeks**Interaksi bilah kemajuan:*** **Arahkan kursor mouse** ke bilah untuk melihat panel dropdown 4 tahap secara detail
 * **Klik** bilah kemajuan untuk membekukan panel dropdown di tempat
-* **Klik lagi** untuk membatalkan pembekuan dan menyembunyikan panel
-
-**Waktu pemrosesan:**
+* **Klik lagi** untuk membatalkan pembekuan dan menyembunyikan panel**Waktu pemrosesan:**
 
 * Jauh lebih cepat daripada mode gratis
 * Berbanding lurus dengan jumlah inti CPU
-* Akselerasi GPU lebih meningkatkan kecepatan
+* Akselerasi GPU lebih lanjut meningkatkan kecepatan
 
 {% hint style=&quot;info&quot; %}
-**Chloros+ Kecepatan**: Pemrosesan paralel dapat 5-10 kali lebih cepat daripada mode berurutan untuk dataset besar. Proyek 500 gambar yang memakan waktu 2 jam dalam mode gratis dapat selesai dalam 15-20 menit dengan Chloros+.
+**Chloros+ Kecepatan**: Pemrosesan paralel dapat 5-10 kali lebih cepat daripada mode berurutan untuk dataset besar. Proyek 500 gambar yang memakan waktu 2 jam dalam mode gratis dapat diselesaikan dalam 15-20 menit dengan Chloros+.
 {% endhint %}
 
 ***
@@ -127,9 +119,7 @@ Chloros beroperasi dalam dua mode pemrosesan berbeda tergantung pada lisensi And
 
 ### Tahap 3: Kalibrasi
 
-**Apa yang dilakukan Chloros:**
-
-* **Koreksi vignette**: Menghapus gelapnya lensa di tepi
+**Apa yang dilakukan Chloros:*** **Koreksi vignette**: Menghapus gelapnya lensa di tepi
 * **Kalibrasi reflektansi**: Menormalkan menggunakan nilai reflektansi target
 * Menerapkan koreksi di semua band/saluran
 * Menggunakan target kalibrasi yang sesuai untuk setiap gambar berdasarkan cap waktu
@@ -150,20 +140,18 @@ Chloros beroperasi dalam dua mode pemrosesan berbeda tergantung pada lisensi And
 
 **Apa yang dilakukan Chloros:**
 
-* Menyimpan gambar yang dikalibrasi dalam format yang dipilih
+* Menyimpan gambar yang telah dikalibrasi dalam format yang dipilih
 * Mengekspor gambar indeks dengan warna LUT yang dikonfigurasi
 * Menulis file ke subfolder model kamera
 * Mempertahankan nama file asli dengan sufiks
 
-**Durasi:** Bervariasi tergantung format ekspor dan ukuran file
-
-***
+**Durasi:** Bervariasi tergantung format ekspor dan ukuran file***
 
 ## Perilaku Pemrosesan
 
-### Alur Pemrosesan Otomatis
+### Jalur Pemrosesan Otomatis
 
-Setelah dimulai, seluruh alur pemrosesan berjalan secara otomatis:
+Setelah dimulai, seluruh jalur pemrosesan berjalan secara otomatis:
 
 * Tidak memerlukan interaksi pengguna
 * Semua langkah yang dikonfigurasi dieksekusi secara berurutan
@@ -182,10 +170,10 @@ Setelah dimulai, seluruh alur pemrosesan berjalan secara otomatis:
 * Penggunaan CPU tinggi (multi-threaded, hingga 16 inti)
 * Dengan akselerasi GPU: Penggunaan GPU tinggi
 * Komputer mungkin kurang responsif selama pemrosesan
-* Hindari memulai tugas CPU-intensif lainnya
+* Hindari memulai tugas lain yang intensif CPU
 
 {% hint style=&quot;warning&quot; %}
-**Tips Kinerja**: Untuk kinerja optimal Chloros+, tutup aplikasi lain dan biarkan Chloros menggunakan sumber daya sistem penuh.
+**Tips Kinerja**: Untuk kinerja terbaik Chloros+, tutup aplikasi lain dan biarkan Chloros menggunakan sumber daya sistem penuh.
 {% endhint %}
 
 ### Pemrosesan Tidak Dapat Dihentikan
@@ -197,9 +185,7 @@ Setelah dimulai, seluruh alur pemrosesan berjalan secara otomatis:
 * Hasil parsial tidak disimpan
 * Harus memulai dari awal jika dibatalkan
 
-**Tips perencanaan:** Untuk proyek yang sangat besar, pertimbangkan untuk memproses dalam batch atau menggunakan CLI untuk kontrol yang lebih baik.
-
-***
+**Tips perencanaan:** Untuk proyek yang sangat besar, pertimbangkan untuk memproses secara bertahap atau menggunakan CLI untuk kontrol yang lebih baik.***
 
 ## Memantau Pemrosesan Anda
 
@@ -223,7 +209,7 @@ Jika Anda perlu menghentikan pemrosesan:
 1. Temukan tombol **Stop/Cancel** (menggantikan tombol Start selama pemrosesan)
 2. Klik tombol Stop
 3. Pemrosesan berhenti segera
-4. Hasil sebagian akan dihapus
+4. Hasil sebagian akan dibuang
 
 ### Kapan Membatalkan
 
@@ -236,13 +222,13 @@ Jika Anda perlu menghentikan pemrosesan:
 
 **Setelah membatalkan:**
 
-* Periksa dan perbaiki masalah apa pun
+* Periksa dan perbaiki masalah yang ada
 * Sesuaikan pengaturan sesuai kebutuhan
 * Mulai ulang pemrosesan dari awal
 * Untuk pengalaman terbaik, tutup sepenuhnya Chloros dan mulai ulang
 
 {% hint style=&quot;warning&quot; %}
-**Tidak Ada Hasil Parsial**: Membatalkan akan membuang semua kemajuan. Chloros tidak menyimpan gambar yang diproses sebagian.
+**Tidak Ada Hasil Parsial**: Membatalkan akan menghapus semua kemajuan. Chloros tidak menyimpan gambar yang diproses sebagian.
 {% endhint %}
 
 ***
@@ -280,7 +266,7 @@ Waktu pemrosesan aktual bervariasi secara signifikan berdasarkan:
 
 ### Tombol Mulai Dinonaktifkan (Berwarna Abu-abu)
 
-**Penyebab Mungkin:**
+**Penyebab kemungkinan:**
 
 * Tidak ada gambar yang diimpor
 * Backend belum sepenuhnya dimulai
@@ -298,7 +284,7 @@ Waktu pemrosesan aktual bervariasi secara signifikan berdasarkan:
 
 **Penyebab kemungkinan:**
 
-* Tidak ada gambar yang valid dalam proyek
+* Tidak ada gambar valid dalam proyek
 * File gambar rusak
 * Ruang disk tidak mencukupi
 * Memori (RAM) tidak mencukupi
@@ -327,7 +313,7 @@ Waktu pemrosesan aktual bervariasi secara signifikan berdasarkan:
 
 ***
 
-## Tips untuk Pemrosesan yang Sukses
+## Tips untuk Pengolahan yang Sukses
 
 ### Sebelum Memulai
 
