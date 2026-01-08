@@ -2,13 +2,13 @@
 
 Setelah Anda membuat atau membuka proyek di Chloros, langkah berikutnya adalah menambahkan gambar multispektral Anda untuk memulai pemrosesan. Pengelola Berkas<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> memudahkan Anda untuk mengimpor gambar dan mengelola dataset Anda.
 
-## Akses File Browser
+## Mengakses File Browser
 
 1. Buka atau buat proyek di Chloros
 2. Klik ikon **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> di bilah sisi kiri
 3. Panel File Browser akan menampilkan daftar file proyek Anda
 
-{% hint style=&quot;info&quot; %}
+{% hint style="info" %}
 **Tipe File yang Didukung**: Chloros mendukung file gambar RAW+JPG dan JPG dari kamera MAPIR Survey3W dan Survey3N. Hanya RAW+JPG yang direkomendasikan.
 {% endhint %}
 
@@ -22,18 +22,20 @@ Ada dua cara utama untuk menambahkan gambar ke proyek Anda:
 
 Gunakan opsi ini untuk mengimpor berkas gambar individu atau sejumlah kecil berkas.
 
-1. Klik tombol **&quot;Tambahkan File&quot;** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> di bagian atas panel File Browser
+1. Klik tombol **&quot;Tambahkan Berkas&quot;** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> di bagian atas panel File Browser
 2. Navigasi ke folder yang berisi gambar Anda
 3. Pilih satu atau lebih file gambar (tahan **Ctrl** untuk memilih beberapa file)
 4. Klik **&quot;Buka&quot;** untuk mengimpor file yang dipilih
 
 ### Metode 2: Tambahkan Folder
 
-Gunakan opsi ini untuk mengimpor semua gambar dari folder sekaligus.
+Gunakan opsi ini untuk mengimpor semua gambar dari sebuah folder sekaligus.
 
 1. Klik tombol **&quot;Tambahkan Folder&quot;** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> di bagian atas panel File Browser
-2. Navigasi ke dan pilih folder yang berisi gambar sesi penangkapan Anda
-3. Klik **&quot;Pilih Folder&quot;** untuk mengimpor semua gambar yang didukung dari folder tersebut***
+2. Navigasi ke dan pilih folder yang berisi gambar sesi pengambilan Anda
+3. Klik **&quot;Pilih Folder&quot;** untuk mengimpor semua gambar yang didukung dari folder tersebut
+
+***
 
 ## Memahami Tabel File Browser
 
@@ -62,22 +64,30 @@ Setelah gambar diimpor, mereka akan muncul dalam tabel dengan kolom-kolom beriku
 * Sangat mempercepat deteksi target selama pemrosesan
 * Lihat [Memilih Gambar Target](choosing-target-images.md) untuk detail
 
+### Menampilkan Metadata Gambar
+
+Mengklik tombol toggle di pojok kanan atas di atas tabel akan menampilkan metadata gambar yang dipilih di area grid gambar.
+
+<figure><img src="../.gitbook/assets/chloros_grid_meta.gif" alt=""><figcaption></figcaption></figure>
+
 ***
 
-## Mengelola Berkas dalam Proyek Anda
+## Mengelola File dalam Proyek Anda
 
-### Menghapus Berkas
+### Menghapus File
 
 Untuk menghapus gambar yang tidak diinginkan dari proyek Anda:
 
-1. Pilih satu atau lebih gambar di tabel Penjelajah Berkas
-2. Klik tombol **&quot;Hapus yang Terpilih&quot;** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> 3. Konfirmasi penghapusan (berkas tidak dihapus dari disk, hanya dihapus dari proyek)
+1. Pilih satu atau lebih gambar di tabel File Browser
+2. Klik tombol **&quot;Hapus yang Terpilih&quot;** <img src="../.gitbook/assets/image (2).png" alt="" data-size="line"> 3. Konfirmasi penghapusan (file tidak dihapus dari disk, hanya dihapus dari proyek)
 
 ### Pengurutan dan Penyaringan
 
 * **Urutkan berdasarkan kolom**: Klik header kolom mana pun untuk mengurutkan gambar
-* **Pengurutan berdasarkan waktu**: Berguna untuk mengorganisir urutan pengambilan gambar secara kronologis
-* **Filter model kamera**: Kelompokkan gambar berdasarkan jenis kamera jika menggunakan beberapa kamera***
+* **Urutkan berdasarkan waktu**: Berguna untuk mengorganisir urutan pengambilan gambar secara kronologis
+* **Penyaringan model kamera**: Kelompokkan gambar berdasarkan jenis kamera jika menggunakan beberapa kamera
+
+***
 
 ## Pratinjau Gambar
 
@@ -94,7 +104,9 @@ Klik thumbnail gambar apa pun di File Browser untuk menampilkannya di area prati
 * **Gambar Sebelumnya**: Klik panah kiri atau tekan tombol ←
 * **Gambar Berikutnya**: Klik panah kanan atau tekan tombol →
 * **Zoom In/Out**: Gunakan roda mouse atau tombol zoom
-* **Geser**: Klik dan seret pada gambar saat diperbesar***
+* **Geser**: Klik dan seret pada gambar saat diperbesar
+
+***
 
 ## Penanganan File Duplikat
 
@@ -104,7 +116,7 @@ Chloros secara otomatis mendeteksi dan mengabaikan file duplikat:
 * Mencegah pemrosesan ganda yang tidak disengaja
 * Pesan peringatan ditampilkan saat duplikat terdeteksi
 
-{% hint style=&quot;warning&quot; %}
+{% hint style="warning" %}
 **Penting**: Jangan mengganti nama atau memodifikasi file gambar asli sebelum mengimpor. Chloros bergantung pada nama file asli dan metadata untuk pemrosesan yang benar.
 {% endhint %}
 
@@ -112,14 +124,16 @@ Chloros secara otomatis mendeteksi dan mengabaikan file duplikat:
 
 ## Kumpulan Data Kamera Campuran
 
-Jika proyek Anda mengandung gambar dari beberapa kamera MAPIR:
+Jika proyek Anda berisi gambar dari beberapa kamera MAPIR:
 
 1. Chloros secara otomatis mendeteksi setiap model kamera
 2. Setiap jenis kamera diproses dengan profil kalibrasi yang sesuai
 3. File Browser menampilkan model kamera di kolom Model Kamera
 4. Pengolahan menerapkan pengaturan yang benar untuk setiap jenis kamera
 
-**Contoh skenario**: Survey3W RGN + Survey3N OCN konfigurasi kamera ganda***
+**Skenario contoh**: Survey3W RGN + Survey3N OCN konfigurasi kamera ganda
+
+***
 
 ## Praktik Terbaik
 
@@ -144,14 +158,14 @@ Jika proyek Anda mengandung gambar dari beberapa kamera MAPIR:
 
 ***
 
-## Masalah Umum dan Solusinya
+## Masalah Umum dan Solusi
 
 ### Gambar Tidak Muncul Setelah Impor
 
 **Penyebab kemungkinan:**
 
 * Format file tidak didukung (hanya RAW+JPG dan JPG dari kamera MAPIR)
-* Gambar berasal dari kamera non-MAPIR (lihat [Daftar Kamera yang Didukung](../supported-cameras.md))
+* Gambar berasal dari kamera non-MAPIR (lihat [Kamera yang Didukung](../supported-cameras.md))
 * File rusak atau transfer tidak lengkap dari kartu SD
 
 **Solusi:** Verifikasi kompatibilitas format file dan model kamera
@@ -160,8 +174,8 @@ Jika proyek Anda mengandung gambar dari beberapa kamera MAPIR:
 
 **Penyebab kemungkinan:**
 
-* Metadata EXIF yang dimodifikasi
-* Gambar diedit menggunakan perangkat lunak eksternal
+* Metadata EXIF dimodifikasi
+* Gambar diedit di perangkat lunak eksternal
 * Transfer file tidak lengkap
 
 **Solusi:** Impor ulang file asli yang belum dimodifikasi dari kamera/kartu SD
@@ -173,14 +187,16 @@ Jika proyek Anda mengandung gambar dari beberapa kamera MAPIR:
 * Jam kamera tidak disetel dengan benar
 * Data EXIF dihapus oleh perangkat lunak eksternal
 
-**Solusi**: Verifikasi pengaturan waktu kamera benar saat pengambilan gambar***
+**Solusi**: Verifikasi pengaturan waktu kamera benar saat pengambilan gambar
+
+***
 
 ## Langkah Selanjutnya
 
 Setelah file diimpor:
 
 1. **Periksa daftar file** - Pastikan semua gambar dimuat dengan benar
-2. **Periksa model kamera** - Verifikasi deteksi kamera yang benar
+2. **Periksa model kamera** - Pastikan deteksi kamera benar
 3. **Tandai gambar target** - Lihat [Memilih Gambar Target](choosing-target-images.md)
 4. **Sesuaikan pengaturan** - Konfigurasikan opsi pemrosesan di [Pengaturan Proyek](adjusting-project-settings.md)
 5. **Mulai pemrosesan** - Lihat [Memulai Pemrosesan](starting-the-processing.md)

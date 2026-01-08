@@ -1,6 +1,6 @@
 # Membuka Gambar dalam Mode Layar Penuh
 
-Chloros Image Viewer menyediakan antarmuka layar penuh khusus untuk melihat, menganalisis, dan memanipulasi gambar multispektral Anda. Baik saat melihat gambar asli maupun hasil pemrosesan, Image Viewer menawarkan alat-alat canggih untuk inspeksi dan analisis.
+Chloros Image Viewer menyediakan antarmuka layar penuh khusus untuk melihat, menganalisis, dan memanipulasi gambar multispektral Anda. Baik saat melihat gambar asli maupun hasil pemrosesan, Image Viewer menawarkan alat-alat yang kuat untuk inspeksi dan analisis.
 
 ## Mengakses Image Viewer
 
@@ -64,22 +64,16 @@ Sesuaikan perbesaran untuk memeriksa detail gambar:
 * Tekan tombol **−** (Minus)
 * Gulir roda mouse ke bawah
 
-**Sesuaikan dengan Layar:**
-
-* Klik tombol **↔** (Sesuaikan)
-* Tekan tombol **0** (Nol)
-* Klik ganda pada gambar
-
-#### Geser Saat Diperbesar
+#### Perpindahan Gambar Saat Diperbesar
 
 Saat diperbesar melebihi ukuran layar:
 
 1. Pindahkan kursor mouse di atas gambar
 2. Klik dan **tahan tombol mouse kiri**
 3. **Seret** untuk memindahkan gambar
-4. Lepaskan untuk menghentikan pergerakan
+4. Lepaskan untuk menghentikan perpindahan
 
-**Alternatif**: Gunakan tombol panah untuk memindahkan gambar dalam increment kecil
+**Alternatif**: Gunakan tombol panah untuk perpindahan dalam increment kecil
 
 ***
 
@@ -92,7 +86,7 @@ Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan sec
 **Lokasi tampilan nilai:**
 
 * **Angka mengambang dan garis merah di legenda gradien LUT indeks sisi kanan**
-* **Saat diperbesar lebih lanjut, nilai mengambang di dekat kursor dan piksel yang ditandai**
+* **Saat diperbesar lebih jauh, nilai mengambang di dekat kursor dan piksel yang ditandai**
 * Menampilkan nilai untuk piksel **di bawah kursor atau yang ditandai**
 * Diperbarui saat Anda menggerakkan mouse
 
@@ -100,28 +94,30 @@ Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan sec
 
 ## Jenis Gambar yang Dapat Ditampilkan
 
-### Gambar Asli (Pra-Pemrosesan)
+### JPG
 
-**Gambar RAW + JPG dari kamera:**
+**Gambar JPG dari kamera:**
 
-* Menampilkan data RAW sebagai pratinjau
+* Menampilkan data JPG sebagai pratinjau
 * Menampilkan nilai asli yang belum dikoreksi
 * Berguna untuk memeriksa kualitas gambar sebelum pemrosesan
 
-### Gambar Reflektansi yang Dikalibrasi
+### RAW (Asli)
+
+### RAW (Reflektansi)
 
 **Setelah pemrosesan:**
 
 * Koreksi vignette
-* Reflektansi dikalibrasi
+* Kalibrasi reflektansi
 * Multi-band TIFF (Red, Green, NIR, dll.)
 * Data ilmiah siap untuk analisis
 
-### Gambar Indeks
+### RAW (Indeks)
 
 **NDVI, NDRE, GNDVI, dll. (berkas \_NDVI.tif):**
 
-* Gambar monokrom tunggal
+* Gambar grayscale satu band
 * Nilai piksel mewakili hasil perhitungan indeks
 * Rentang biasanya -1 hingga +1 untuk indeks yang dinormalisasi
 * Dapat menerapkan tabel warna LUT untuk visualisasi
@@ -130,9 +126,9 @@ Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan sec
 
 ## Aplikasi Indeks dan LUT
 
-Terapkan indeks multispektral dan tabel warna LUT:
+Terapkan indeks multispektral dan tabel warna Look-Up Tables:
 
-1. Temukan **Index/LUT Sandbox** di **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di bilah sisi
+1. Temukan **Index/LUT Sandbox** di **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di sidebar
 2. Pilih indeks vegetasi (NDVI, NDRE, dll.)
 3. Pilih rumus multispektral, atau buat rumus kustom sendiri (hanya Chloros+)
 4. Terapkan gradien LUT warna untuk visualisasi
@@ -155,19 +151,7 @@ Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk petunjuk detail.
 
 * **+** atau **=**: Perbesar
 * **−**: Perkecil
-* **0** (Nol): Sesuaikan dengan layar
 * **Roda Mouse**: Perbesar/perkecil
-
-### Kontrol Tampilan
-
-* **P**: Aktifkan/nonaktifkan mode persentase piksel
-* **L**: Aktifkan/nonaktifkan panel lapisan
-* **Esc**: Tutup mode layar penuh atau kembali ke Penjelajah Berkas
-
-### Lainnya
-
-* **Ctrl+S**: Simpan gambar saat ini
-* **F**: Mode layar penuh (jika tersedia)
 
 ***
 
@@ -186,7 +170,7 @@ Pastikan indeks dihitung dengan benar:
 
 ***
 
-## Pemecahan Masalah Tampilan
+## Pemecahan Masalah Tampilan Gambar
 
 ### Gambar Tidak Bisa Dibuka
 
@@ -219,7 +203,7 @@ Pastikan indeks dihitung dengan benar:
 
 ### Nilai Piksel Tampak Salah
 
-**Penyebab Mungkin:**
+**Penyebab kemungkinan:**
 
 * Melihat gambar yang salah (asli vs yang diproses)
 * Kalibrasi tidak diterapkan dengan benar
@@ -236,7 +220,7 @@ Pastikan indeks dihitung dengan benar:
 
 ## Langkah Selanjutnya
 
-Sekarang Anda dapat melihat gambar dalam mode layar penuh:
+Sekarang Anda dapat menampilkan gambar dalam mode layar penuh:
 
 * [**Lapisan Gambar**](image-layers.md) - Pelajari tentang visualisasi multi-band
 * [**Sandbox Indeks/LUT**](index-lut-sandbox.md) - Terapkan indeks kustom dan pemetaan warna
