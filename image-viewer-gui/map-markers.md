@@ -1,6 +1,6 @@
 # Penanda Peta
 
-Tab Peta menampilkan gambar Anda pada peta interaktif 2D berdasarkan koordinat GPS-nya. Hal ini memberikan gambaran geografis tentang sesi pengambilan gambar Anda dan membantu Anda memvisualisasikan cakupan spasial. Fitur ini juga berguna saat pertama kali mengimpor gambar untuk dengan cepat menghapus gambar yang tidak perlu diproses.
+Tab Peta menampilkan gambar Anda pada peta interaktif 2D berdasarkan koordinat GPS-nya. Ini memberikan gambaran geografis tentang sesi pengambilan gambar Anda dan membantu Anda memvisualisasikan cakupan spasial. Fitur ini juga berguna saat pertama kali mengimpor gambar untuk dengan cepat menghapus gambar yang tidak perlu diproses.
 
 <figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
@@ -19,7 +19,7 @@ Tab Peta menampilkan gambar Anda pada peta interaktif 2D berdasarkan koordinat G
 
 ## Mengatur Gambar dari Tab Peta
 
-Tab **Peta** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> memiliki fungsi tambah  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  dan hapus  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  seperti yang ada di [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Tab ini juga menampilkan daftar tabel file proyek yang sama tetapi dengan header kolom yang berbeda:
+Tab **Peta**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> memiliki fungsi tambah  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  dan hapus  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  seperti yang ada di [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Tab ini juga menampilkan daftar tabel file proyek yang sama tetapi dengan header kolom yang berbeda:
 
 ### Nama File
 
@@ -90,7 +90,7 @@ Tab Peta mendukung dua penyedia ubin untuk gambar latar belakang peta:
 
 Anda dapat memilih jenis lapisan peta (dari kiri ke kanan):
 
- <img src="../.gitbook/assets/image (23).png" alt="" data-size="line">### Terrain
+ <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terrain
 
 Menampilkan profil elevasi dan ubin peta dengan detail (jalan, dll)
 
@@ -100,7 +100,7 @@ Menampilkan ubin peta standar (bandwidth rendah) dengan detail (jalan, dll)
 
 ### Satellite
 
-Menampilkan ubin peta satelit dengan detail tinggi (bandwidth tinggi)
+Menampilkan ubin peta satelit detail (bandwidth tinggi)
 
 ### Hybrid
 
@@ -117,9 +117,7 @@ Menampilkan ubin peta satelit dengan detail tambahan (jalan, dll)
 
 ### Kontrol Geser
 
-* **Geser**: Klik dan seret untuk berpindah di peta
-
-***
+* **Geser**: Klik dan seret untuk berpindah di peta***
 
 ## Kasus Penggunaan
 
@@ -129,7 +127,7 @@ Menampilkan ubin peta satelit dengan detail tambahan (jalan, dll)
 * Identifikasi celah dalam cakupan gambar
 * Verifikasi pelaksanaan jalur terbang
 
-### Ulasan Survei Darat
+### Review Survei Darat
 
 * Lihat distribusi spasial penangkapan berbasis darat
 * Temukan gambar target kalibrasi relatif terhadap area survei
@@ -145,7 +143,7 @@ Menampilkan ubin peta satelit dengan detail tambahan (jalan, dll)
 
 ## Pemecahan Masalah
 
-### Tidak Ada Marker yang Muncul
+### Tidak Ada Penanda yang Muncul
 
 **Penyebab kemungkinan:**
 

@@ -31,10 +31,8 @@ Bagian terbesar layar menampilkan gambar Anda:
 
 * **Resolusi penuh**: Gambar ditampilkan pada resolusi asli
 * **Dapat diperbesar/perkecil**: Gunakan kontrol atau roda mouse untuk memperbesar/perkecil
-* **Dapat digeser**: Klik dan seret untuk berpindah saat diperbesar/perkecil
-* **Perbandingan aspek terjaga**: Gambar diskalakan secara proporsional
-
-***
+* **Dapat digeser**: Klik dan seret untuk berpindah saat diperbesar
+* **Perbandingan aspek terjaga**: Gambar diskalakan secara proporsional***
 
 ## Opsi Tampilan
 
@@ -44,51 +42,38 @@ Bagian terbesar layar menampilkan gambar Anda:
 
 Navigasi melalui set gambar Anda menggunakan pintasan keyboard atau tombol:
 
-* **Gambar berikutnya**: Klik tombol → atau tekan tombol **→** (Panah Kanan)
-* **Gambar sebelumnya**: Klik tombol ← atau tekan tombol **←** (Panah Kiri)
+* **Gambar berikutnya**: Klik tombol → atau tekan tombol**→** (Panah Kanan)
+* **Gambar sebelumnya**: Klik tombol ← atau tekan tombol**←** (Panah Kiri)
 * **Lompat ke gambar tertentu**: Kembali ke File Browser dan klik thumbnail yang diinginkan
 
 #### Kontrol Perbesaran
 
 Sesuaikan perbesaran untuk memeriksa detail gambar:
 
-**Perbesar:**
+**Perbesar:*** Klik tombol **+** (Plus)
+* Tekan tombol **+**atau**=*** Gulir roda mouse ke atas
 
-* Klik tombol **+** (Plus)
-* Tekan tombol **+** atau **=**
-* Gulir roda mouse ke atas
-
-**Perkecil:**
-
-* Klik tombol **−** (Minus)
+**Perkecil:*** Klik tombol **−** (Minus)
 * Tekan tombol **−** (Minus)
 * Gulir roda mouse ke bawah
 
-#### Perpindahan Gambar Saat Diperbesar
+#### Pergeseran Saat Diperbesar
 
 Saat diperbesar melebihi ukuran layar:
 
 1. Pindahkan kursor mouse di atas gambar
 2. Klik dan **tahan tombol mouse kiri**
-3. **Seret** untuk memindahkan gambar
-4. Lepaskan untuk menghentikan perpindahan
 
-**Alternatif**: Gunakan tombol panah untuk perpindahan dalam increment kecil
+3.**Seret** untuk memindahkan gambar
+4. Lepaskan untuk menghentikan pergeseran
 
-***
+**Alternatif**: Gunakan tombol panah untuk pergeseran dalam increment kecil***
 
 ## Pemeriksaan Nilai Piksel
 
 ### Menampilkan Nilai Piksel di Kursor
 
-Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan secara real-time:
-
-**Lokasi tampilan nilai:**
-
-* **Angka mengambang dan garis merah di legenda gradien LUT indeks sisi kanan**
-* **Saat diperbesar lebih jauh, nilai mengambang di dekat kursor dan piksel yang ditandai**
-* Menampilkan nilai untuk piksel **di bawah kursor atau yang ditandai**
-* Diperbarui saat Anda menggerakkan mouse
+Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan secara real-time:**Lokasi tampilan nilai:*** **Angka mengambang dan garis merah di legenda gradien LUT indeks sisi kanan*** **Saat diperbesar lebih jauh, nilai mengambang di dekat kursor dan piksel yang ditandai*** Menampilkan nilai untuk piksel **di bawah kursor atau yang ditandai*** Diperbarui saat Anda menggerakkan mouse
 
 ***
 
@@ -117,7 +102,7 @@ Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan sec
 
 **NDVI, NDRE, GNDVI, dll. (berkas \_NDVI.tif):**
 
-* Gambar grayscale satu band
+* Gambar grayscale satu kanal
 * Nilai piksel mewakili hasil perhitungan indeks
 * Rentang biasanya -1 hingga +1 untuk indeks yang dinormalisasi
 * Dapat menerapkan tabel warna LUT untuk visualisasi
@@ -126,9 +111,9 @@ Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan sec
 
 ## Aplikasi Indeks dan LUT
 
-Terapkan indeks multispektral dan tabel warna Look-Up Tables:
+Terapkan indeks multispektral dan tabel warna LUT:
 
-1. Temukan **Index/LUT Sandbox** di **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di sidebar
+1. Temukan **Index/LUT Sandbox**di**Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di sidebar
 2. Pilih indeks vegetasi (NDVI, NDRE, dll.)
 3. Pilih rumus multispektral, atau buat rumus kustom sendiri (hanya Chloros+)
 4. Terapkan gradien LUT warna untuk visualisasi
@@ -149,11 +134,9 @@ Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk petunjuk detail.
 
 ### Perbesaran
 
-* **+** atau **=**: Perbesar
+* **+**atau**=**: Perbesar
 * **−**: Perkecil
-* **Roda Mouse**: Perbesar/perkecil
-
-***
+* **Roda Mouse**: Perbesar/perkecil***
 
 ### Verifikasi Perhitungan Indeks
 
@@ -166,9 +149,7 @@ Pastikan indeks dihitung dengan benar:
    * **GNDVI**: Mirip dengan NDVI tetapi sensitif terhadap klorofil
 3. Periksa area non-vegetasi:
    * **Tanah**: Dekat 0 atau sedikit negatif
-   * **Air**: Nilai negatif (-0,5 hingga 0)
-
-***
+   * **Air**: Nilai negatif (-0,5 hingga 0)***
 
 ## Pemecahan Masalah Tampilan Gambar
 
@@ -203,7 +184,7 @@ Pastikan indeks dihitung dengan benar:
 
 ### Nilai Piksel Tampak Salah
 
-**Penyebab kemungkinan:**
+**Penyebab Mungkin:**
 
 * Melihat gambar yang salah (asli vs yang diproses)
 * Kalibrasi tidak diterapkan dengan benar
@@ -220,7 +201,7 @@ Pastikan indeks dihitung dengan benar:
 
 ## Langkah Selanjutnya
 
-Sekarang Anda dapat menampilkan gambar dalam mode layar penuh:
+Sekarang Anda dapat melihat gambar dalam mode layar penuh:
 
 * [**Lapisan Gambar**](image-layers.md) - Pelajari tentang visualisasi multi-band
 * [**Sandbox Indeks/LUT**](index-lut-sandbox.md) - Terapkan indeks kustom dan pemetaan warna

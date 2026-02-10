@@ -1,6 +1,6 @@
 # Menambahkan Berkas ke Proyek
 
-Setelah Anda membuat atau membuka proyek di Chloros, langkah berikutnya adalah menambahkan gambar multispektral Anda untuk memulai pemrosesan. Pengelola Berkas<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> memudahkan Anda untuk mengimpor gambar dan mengelola dataset Anda.
+Setelah Anda membuat atau membuka proyek di Chloros, langkah berikutnya adalah menambahkan gambar multispektral Anda untuk memulai pemrosesan. File Browser<img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> memudahkan Anda untuk mengimpor gambar dan mengelola dataset Anda.
 
 ## Mengakses File Browser
 
@@ -22,20 +22,18 @@ Ada dua cara utama untuk menambahkan gambar ke proyek Anda:
 
 Gunakan opsi ini untuk mengimpor berkas gambar individu atau sejumlah kecil berkas.
 
-1. Klik tombol **&quot;Tambahkan Berkas&quot;** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> di bagian atas panel File Browser
+1. Klik tombol **&quot;Tambahkan Berkas&quot;** <img src="../.gitbook/assets/image.png" alt="" data-size="line"> di bagian atas panel Penjelajah File
 2. Navigasi ke folder yang berisi gambar Anda
 3. Pilih satu atau lebih file gambar (tahan **Ctrl** untuk memilih beberapa file)
 4. Klik **&quot;Buka&quot;** untuk mengimpor file yang dipilih
 
 ### Metode 2: Tambahkan Folder
 
-Gunakan opsi ini untuk mengimpor semua gambar dari sebuah folder sekaligus.
+Gunakan opsi ini untuk mengimpor semua gambar dari folder sekaligus.
 
 1. Klik tombol **&quot;Tambahkan Folder&quot;** <img src="../.gitbook/assets/image (1).png" alt="" data-size="line"> di bagian atas panel File Browser
-2. Navigasi ke dan pilih folder yang berisi gambar sesi pengambilan Anda
-3. Klik **&quot;Pilih Folder&quot;** untuk mengimpor semua gambar yang didukung dari folder tersebut
-
-***
+2. Navigasi ke dan pilih folder yang berisi gambar sesi penangkapan Anda
+3. Klik **&quot;Pilih Folder&quot;** untuk mengimpor semua gambar yang didukung dari folder tersebut***
 
 ## Memahami Tabel File Browser
 
@@ -84,10 +82,8 @@ Untuk menghapus gambar yang tidak diinginkan dari proyek Anda:
 ### Pengurutan dan Penyaringan
 
 * **Urutkan berdasarkan kolom**: Klik header kolom mana pun untuk mengurutkan gambar
-* **Urutkan berdasarkan waktu**: Berguna untuk mengorganisir urutan pengambilan gambar secara kronologis
-* **Penyaringan model kamera**: Kelompokkan gambar berdasarkan jenis kamera jika menggunakan beberapa kamera
-
-***
+* **Pengurutan berdasarkan waktu**: Berguna untuk mengorganisir urutan pengambilan gambar secara kronologis
+* **Penyaringan berdasarkan model kamera**: Kelompokkan gambar berdasarkan jenis kamera jika menggunakan beberapa kamera***
 
 ## Pratinjau Gambar
 
@@ -104,9 +100,7 @@ Klik thumbnail gambar apa pun di File Browser untuk menampilkannya di area prati
 * **Gambar Sebelumnya**: Klik panah kiri atau tekan tombol ←
 * **Gambar Berikutnya**: Klik panah kanan atau tekan tombol →
 * **Zoom In/Out**: Gunakan roda mouse atau tombol zoom
-* **Geser**: Klik dan seret pada gambar saat diperbesar
-
-***
+* **Geser**: Klik dan seret pada gambar saat diperbesar***
 
 ## Penanganan File Duplikat
 
@@ -129,11 +123,9 @@ Jika proyek Anda berisi gambar dari beberapa kamera MAPIR:
 1. Chloros secara otomatis mendeteksi setiap model kamera
 2. Setiap jenis kamera diproses dengan profil kalibrasi yang sesuai
 3. File Browser menampilkan model kamera di kolom Model Kamera
-4. Pengolahan menerapkan pengaturan yang benar untuk setiap jenis kamera
+4. Pemrosesan menerapkan pengaturan yang benar untuk setiap jenis kamera
 
-**Skenario contoh**: Survey3W RGN + Survey3N OCN konfigurasi kamera ganda
-
-***
+**Skenario contoh**: Survey3W RGN + Survey3N OCN konfigurasi kamera ganda***
 
 ## Praktik Terbaik
 
@@ -187,9 +179,7 @@ Jika proyek Anda berisi gambar dari beberapa kamera MAPIR:
 * Jam kamera tidak disetel dengan benar
 * Data EXIF dihapus oleh perangkat lunak eksternal
 
-**Solusi**: Verifikasi pengaturan waktu kamera benar saat pengambilan gambar
-
-***
+**Solusi**: Verifikasi pengaturan waktu kamera benar saat pengambilan gambar***
 
 ## Langkah Selanjutnya
 

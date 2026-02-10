@@ -28,7 +28,7 @@ Pengaturan ini mengontrol cara Chloros mendeteksi dan memproses target kalibrasi
 
 ### Minimum Pengelompokan Target (0-100)
 
-* **Tipe**: Bilangan
+* **Tipe**: Angka
 * **Rentang**: 0 hingga 100
 * **Default**: 60
 * **Deskripsi**: Mengontrol ambang batas pengelompokan untuk menggabungkan wilayah berwarna serupa saat mendeteksi target kalibrasi. Nilai yang lebih tinggi memerlukan warna yang lebih serupa untuk digabungkan, menghasilkan deteksi target yang lebih konservatif. Nilai yang lebih rendah memungkinkan variasi warna yang lebih besar dalam kelompok target.
@@ -38,7 +38,7 @@ Pengaturan ini mengontrol cara Chloros mendeteksi dan memproses target kalibrasi
 
 ***
 
-## Pemrosesan
+## Pengolahan
 
 Pengaturan ini mengontrol cara Chloros memproses dan mengkalibrasi gambar Anda.
 
@@ -60,31 +60,32 @@ Pengaturan ini mengontrol cara Chloros memproses dan mengkalibrasi gambar Anda.
 
 * **Tipe**: Pilihan dropdown
 * **Opsi**:
-  * Kualitas Tinggi (Lebih Cepat) - Saat ini opsi satu-satunya yang tersedia
-* **Default**: Kualitas Tinggi (Lebih Cepat)
-* **Deskripsi**: Memilih algoritma demosaicing yang digunakan untuk mengonversi data sensor pola Bayer mentah menjadi gambar berwarna penuh. Metode &quot;Kualitas Tinggi (Lebih Cepat)&quot; memberikan keseimbangan optimal antara kecepatan pemrosesan dan kualitas gambar.
+  * Standar (Cepat, Kualitas Sedang)
+  * Texture Aware (Lambat, Kualitas Tertinggi) \[Chloros+]
+* **Default**: Standar (Cepat, Kualitas Sedang)
+* **Deskripsi**: Memilih algoritma demosaicing yang digunakan untuk mengubah data sensor pola Bayer mentah menjadi gambar berwarna penuh. Metode &quot;Standar (Cepat, Kualitas Sedang)&quot; memberikan keseimbangan optimal antara kecepatan pemrosesan dan kualitas gambar. Metode &quot;Tekstur Sadar (Lambat, Kualitas Tertinggi)&quot; \[Chloros+] menggunakan algoritma demosaicing berteknologi tinggi yang sadar tepi, dikombinasikan dengan model denoising AI/ML yang menghilangkan hampir semua noise demosaicing. Model Tekstur Sadar memerlukan memori GPU (VRAM) untuk dijalankan. Kami merekomendasikan penggunaannya saat Anda memiliki &gt;4GB VRAM tersedia untuk pemrosesan yang lebih cepat.
 * **Catatan**: Metode debayer tambahan mungkin ditambahkan pada versi mendatang dari Chloros.
 
-### Interval kalibrasi ulang minimum
+### Interval kalibrasi minimum
 
 * **Tipe**: Angka
 * **Rentang**: 0 hingga 3.600 detik
 * **Default**: 0 detik
-* **Deskripsi**: Menentukan interval waktu minimum (dalam detik) antara penggunaan target kalibrasi. Jika disetel ke 0, Chloros akan menggunakan semua target kalibrasi yang terdeteksi. Jika disetel ke nilai yang lebih tinggi, Chloros hanya akan menggunakan target kalibrasi yang terpisah setidaknya selama ini detik, mengurangi waktu pemrosesan untuk dataset dengan penangkapan target kalibrasi yang sering.
+* **Deskripsi**: Menentukan interval waktu minimum (dalam detik) antara penggunaan target kalibrasi. Saat disetel ke 0, Chloros akan menggunakan semua target kalibrasi yang terdeteksi. Saat disetel ke nilai yang lebih tinggi, Chloros hanya akan menggunakan target kalibrasi yang terpisah setidaknya selama ini detik, mengurangi waktu pemrosesan untuk dataset dengan penangkapan target kalibrasi yang sering.
 * **Kapan menyesuaikan**:
   * Atur ke 0 untuk akurasi kalibrasi maksimum saat kondisi pencahayaan bervariasi
   * Tingkatkan (misalnya, menjadi 60-300 detik) untuk pemrosesan lebih cepat saat pencahayaan konsisten dan Anda memiliki gambar target kalibrasi yang sering
 
 ### Pergeseran zona waktu sensor cahaya
 
-* **Tipe**: Angka
+* **Tipe**: Bilangan
 * **Rentang**: -12 hingga +12 jam
 * **Default**: 0 jam
 * **Deskripsi**: Menentukan offset zona waktu (dalam jam dari UTC) untuk cap waktu data sensor cahaya. Ini digunakan saat memproses file data PPK (Post-Processed Kinematic) untuk memastikan sinkronisasi waktu yang benar antara penangkapan gambar dan data GPS.
-* **Kapan disesuaikan**: Atur ini sesuai dengan pergeseran zona waktu lokal Anda jika data PPK Anda menggunakan waktu lokal alih-alih UTC. Contoh:
-  * Waktu Pasifik: -8 atau -7 (tergantung pada DST)
-  * Waktu Timur: -5 atau -4 (tergantung pada DST)
-  * Waktu Eropa Tengah: +1 atau +2 (tergantung pada DST)
+* **Kapan disesuaikan**: Atur ini ke offset zona waktu lokal Anda jika data PPK Anda menggunakan waktu lokal alih-alih UTC. Contoh:
+  * Waktu Pasifik: -8 atau -7 (tergantung DST)
+  * Waktu Timur: -5 atau -4 (tergantung DST)
+  * Waktu Eropa Tengah: +1 atau +2 (tergantung DST)
 
 ### Terapkan koreksi PPK
 
@@ -118,12 +119,10 @@ Pengaturan ini mengontrol cara Chloros memproses dan mengkalibrasi gambar Anda.
 * **Default**: Dipilih otomatis berdasarkan konfigurasi proyek
 * **Deskripsi**: Menugaskan kamera spesifik ke Pin Eksposur 2 untuk sinkronisasi waktu PPK saat menggunakan pengaturan dua kamera.
 * **Perilaku pemilihan otomatis**:
-  * Satu kamera + satu pin: Pin 2 secara otomatis diatur ke &quot;Jangan Digunakan&quot;
-  * Satu kamera + dua pin: Pin 2 secara otomatis diatur ke &quot;Jangan Digunakan&quot;
+  * Satu kamera + satu pin: Pin 2 secara otomatis disetel ke &quot;Jangan Digunakan&quot;
+  * Satu kamera + dua pin: Pin 2 secara otomatis disetel ke &quot;Jangan Digunakan&quot;
   * Beberapa kamera: Pemilihan manual diperlukan
-* **Catatan**: Kamera yang sama tidak dapat ditugaskan ke Pin 1 dan Pin 2 secara bersamaan.
-
-***
+* **Catatan**: Kamera yang sama tidak dapat ditugaskan ke Pin 1 dan Pin 2 secara bersamaan.***
 
 ## Indeks
 
@@ -154,7 +153,7 @@ Pengaturan ini memungkinkan Anda mengonfigurasi indeks multispektral untuk anali
   2. Tentukan rumus Anda menggunakan identifikasi band (misalnya, NIR, Red, Green, Blue)
   3. Simpan rumus dengan nama yang deskriptif
 * **Sintaks rumus**: Operasi matematika standar didukung, termasuk:  
-  * Aritmatika: `+`, `-`, `*`, `/`
+  * Aritmatika: `+`, `-`, `*`, `/`  
   * Kurung untuk urutan operasi
   * Referensi band: NIR, Red, Green, Blue, RedEdge, Cyan, Orange, NIR1, NIR2
 
@@ -162,29 +161,27 @@ Pengaturan ini memungkinkan Anda mengonfigurasi indeks multispektral untuk anali
 
 ## Ekspor
 
-Pengaturan ini mengontrol format dan kualitas gambar yang diekspor.
+Pengaturan ini mengontrol format dan kualitas gambar yang diekspor setelah diproses.
 
 ### Format gambar yang dikalibrasi
 
 * **Tipe**: Pilihan dropdown
 * **Opsi**:
-  * **TIFF (16-bit)** - Format TIFF 16-bit tanpa kompresi
+  * **TIFF (16-bit)** - Format TIFF 16-bit tidak terkompresi
   * **TIFF (32-bit, Persentase)** - Format TIFF 32-bit floating-point dengan nilai reflektansi sebagai persentase
-  * **PNG (8-bit)** - Format PNG terkompresi 8-bit
-  * **JPG (8-bit)** - Format JPEG terkompresi 8-bit
+  * **PNG (8-bit)** - Format PNG terkompresi 8-bit  
+  * **JPG (8-bit)** - Format JPEG terkompresi 8-bit  
 * **Default**: TIFF (16-bit)
 * **Deskripsi**: Memilih format file untuk menyimpan gambar yang telah diproses dan dikalibrasi.
 * **Rekomendasi format**:
-  * **TIFF (16-bit)**: Direkomendasikan untuk analisis ilmiah dan alur kerja profesional. Menjaga kualitas data maksimum tanpa artefak kompresi. Terbaik untuk analisis multispektral dan pemrosesan lebih lanjut di perangkat lunak GIS.
+  * **TIFF (16-bit)**: Direkomendasikan untuk analisis ilmiah dan alur kerja profesional. Mempertahankan kualitas data maksimum tanpa artefak kompresi. Terbaik untuk analisis multispektral dan pemrosesan lebih lanjut di perangkat lunak GIS.
   * **TIFF (32-bit, Persentase)**: Terbaik untuk alur kerja yang memerlukan nilai reflektansi sebagai persentase (0-100%). Menawarkan presisi maksimum untuk pengukuran radiometrik.
-  * **PNG (8-bit)**: Cocok untuk tampilan web dan visualisasi umum. Ukuran file lebih kecil dengan kompresi tanpa kehilangan data, tetapi rentang dinamis berkurang.  
-  * **JPG (8-bit)**: Ukuran file terkecil, terbaik untuk pratinjau dan tampilan web saja. Menggunakan kompresi dengan kehilangan data yang tidak cocok untuk analisis ilmiah.  
+  * **PNG (8-bit)**: Baik untuk tampilan web dan visualisasi umum. Ukuran file lebih kecil dengan kompresi tanpa kehilangan data, tetapi rentang dinamis berkurang.  
+  * **JPG (8-bit)**: Ukuran file terkecil, terbaik untuk pratinjau dan tampilan web saja. Menggunakan kompresi dengan kehilangan data yang tidak cocok untuk analisis ilmiah.  ***  
 
-***  
+## Simpan Template Proyek  
 
-## Simpan Template Proyek
-
-Fitur ini memungkinkan Anda menyimpan pengaturan proyek saat ini sebagai templat yang dapat digunakan kembali.
+Fitur ini memungkinkan Anda menyimpan pengaturan proyek saat ini sebagai template yang dapat digunakan ulang.
 
 * **Tipe**: Masukan teks + Tombol Simpan
 * **Deskripsi**: Masukkan nama deskriptif untuk templat pengaturan Anda dan klik ikon simpan. Templat akan menyimpan semua pengaturan proyek saat ini (deteksi target, opsi pemrosesan, indeks, dan format ekspor) untuk penggunaan ulang yang mudah di proyek mendatang.
@@ -200,7 +197,7 @@ Fitur ini memungkinkan Anda menyimpan pengaturan proyek saat ini sebagai templat
 
 ***
 
-## Folder Penyimpanan Proyek
+## Simpan Folder Proyek
 
 Pengaturan ini menentukan lokasi penyimpanan default untuk proyek baru.
 
@@ -210,14 +207,12 @@ Pengaturan ini menentukan lokasi penyimpanan default untuk proyek baru.
 * **Kapan mengubah**:
   * Atur ke drive jaringan untuk kolaborasi tim
   * Ubah ke drive dengan ruang penyimpanan lebih besar untuk dataset besar
-  * Organisasikan proyek berdasarkan tahun, klien, atau jenis proyek di folder yang berbeda
-* **Catatan**: Mengubah pengaturan ini hanya memengaruhi PROYEK BARU. Proyek yang sudah ada tetap berada di lokasi aslinya.
-
-***
+  * Organisasikan proyek berdasarkan tahun, klien, atau jenis proyek di folder berbeda
+* **Catatan**: Mengubah pengaturan ini hanya memengaruhi PROYEK BARU. Proyek yang sudah ada tetap berada di lokasi aslinya.***
 
 ## Persisten Pengaturan
 
-Semua pengaturan proyek disimpan secara otomatis bersama berkas proyek Anda (format proyek `.mapir`). Saat Anda membuka kembali proyek, semua pengaturan akan dipulihkan persis seperti saat Anda meninggalkannya.
+Semua pengaturan proyek disimpan secara otomatis bersama berkas proyek (format proyek `.mapir`). Saat Anda membuka kembali proyek, semua pengaturan akan dipulihkan persis seperti saat Anda meninggalkannya.
 
 ### Hierarki Pengaturan
 
@@ -230,7 +225,7 @@ Pengaturan diterapkan dalam urutan berikut:
 
 ### Pengaturan dan Pemrosesan Gambar
 
-Sebagian besar perubahan pengaturan (terutama di kategori Pemrosesan dan Ekspor) akan memicu pemrosesan ulang gambar untuk mencerminkan pengaturan baru. Namun, beberapa pengaturan bersifat &quot;hanya ekspor&quot; dan tidak memerlukan pemrosesan ulang segera:
+Sebagian besar perubahan pengaturan (terutama di kategori Pengolahan dan Ekspor) akan memicu pengolahan ulang gambar untuk mencerminkan pengaturan baru. Namun, beberapa pengaturan bersifat &quot;hanya ekspor&quot; dan tidak memerlukan pengolahan ulang segera:
 
 * Simpan Template Proyek
 * Direktori Kerja
@@ -242,8 +237,8 @@ Sebagian besar perubahan pengaturan (terutama di kategori Pemrosesan dan Ekspor)
 
 1. **Mulai dengan pengaturan default**: Pengaturan default bekerja dengan baik untuk sebagian besar sistem kamera MAPIR dan alur kerja tipikal.
 2. **Buat templat**: Setelah mengoptimalkan pengaturan untuk alur kerja atau kamera tertentu, simpan sebagai templat untuk memastikan konsistensi di seluruh proyek.
-3. **Uji coba sebelum pemrosesan penuh**: Saat mencoba pengaturan baru, uji coba pada subset kecil gambar sebelum memproses seluruh dataset.
-4. **Dokumentasikan pengaturan Anda**: Gunakan nama template yang deskriptif yang menunjukkan sistem kamera, jenis pemrosesan, dan tujuan penggunaan (misalnya, &quot;Survey3\_RGB\_NDVI\_Agriculture&quot;).
+3. **Uji sebelum pemrosesan penuh**: Saat mencoba pengaturan baru, uji pada subset kecil gambar sebelum memproses seluruh dataset Anda.
+4. **Dokumentasikan pengaturan Anda**: Gunakan nama templat deskriptif yang menunjukkan sistem kamera, jenis pemrosesan, dan tujuan penggunaan (misalnya, &quot;Survey3\_RGB\_NDVI\_Agriculture&quot;).
 5. **Pemilihan format ekspor**: Pilih format ekspor berdasarkan penggunaan akhir:
    * Analisis ilmiah → TIFF (16-bit atau 32-bit)
    * Pengolahan GIS → TIFF (16-bit)

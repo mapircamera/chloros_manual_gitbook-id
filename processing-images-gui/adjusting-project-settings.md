@@ -8,7 +8,7 @@ Sebelum memproses gambar Anda, penting untuk mengonfigurasi pengaturan proyek ag
 2. Klik ikon **Pengaturan Proyek** <img src="../.gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> di bilah sisi kiri
 3. Panel Pengaturan Proyek menampilkan semua opsi konfigurasi
 
-{% hint style=&quot;info&quot; %}
+{% hint style="info" %}
 **Pengaturan disimpan secara otomatis** bersama proyek Anda. Saat Anda membuka kembali proyek, semua pengaturan akan dipulihkan.
 {% endhint %}
 
@@ -22,7 +22,7 @@ Untuk alur kerja kamera MAPIR Survey3 yang umum, pengaturan default berfungsi de
 
 * ✅ **Koreksi vignette**: Diaktifkan
 * ✅ **Kalibrasi reflektansi**: Diaktifkan (membutuhkan gambar target MAPIR)
-* ✅ **Metode Debayer**: Kualitas Tinggi (Lebih Cepat)
+* ✅ **Metode Debayer**: Standar (Cepat, Kualitas Sedang)
 * ✅ **Format Ekspor**: TIFF (16-bit)
 
 Cukup impor gambar Anda dan mulai pemrosesan dengan pengaturan default ini.
@@ -37,33 +37,35 @@ Panel Pengaturan Proyek dibagi menjadi beberapa kategori. Berikut adalah ringkas
 
 Mengontrol cara Chloros mengidentifikasi target kalibrasi dalam gambar Anda.
 
-**Pengaturan utama:**
-
-* **Area sampel kalibrasi minimum**: Batas ukuran untuk deteksi target (default: 25 piksel)
-* **Pengelompokan target minimum**: Batas kesamaan untuk mengelompokkan wilayah target (default: 60)
-
-**Kapan menyesuaikan:**
+**Pengaturan utama:*** **Area sampel kalibrasi minimum**: Batas ukuran untuk deteksi target (default: 25 piksel)
+* **Pengelompokan target minimum**: Batas kesamaan untuk mengelompokkan area target (default: 60)**Kapan menyesuaikan:**
 
 * Tingkatkan area sampel jika terjadi deteksi palsu
 * Kurangi jika target tidak terdeteksi
-* Sesuaikan pengelompokan jika target terbagi menjadi beberapa deteksi
+* Sesuaikan pengelompokan jika target terbagi menjadi deteksi ganda
 
 ### Pemrosesan
 
-Opsi pemrosesan dan kalibrasi gambar utama.
+Opsi pemrosesan gambar utama dan kalibrasi.
 
-**Pengaturan utama:**
-
-* **Koreksi vignette**: Mengkompensasi penggelapan lensa di tepi ✅ Direkomendasikan
-* **Kalibrasi reflektansi**: Menormalkan nilai menggunakan target kalibrasi ✅ Direkomendasikan
-* **Metode debayer**: Algoritma untuk mengonversi RAW menjadi multi-spektral 3-saluran
-* **Interval kalibrasi minimum**: Waktu antara penggunaan target kalibrasi (0 = gunakan semua)
-
-**Pengaturan lanjutan:**
-
-* **Pergeseran zona waktu sensor cahaya**: Untuk sinkronisasi waktu PPK (default: 0)
+**Pengaturan utama:*** **Koreksi vignette**: Mengkompensasi penggelapan lensa di tepi ✅ Direkomendasikan
+* **Kalibrasi reflektansi**: Menormalisasi nilai menggunakan target kalibrasi ✅ Direkomendasikan
+* **Metode debayer**: Algoritma untuk mengonversi RAW menjadi 3-saluran multispektral
+* **Interval kalibrasi minimum**: Waktu antara penggunaan target kalibrasi (0 = gunakan semua)**Pengaturan lanjutan:*** **Pergeseran zona waktu sensor cahaya**: Untuk sinkronisasi waktu PPK (default: 0)
 * **Terapkan koreksi PPK**: Menggunakan data GPS/pin eksposur dari file .daq
 * **Pin Eksposur 1/2**: Menugaskan kamera ke pin eksposur untuk pengaturan dua kamera
+
+### Metode Debayer
+
+Saat ini kami menawarkan 2 metode debayer di Chloros:
+
+#### Standar (Cepat, Kualitas Sedang)
+
+Metode debayer standar memproses dengan cepat tetapi menampilkan noise warna debayer, menghasilkan gambar yang kurang akurat dan lebih berisik.
+
+#### Texture Aware (Lambat, Kualitas Tertinggi) \[Chloros+ Saja]
+
+Tekstur Sadar menggunakan metode debayer berkualitas tinggi yang sadar tepi, dikombinasikan dengan model denoising AI/ML yang menghilangkan hampir semua noise debayer. Model Tekstur Sadar memerlukan memori GPU (VRAM) untuk berjalan. Kami merekomendasikan menggunakannya saat Anda memiliki &gt;4GB VRAM tersedia untuk pemrosesan yang lebih cepat.
 
 ### Indeks (Indeks Multispektral)
 
@@ -71,49 +73,42 @@ Konfigurasikan indeks vegetasi mana yang akan dihitung dan diekspor.
 
 **Cara menambahkan indeks:**
 
-1. Klik tombol **&quot;Tambah indeks&quot;**
+1. Klik tombol**&quot;Tambah indeks&quot;**
+
 2. Pilih indeks dari menu dropdown (NDVI, NDRE, GNDVI, dll.)
 3. Konfigurasikan pengaturan visualisasi (warna LUT, rentang nilai)
-4. Tambahkan indeks tambahan sesuai kebutuhan
+4. Tambahkan beberapa indeks sesuai kebutuhan
 
-**Indeks populer:**
-
-* **NDVI**: Kesehatan vegetasi umum (paling umum)
+**Indeks populer:*** **NDVI**: Kesehatan vegetasi umum (paling umum)
 * **NDRE**: Deteksi stres dini dengan RedEdge
 * **GNDVI**: Sensitif terhadap konsentrasi klorofil
 * **OSAVI**: Berfungsi baik dengan tanah yang terlihat
-* **EVI**: Wilayah dengan indeks area daun tinggi (LAI)
+* **EVI**: Wilayah dengan indeks area daun tinggi (LAI)**Rumus kustom (hanya Chloros+):**
 
-**Rumus kustom (hanya Chloros+):**
-
-* Buat formula indeks multispektral kustom
+* Buat rumus indeks multispektral kustom
 * Gunakan perhitungan band dengan semua kanal gambar
-* Simpan formula kustom untuk penggunaan ulang
+* Simpan rumus kustom untuk penggunaan ulang
 
-Untuk semua indeks dan formula yang tersedia, lihat [Formula Indeks Multispektral](../project-settings/multispectral-index-formulas.md).
+Untuk semua indeks dan rumus yang tersedia, lihat [Rumus Indeks Multispektral](../project-settings/multispectral-index-formulas.md).
 
 ### Ekspor
 
 Mengontrol format dan kualitas file output.
 
-**Format yang tersedia:**
-
-* **TIFF (16-bit)**: Direkomendasikan untuk analisis GIS dan ilmiah (rentang 0-65.535)
-* **TIFF (32-bit, Persen)**: Nilai reflektansi bilangan floating-point (rentang 0,0-1,0)
+**Format yang tersedia:*** **TIFF (16-bit)**: Direkomendasikan untuk analisis GIS dan ilmiah (rentang 0-65.535)
+* **TIFF (32-bit, Persentase)**: Nilai reflektansi bilangan floating-point (rentang 0,0-1,0)
 * **PNG (8-bit)**: Kompresi tanpa kehilangan data untuk visualisasi (rentang 0-255)
-* **JPG (8-bit)**: Berkas terkecil, kompresi dengan kehilangan data (rentang 0-255)
-
-***
+* **JPG (8-bit)**: Ukuran file terkecil, kompresi dengan kehilangan data (rentang 0-255)***
 
 ## Menyimpan dan Memuat Pengaturan
 
 ### Simpan Template Proyek
 
-Buat templat yang dapat digunakan ulang untuk alur kerja yang konsisten:
+Buat template yang dapat digunakan ulang untuk alur kerja yang konsisten:
 
 1. Konfigurasikan semua pengaturan yang diinginkan di panel Pengaturan Proyek
-2. Gulir ke bagian **&quot;Simpan Templat Proyek&quot;** di bagian bawah
-3. Masukkan nama templat yang deskriptif (misalnya, &quot;Survey3N\_RGN\_Agriculture&quot;)
+2. Gulir ke bagian **&quot;Simpan Template Proyek&quot;** di bagian bawah
+3. Masukkan nama template yang deskriptif (misalnya, &quot;Survey3N\_RGN\_Agriculture&quot;)
 4. Klik ikon simpan
 
 **Manfaat:**
@@ -127,13 +122,14 @@ Buat templat yang dapat digunakan ulang untuk alur kerja yang konsisten:
 Saat membuat proyek baru:
 
 1. Pilih **&quot;Proyek Baru&quot;** dari menu utama
-2. Pilih opsi **&quot;Memuat dari template&quot;**
-3. Pilih template yang telah disimpan
+2. Pilih opsi **&quot;Muat dari template&quot;**
+
+3. Pilih templat yang telah disimpan
 4. Semua pengaturan diterapkan secara otomatis
 
 ### Direktori Kerja
 
-Pengaturan **&quot;Folder Penyimpanan Proyek&quot;** menentukan lokasi default untuk membuat proyek baru:
+Pengaturan **&quot;Save Project Folder&quot;** menentukan lokasi default untuk membuat proyek baru:
 
 * **Lokasi default**: `C:\Users\[Username]\Chloros Projects`
 * **Ubah lokasi**: Klik ikon edit dan pilih folder baru
@@ -146,11 +142,11 @@ Pengaturan **&quot;Folder Penyimpanan Proyek&quot;** menentukan lokasi default u
 
 ## Pengaturan PPK (Post-Processed Kinematic)
 
-Jika menggunakan perekam DAQ MAPIR dengan GPS untuk penentuan lokasi geografis yang akurat:
+Jika menggunakan perekam DAQ MAPIR dengan GPS untuk penentuan lokasi geografis yang presisi:
 
 ### Persyaratan
 
-* Perekam DAQ MAPIR dengan modul GPS (GNSS)
+* MAPIR DAQ dengan modul GPS (GNSS)
 * Berkas log .daq dengan entri pin eksposur
 * Kamera terhubung ke pin eksposur DAQ selama sesi perekaman
 
@@ -158,18 +154,15 @@ Jika menggunakan perekam DAQ MAPIR dengan GPS untuk penentuan lokasi geografis y
 
 1. Letakkan berkas log .daq di folder proyek Anda
 2. Di Pengaturan Proyek, aktifkan kotak centang **&quot;Terapkan koreksi PPK&quot;**
-3. Atur **&quot;Pergeseran zona waktu sensor cahaya&quot;** jika diperlukan (default: 0 untuk UTC)
+
+3. Atur**&quot;Pergeseran zona waktu sensor cahaya&quot;** jika diperlukan (default: 0 untuk UTC)
 4. Tetapkan kamera ke pin eksposur:
-   * **Kamera tunggal**: Ditetapkan secara otomatis ke Pin 1
-   * **Dua kamera**: Tetapkan setiap kamera ke pin yang benar secara manual
-
-**Penetapan Pin Eksposur:**
-
-* **Pin Eksposur 1**: Pilih model kamera dari daftar dropdown
+   * **Kamera tunggal**: Secara otomatis ditugaskan ke Pin 1
+   * **Kamera ganda**: Tetapkan setiap kamera ke pin yang benar secara manual**Penugasan Pin Eksposur:*** **Pin Eksposur 1**: Pilih model kamera dari daftar dropdown
 * **Pin Eksposur 2**: Pilih kamera kedua atau &quot;Jangan Digunakan&quot;
 * Kamera yang sama tidak dapat ditugaskan ke kedua pin
 
-{% hint style=&quot;warning&quot; %}
+{% hint style="warning" %}
 **Penting**: Pin eksposur harus ditugaskan dengan benar ke kamera masing-masing. Penugasan yang salah akan menghasilkan data geolokasi yang salah.
 {% endhint %}
 
@@ -181,7 +174,7 @@ Jika menggunakan perekam DAQ MAPIR dengan GPS untuk penentuan lokasi geografis y
 
 Saat memproses gambar dari beberapa kamera MAPIR dalam satu proyek:
 
-1. Chloros secara otomatis mendeteksi model setiap kamera
+1. Chloros secara otomatis mendeteksi model kamera masing-masing
 2. Setiap kamera mendapatkan profil pemrosesan yang sesuai
 3. PPK: Tetapkan secara manual setiap kamera ke pin eksposur yang benar
 4. Semua kamera menggunakan format ekspor dan indeks yang sama
@@ -198,7 +191,7 @@ Untuk survei berulang di area yang sama sepanjang waktu:
 4. Gunakan pengaturan yang identik untuk hasil yang dapat dibandingkan
 5. Ekspor dalam format yang sama untuk analisis temporal
 
-### Data Set Besar
+### Set Data Besar
 
 Untuk proyek dengan banyak gambar (500+):
 
