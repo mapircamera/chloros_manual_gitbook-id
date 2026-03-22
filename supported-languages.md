@@ -1,12 +1,12 @@
 # Bahasa yang Didukung
 
-Chloros menyediakan dukungan antarmuka penuh dalam **38 bahasa di seluruh dunia**, sehingga dapat diakses oleh pengguna di seluruh dunia. Anda dapat beralih bahasa secara instan di semua antarmuka: Desktop, Browser, CLI, dan Python SDK.
+Chloros menyediakan dukungan antarmuka lengkap dalam **38 bahasa di seluruh dunia**, sehingga dapat diakses oleh pengguna di seluruh dunia. Anda dapat beralih bahasa secara instan di semua antarmuka: Desktop, Browser, CLI, dan Python SDK.
 
 Chloros mendukung bahasa-bahasa berikut:
 
 | # | Bahasa | Nama Asli | Kode CLI |
 |---|----------|-------------|----------|
-| 1 | 🇺🇸 Inggris | Inggris | `en` |
+| 1 | 🇺🇸 Inggris | English | `en` |
 | 2 | 🇪🇸 Spanyol | Español | `es` |
 | 3 | 🇵🇹 Portugis | Português | `pt` |
 | 4 | 🇫🇷 Prancis | Français | `fr` |
@@ -15,8 +15,8 @@ Chloros mendukung bahasa-bahasa berikut:
 | 7 | 🇯🇵 Jepang | 日本語 | `ja` |
 | 8 | 🇰🇷 Korea | 한국어 | `ko` |
 | 9 | 🇨🇳 Tionghoa (Sederhana) | 简体中文 | `zh` |
-| 10 | 🇹🇼 Mandarin (Tradisional) | 繁體中文 | `zh-TW` |
-| 11 | 🇷🇺 Rusia | Русский | `ru` |
+| 10 | 🇹🇼 Bahasa Mandarin (Tradisional) | 繁體中文 | `zh-TW` |
+| 11 | 🇷🇺 Bahasa Rusia | Русский | `ru` |
 | 12 | 🇳🇱 Belanda | Nederlands | `nl` |
 | 13 | 🇸🇦 Arab | العربية | `ar` |
 | 14 | 🇵🇱 Polandia | Polski | `pl` |
@@ -37,10 +37,10 @@ Chloros mendukung bahasa-bahasa berikut:
 | 29 | 🇧🇷 Portugis Brasil | Português Brasileiro | `pt-BR` |
 | 30 | 🇭🇰 Kanton | 粵語 | `zh-HK` |
 | 31 | 🇲🇾 Melayu | Bahasa Melayu | `ms` |
-| 32 | 🇸🇰 Slovak | Slovenčina | `sk` |
+| 32 | 🇸🇰 Slovakia | Slovenčina | `sk` |
 | 33 | 🇧🇬 Bulgaria | Български | `bg` |
 | 34 | 🇭🇷 Kroasia | Hrvatski | `hr` |
-| 35 | 🇱🇹 Lithuania | Lietuvių | `lt` |
+| 35 | 🇱🇹 Lituania | Lietuvių | `lt` |
 | 36 | 🇱🇻 Latvia | Latviešu | `lv` |
 | 37 | 🇪🇪 Estonia | Eesti | `et` |
 | 38 | 🇸🇮 Slovenia | Slovenščina | `sl` |
@@ -50,7 +50,7 @@ Chloros mendukung bahasa-bahasa berikut:
 ### Di Chloros Desktop/Browser
 
 1. Buka pengaturan aplikasi
-2. Navigasi ke menu pemilihan bahasa
+2. Buka menu pemilihan bahasa
 3. Pilih bahasa yang diinginkan dari daftar
 4. Antarmuka akan diperbarui secara instan
 
@@ -85,9 +85,9 @@ Atur parameter bahasa saat menginisialisasi SDK untuk mendapatkan pesan dan outp
 
 Semua 38 bahasa didukung sepenuhnya di:
 
-* **Chloros Desktop** - Terjemahan antarmuka pengguna grafis (GUI) lengkap
+* **Chloros Desktop** - Terjemahan antarmuka pengguna (GUI) lengkap
 * **Chloros Browser** - Antarmuka web dalam semua bahasa
 * **Chloros CLI** - Antarmuka baris perintah dan pesan keluaran
 * **Chloros Python SDK** - Pesan dan dokumentasi API
 
-Dukungan bahasa memastikan pengguna di seluruh dunia dapat bekerja secara efisien dalam bahasa ibu mereka tanpa hambatan.
+Dukungan bahasa memastikan bahwa pengguna di seluruh dunia dapat bekerja secara efisien dalam bahasa ibu mereka tanpa hambatan.

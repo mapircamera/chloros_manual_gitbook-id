@@ -13,14 +13,14 @@
 * [Unduh](download.md)
 * [FAQ](faq.md)
 
-## Pengolahan Gambar (GUI)
+## Pemrosesan Gambar (GUI)
 
 * [Menyesuaikan Pengaturan Proyek](processing-images-gui/adjusting-project-settings.md)
-* [Menambahkan Berkas ke Proyek](processing-images-gui/adding-files-to-a-project.md)
+* [Menambahkan File ke Proyek](processing-images-gui/adding-files-to-a-project.md)
 * [Memilih Gambar Target](processing-images-gui/choosing-target-images.md)
-* [Memulai Pengolahan](processing-images-gui/starting-the-processing.md)
-* [Memantau Pengolahan](processing-images-gui/monitoring-the-processing.md)
-* [Menyelesaikan Pengolahan](processing-images-gui/finishing-the-processing.md)
+* [Memulai Pemrosesan](processing-images-gui/starting-the-processing.md)
+* [Memantau Pemrosesan](processing-images-gui/monitoring-the-processing.md)
+* [Menyelesaikan Pemrosesan](processing-images-gui/finishing-the-processing.md)
 
 ## SETTING PROYEK
 
@@ -29,8 +29,19 @@
 
 ## PENAMPIL GAMBAR (GUI)
 
-* [Grid Gambar](image-viewer-gui/image-grid.md)
-* [Membuka Gambar Penuh Layar](image-viewer-gui/opening-an-image-full-screen.md)
+* [Kisi Gambar](image-viewer-gui/image-grid.md)
+* [Membuka Gambar dalam Layar Penuh](image-viewer-gui/opening-an-image-full-screen.md)
 * [Lapisan Gambar](image-viewer-gui/image-layers.md)
 * [Sandbox Indeks/LUT](image-viewer-gui/index-lut-sandbox.md)
 * [Penanda Peta](image-viewer-gui/map-markers.md)
+
+## Linux &amp; Komputasi Tepi
+
+* [Linux Ikhtisar](linux/linux-overview.md)
+* [Linux Instalasi](linux/linux-installation.md)
+* [Panduan NVIDIA Jetson](linux/nvidia-jetson-guide.md)
+
+## Arsitektur Pemrosesan
+
+* [Adaptasi Komputasi Dinamis](processing-architecture/dynamic-compute-adaptation.md)
+* [Pipa Pemrosesan](processing-architecture/processing-pipeline.md)

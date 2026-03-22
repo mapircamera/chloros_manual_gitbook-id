@@ -1,10 +1,10 @@
 # Penanda Peta
 
-Tab Peta menampilkan gambar Anda pada peta interaktif 2D berdasarkan koordinat GPS-nya. Ini memberikan gambaran geografis tentang sesi pengambilan gambar Anda dan membantu Anda memvisualisasikan cakupan spasial. Fitur ini juga berguna saat pertama kali mengimpor gambar untuk dengan cepat menghapus gambar yang tidak perlu diproses.
+Tab Peta menampilkan gambar-gambar Anda pada peta 2D interaktif berdasarkan koordinat GPS-nya. Fitur ini memberikan gambaran geografis tentang sesi pengambilan gambar Anda dan membantu Anda memvisualisasikan cakupan spasial. Fitur ini juga berguna saat pertama kali mengimpor gambar untuk dengan cepat menghapus gambar-gambar yang tidak perlu diproses.
 
 <figure><img src="../.gitbook/assets/chloros_map_markers.gif" alt=""><figcaption></figcaption></figure>
 
-## Akses Tab Peta
+## Mengakses Tab Peta
 
 1. Buka atau buat proyek di Chloros
 2. Impor gambar yang mengandung metadata GPS
@@ -12,14 +12,14 @@ Tab Peta menampilkan gambar Anda pada peta interaktif 2D berdasarkan koordinat G
 4. Peta akan menampilkan penanda di setiap lokasi GPS gambar
 
 {% hint style="info" %}
-**GPS Diperlukan**: Hanya gambar yang memiliki koordinat GPS tertanam dalam metadata EXIF-nya yang akan muncul di peta. Pastikan kamera Anda memiliki GPS yang diaktifkan saat pengambilan gambar.
+**GPS Diperlukan**: Hanya gambar dengan koordinat GPS yang tertanam dalam metadata EXIF-nya yang akan muncul di peta. Pastikan kamera Anda mengaktifkan GPS saat pengambilan gambar.
 {% endhint %}
 
 ***
 
 ## Mengatur Gambar dari Tab Peta
 
-Tab **Peta**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> memiliki fungsi tambah  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  dan hapus  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  seperti yang ada di [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Tab ini juga menampilkan daftar tabel file proyek yang sama tetapi dengan header kolom yang berbeda:
+Tab **Peta**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> memiliki tombol tambah  <img src="../.gitbook/assets/image.png" alt="" data-size="line">   <img src="../.gitbook/assets/image (1).png" alt="" data-size="line">  dan hapus  <img src="../.gitbook/assets/image (2).png" alt="" data-size="line">  seperti yang ada di tab [**File Browser**](../processing-images-gui/adding-files-to-a-project.md) <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> . Tab ini juga menampilkan daftar tabel file proyek yang sama, namun dengan judul kolom yang berbeda:
 
 ### Nama File
 
@@ -39,7 +39,7 @@ Tab **Peta**<img src="../.gitbook/assets/image (3).png" alt="" data-size="line">
 * Ketinggian gambar
 
 {% hint style="info" %}
-Mengklik header kolom tabel juga akan mengurutkan data baris
+Mengklik judul kolom tabel juga akan mengurutkan data baris
 {% endhint %}
 
 ***
@@ -51,16 +51,16 @@ Setiap gambar dengan data GPS diwakili oleh penanda di peta:
 ### Tampilan Penanda
 
 * Penanda menunjukkan koordinat GPS tepat di mana setiap gambar diambil
-* Penanda yang berdekatan mungkin digabungkan saat diperbesar
-* Perbesar untuk melihat lokasi gambar individu
+* Penanda yang berdekatan mungkin akan digabungkan saat diperkecil
+* Perbesar untuk melihat lokasi gambar secara individual
 
 {% hint style="success" %}
-SUPER-ZOOM: Saat Anda mencapai tingkat zoom maksimum dari penyedia ubin peta, ubin tersebut akan diperbesar saat diperbesar lebih lanjut, memungkinkan Anda melihat penanda yang berdekatan.
+SUPER-ZOOM: Saat Anda mencapai tingkat perbesaran maksimum dari penyedia ubin peta, ubin tersebut akan diperbesar saat Anda memperbesar lebih lanjut, sehingga Anda dapat melihat penanda yang berdekatan.
 {% endhint %}
 
 ### Pratinjau Saat Mengarahkan Kursor
 
-* **Arahkan kursor mouse** ke atas penanda mana pun untuk melihat pratinjau miniatur gambar tersebut
+* **Arahkan kursor mouse** ke penanda mana pun untuk melihat pratinjau miniatur gambar tersebut
 * Ini memungkinkan identifikasi visual cepat tanpa meninggalkan tampilan peta
 * Berguna untuk menemukan gambar spesifik dalam sesi pengambilan gambar yang besar
 
@@ -69,7 +69,7 @@ SUPER-ZOOM: Saat Anda mencapai tingkat zoom maksimum dari penyedia ubin peta, ub
 ## Penyedia Ubin Peta
 
 {% hint style="success" %}
-**Pemilihan Otomatis**: Chloros secara otomatis memilih layanan ubin yang menyediakan tingkat zoom terbaik untuk lokasi peta Anda saat ini. Anda dapat beralih secara manual antara penyedia jika diinginkan.
+**Pemilihan Otomatis**: Chloros secara otomatis memilih layanan ubin yang menyediakan tingkat zoom terbaik untuk lokasi peta Anda saat ini. Anda dapat beralih secara manual antar penyedia jika diinginkan.
 {% endhint %}
 
 Tab Peta mendukung dua penyedia ubin untuk gambar latar belakang peta:
@@ -77,12 +77,12 @@ Tab Peta mendukung dua penyedia ubin untuk gambar latar belakang peta:
 ### Google Maps
 
 * Gambar satelit dan peta standar dari Google
-* Terbaik untuk cakupan global yang luas
+* Terbaik untuk cakupan global secara umum
 
 ### ESRI
 
 * Gambar satelit dan udara dari ESRI ArcGIS
-* Seringkali menyediakan gambar beresolusi lebih tinggi di wilayah tertentu
+* Seringkali menyediakan gambar dengan resolusi lebih tinggi di wilayah tertentu
 
 ***
 
@@ -92,7 +92,7 @@ Anda dapat memilih jenis lapisan peta (dari kiri ke kanan):
 
  <img src="../.gitbook/assets/image (23).png" alt="" data-size="original">### Terrain
 
-Menampilkan profil elevasi dan ubin peta dengan detail (jalan, dll)
+Menampilkan profil ketinggian dan ubin peta dengan detail (jalan, dll)
 
 ### Map
 
@@ -113,25 +113,25 @@ Menampilkan ubin peta satelit dengan detail tambahan (jalan, dll)
 ### Kontrol Zoom
 
 * **Zoom In/Out**: Gunakan roda gulir mouse atau tombol zoom
-* **Layar Penuh**: Tampilkan peta dalam mode layar penuh
+* **Layar Penuh**: Tampilkan peta dalam layar penuh
 
 ### Kontrol Geser
 
-* **Geser**: Klik dan seret untuk berpindah di peta***
+* **Geser**: Klik dan seret untuk bergerak di sekitar peta***
 
 ## Kasus Penggunaan
 
-### Visualisasi Jalur Terbang
+### Visualisasi Jalur Penerbangan
 
-* Lihat area cakupan sesi penangkapan drone
+* Lihat area cakupan sesi pengambilan gambar drone
 * Identifikasi celah dalam cakupan gambar
-* Verifikasi pelaksanaan jalur terbang
+* Verifikasi pelaksanaan jalur penerbangan
 
-### Review Survei Darat
+### Tinjauan Survei Darat
 
-* Lihat distribusi spasial penangkapan berbasis darat
+* Lihat distribusi spasial pengambilan gambar berbasis darat
 * Temukan gambar target kalibrasi relatif terhadap area survei
-* Rencanakan lokasi penangkapan tambahan
+* Rencanakan lokasi pengambilan gambar tambahan
 
 ### Kontrol Kualitas
 
@@ -151,13 +151,13 @@ Menampilkan ubin peta satelit dengan detail tambahan (jalan, dll)
 * GPS dinonaktifkan pada kamera selama pengambilan
 * Data EXIF dihapus oleh perangkat lunak eksternal
 
-**Solusi:** Verifikasi GPS diaktifkan pada kamera dan impor ulang file asli
+**Solusi**: Pastikan GPS diaktifkan pada kamera Anda dan impor ulang file asli
 
-### Marker di Lokasi yang Salah
+### Penanda Berada di Lokasi yang Salah
 
-**Penyebab kemungkinan:**
+**Penyebab yang mungkin:**
 
-* GPS kamera memiliki sinyal satelit yang buruk
-* Pergeseran GPS selama pengambilan
+* GPS kamera memiliki sinyal satelit yang lemah
+* GPS mengalami drift selama pengambilan gambar
 
-**Solusi:** Ini biasanya masalah saat pengambilan; pertimbangkan menggunakan GPS PPK/RTK untuk aplikasi presisi
+**Solusi**: Ini biasanya merupakan masalah saat pengambilan gambar; pertimbangkan untuk menggunakan GPS PPK/RTK untuk aplikasi presisi

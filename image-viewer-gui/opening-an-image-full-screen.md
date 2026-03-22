@@ -1,6 +1,6 @@
-# Membuka Gambar dalam Mode Layar Penuh
+# Membuka Gambar dalam Layar Penuh
 
-Chloros Image Viewer menyediakan antarmuka layar penuh khusus untuk melihat, menganalisis, dan memanipulasi gambar multispektral Anda. Baik saat melihat gambar asli maupun hasil pemrosesan, Image Viewer menawarkan alat-alat yang kuat untuk inspeksi dan analisis.
+Chloros Image Viewer menyediakan antarmuka layar penuh khusus untuk melihat, menganalisis, dan memanipulasi gambar multispektral Anda. Baik saat melihat gambar asli maupun hasil pemrosesan, Image Viewer menawarkan alat-alat canggih untuk pemeriksaan dan analisis.
 
 ## Mengakses Image Viewer
 
@@ -9,28 +9,28 @@ Chloros Image Viewer menyediakan antarmuka layar penuh khusus untuk melihat, men
 Cara paling umum untuk membuka gambar di Image Viewer:
 
 1. Pastikan Anda berada di tab **File Browser** <img src="../.gitbook/assets/icon_file-browser.JPG" alt="" data-size="line">
-2. Klik thumbnail gambar apa pun di grid gambar
-3. Gambar terbuka di area pratinjau utama (tengah layar)
-4. Gambar sekarang dimuat dan siap untuk ditampilkan dalam mode layar penuh
+2. Klik **thumbnail gambar** mana pun di grid gambar
+3. Gambar akan terbuka di **area pratinjau utama** (tengah layar)
+4. Gambar kini telah dimuat dan siap untuk ditampilkan dalam mode layar penuh
 
 ### Membuka Tab Image Viewer
 
 Setelah gambar dimuat di area pratinjau:
 
 1. Klik ikon **Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di bilah sisi kiri
-2. Tab Image Viewer terbuka, menampilkan gambar yang dipilih dalam mode layar penuh
-3. Alat tampilan dan analisis lanjutan tersedia di bilah sisi kiri
+2. Tab Penampil Gambar akan terbuka, menampilkan gambar yang dipilih dalam mode layar penuh
+3. Alat tampilan dan analisis lanjutan akan tersedia di bilah sisi kiri
 
 ***
 
-## Ringkasan Antarmuka Image Viewer
+## Gambaran Umum Antarmuka Penampil Gambar
 
 ### Area Tampilan Utama
 
 Bagian terbesar layar menampilkan gambar Anda:
 
 * **Resolusi penuh**: Gambar ditampilkan pada resolusi asli
-* **Dapat diperbesar/perkecil**: Gunakan kontrol atau roda mouse untuk memperbesar/perkecil
+* **Dapat diperbesar**: Gunakan kontrol atau roda mouse untuk memperbesar
 * **Dapat digeser**: Klik dan seret untuk berpindah saat diperbesar
 * **Perbandingan aspek terjaga**: Gambar diskalakan secara proporsional***
 
@@ -38,52 +38,52 @@ Bagian terbesar layar menampilkan gambar Anda:
 
 ### Navigasi Gambar Dasar
 
-#### Menjelajahi Gambar
+#### Menelusuri Gambar
 
-Navigasi melalui set gambar Anda menggunakan pintasan keyboard atau tombol:
+Navigasi melalui kumpulan gambar Anda menggunakan pintasan keyboard atau tombol:
 
 * **Gambar berikutnya**: Klik tombol → atau tekan tombol**→** (Panah Kanan)
 * **Gambar sebelumnya**: Klik tombol ← atau tekan tombol**←** (Panah Kiri)
-* **Lompat ke gambar tertentu**: Kembali ke File Browser dan klik thumbnail yang diinginkan
+* **Lompat ke gambar tertentu**: Kembali ke Penjelajah File dan klik thumbnail yang diinginkan
 
 #### Kontrol Perbesaran
 
 Sesuaikan perbesaran untuk memeriksa detail gambar:
 
 **Perbesar:*** Klik tombol **+** (Plus)
-* Tekan tombol **+**atau**=*** Gulir roda mouse ke atas
+* Tekan tombol **+**atau**=*** Gulir roda mouse **ke atas**
 
 **Perkecil:*** Klik tombol **−** (Minus)
 * Tekan tombol **−** (Minus)
-* Gulir roda mouse ke bawah
+* Gulir roda mouse **ke bawah**
 
-#### Pergeseran Saat Diperbesar
+#### Geser Saat Diperbesar
 
 Saat diperbesar melebihi ukuran layar:
 
 1. Pindahkan kursor mouse di atas gambar
-2. Klik dan **tahan tombol mouse kiri**
+2. Klik dan **tahan tombol kiri mouse**
 
-3.**Seret** untuk memindahkan gambar
-4. Lepaskan untuk menghentikan pergeseran
+3.**Seret** untuk menggeser gambar
+4. Lepaskan untuk menghentikan penggeseran
 
-**Alternatif**: Gunakan tombol panah untuk pergeseran dalam increment kecil***
+**Alternatif**: Gunakan tombol panah untuk menggeser dalam langkah kecil***
 
 ## Pemeriksaan Nilai Piksel
 
-### Menampilkan Nilai Piksel di Kursor
+### Melihat Nilai Piksel di Kursor
 
-Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan secara real-time:**Lokasi tampilan nilai:*** **Angka mengambang dan garis merah di legenda gradien LUT indeks sisi kanan*** **Saat diperbesar lebih jauh, nilai mengambang di dekat kursor dan piksel yang ditandai*** Menampilkan nilai untuk piksel **di bawah kursor atau yang ditandai*** Diperbarui saat Anda menggerakkan mouse
+Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan secara real-time:**Lokasi tampilan nilai:*** **Angka mengambang dan garis merah di legenda gradien LUT sisi kanan*** **Saat diperbesar lebih jauh, nilai mengambang di dekat kursor dan piksel yang disorot*** Menampilkan nilai untuk piksel **di bawah kursor atau yang disorot*** Diperbarui saat Anda menggerakkan mouse
 
 ***
 
-## Jenis Gambar yang Dapat Ditampilkan
+## Jenis Gambar yang Dapat Anda Lihat
 
 ### JPG
 
 **Gambar JPG dari kamera:**
 
-* Menampilkan data JPG sebagai pratinjau
+* Menampilkan data JPG seperti pratinjau
 * Menampilkan nilai asli yang belum dikoreksi
 * Berguna untuk memeriksa kualitas gambar sebelum pemrosesan
 
@@ -93,8 +93,8 @@ Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan sec
 
 **Setelah pemrosesan:**
 
-* Koreksi vignette
-* Kalibrasi reflektansi
+* Vignette telah dikoreksi
+* Reflektansi telah dikalibrasi
 * Multi-band TIFF (Red, Green, NIR, dll.)
 * Data ilmiah siap untuk analisis
 
@@ -102,24 +102,24 @@ Saat Anda menggerakkan kursor mouse di atas gambar, nilai piksel ditampilkan sec
 
 **NDVI, NDRE, GNDVI, dll. (berkas \_NDVI.tif):**
 
-* Gambar grayscale satu kanal
+* Gambar skala abu-abu satu kanal
 * Nilai piksel mewakili hasil perhitungan indeks
 * Rentang biasanya -1 hingga +1 untuk indeks yang dinormalisasi
-* Dapat menerapkan tabel warna LUT untuk visualisasi
+* Dapat menerapkan LUT warna untuk visualisasi
 
 ***
 
-## Aplikasi Indeks dan LUT
+## Penerapan Indeks dan LUT
 
-Terapkan indeks multispektral dan tabel warna LUT:
+Terapkan indeks multispektral dan Tabel Pencarian Warna (LUT):
 
-1. Temukan **Index/LUT Sandbox**di**Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> di sidebar
+1. Temukan **Index/LUT Sandbox**di**Image Viewer** <img src="../.gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> sidebar
 2. Pilih indeks vegetasi (NDVI, NDRE, dll.)
-3. Pilih rumus multispektral, atau buat rumus kustom sendiri (hanya Chloros+)
+3. Pilih rumus multispektral, atau buat rumus kustom Anda sendiri (hanya Chloros+)
 4. Terapkan gradien LUT warna untuk visualisasi
 5. Sesuaikan rentang nilai dan ambang batas
 
-Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk petunjuk detail.
+Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk petunjuk terperinci.
 
 ***
 
@@ -132,30 +132,30 @@ Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk petunjuk detail.
 * **Home**: Gambar pertama dalam daftar
 * **End**: Gambar terakhir dalam daftar
 
-### Perbesaran
+### Zoom
 
 * **+**atau**=**: Perbesar
 * **−**: Perkecil
 * **Roda Mouse**: Perbesar/perkecil***
 
-### Verifikasi Perhitungan Indeks
+### Memverifikasi Perhitungan Indeks
 
 Pastikan indeks dihitung dengan benar:
 
 1. Buka NDVI atau gambar indeks lainnya
 2. Periksa area vegetasi:
-   * **NDVI**: Harus menampilkan 0,4-0,9 untuk tanaman sehat
-   * **NDRE**: Nilai lebih tinggi untuk pertumbuhan yang vigor
+   * **NDVI**: Harus menunjukkan nilai 0,4–0,9 untuk tanaman sehat
+   * **NDRE**: Nilai lebih tinggi untuk pertumbuhan yang subur
    * **GNDVI**: Mirip dengan NDVI tetapi sensitif terhadap klorofil
-3. Periksa area non-vegetasi:
+3. Periksa non-vegetasi:
    * **Tanah**: Dekat 0 atau sedikit negatif
    * **Air**: Nilai negatif (-0,5 hingga 0)***
 
-## Pemecahan Masalah Tampilan Gambar
+## Pemecahan Masalah Tampilan
 
 ### Gambar Tidak Bisa Dibuka
 
-**Penyebab kemungkinan:**
+**Penyebab yang mungkin:**
 
 * File rusak selama pemrosesan
 * Format file tidak didukung
@@ -163,37 +163,37 @@ Pastikan indeks dihitung dengan benar:
 
 **Solusi:**
 
-1. Coba buka di pemutar eksternal untuk memverifikasi integritas file
-2. Periksa format file sesuai dengan jenis yang diharapkan
+1. Coba buka di penampil eksternal untuk memverifikasi integritas file
+2. Periksa apakah format file sesuai dengan tipe yang diharapkan
 3. Tutup aplikasi lain untuk membebaskan memori
 4. Coba gambar yang lebih kecil/berbeda
 
 ### Tampilan Gambar Hitam atau Putih
 
-**Penyebab kemungkinan:**
+**Penyebab yang mungkin:**
 
 * Rentang nilai di luar kemampuan tampilan
-* Gambar 32-bit float dengan nilai yang tidak biasa
+* Gambar float 32-bit dengan nilai yang tidak biasa
 * Kesalahan perhitungan indeks
 
 **Solusi:**
 
-1. Periksa nilai piksel - jika semua sangat rendah atau sangat tinggi, sesuaikan rentang tampilan
+1. Periksa nilai piksel - jika semuanya sangat rendah atau sangat tinggi, sesuaikan rentang tampilan
 2. Coba buka di QGIS atau aplikasi serupa dengan penyesuaian rentang otomatis
-3. Periksa Log Debug dari pemrosesan untuk kesalahan
+3. Periksa Log Debug dari proses untuk kesalahan
 
 ### Nilai Piksel Tampak Salah
 
-**Penyebab Mungkin:**
+**Penyebab yang mungkin:**
 
 * Melihat gambar yang salah (asli vs yang diproses)
 * Kalibrasi tidak diterapkan dengan benar
-* Data sensor cahaya tidak termasuk dalam input
-* Mode persentase diaktifkan secara salah
+* Data sensor cahaya tidak disertakan dalam input
+* Mode persentase diaktifkan/dinonaktifkan secara salah
 
 **Solusi:**
 
-1. Verifikasi bahwa Anda melihat output yang diproses (periksa sufiks nama file)
+1. Pastikan Anda melihat output yang telah diproses (periksa sufiks nama file)
 2. Periksa status tombol mode persentase
 3. Bandingkan dengan gambar yang diketahui baik dari dataset yang sama
 
@@ -201,7 +201,7 @@ Pastikan indeks dihitung dengan benar:
 
 ## Langkah Selanjutnya
 
-Sekarang Anda dapat melihat gambar dalam mode layar penuh:
+Sekarang Anda dapat melihat gambar dalam layar penuh:
 
 * [**Lapisan Gambar**](image-layers.md) - Pelajari tentang visualisasi multi-band
 * [**Sandbox Indeks/LUT**](index-lut-sandbox.md) - Terapkan indeks kustom dan pemetaan warna

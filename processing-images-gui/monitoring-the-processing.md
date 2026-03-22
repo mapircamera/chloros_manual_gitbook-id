@@ -1,47 +1,45 @@
-# Pemantauan Proses
+# Memantau Proses Pemrosesan
 
-Setelah proses dimulai, Chloros menyediakan beberapa cara untuk memantau kemajuan, memeriksa masalah, dan memahami apa yang terjadi dengan dataset Anda. Halaman ini menjelaskan cara melacak proses Anda dan menafsirkan informasi yang disediakan oleh Chloros.
+Setelah proses pemrosesan dimulai, Chloros menyediakan beberapa cara untuk memantau kemajuan, memeriksa adanya masalah, dan memahami apa yang terjadi pada dataset Anda. Halaman ini menjelaskan cara melacak proses pemrosesan Anda dan menafsirkan informasi yang disediakan oleh Chloros.
 
-## Ringkasan Bar Kemajuan
+## Gambaran Umum Bilah Kemajuan
 
-Bar kemajuan di header atas menampilkan status pemrosesan real-time dan persentase penyelesaian.
+Bilah kemajuan di bagian atas header menampilkan status pemrosesan secara real-time dan persentase penyelesaian.
 
-### Bar Kemajuan Mode Gratis
+### Bilah Kemajuan Mode Gratis
 
 Untuk pengguna tanpa lisensi Chloros+:
 
 **Tampilan Kemajuan 2 Tahap:**
 
-1. **Deteksi Target** - Mencari target kalibrasi dalam gambar
-2. **Pemrosesan** - Menerapkan koreksi dan mengekspor
-
-**Progress bar menampilkan:**
+1.**Deteksi Target** - Mencari target kalibrasi dalam gambar
+2. **Pemrosesan** - Menerapkan koreksi dan mengekspor**Bilah kemajuan menampilkan:**
 
 * Persentase penyelesaian keseluruhan (0-100%)
 * Nama tahap saat ini
 * Visualisasi bilah horizontal sederhana
 
-### Progress Bar Chloros+
+### Bilah Kemajuan Chloros+
 
 Untuk pengguna dengan lisensi Chloros+:
 
 **Tampilan Progres 4 Tahap:**
 
-1. **Deteksi** - Mencari target kalibrasi
-2. **Analisis** - Menganalisis gambar dan menyiapkan pipeline
+1.**Deteksi** - Mencari target kalibrasi
+2. **Analisis** - Memeriksa gambar dan menyiapkan alur kerja
 3. **Kalibrasi** - Menerapkan koreksi vignette dan reflektansi
-4. **Ekspor** - Menyimpan file yang diproses
-
-**Fitur Interaktif:**
-
-* **Arahkan kursor ke** bilah kemajuan untuk melihat panel 4 tahap yang diperluas
+4. **Ekspor** - Menyimpan file yang telah diproses**Fitur Interaktif:*** **Arahkan kursor** ke bilah kemajuan untuk melihat panel 4 tahap yang diperluas
 * **Klik** bilah kemajuan untuk membekukan/menancapkan panel yang diperluas
-* **Klik lagi** untuk membatalkan pembekuan dan menyembunyikan otomatis saat mouse meninggalkan area
+* **Klik lagi** untuk membatalkan pembekuan dan menyembunyikan secara otomatis saat kursor keluar
 * Setiap tahap menampilkan kemajuan individu (0-100%)
 
 ***
 
 ## Memahami Setiap Tahap Pemrosesan
+
+{% hint style="info" %}
+**Arsitektur Pipeline**: Keempat tahap antarmuka pengguna ini sesuai dengan [pipeline pemrosesan 4-thread](../processing-architecture/processing-pipeline.md). Pada sistem dengan akselerasi GPU, Thread 3 (Kalibrasi) memanfaatkan [Adaptasi Komputasi Dinamis](../processing-architecture/dynamic-compute-adaptation.md) yang mengoptimalkan pemrosesan untuk perangkat keras spesifik Anda.
+{% endhint %}
 
 ### Tahap 1: Deteksi (Deteksi Target)
 
@@ -54,8 +52,8 @@ Untuk pengguna dengan lisensi Chloros+:
 
 **Durasi:**
 
-* Dengan target yang ditandai: 10-60 detik
-* Tanpa target yang ditandai: 5-30+ menit (memindai semua gambar)
+* Dengan target yang ditandai: 10–60 detik
+* Tanpa target yang ditandai: 5–30+ menit (memindai semua gambar)
 
 **Indikator kemajuan:**
 
@@ -75,63 +73,51 @@ Untuk pengguna dengan lisensi Chloros+:
 
 * Membaca metadata EXIF gambar (cap waktu, pengaturan eksposur)
 * Menentukan strategi kalibrasi berdasarkan cap waktu target
-* Mengorganisir antrian pemrosesan gambar
-* Menyiapkan pekerja pemrosesan paralel (hanya Chloros+)
+* Mengatur antrian pemrosesan gambar
+* Mempersiapkan pekerja pemrosesan paralel (hanya Chloros+)
 
-**Durasi:** 5-30 detik
-
-**Indikator kemajuan:**
+**Durasi:** 5-30 detik**Indikator kemajuan:**
 
 * Menganalisis: 0% → 100%
 * Tahap cepat, biasanya selesai dengan cepat
 
 **Hal yang perlu diperhatikan:**
 
-* Harus berjalan secara bertahap tanpa henti
+* Harus berjalan lancar tanpa jeda
 * Peringatan tentang metadata yang hilang akan muncul di Debug Log
 
 ### Tahap 3: Kalibrasi
 
-**Apa yang terjadi:**
-
-* **Debayering**: Mengonversi pola Bayer RAW menjadi 3 kanal
-* **Koreksi vignette**: Menghapus gelap di tepi lensa
-* **Kalibrasi reflektansi**: Menormalkan dengan nilai target
+**Apa yang terjadi:*** **Debayering**: Mengonversi pola Bayer RAW menjadi 3 kanal
+* **Koreksi vignette**: Menghilangkan penggelapan tepi lensa
+* **Kalibrasi reflektansi**: Menormalisasi dengan nilai target
 * **Perhitungan indeks**: Menghitung indeks multispektral
-* Memproses setiap gambar melalui seluruh pipeline
+* Memproses setiap gambar melalui seluruh alur kerja
 
-**Durasi:** Mayoritas waktu pemrosesan total (60-80%)
-
-**Indikator kemajuan:**
+**Durasi:** Sebagian besar waktu pemrosesan total (60-80%)**Indikator kemajuan:**
 
 * Kalibrasi: 0% → 100%
 * Gambar saat ini sedang diproses
-* Gambar yang selesai / Total gambar
+* Gambar yang telah selesai / Total gambar
 
-**Perilaku pemrosesan:**
-
-* **Mode bebas**: Memproses satu gambar sekaligus secara berurutan
+**Perilaku pemrosesan:*** **Mode bebas**: Memproses satu gambar pada satu waktu secara berurutan
 * **Mode Chloros+**: Memproses hingga 16 gambar secara bersamaan
-* **Percepatan GPU**: Secara signifikan mempercepat tahap ini
+* **Akselerasi GPU**: Secara signifikan mempercepat tahap ini**Hal yang perlu diperhatikan:**
 
-**Hal yang perlu diperhatikan:**
-
-* Kemajuan yang stabil melalui jumlah gambar
+* Kemajuan yang stabil berdasarkan jumlah gambar
 * Periksa Log Debug untuk pesan penyelesaian per gambar
-* Peringatan tentang kualitas gambar atau masalah kalibrasi
+* Peringatan mengenai kualitas gambar atau masalah kalibrasi
 
 ### Tahap 4: Ekspor
 
 **Apa yang terjadi:**
 
-* Menulis gambar yang dikalibrasi ke disk dalam format yang dipilih
+* Menulis gambar yang telah dikalibrasi ke disk dalam format yang dipilih
 * Mengekspor gambar indeks multispektral dengan warna LUT
 * Membuat subfolder model kamera
 * Mempertahankan nama file asli dengan sufiks yang sesuai
 
-**Durasi:** 10-20% dari total waktu pemrosesan
-
-**Indikator kemajuan:**
+**Durasi:** 10-20% dari total waktu pemrosesan**Indikator kemajuan:**
 
 * Ekspor: 0% → 100%
 * File sedang ditulis
@@ -141,18 +127,18 @@ Untuk pengguna dengan lisensi Chloros+:
 
 * Peringatan ruang disk
 * Kesalahan penulisan file
-* Selesai semua output yang dikonfigurasi
+* Selesainya semua output yang dikonfigurasi
 
 ***
 
 ## Tab Log Debug
 
-Log Debug menyediakan informasi detail tentang kemajuan pemrosesan dan masalah yang ditemui.
+Log Debug menyediakan informasi terperinci tentang kemajuan pemrosesan dan masalah apa pun yang ditemui.
 
-### Akses Log Debug
+### Mengakses Log Debug
 
 1. Klik ikon **Log Debug** <img src="../.gitbook/assets/icon_log.JPG" alt="" data-size="line"> di bilah sisi kiri
-2. Panel log terbuka menampilkan pesan pemrosesan real-time
+2. Panel log terbuka menampilkan pesan pemrosesan secara real-time
 3. Otomatis menggulir untuk menampilkan pesan terbaru
 
 ### Memahami Pesan Log
@@ -179,7 +165,7 @@ Masalah non-kritis yang tidak menghentikan pemrosesan:
 [WARN] Low contrast in calibration panel - results may vary
 ```
 
-**Tindakan:** Periksa peringatan setelah pemrosesan, tetapi jangan hentikan
+**Tindakan:** Periksa peringatan setelah pemrosesan selesai, tetapi jangan hentikan
 
 #### Pesan Kesalahan (Red)
 
@@ -197,11 +183,11 @@ Masalah kritis yang dapat menyebabkan pemrosesan gagal:
 
 | Pesan                          | Arti                                | Tindakan yang Diperlukan                                         |
 | -------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| &quot;Target terdeteksi di \[nama file]&quot; | Target kalibrasi ditemukan dengan sukses  | Tidak ada - normal                                         |
-| &quot;Memproses gambar X dari Y&quot;        | Pembaruan progres saat ini                | Tidak ada - normal                                         |
+| &quot;Target terdeteksi di \[nama_file]&quot; | Target kalibrasi berhasil ditemukan  | Tidak ada - normal                                         |
+| &quot;Memproses gambar X dari Y&quot;        | Pembaruan kemajuan saat ini                | Tidak ada - normal                                         |
 | &quot;Tidak ada target yang ditemukan&quot;               | Tidak ada target kalibrasi yang terdeteksi        | Tandai gambar target atau nonaktifkan kalibrasi reflektansi |
-| &quot;Ruang disk tidak cukup&quot;        | Ruang penyimpanan tidak cukup untuk output          | Bebaskan ruang disk                                    |
-| &quot;Melewati file rusak&quot;        | File gambar rusak                  | Salin ulang file dari kartu SD                             |
+| &quot;Ruang disk tidak mencukupi&quot;        | Penyimpanan tidak cukup untuk output          | Kosongkan ruang disk                                    |
+| &quot;Melewati file yang rusak&quot;        | File gambar rusak                  | Salin ulang file dari kartu SD                             |
 | &quot;Data PPK diterapkan&quot;               | Koreksi GPS dari file .daq diterapkan | Tidak ada - normal                                         |
 
 ### Menyalin Data Log
@@ -210,7 +196,7 @@ Untuk menyalin log untuk pemecahan masalah atau dukungan:
 
 1. Buka panel Debug Log
 2. Klik tombol **&quot;Copy Log&quot;** (atau klik kanan → Pilih Semua)
-3. Tempel ke file teks atau email
+3. Tempel ke berkas teks atau email
 4. Kirim ke dukungan MAPIR jika diperlukan
 
 ***
@@ -219,9 +205,9 @@ Untuk menyalin log untuk pemecahan masalah atau dukungan:
 
 ### Penggunaan CPU
 
-**Mode Bebas:**
+**Mode Gratis:**
 
-* 1 inti CPU pada \~100%
+* 1 inti CPU pada ~100%
 * Inti lainnya idle atau tersedia
 * Sistem tetap responsif
 
@@ -248,7 +234,7 @@ Untuk menyalin log untuk pemecahan masalah atau dukungan:
 
 **Jika memori rendah:**
 
-* Proses batch yang lebih kecil
+* Proses dalam batch yang lebih kecil
 * Tutup aplikasi lain
 * Tingkatkan RAM jika sering memproses dataset besar
 
@@ -256,19 +242,19 @@ Untuk menyalin log untuk pemecahan masalah atau dukungan:
 
 Saat akselerasi GPU diaktifkan:
 
-* GPU NVIDIA menunjukkan penggunaan tinggi (60-90%)
+* GPU NVIDIA menunjukkan pemanfaatan tinggi (60-90%)
 * Penggunaan VRAM meningkat (membutuhkan 4GB+ VRAM)
-* Tahap kalibrasi menjadi jauh lebih cepat
+* Tahap kalibrasi jauh lebih cepat
 
 **Untuk memantau:**
 
 * Ikon NVIDIA di System Tray
-* Task Manager → Performance → GPU
+* Task Manager → Kinerja → GPU
 * GPU-Z atau alat pemantauan serupa
 
-### Disk I/O
+### I/O Disk
 
-**Apa yang diharapkan:**
+**Yang diharapkan:**
 
 * Pembacaan disk tinggi selama tahap Analisis
 * Penulisan disk tinggi selama tahap Ekspor
@@ -278,55 +264,55 @@ Saat akselerasi GPU diaktifkan:
 
 * Gunakan SSD untuk folder proyek jika memungkinkan
 * Hindari drive jaringan untuk dataset besar
-* Pastikan disk tidak mendekati kapasitas maksimum (mempengaruhi kecepatan penulisan)
+* Pastikan ruang disk tidak mendekati kapasitas penuh (mempengaruhi kecepatan penulisan)
 
 ***
 
 ## Mendeteksi Masalah Selama Pemrosesan
 
-### Tanda Peringatan
+### Tanda-tanda Peringatan
 
-**Proses terhenti (tidak ada perubahan selama 5+ menit):**
+**Kemajuan terhenti (tidak ada perubahan selama 5+ menit):**
 
 * Periksa Log Debug untuk kesalahan
 * Verifikasi ruang disk yang tersedia
-* Periksa Task Manager untuk memastikan Chloros berjalan
+* Periksa Task Manager untuk memastikan Chloros sedang berjalan
 
-**Pesan kesalahan muncul secara berkala:**
+**Pesan kesalahan muncul secara berulang:**
 
 * Hentikan pemrosesan dan tinjau kesalahan
 * Penyebab umum: ruang disk, file rusak, masalah memori
 * Lihat bagian Pemecahan Masalah di bawah
 
-**Sistem menjadi tidak responsif:**
+**Sistem tidak merespons:**
 
-* Chloros+ mode paralel menggunakan terlalu banyak sumber daya
-* Pertimbangkan untuk mengurangi tugas bersamaan atau meng-upgrade hardware
+* Mode paralel Chloros+ menggunakan terlalu banyak sumber daya
+* Pertimbangkan untuk mengurangi tugas bersamaan atau meng-upgrade perangkat keras
 * Mode bebas lebih hemat sumber daya
 
-### Kapan Harus Menghentikan Proses
+### Kapan Harus Menghentikan Pemrosesan
 
-Hentikan proses jika Anda melihat:
+Hentikan pemrosesan jika Anda melihat:
 
 * ❌ Kesalahan &quot;Disk penuh&quot; atau &quot;Tidak dapat menulis file&quot;
-* ❌ Kesalahan kerusakan berulang pada file gambar
+* ❌ Kesalahan file gambar rusak berulang
 * ❌ Sistem benar-benar macet (tidak merespons)
 * ❌ Menyadari pengaturan yang salah telah dikonfigurasi
 * ❌ Gambar yang salah diimpor
 
 **Cara menghentikan:**
 
-1. Klik tombol **Stop/Cancel** (menggantikan tombol Start)
-2. Proses dihentikan, progres hilang
+1. Klik tombol**Stop/Cancel** (menggantikan tombol Start)
+2. Pemrosesan berhenti, progres hilang
 3. Perbaiki masalah dan mulai ulang dari awal
 
 ***
 
-## Pemecahan Masalah Selama Proses
+## Pemecahan Masalah Selama Pemrosesan
 
-### Proses Sangat Lambat
+### Pemrosesan Sangat Lambat
 
-**Penyebab mungkin:**
+**Penyebab kemungkinan:**
 
 * Gambar target tidak ditandai (memindai semua gambar)
 * Penyimpanan HDD alih-alih SSD
@@ -337,16 +323,16 @@ Hentikan proses jika Anda melihat:
 **Solusi:**
 
 1. Jika baru dimulai dan berada di tahap Deteksi: Batalkan, tandai target, mulai ulang
-2. Untuk masa depan: Gunakan SSD, kurangi indeks, tingkatkan hardware
+2. Untuk ke depannya: Gunakan SSD, kurangi indeks, tingkatkan perangkat keras
 3. Pertimbangkan CLI untuk pemrosesan batch dataset besar
 
 ### Peringatan &quot;Ruang Disk&quot;
 
 **Solusi:**
 
-1. Bebaskan ruang disk segera
+1. Kosongkan ruang disk segera
 2. Pindahkan proyek ke drive dengan ruang lebih besar
-3. Kurangi jumlah indeks yang diekspor
+3. Kurangi jumlah indeks yang akan diekspor
 4. Gunakan format JPG alih-alih TIFF (berkas lebih kecil)
 
 ### Pesan &quot;Berkas Rusak&quot; yang Sering Muncul
@@ -354,18 +340,18 @@ Hentikan proses jika Anda melihat:
 **Solusi:**
 
 1. Salin ulang gambar dari kartu SD untuk memastikan integritas
-2. Uji kartu SD untuk kesalahan
+2. Periksa kartu SD untuk kesalahan
 3. Hapus berkas rusak dari proyek
 4. Lanjutkan pemrosesan gambar yang tersisa
 
-### Overheating Sistem / Throttling
+### Sistem Overheating / Throttling
 
 **Solusi:**
 
-1. Pastikan ventilasi yang cukup
+1. Pastikan ventilasi yang memadai
 2. Bersihkan debu dari ventilasi komputer
 3. Kurangi beban pemrosesan (gunakan mode Free alih-alih Chloros+)
-4. Proses pada waktu yang lebih sejuk di siang hari
+4. Lakukan pemrosesan pada waktu yang lebih sejuk
 
 ***
 
@@ -373,7 +359,7 @@ Hentikan proses jika Anda melihat:
 
 Saat pemrosesan selesai:
 
-* Bar kemajuan mencapai 100%
+* Bilah kemajuan mencapai 100%
 * Pesan **&quot;Pemrosesan Selesai&quot;** muncul di Log Debug
 * Tombol Mulai kembali aktif
 * Semua file output berada di subfolder model kamera
@@ -385,8 +371,8 @@ Saat pemrosesan selesai:
 Setelah pemrosesan selesai:
 
 1. **Periksa hasil** - Lihat [Menyelesaikan Pemrosesan](finishing-the-processing.md)
-2. **Periksa folder output** - Pastikan semua file diekspor dengan benar
-3. **Periksa Debug Log** - Periksa apakah ada peringatan atau kesalahan
-4. **Pratinjau gambar yang diproses** - Gunakan Image Viewer atau perangkat lunak eksternal
+2. **Periksa folder keluaran** - Pastikan semua file diekspor dengan benar
+3. **Periksa Log Debug** - Periksa apakah ada peringatan atau kesalahan
+4. **Pratinjau gambar yang telah diproses** - Gunakan Image Viewer atau perangkat lunak eksternal
 
-Untuk informasi tentang meninjau dan menggunakan hasil pemrosesan Anda, lihat [Menyelesaikan Pemrosesan](finishing-the-processing.md).
+Untuk informasi tentang cara meninjau dan menggunakan hasil pemrosesan Anda, lihat [Menyelesaikan Pemrosesan](finishing-the-processing.md).

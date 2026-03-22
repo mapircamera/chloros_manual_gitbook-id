@@ -2,13 +2,13 @@
 
 ## Chloros dan Chloros (Browser) Masuk
 
-Pengguna <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> memungkinkan Anda untuk masuk ke akun Chloros+ Anda dan mengaktifkan fitur tambahan.
+Menu <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> memungkinkan Anda masuk ke akun Chloros+ Anda dan membuka fitur tambahan.
 
 Setelah masuk, detail akun Anda akan ditampilkan:
 
-<figure><img src=".gitbook/assets/user_account.JPG" alt="" data-size="line"><figcaption></figcaption></figure>## CLI Masuk
+<figure><img src=".gitbook/assets/user_account.JPG" alt="" width="375"><figcaption></figcaption></figure>## CLI Masuk
 
-Masuk dengan kredensial Chloros+ Anda untuk mengaktifkan pemrosesan CLI.
+Masuk dengan kredensial Chloros+ Anda untuk mengaktifkan pemrosesan CLI. Pada Linux (tanpa antarmuka grafis), ini adalah satu-satunya cara untuk mengaktifkan lisensi Anda.
 
 **Sintaks:**
 
@@ -16,8 +16,8 @@ Masuk dengan kredensial Chloros+ Anda untuk mengaktifkan pemrosesan CLI.
 chloros-cli login <email> <password>
 ```
 
-{% hint style=&quot;info&quot; %}
-**Pengguna SDK**: Python SDK juga menyediakan metode programatik `logout()` untuk menghapus kredensial yang disimpan dalam cache. Lihat dokumentasi [Python SDK](api-python-sdk.md#logout) untuk detailnya.
+{% hint style="info" %}
+**Pengguna SDK**: Python SDK juga menyediakan metode programatik `logout()` untuk menghapus kredensial yang disimpan dalam cache. Lihat [dokumentasi Python SDK](api-python-sdk.md#logout) untuk detailnya.
 {% endhint %}
 
 **Contoh:**
@@ -26,18 +26,27 @@ chloros-cli login <email> <password>
 chloros-cli login user@example.com 'MyP@ssw0rd123'
 ```
 
-{% hint style=&quot;warning&quot; %}
+{% hint style="warning" %}
 **Karakter Khusus**: Gunakan tanda kutip tunggal di sekitar kata sandi yang mengandung karakter seperti `$`, `!`, atau spasi.
 {% endhint %}
 
 **Output:**
 
-<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>### Kedaluwarsa Langganan
+<figure><img src=".gitbook/assets/cli login_w.JPG" alt=""><figcaption></figcaption></figure>### Penyimpanan Kredensial
 
-Kedaluwarsa langganan yang ditampilkan di antarmuka pengguna (GUI) menunjukkan kapan lisensi Anda akan menjadi tidak valid. Untuk langganan bulanan berulang, kedaluwarsa terjadi pada akhir bulan. Untuk langganan tahunan, kedaluwarsa terjadi satu tahun setelah Anda memulai langganan. Pemeriksaan lisensi memerlukan koneksi internet bulanan untuk verifikasi, dengan masa tenggang 30 hari.
+Kredensial yang disimpan dalam cache disimpan di lokasi yang spesifik untuk platform:
+
+| Platform | Jalur Cache Kredensial |
+| --- | --- |
+| **Windows** | `%APPDATA%\Chloros\cache\` |
+| **Linux** | `~/.cache/chloros/` |
+
+### Masa Berlaku Paket
+
+Masa berlaku paket yang ditampilkan di antarmuka pengguna (GUI) menunjukkan kapan lisensi Anda akan kedaluwarsa. Untuk langganan bulanan berulang, masa berlaku berakhir pada akhir bulan. Untuk langganan tahunan, masa berlaku berakhir satu tahun setelah Anda memulai langganan. Pemeriksaan lisensi memerlukan koneksi internet bulanan untuk verifikasi, dengan masa tenggang 30 hari.
 
 ### Batas Perangkat
 
-Setiap rencana Chloros+ menawarkan jumlah perangkat terdaftar yang berbeda. Setiap perangkat yang Anda akses dengan akun Chloros+ akan dihitung dalam jumlah perangkat terdaftar Anda. Anda dapat mengganti nama dan menghapus perangkat di halaman akun MAPIR Cloud Anda.
+Setiap paket Chloros+ menawarkan jumlah perangkat terdaftar yang berbeda. Setiap perangkat yang Anda gunakan untuk masuk dengan akun Chloros+ akan dihitung sebagai bagian dari jumlah perangkat terdaftar Anda. Anda dapat mengganti nama dan menghapus perangkat di halaman akun MAPIR Cloud Anda.
 
-<table><thead><tr><th width="168.5999755859375" align="right">Paket Chloros+</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Perangkat yang Didukung</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
+<table><thead><tr><th width="168.5999755859375" align="right">Paket Chloros+</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">PERAK</th><th align="center">EMAS</th></tr></thead><tbody><tr><td align="right">Perangkat yang Didukung</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>

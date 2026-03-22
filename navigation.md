@@ -1,28 +1,41 @@
-# Antarmuka Pengguna Grafis (GUI): Navigasi
+# GUI: Navigasi
 
-Saat pertama kali meluncurkan Chloros dan Chloros (Browser), sistem akan memulai proses backend-nya. Setelah siap, ikon menu utama di pojok kiri atas akan muncul <img src=".gitbook/assets/image (1) (1) (1).png" alt="" data-size="line"> .
+Saat pertama kali membuka Chloros dan Chloros (Browser), sistem backend-nya akan dimulai. Setelah siap, ikon menu utama di pojok kiri atas akan muncul <img src=".gitbook/assets/image (1) (1) (1).png" alt="" data-size="line"> .
 
 <figure><img src=".gitbook/assets/header.JPG" alt=""><figcaption></figcaption></figure>
 
-Dari kiri ke kanan, header atas berisi:
+Dari kiri ke kanan, bagian header atas berisi:
 
 ### <img src=".gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> Menu Utama
 
-Dari menu utama, Anda dapat memulai proyek baru, membuka proyek yang sudah ada, atau membuka folder proyek.
+<figure><img src=".gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+
+Dari menu utama, Anda dapat:
+
+* **Proyek Baru** — membuat proyek baru
+* **Buka Proyek** — membuka proyek yang sudah ada
+* **Buka Folder Proyek** — membuka folder proyek di penjelajah file Anda
+* **Tambahkan File** — menambahkan file gambar individual ke proyek saat ini _(tampak setelah proyek dibuka)_
+* **Tambahkan Folder** — tambahkan folder gambar ke proyek saat ini _(tampak setelah proyek dibuka)_
+* **Mulai Pemrosesan / Hentikan Pemrosesan** — mulai atau hentikan alur pemrosesan gambar _(diaktifkan setelah berkas ditambahkan)_
+
+{% hint style="info" %}
+**Hanya Windows**: Antarmuka Pengguna Desktop Chloros tersedia di Windows. Pengguna Linux harus melihat [CLI](CLI.md) dan [Python SDK](api-python-sdk.md) untuk pemrosesan tanpa antarmuka grafis.
+{% endhint %}
 
 ### <img src=".gitbook/assets/image (2) (1).png" alt="" data-size="line"> Tombol Putar/Mulai
 
-Ketika diaktifkan, tombol mulai pemrosesan akan memulai alur pemrosesan gambar.
+Jika diaktifkan, tombol mulai pemrosesan akan memulai alur pemrosesan gambar.
 
-### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Bar Progres <img src=".gitbook/assets/image (5).png" alt="" data-size="line">Dalam mode gratis Chloros, yang memproses semua file secara berurutan, bilah kemajuan akan menampilkan 2 tahap: Deteksi Target dan Pemrosesan.
+### <img src=".gitbook/assets/image (4).png" alt="" data-size="line"> Bilah Kemajuan <img src=".gitbook/assets/image (5).png" alt="" data-size="line">Dalam mode gratis Chloros, yang memproses semua file secara berurutan, bilah kemajuan akan menampilkan 2 tahap: Deteksi Target dan Pemrosesan.
 
-Dalam mode berlisensi berbayar Chloros+, yang memproses semua file secara bersamaan, bilah kemajuan menampilkan 4 tahap: Deteksi, Analisis, Kalibrasi, Ekspor. Jika Anda mengarahkan kursor mouse ke bilah kemajuan Chloros+, panel bilah kemajuan yang diperluas akan muncul sehingga Anda dapat mengikuti prosesnya. Mengklik bilah kemajuan atas akan membekukan panel dropdown, mengklik lagi akan membukanya kembali.
+Dalam mode berlisensi berbayar Chloros+, yang memproses semua file secara bersamaan, bilah kemajuan menampilkan 4 tahap: Deteksi, Analisis, Kalibrasi, Ekspor. Jika Anda mengarahkan kursor mouse ke atas bilah kemajuan Chloros+, panel bilah kemajuan yang diperluas akan muncul sehingga Anda dapat mengikuti prosesnya. Mengklik bilah kemajuan bagian atas akan membekukan panel dropdown, mengklik lagi akan membukanya kembali.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
 ## Menu Samping
 
-Menu sidebar kiri berisi berbagai ikon untuk berinteraksi:
+Menu bilah samping kiri berisi berbagai ikon untuk berinteraksi:
 
 #### <img src=".gitbook/assets/icon_project-settings.JPG" alt="" data-size="line"> [Pengaturan Proyek](project-settings/project-settings.md)
 
@@ -30,20 +43,20 @@ Tab Pengaturan Proyek memungkinkan Anda menyesuaikan pengaturan global proyek da
 
 #### <img src=".gitbook/assets/icon_file-browser.JPG" alt="" data-size="line"> Penjelajah File
 
-Tambahkan file/folder dan hapus file dari proyek. File duplikat diabaikan. Centang kotak kolom target untuk gambar target, dan pemrosesan hanya akan memeriksa gambar yang dicentang sebagai target, sehingga mempercepat waktu pemrosesan Anda. Gunakan tombol beralih Gambar/Metadata untuk beralih antara tampilan grid thumbnail gambar terpilih dan tabel metadata detail.
+Tambahkan file/folder dan hapus file dari proyek. File duplikat diabaikan. Centang kotak kolom target untuk gambar target mana pun, dan pemrosesan hanya akan memeriksa gambar yang dicentang sebagai target, sehingga sangat mempercepat waktu pemrosesan Anda. Gunakan tombol beralih Gambar/Metadata untuk beralih antara tampilan kisi thumbnail gambar yang dipilih dan tabel metadata terperinci.
 
 #### <img src=".gitbook/assets/icon_image-viewer.JPG" alt="" data-size="line"> [Penerima Gambar](image-viewer-gui/opening-an-image-full-screen.md)
 
-Ketika gambar diklik di penerima gambar utama, gambar tersebut akan dibuka layar penuh di tab Penerima Gambar.
+Saat gambar diklik di penerima gambar utama, gambar tersebut akan dibuka dalam layar penuh di tab Penerima Gambar.
 
 #### <img src=".gitbook/assets/image (7).png" alt="" data-size="line"> [Peta](image-viewer-gui/map-markers.md)
 
-Lihat gambar Anda pada peta interaktif 2D berdasarkan koordinat GPS-nya. Mendukung penyedia peta Google Maps dan ESRI, secara otomatis memilih layanan terbaik untuk lokasi Anda. Arahkan kursor ke penanda untuk melihat pratinjau thumbnail gambar.
+Lihat gambar Anda pada peta 2D interaktif berdasarkan koordinat GPS-nya. Mendukung penyedia peta Google Maps dan ESRI, secara otomatis memilih layanan terbaik untuk lokasi Anda. Arahkan kursor ke penanda untuk melihat pratinjau thumbnail gambar.
 
-#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Catatan Debug
+#### <img src=".gitbook/assets/icon_log.JPG" alt="" data-size="line"> Log Debug
 
-Periksa catatan debug saat terjadi masalah. Salin/unduh catatan dan kirim ke [MAPIR Support](https://www.mapir.camera/community/contact) untuk bantuan.
+Periksa log untuk cetakan debug saat terjadi masalah. Salin/unduh log dan kirimkan ke [Dukungan MAPIR](https://www.mapir.camera/community/contact) untuk mendapatkan bantuan.
 
 #### <img src=".gitbook/assets/icon_user.JPG" alt="" data-size="line"> [Masuk Pengguna](chloros+-login.md)
 
-Sidebar login pengguna memungkinkan Anda masuk ke akun Chloros+ untuk mengakses fitur lanjutan. Anda juga dapat melihat versi aplikasi saat ini, serta mengatur bahasa teks yang ditampilkan di antarmuka pengguna Chloros dan CLI.
+Panel samping masuk pengguna memungkinkan Anda masuk ke akun Chloros+ Anda untuk membuka fitur-fitur lanjutan. Anda juga dapat melihat versi aplikasi saat ini, serta menyesuaikan bahasa teks yang ditampilkan di antarmuka pengguna (GUI) Chloros dan CLI.
