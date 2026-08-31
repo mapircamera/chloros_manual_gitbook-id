@@ -1,335 +1,200 @@
 # Lapisan Gambar
 
-Menu tarik-turun Lapisan Gambar di Chloros Image Viewer memungkinkan Anda untuk dengan cepat beralih di antara berbagai versi gambar yang sama — mulai dari tangkapan asli hingga hasil reflektansi yang telah diproses dan gambar indeks yang dihitung.
+**Menu tarik-turun lapisan** di pojok kanan atas Penampil Gambar memungkinkan Anda beralih di antara setiap versi gambar yang sedang Anda lihat — mulai dari tangkapan sumber, melalui setiap hasil pemrosesan, hingga gambar indeks yang dihitung — tanpa perlu keluar dari penampil.
 
-## Apa itu Lapisan Gambar?
+## Apa Itu Lapisan Gambar?
 
-Di Chloros, **lapisan** mengacu pada berbagai hasil gambar yang tersedia untuk satu gambar sumber. Saat Anda memproses gambar, Chloros membuat beberapa versi:
+Sebuah &quot;lapisan&quot; di Chloros adalah satu **berkas produk**yang didaftarkan terhadap satu gambar sumber. Proses impor memberikan berkas-berkas sumber; pemrosesan menambahkan satu lapisan untuk setiap produk yang dihasilkan oleh proses tersebut. File yang diekspor tetap menggunakan nama file sumber —**folder**-lah yang mengidentifikasi produk, dan nama lapisan adalah label yang diberikan Chloros untuk folder tersebut.
 
-* **Gambar asli** (file JPG dan RAW dari kamera Anda)
-* **Output reflektansi yang dikalibrasi** (jika kalibrasi reflektansi diaktifkan)
-* **Gambar target** (jika gambar mengandung target kalibrasi)
-* **Gambar indeks** (NDVI, NDRE, GNDVI, dll., jika indeks telah dikonfigurasi)
+<!-- SCREENSHOT-NEEDED: Image Viewer full screen with the layer dropdown open on a processed LATTICE multispectral image, showing the full list: TIFF base, RAW (Original), RAW (Debayered), RAW (Preview), RAW (Radiance), RAW (Reflectance), and one RAW (NDVI Index) entry. -->
 
-Menu tarik-turun **Pemilih Lapisan** di pojok kanan atas Penampil Gambar memungkinkan Anda beralih secara instan antara versi-versi ini tanpa meninggalkan penampil.***
+***
 
-## Jenis Lapisan yang Tersedia
+## Daftar lapisan
 
-### JPG
+### Selalu ada
 
-* Gambar pratinjau JPG asli dari kamera Anda
-* Selalu tersedia untuk semua gambar
-* Belum diproses, sebagaimana diambil oleh kamera
-* Paling cepat dimuat dan ditampilkan
+| Lapisan | Apa itu |
+| --- | --- |
+| **JPG**(atau**PNG**/**TIFF**) | File dasar yang disertakan bersama tangkapan. Survey3 mengimpor file `.JPG` di samping setiap file `.RAW`; Perekaman LATTICE menampilkan pratinjau layar berupa PNG atau TIFF. Dilabeli sesuai dengan apa yang sebenarnya diimpor |
+| **RAW (Asli)** | Frame mentah sumber, yang telah di-debayering untuk ditampilkan tanpa koreksi apa pun. Tersedia sejak saat impor — tidak memerlukan pemrosesan |
 
-**Kapan harus dilihat:**
+Tangkapan LATTICE yang file dasarnya **adalah** bingkai mentahnya tidak memiliki entri dasar terpisah: `RAW (Original)` sudah mencakupnya.
 
-* Pratinjau cepat dari hasil tangkapan asli
-* Memeriksa komposisi dan bingkai gambar
-* Memverifikasi kualitas tangkapan sebelum pemrosesan
+### Produk pemrosesan Survey3
 
-### RAW (Asli)
-
-* Data sensor RAW asli dari kamera Anda
-* Telah di-debayer tanpa pemrosesan pasca-pengambilan
-* Kedalaman bit lebih tinggi daripada JPG (biasanya data sensor 12-bit atau 14-bit)
-
-**Kapan harus dilihat:**
-
-* Memeriksa kualitas data sensor asli
-* Memeriksa masalah sensor atau artefak
-* Membandingkan hasil sebelum/sesudah pemrosesan
-
-### RAW (Target)
-
-* Hanya muncul untuk gambar yang teridentifikasi mengandung target kalibrasi
-* Menampilkan gambar RAW asli dengan target yang terdeteksi
-* Digunakan untuk memverifikasi bahwa deteksi target berhasil
-
-**Kapan harus dilihat:**
-
-* Memastikan target kalibrasi terdeteksi dengan benar
-* Memeriksa kualitas gambar target
-* Memecahkan masalah kalibrasi
+| Lapisan | Ditulis ke | Ada saat |
+| --- | --- | --- |
+| **RAW (Target)** | — | Frame tersebut diidentifikasi mengandung target kalibrasi |
+| **RAW (Reflektansi)** | `Reflectance_Calibrated_Images/` | Kalibrasi reflektansi berhasil dijalankan pada frame ini |
+| **Vignette Corrected**| `Vignette_Corrected_Images/` | Frame tersebut tidak dapat dikalibrasi reflektansinya**dan** *koreksi vignette* diaktifkan |
+| **Respon Sensor**| `Sensor_Response_Images/` | Bingkai ini tidak dapat dikalibrasi reflektansinya**dan** *koreksi vignette* dinonaktifkan |
+| **Keseimbangan Putih** | `White_Balanced_Images/` | Produk dengan keseimbangan putih telah disimpan |
 
 {% hint style="info" %}
-**Lapisan Target**: Lapisan ini hanya muncul di menu dropdown untuk gambar yang mengandung target kalibrasi. Gambar tangkapan biasa tidak akan memiliki opsi ini.
+**Koreksi Vignette dan Respons Sensor adalah alternatif, tidak pernah keduanya sekaligus.** Terdapat tepat satu produk cadangan yang tidak dikalibrasi per proses, untuk setiap model kamera, dan tombol *Koreksi Vignette* menentukan mana yang dipilih. Lihat [Pengaturan Proyek](../project-settings/project-settings.md).
 {% endhint %}
 
-### RAW (Reflektansi)
+### Tingkat LATTICE
 
-* Gambar keluaran reflektansi yang telah dikalibrasi
-* Koreksi vignette (jika diaktifkan dalam pemrosesan)
-* Reflektansi dikalibrasi menggunakan data target (jika diaktifkan)
-* Multi-band TIFF dengan semua saluran kamera
-* Nilai piksel mewakili persentase reflektansi (saat menggunakan mode persentase)
-* Siap untuk dimanipulasi dengan [Index/LUT Sandbox](index-lut-sandbox.md)
+LATTICE menangkap penyebaran data ke tingkat-tingkat ini dalam satu tahap pemrosesan. Tingkat mana saja yang tersedia bergantung pada pengaturan ekspor per-produk di Pengaturan Proyek dan pada spesifikasi kamera yang bersangkutan.
 
-**Kapan harus dilihat:**
+| Lapisan | Ditulis ke | Berlaku untuk |
+| --- | --- | --- |
+| **RAW (Debayered)** | `Debayered_Images/` | RGB dan multispektral |
+| **RAW (Pratinjau)** | `Preview_Images/` | Multispektral (perluasan warna palsu) |
+| **Keseimbangan Putih** | `Preview_Images/` | Kamera utama RGB — pratinjau RGB terdaftar dengan nama ini agar sejajar dengan lapisan Survey3 yang memiliki nama sama |
+| **RAW (Radiance)** | `Radiance_Images/` | Hanya multispektral |
+| **RAW (Reflektansi)** | `Reflectance_Calibrated_Images/` | Hanya multispektral, dan hanya jika ada catatan downwelling `.daq` yang sesuai atau target dalam bingkai yang lulus QA yang mencakup bingkai tersebut |
 
-* Memeriksa hasil yang telah dikalibrasi
-* Memverifikasi kualitas kalibrasi
-* Memeriksa nilai piksel untuk akurasi ilmiah
-* Membandingkan dengan gambar asli untuk melihat efek kalibrasi
+Kamera utama RGB tidak memiliki radiometri per-pita, sehingga radiance dan reflectance dilewati untuk kamera tersebut sebagai **tidak berlaku** — log akan mencatat hal ini daripada gagal tanpa pemberitahuan.
 
-{% hint style="success" %}
-**Disarankan**: Gunakan lapisan RAW (Reflektansi) saat memeriksa nilai piksel untuk pengukuran dan analisis ilmiah.
+### Lapisan indeks, LUT, dan sandbox
+
+| Pola lapisan | Contoh | Asal |
+| --- | --- | --- |
+| **RAW (`<INDEX>` Indeks)** | `RAW (NDVI Index)` | Satu per indeks yang dikonfigurasi di Pengaturan Proyek, dihitung selama pemrosesan |
+| **`<INDEX>` LUT** | `NDVI LUT` | Versi yang telah dipetakan warnanya dari sebuah indeks |
+| **Sandbox (`<Name>` `<Index\|LUT>` `<NNN>`)** | `Sandbox (NDVI LUT 003)` | Satu per proses ekspor [Indeks/LUT Sandbox](index-lut-sandbox.md) proses ekspor |
+
+Jika nama indeks yang sama dikonfigurasi lebih dari sekali dengan pengaturan yang berbeda, indeks kedua dan seterusnya akan diberi nomor pada namanya (`RAW (NDVI2 Index)`) agar lapisan-lapisan tersebut tetap dapat dibedakan.
+
+***
+
+## Menggunakan pemilih lapisan
+
+1. Buka gambar dalam tampilan layar penuh dengan mengklik thumbnail di kisi
+2. Klik **menu tarik-turun lapisan** di pojok kanan atas penampil
+3. Pilih lapisan — gambar akan diperbarui seketika
+
+Menu tarik-turun menampilkan **JPG, RAW (Asli), RAW (Target), RAW (Reflektansi)** terlebih dahulu, dalam urutan tersebut, dan mencantumkan semua yang lain setelahnya sesuai urutan pendaftaran produk.
+
+### Preferensi lapisan saat menavigasi
+
+Menekan **←**/**→** akan berpindah ke gambar berikutnya dan berusaha mempertahankan lapisan yang sama:
+
+1. **Kecocokan persis didahulukan** — jika gambar berikutnya memiliki lapisan dengan nama yang sama, Anda akan beralih ke lapisan tersebut. Inilah yang membuat Anda tetap berada di lapisan `RAW (NDVI Index)` saat menelusuri seluruh set
+2. **Kemudian pencocokan berdasarkan jenis** — lapisan indeks mencari lapisan indeks apa pun, LUT mencari LUT apa pun, reflektansi mencari reflektansi, target mencari target, asli mencari asli, dan dasar mencari dasar
+3. **Kemudian, khusus untuk lapisan ekspor** — nama tetap dipertahankan meskipun daftar lapisan belum sepenuhnya terperbarui, karena berkas tersebut sudah ada di disk. Inilah yang memungkinkan Anda meninjau hasil sementara proses masih sedang menulisnya
+4. **Jika tidak** — lapisan pertama yang tersedia, yang biasanya adalah gambar dasar
+
+File sidecar `.daq` dan `.csv` dalam proyek dilewati saat navigasi menggunakan tombol panah, sehingga saat menelusuri gambar, Anda tidak akan pernah mendarat pada rekaman sensor cahaya.
+
+Fitur zoom dan pan juga berlaku di seluruh gambar, sehingga perbandingan sebelum/sesudah pada posisi bidang yang sama menjadi mudah.
+
+***
+
+## Memahami nilai piksel per lapisan
+
+[Panel Nilai Kursor](opening-an-image-full-screen.md#cursor-values) menampilkan nilai sebenarnya per kanal di bawah kursor Anda, dalam satuan yang digunakan untuk menyimpan lapisan tersebut. Kolom-kolomnya berubah sesuai dengan lapisan:
+
+| Lapisan | Satuan yang ditampilkan | Catatan |
+| --- | --- | --- |
+| Dasar (JPG / PNG / pratinjau TIFF) | DN, 0–255 | Nilai tampilan, telah dikoreksi gamma pada RGB. Hanya untuk pemeriksaan visual |
+| RAW (Asli) | DN | Angka digital mentah dari sensor. Sumbu histogram menunjukkan kedalaman: 255 (8-bit), 4095 (12-bit), atau 65535 (16-bit) |
+| RAW (Debayered) | DN | Linear, tanpa peregangan tampilan |
+| RAW (Pratinjau) / Keseimbangan Putih | DN | Produk tampilan — diregangkan atau dikoreksi gamma. Bukan untuk pengukuran |
+| RAW (Radian) | **W/m²/sr/nm** | Radian fisik Float32. Tanpa kolom DN |
+| RAW (Reflektansi) | DN **dan %** | Persentase dihitung berdasarkan skala file tersebut — lihat di bawah |
+| Ekspor indeks / LUT / sandbox | Nilai indeks, atau komponen RGB | File indeks saluran tunggal melaporkan nilai indeks; file LUT yang dipetakan warna melaporkan komponen Red/Green/Blue |
+
+### Reflektansi: skalanya per berkas
+
+{% hint style="warning" %}
+**&quot;Bagi dengan 65.535&quot; hanya benar untuk Survey3.** Reflektansi LATTICE disimpan dalam skala yang berbeda, dan mencampurkan kedua pembagi tersebut adalah cara paling umum untuk mendapatkan nilai reflektansi yang tepat setengah dari yang seharusnya.
 {% endhint %}
 
-### RAW (NDVI Indeks)... dan sejenisnya
+| Sumber | DN yang setara dengan reflektansi 1,0 | Diidentifikasi oleh |
+| --- | --- | --- |
+| **LATTICE**(M3C / M3M) |**32768** | Tag XMP `Chloros:PixelScale=32768` yang dicantumkan pada setiap ekspor reflektansi LATTICE. Ruang kosong 2× berarti ρ di atas 1,0 dapat direpresentasikan alih-alih dipotong |
+| **Survey3**|**65535** | Tidak ada tag skala XMP Chloros — kalibrasi Survey3 menulis ρ × dtype-max dan memotong pada 1,0 |
 
-* Gambar indeks vegetasi yang dihitung (NDVI dalam contoh ini)
-* Nama indeks berubah tergantung pada indeks mana yang dikonfigurasi selama pemrosesan
-* Contoh: RAW (NDVI Index), RAW (NDRE Index), RAW (GNDVI Index), dll.
-* Gambar skala abu-abu satu kanal yang menampilkan hasil perhitungan indeks
-* Satu lapisan muncul untuk setiap indeks yang dikonfigurasi di Pengaturan Proyek
+Untuk GIS dan skrip: baca nilai dari berkas dan bagi dengan nilai tersebut. Jika tag tidak ada, berkas menggunakan skala (65535). Penampil, kotak pasir indeks/LUT, dan ekspor indeks semuanya menentukan skala dengan cara yang sama, sehingga angka yang Anda baca di kursor adalah angka yang digunakan dalam perhitungan indeks.
 
-**Nama indeks yang mungkin:**
+Penyimpanan khusus format di atas skala tersebut:
 
-* RAW (Indeks NDVI)
-* RAW (Indeks NDRE)
-* RAW (Indeks GNDVI)
-* RAW (Indeks OSAVI)
-* RAW (Indeks EVI)
-* RAW (Indeks SAVI)
-* Dan banyak lagi... (lihat [Rumus Indeks Multispektral](../project-settings/multispectral-index-formulas.md))
+* **TIFF (32-bit, Persen)** menyimpan DN / 65535 sebagai bilangan float
+* **PNG (8-bit)**dan**JPG (8-bit)** menyimpan DN × 255 / 65535
+* **Ekspor 8-bit TIFF dari tangkapan sumber 8-bit** dipotong menjadi 0–255 alih-alih diskalakan ulang, dan sengaja tidak menyertakan tag skala. Panel hanya menampilkan DN untuk file-file tersebut, tanpa kolom persentase
 
-**Kapan harus dilihat:**
+### Rentang nilai indeks
 
-* Memeriksa hasil perhitungan indeks
-* Memeriksa rentang nilai indeks
-* Mengidentifikasi area yang menarik
-* Memverifikasi gambar indeks sebelum digunakan dalam GIS atau analisis
+| Keluarga indeks | Rentang umum | Pembacaan |
+| --- | --- | --- |
+| Perbedaan ternormalisasi (NDVI, GNDVI, NDRE, ENDVI…) | −1 hingga +1 | Vegetasi sehat umumnya 0,4–0,9; tanah telanjang mendekati 0; air bernilai negatif |
+| Disesuaikan dengan tanah (SAVI, OSAVI, MSAVI2…) | kira-kira −1 hingga +1,5 | Nilai yang serupa dengan NDVI dengan latar belakang tanah yang ditekan |
+| Rasio (GRVI, GCI, MSR, CIRE…) | tak terbatas ke atas | Rasio terus meningkat tanpa batas saat rentang pembilang mendekati nol |
+| EVI / LAI | 0 hingga ~1, 0 hingga ~3,5 | Awan dan piksel jenuh lainnya membuat keduanya keluar dari rentang — tutupi terlebih dahulu |
 
-***
-
-## Menggunakan Pemilih Lapisan
-
-### Membuka Menu Tarik-Turun
-
-1. Buka gambar dalam mode layar penuh (klik thumbnail mana pun di Penampil Gambar)
-2. Temukan **menu tarik-turun lapisan** di sudut kanan atas penampil
-3. Menu tarik-turun menampilkan lapisan yang saat ini dipilih (misalnya, &quot;JPG&quot;)
-4. Klik menu tarik-turun untuk melihat semua lapisan yang tersedia
-
-### Mengganti Lapisan
-
-1. Klik menu tarik-turun lapisan untuk membuka daftar
-2. Semua lapisan yang tersedia untuk gambar saat ini ditampilkan
-3. Klik nama lapisan mana pun untuk beralih ke versi tersebut
-4. Gambar akan diperbarui secara instan untuk menampilkan lapisan yang dipilih
-
-**Peralihan cepat:**
-
-* Menu dropdown mengingat pilihan terakhir Anda
-* Saat beralih ke gambar berikutnya, Chloros mencoba menampilkan jenis lapisan yang sama
-* Jika lapisan tersebut tidak ada pada gambar berikutnya, maka secara default akan menggunakan JPG
-
-### Ketersediaan Lapisan
-
-Tidak semua lapisan tersedia untuk setiap gambar:
-
-**Selalu tersedia:*** ✅ JPG (setiap gambar memiliki pratinjau JPG)
-
-**Tersedia secara bersyarat:**
-
-* ⚠️ RAW (Asli) - Hanya jika gambar diambil dalam mode RAW atau RAW+JPG
-* ⚠️ RAW (Target) - Hanya jika gambar mengandung target kalibrasi yang terdeteksi
-* ⚠️ RAW (Reflektansi) - Hanya setelah diproses dengan kalibrasi reflektansi diaktifkan
-* ⚠️ RAW (\[Index] Index) - Hanya setelah diproses dengan indeks yang dikonfigurasi
+Lihat [Rumus Indeks Multispektral](../project-settings/multispectral-index-formulas.md) untuk rumus tepat di balik setiap preset.
 
 ***
 
-## Persisten Lapisan
+## Alur kerja umum
 
-### Berpindah Antara Gambar
+### Perbandingan sebelum / sesudah
 
-Saat Anda berpindah ke gambar lain (menggunakan tombol panah atau mengklik thumbnail):**Preferensi lapisan tetap dipertahankan:**
+1. Pilih **RAW (Asli)** dan perhatikan efek vignetting serta nilai-nilai yang belum dikalibrasi
+2. Beralih ke **RAW (Reflektansi)**
 
-* Jika melihat &quot;RAW (Reflectance)&quot;, gambar berikutnya menampilkan &quot;RAW (Reflectance)&quot; (jika tersedia)
-* Jika sedang melihat &quot;RAW (NDVI Indeks)&quot;, gambar berikutnya menampilkan &quot;RAW (NDVI Indeks)&quot; (jika tersedia)
-* Jika lapisan yang sama tidak ada, secara default akan menggunakan JPG
+3. Bandingkan — efek vignetting telah dihilangkan, nilai-nilai telah dikalibrasi. Perbesar dan geser tampilan tetap terkunci, sehingga Anda melihat area tanah yang sama
 
-**Contoh alur kerja:**
+### Meninjau satu indeks di seluruh rangkaian gambar
 
-1. Buka Gambar 1, beralih ke RAW (NDVI Index)
-2. Tekan → untuk melihat Gambar 2
-3. Gambar 2 secara otomatis menampilkan lapisan RAW (NDVI Index)
-4. Lanjutkan navigasi - semua gambar menampilkan lapisan NDVI
-5. Sangat efisien untuk meninjau hasil indeks di banyak gambar
+1. Buka gambar pertama yang telah diproses dan pilih lapisan indeks
+2. Tekan **→** berulang kali — lapisan indeks akan mengikuti Anda dari gambar ke gambar
+3. Perhatikan histogram di bilah samping saat Anda menelusuri: bingkai yang distribusinya melonjak layak untuk diperiksa lebih dekat
 
-***
+### Verifikasi target kalibrasi
 
-## Alur Kerja Umum
+1. Pilih **RAW (Target)** pada bingkai target
+2. Pastikan target terlihat jelas dan terdeteksi
+3. Pindah ke bingkai target berikutnya — lapisan target akan mengikuti
 
-### Alur Kerja 1: Perbandingan Sebelum/Sesudah
+### Periksa keakuratan nilai reflektansi
 
-**Tujuan**: Membandingkan gambar asli dengan gambar yang telah dikalibrasi
+1. Pilih **RAW (Reflectance)**
 
-1. Buka gambar yang telah diproses di Image Viewer
-2. Pilih **RAW (Asli)** dari menu tarik-turun
-3. Perhatikan vignetting dan nilai yang belum dikalibrasi
-4. Beralih ke **RAW (Reflektansi)** dari menu tarik-turun
-5. Bandingkan - vignetting telah dihilangkan, nilai-nilai telah dikalibrasi
-
-### Alur Kerja 2: Peninjauan Indeks
-
-**Tujuan**: Meninjau hasil NDVI secara cepat di seluruh dataset
-
-1. Buka gambar yang telah diproses pertama
-2. Pilih **RAW (Indeks NDVI)** dari menu dropdown
-3. Gunakan tombol panah → untuk berpindah ke gambar berikutnya
-4. Lapisan NDVI tetap aktif secara otomatis
-5. Lanjutkan ke semua gambar, periksa pola NDVI
-6. Beralih ke **RAW (NDRE Index)** untuk membandingkan
-
-### Alur Kerja 3: Verifikasi Target
-
-**Tujuan**: Memverifikasi bahwa semua gambar target terdeteksi dengan benar
-
-1. Navigasi ke gambar target
-2. Pilih **RAW (Target)** dari menu dropdown
-3. Verifikasi bahwa target kalibrasi terlihat jelas dan terdeteksi
-4. Navigasi ke gambar target berikutnya
-5. Ulangi verifikasi untuk semua target
-
-### Alur Kerja 4: Pemeriksaan Nilai Piksel
-
-**Tujuan**: Memeriksa nilai reflektansi untuk akurasi ilmiah
-
-1. Buka gambar yang telah diproses
-2. Pilih lapisan **RAW (Reflektansi)**
-
-3. Aktifkan mode**Persentase Piksel** (tombol di bilah alat kanan atas)
-4. Gerakkan kursor di atas area vegetasi
-5. Pastikan nilai piksel berada dalam rentang yang diharapkan (30-70% untuk NIR, 5-15% untuk Red)
-6. Periksa area tanah dan air untuk nilai yang sesuai
+2. Baca kolom**%** di panel Nilai Kursor — nilainya sudah diskalakan dengan benar untuk file tersebut
+3. Lakukan pemeriksaan validasi terhadap bahan yang diketahui dalam bingkai: vegetasi yang sehat memiliki nilai NIR yang tinggi dan nilai merah yang rendah; target kalibrasi seharusnya menunjukkan nilai reflektansi yang mendekati nilai yang dipublikasikan
 
 ***
-
-## Memahami Nilai Piksel per Lapisan
-
-Lapisan yang berbeda menampilkan rentang nilai piksel yang berbeda:
-
-### Lapisan JPG
-
-* **Rentang**: 0-255 (8-bit)
-* **Arti**: Nilai tampilan, telah dikoreksi gamma
-* **Penggunaan**: Hanya untuk pemeriksaan visual, bukan untuk pengukuran ilmiah
-
-### RAW (Asli)
-
-* **Rentang**: 0-65535 (16-bit)
-* **Arti**: Angka digital mentah dari sensor
-* **Penggunaan**: Memeriksa kinerja sensor, belum dikalibrasi
-
-### RAW (Reflektansi)
-
-* **Rentang**: 0-65.535 (16-bit TIFF) atau 0,0-1,0 (32-bit Persentase)
-* **Arti**: Persentase reflektansi yang telah dikalibrasi
-* **Penggunaan**: Pengukuran dan analisis ilmiah**Untuk 16-bit TIFF:**Bagi dengan 65.535 untuk mendapatkan persentase reflektansi**Untuk 32-bit Persentase:** Nilai secara langsung mewakili persentase (0,5 = 50% reflektansi)
-
-### RAW (Gambar Indeks)
-
-* **Rentang**: Bervariasi sesuai indeks (biasanya -1,0 hingga +1,0 untuk indeks yang dinormalisasi)
-* **Arti**: Hasil perhitungan indeks
-* **Contoh**:
-  * NDVI: -1 hingga +1 (vegetasi biasanya 0,4 hingga 0,9)
-  * NDRE: -1 hingga +1 (deteksi stres)
-  * EVI: 0 hingga 1 (vegetasi yang ditingkatkan)
-
-***
-
-## Tips dan Praktik Terbaik
-
-### Pergantian Lapisan yang Efisien
-
-* **Penggunaan pintasan keyboard**: Meskipun tidak ada pintasan keyboard untuk lapisan, tombol panah navigasi (←/→) berfungsi di semua lapisan
-* **Alur kerja yang konsisten**: Pilih satu lapisan (misalnya, NDVI) dan tinjau seluruh dataset sebelum beralih ke lapisan lain
-* **Perbandingan cepat**: Beralih antara Original dan Reflectance untuk memverifikasi kualitas pemrosesan
-
-### Pertimbangan Kinerja
-
-* **JPG dimuat paling cepat**: Gunakan untuk navigasi cepat melalui banyak gambar
-* **Lapisan RAW dimuat lebih lambat**: Resolusi dan kedalaman bit yang lebih tinggi
-* **Lapisan indeks**: Kecepatan serupa dengan lapisan Reflektansi
-* **Pemuatan pertama paling lambat**: Tampilan berikutnya dari lapisan yang sama disimpan dalam cache dan lebih cepat
-
-### Verifikasi Kualitas
-
-* **Selalu periksa RAW (Asli)**: Verifikasi kualitas data sumber sebelum mempercayai hasil pemrosesan
-* **Bandingkan lapisan**: Gunakan peralihan lapisan untuk memvalidasi bahwa pemrosesan berjalan dengan benar
-* **Periksa rentang indeks**: Gunakan mode Persentase Piksel dengan lapisan indeks untuk memverifikasi nilai-nilai yang wajar***
 
 ## Pemecahan Masalah
 
-### Lapisan Tidak Tersedia
+### Lapisan yang saya harapkan tidak ada dalam menu tarik-turun
 
-**Masalah**: Lapisan yang diharapkan tidak muncul di menu tarik-turun**Penyebab kemungkinan:**
+**Kemungkinan penyebab**
 
-* Gambar belum diproses (hanya JPG dan RAW (Asli) yang tersedia)
-* Kalibrasi reflektansi dinonaktifkan selama pemrosesan
-* Indeks tertentu tidak dikonfigurasi di Pengaturan Proyek
-* Gambar adalah gambar target saja (tidak ada indeks yang dihasilkan untuk target)
+* Gambar tersebut belum pernah diproses — hanya lapisan dasar dan `RAW (Original)` yang ada
+* Tombol ekspor produk tidak dicentang di Pengaturan Proyek
+* Produk tersebut tidak berlaku untuk kamera tersebut (radiance dan reflektansi pada master RGB; indeks apa pun pada kamera mono M3M single-band)
+* Kalibrasi reflektansi tidak memiliki data yang dapat diproses — tidak ada cakupan sinar turun (downwelling) pada `.daq` dan tidak ada target dalam bingkai yang lulus QA — sehingga bingkai tersebut kembali menggunakan Vignette Corrected atau Sensor Response
 
-**Solusi:**
+**Apa yang harus dilakukan**
 
-1. Verifikasi gambar telah diproses (periksa folder output untuk file yang diproses)
-2. Periksa Pengaturan Proyek untuk memastikan indeks telah dikonfigurasi
-3. Proses ulang dengan indeks yang diinginkan diaktifkan
+1. Periksa log proses: Chloros menunjukkan kapan produk ekspor yang diminta tidak dapat dihasilkan dan alasannya
+2. Periksa tombol pengaturan ekspor per produk di [Pengaturan Proyek](../project-settings/project-settings.md)
+3. Pastikan folder produk tersebut ada di pohon output proyek
+4. Proses ulang dengan produk tersebut diaktifkan
 
-### Lapisan yang Ditampilkan Salah
+### Daftar lapisan terlihat sudah kedaluwarsa
 
-**Masalah**: Gambar terbuka di lapisan yang tidak diharapkan**Penyebab**: Preferensi lapisan dari gambar sebelumnya diteruskan, tetapi lapisan tersebut tidak ada pada gambar saat ini**Solusi**: Chloros secara otomatis beralih ke JPG saat lapisan yang disukai tidak tersedia - ini adalah perilaku normal
+Chloros memindai ulang folder produk proyek saat proses berjalan dan memperbaiki pendaftaran lapisan yang hilang berdasarkan data yang sebenarnya ada di disk, sehingga lapisan yang telah selesai diekspor biasanya muncul dengan sendirinya dalam satu siklus pemindaian. Beralih dari gambar dan kembali ke proyek akan memaksa pembaruan resolusi.
 
-### Tidak Dapat Melihat Target Kalibrasi
+### Nilai reflektansi tampak setengah dari yang seharusnya
 
-**Masalah**: Lapisan RAW (Target) tidak menampilkan deteksi target**Penyebab yang mungkin:**
+Anda hampir pasti membagi berkas LATTICE dengan 65535. Gunakan `Chloros:PixelScale` (32768), atau periksa kolom **%**, yang telah menerapkan nilai tersebut.
 
-* Target tidak terdeteksi selama pemrosesan
-* Gambar sebenarnya tidak mengandung target
-* Pengaturan deteksi target terlalu ketat
+### Lapisan indeks ada tetapi gambarnya kosong
 
-**Solusi:**
-
-1. Periksa Log Debug untuk pesan &quot;Target ditemukan&quot;
-2. Pastikan gambar sebenarnya mengandung target kalibrasi yang terlihat
-3. Sesuaikan pengaturan deteksi target di Pengaturan Proyek
-4. Lihat [Memilih Gambar Target](../processing-images-gui/choosing-target-images.md)
-
-***
-
-## Fitur Terkait
-
-### Alat Penampil Gambar
-
-Saat melihat lapisan apa pun, Anda dapat menggunakan:
-
-* **Kontrol zoom**: Perbesar untuk memeriksa detail
-* **Pan**: Klik dan seret untuk berpindah di gambar yang diperbesar
-* **Pemeriksaan nilai piksel**: Lihat nilai di lokasi kursor
-* **Panah navigasi**: Berpindah antar gambar sambil mempertahankan lapisan
-* **Mode Persentase Piksel**: Beralih antara tampilan DN dan persentase
-
-Lihat [Membuka Gambar dalam Layar Penuh](opening-an-image-full-screen.md) untuk dokumentasi lengkap Penampil Gambar.
-
-### Sandbox Indeks/LUT
-
-Untuk pengujian dan visualisasi indeks interaktif:
-
-* **Perhitungan indeks waktu nyata**: Uji rumus indeks yang berbeda
-* **Pemetaan warna LUT**: Terapkan gradien warna pada indeks skala abu-abu
-* **Ekspor visualisasi**: Simpan gambar indeks berwarna
-
-Lihat [Sandbox Indeks/LUT](index-lut-sandbox.md) untuk detailnya.
+Indeks tersebut memerlukan band yang tidak dimiliki oleh lapisan Anda — misalnya, indeks yang membaca saluran ketiga yang diterapkan pada berkas satu atau dua saluran. Beralihlah ke lapisan multi-band (reflektansi atau debayered), atau pilih indeks yang sesuai dengan filter kamera.
 
 ***
 
 ## Langkah Selanjutnya
 
-Sekarang setelah Anda memahami lapisan gambar:
-
-* [**Membuka Gambar dalam Layar Penuh**](opening-an-image-full-screen.md) - Panduan lengkap Image Viewer
-* [**Index/LUT Sandbox**](index-lut-sandbox.md) - Visualisasi indeks interaktif
-* [**Rumus Indeks Multispektral**](../project-settings/multispectral-index-formulas.md) - Referensi indeks yang tersedia
-* [**Menyelesaikan Pemrosesan**](../processing-images-gui/finishing-the-processing.md) - Memahami hasil pemrosesan
+* [**Membuka Gambar dalam Layar Penuh**](opening-an-image-full-screen.md) — pembacaan kursor, histogram, dan pengaturan GSD
+* [**Index/LUT Sandbox**](index-lut-sandbox.md) — visualisasi indeks interaktif dan ekspor
+* [**Rumus Indeks Multispektral**](../project-settings/multispectral-index-formulas.md) — referensi indeks
+* [**Menyelesaikan Pemrosesan**](../processing-images-gui/finishing-the-processing.md) — struktur folder keluaran yang dituju oleh lapisan-lapisan ini
