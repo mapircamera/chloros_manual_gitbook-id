@@ -43,7 +43,7 @@ Alat-alat server ini mencakup fungsi yang dilakukan oleh [Python SDK](api-python
 claude mcp add chloros -- chloros-mcp
 ```
 
-**Claude Desktop:**tambahkan ini ke `claude_desktop_config.json` (buka melalui**Pengaturan &gt; Pengembang &gt; Edit Konfigurasi**), lalu mulai ulang Claude Desktop.**Cursor** menggunakan entri yang sama di `~/.cursor/mcp.json`.
+**Claude Desktop:**tambahkan ini ke `claude_desktop_config.json` (buka melalui**Pengaturan > Pengembang > Edit Konfigurasi**), lalu mulai ulang Claude Desktop.**Cursor** menggunakan entri yang sama di `~/.cursor/mcp.json`.
 
 ```json
 {
@@ -132,5 +132,5 @@ Satu ketidaksimetrisan yang harus diketahui oleh asisten: `process()` di SDK sec
 
 * **Diperlukan login Chloros+.**CLI dan SDK memerlukan tingkatan Chloros+**berbayar**, yang diberlakukan di sisi server: permintaan akan gagal dengan kode kesalahan `401 AUTH_REQUIRED` jika belum masuk, dan `403 PLAN_UPGRADE_REQUIRED` pada tingkatan gratis. Jalankan `chloros-cli login` sekali per mesin sebelum menjalankan skrip yang dihasilkan. Lihat [Masuk Chloros+](chloros+-login.md).
 * **Perintah penangkapan mengendalikan perangkat keras fisik.** Perintah `lattice` / `daq` / `project`, objek sesi SDK, dan alat-alat `chloros-mcp` terhubung, melakukan streaming, dan memicu kamera serta sensor fisik. Periksa skrip yang dihasilkan sebelum dijalankan pertama kali, dan jalankan skrip tersebut dengan perangkat keras yang diawasi.
-* **Periksa hasil keluaran secara acak.** Verifikasi folder hasil dan beberapa nilai piksel sebelum mempublikasikan hasil. Secara khusus, file TIFF reflektansi diskalakan per sumber — baca tag XMP `Chloros:PixelScale` (file LATTICE menyertakannya: 32768 = 1,0 reflektansi; file Survey3 tidak memilikinya, dan menggunakan 65535 = 1,0) alih-alih mengasumsikan pembagi. Kedua halaman referensi tersebut mendokumentasikan hal ini di bawah &quot;Membaca piksel reflektansi&quot;.
+* **Periksa hasil keluaran secara acak.** Verifikasi folder hasil dan beberapa nilai piksel sebelum mempublikasikan hasil. Secara khusus, file TIFF reflektansi diskalakan per sumber — baca tag XMP `Chloros:PixelScale` (file LATTICE menyertakannya: 32768 = 1,0 reflektansi; file Survey3 tidak memilikinya, dan menggunakan 65535 = 1,0) alih-alih mengasumsikan pembagi. Kedua halaman referensi tersebut mendokumentasikan hal ini di bawah "Membaca piksel reflektansi".
 * **Hal-hal kecil yang dapat mengganggu kode yang dihasilkan:**`pool-record` menulis ke sistem berkas**host backend** (default `~/Documents/DAQ Live View/`); pada mesin dengan beberapa antarmuka jaringan, gunakan `daq pool-connect --eth-host <ip-or-hostname>` daripada penemuan otomatis; gunakan `http://127.0.0.1:5000` (bukan `localhost`) di mana pun URL backend muncul; skrip yang menjelajahi pohon output proyek harus melewati folder `clamp_masks/` (file `*_clampmask.tif` di dalamnya adalah masker, bukan gambar — lihat [Format Gambar Keluaran](output-image-formats.md#clamp-masks)); dan pada Windows dengan opsi jalur panjang dinonaktifkan, jaga agar nama folder proyek tetap pendek — folder proyek yang kedalamannya melebihi sekitar 130 karakter akan ditolak sebelum pemrosesan dimulai.

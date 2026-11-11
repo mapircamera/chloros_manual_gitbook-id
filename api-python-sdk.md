@@ -1,9 +1,7 @@
 # API: Python SDK
 
 {% hint style="info" %}
-**Mencari API lengkap?** Halaman ini adalah panduan praktis. Setiap kelas publik, metode, tanda tangan yang tepat, dan contoh yang dapat disalin-tempel terdapat di [Referensi SDK](reference/sdk-reference.md), yang dioptimalkan untuk asisten AI.**Sedang bekerja dengan asisten AI?** Tempelkan URL ini ke dalam obrolan agar Anda memiliki Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API
-
-Setiap halaman panduan ini tersedia dalam format markdown mentah di slug huruf kecilnya + `.md`, dan seluruh panduan diindeks di `https://mapir.gitbook.io/chloros/llms.txt`.
+**Mencari API lengkap?** Halaman ini adalah panduan praktis. Setiap kelas publik, metode, tanda tangan yang tepat, dan contoh yang dapat disalin-tempel terdapat di [Referensi SDK](reference/sdk-reference.md), yang dioptimalkan untuk asisten AI.**Sedang bekerja dengan asisten AI?** Tempelkan URL ini ke dalam obrolan agar Anda memiliki Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Chloros API Setiap halaman panduan ini tersedia dalam format markdown mentah di slug huruf kecilnya + `.md`, dan seluruh panduan diindeks di `https://mapir.gitbook.io/chloros/llms.txt`.
 {% endhint %}
 
 **Chloros Python SDK** (`chloros-sdk` di PyPI) mengendalikan semua fungsi yang dapat dilakukan aplikasi desktop dari Python: pemrosesan gambar batch, kontrol kamera dan array LATTICE secara langsung, sesi pengumpulan data (DAQ) sensor cahaya, serta otomatisasi proyek yang disimpan. Ini merupakan lapisan tipis di atas backend lokal yang sama yang digunakan oleh GUI dan CLI (HTTP di `127.0.0.1:5000`), sehingga perilakunya identik di ketiga antarmuka tersebut.
@@ -144,7 +142,7 @@ for hint in result.get("summary", {}).get("hints", []):
 ```
 
 {% hint style="warning" %}
-**`process()` tidak memicu pengecualian ketika suatu eksekusi tidak menghasilkan gambar apa pun.** Inilah satu-satunya perbedaan yang disengaja antara SDK dan CLI: `chloros-cli process` menganggap &quot;produk diminta, tetapi tidak ada yang ditulis&quot; sebagai kegagalan dan keluar dengan nilai non-nol, sedangkan SDK kembali secara normal dan melaporkan kondisi tersebut melalui `summary` / petunjuk. Jika pipeline Anda harus berhenti pada eksekusi yang kosong, periksa sendiri — periksa `summary` (atau hitung file di bawah folder proyek) daripada mengandalkan pengecualian.
+**`process()` tidak memicu pengecualian ketika suatu eksekusi tidak menghasilkan gambar apa pun.** Inilah satu-satunya perbedaan yang disengaja antara SDK dan CLI: `chloros-cli process` menganggap "produk diminta, tetapi tidak ada yang ditulis" sebagai kegagalan dan keluar dengan nilai non-nol, sedangkan SDK kembali secara normal dan melaporkan kondisi tersebut melalui `summary` / petunjuk. Jika pipeline Anda harus berhenti pada eksekusi yang kosong, periksa sendiri — periksa `summary` (atau hitung file di bawah folder proyek) daripada mengandalkan pengecualian.
 {% endhint %}
 
 ## Smart Connect — perangkat keras langsung
@@ -163,7 +161,7 @@ with chloros_sdk.connect_camera("213800234") as cam:
 ```
 
 {% hint style="info" %}
-**Jalur relatif mengacu pada lokasi di mana skrip Anda dijalankan (berubah pada versi 1.3.0).** Dengan backend lokal, jalur relatif `output_dir` (termasuk `"output"` default) — dan jalur lain yang dibuka oleh backend (`burst_dir`, `profile_path`, `save_path`, `mask_path`) — disesuaikan dengan direktori kerja skrip Anda, sehingga `cam.capture("output/")` menulis ke `<current folder>/output/`. Pada versi 1.2.0, backend yang terinstal menerjemahkannya ke dalam folder instalasinya sendiri dan mengalami kegagalan dengan pesan &quot;Akses ditolak&quot;. Terhadap backend jarak jauh, jalur dikirimkan sesuai yang diketik.
+**Jalur relatif mengacu pada lokasi di mana skrip Anda dijalankan (berubah pada versi 1.3.0).** Dengan backend lokal, jalur relatif `output_dir` (termasuk `"output"` default) — dan jalur lain yang dibuka oleh backend (`burst_dir`, `profile_path`, `save_path`, `mask_path`) — disesuaikan dengan direktori kerja skrip Anda, sehingga `cam.capture("output/")` menulis ke `<current folder>/output/`. Pada versi 1.2.0, backend yang terinstal menerjemahkannya ke dalam folder instalasinya sendiri dan mengalami kegagalan dengan pesan "Akses ditolak". Terhadap backend jarak jauh, jalur dikirimkan sesuai yang diketik.
 {% endhint %}
 
 ### Array tersinkronisasi — `connect_array`
@@ -246,7 +244,7 @@ Penggunaan offline berfungsi selama masa tenggang paket: tingkatan dibaca dari c
 
 ## Pengecualian
 
-Tangani kelas dasar untuk menangani &quot;segala kesalahan Chloros&quot;:
+Tangani kelas dasar untuk menangani "segala kesalahan Chloros":
 
 ```python
 import chloros_sdk

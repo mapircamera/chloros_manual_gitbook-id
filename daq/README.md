@@ -86,8 +86,8 @@ Setiap nama file `.daq` mencakup ID sensor dan cap waktu.
 
 * [**Tab DAQ di Chloros**](gui.md) — panduan lengkap antarmuka pengguna grafis (GUI): menghubungkan setiap model, pengaturan per-sensor, grafik spektrum, data kolorimetrik real-time, reflektansi dua sensor, dan perekaman.
 * [**Panduan Cepat CLI (pool-\*)**](cli-quick-start.md) — mengendalikan sensor DAQ dari `chloros-cli daq pool-*`, jalur baris perintah yang didukung.
-* [**Profil Batas &amp; Rentang yang Dikalibrasi**](caps-and-range.md) — batas apa saja yang ada per model, cara mendeklarasikannya, serta rentang spektral yang dikalibrasi secara terperinci.
-* [**Perekaman &amp; Format .daq**](recording.md) — format SQLite `.daq` dan alur kerja perekaman.
-* [**Jaringan DAQ-E &amp; Sinkronisasi Waktu**](ethernet-ptp.md) — mode transmisi DAQ-E dan sinkronisasi waktu PTP.
+* [**Profil Batas & Rentang yang Dikalibrasi**](caps-and-range.md) — batas apa saja yang ada per model, cara mendeklarasikannya, serta rentang spektral yang dikalibrasi secara terperinci.
+* [**Perekaman & Format .daq**](recording.md) — format SQLite `.daq` dan alur kerja perekaman.
+* [**Jaringan DAQ-E & Sinkronisasi Waktu**](ethernet-ptp.md) — mode transmisi DAQ-E dan sinkronisasi waktu PTP.
 * [**Alur Kerja Reflektansi**](reflectance.md) — menggunakan data downwelling DAQ untuk menghasilkan reflektansi.
 * Untuk dokumentasi lengkap tingkat flag, lihat [Referensi CLI](../reference/cli-reference.md) (bagian `chloros-cli daq`) dan [Referensi SDK](../reference/sdk-reference.md) (`chloros_sdk.connect_daq_sensor()`), yang keduanya ditulis agar dapat langsung digunakan oleh asisten AI.

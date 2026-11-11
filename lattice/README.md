@@ -37,13 +37,13 @@ Chloros menampilkannya dengan awalan `LATT-` (misalnya `LATT-M3M-L87-F450`). Str
 | --------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | Sensor    | `M3C` / `M3M`                                            | Warna Bayer / monokrom                                                                          |
 | Lensa      | `L41` / `L87`                                            | Angka tersebut merupakan **sudut pandang horizontal dalam derajat**: L41 = sempit (41°), L87 = lebar (87°)    |
-| Filter    | `FRGB` / `FRGN` / `FOCN` / `FNGB` (M3C) atau `F<nm>` (M3M) | Lihat [Filter &amp; Pita Spektral](https://mapir.gitbook.io/lattice-camera/hardware/filters-and-bands) |
+| Filter    | `FRGB` / `FRGN` / `FOCN` / `FNGB` (M3C) atau `F<nm>` (M3M) | Lihat [Filter & Pita Spektral](https://mapir.gitbook.io/lattice-camera/hardware/filters-and-bands) |
 
 String model mengendalikan semua proses selanjutnya: Chloros menentukan profil sensor, tata letak pita, dan kalibrasi pabrik dari `DeviceUserID` + `DeviceSerialNumber`. Tidak ada yang perlu dikonfigurasi per kamera — lihat [Menghubungkan Kamera](connecting.md).
 
 ## Filter dan pita
 
-Pusat pita, tepi FWHM, dan katalog lengkap 23-SKU M3M merupakan spesifikasi produk, sehingga tercantum dalam manual perangkat keras: [**Filter &amp; Pita Spektral**](https://mapir.gitbook.io/lattice-camera/hardware/filters-and-bands).
+Pusat pita, tepi FWHM, dan katalog lengkap 23-SKU M3M merupakan spesifikasi produk, sehingga tercantum dalam manual perangkat keras: [**Filter & Pita Spektral**](https://mapir.gitbook.io/lattice-camera/hardware/filters-and-bands).
 
 Yang penting dari sisi perangkat lunak: kode filter dalam string model menentukan produk apa saja yang dapat dibuat oleChloros. Kamera dengan filter RGB (`FRGB`) hanya menghasilkan produk yang telah melalui proses debayering dan pratinjau — radian dan reflektansi per-pita tidak relevan untuk sensor pita lebar, sehingga Chloros mengabaikannya dan menyatakan hal tersebut. Setiap filter lainnya menghasilkan rantai lengkap radian → reflektansi → indeks.
 
@@ -57,8 +57,8 @@ Dari sisi perangkat lunak, yang penting adalah bahwa Chloros menentukan kalibras
 
 * [Menghubungkan Kamera](connecting.md) — penemuan otomatis, dialog koneksi antarmuka pengguna (GUI), setara CLI/SDK, dan bagaimana kalibrasi pabrik ditentukan (paket di kamera vs. cloud) saat kamera terhubung.
 * [Pengaturan Kamera](camera-settings.md) — setiap kontrol di tab Kamera: daftar kamera, panel pengaturan per kamera, dan panel pengaturan array (termasuk editor ROI dan penyelarasan).
-* [Pengaturan &amp; Mode Pengambilan Gambar](capture.md) — Pengambilan Semua, pengambilan Tunggal / Berkelanjutan / Interval, jenis ekspor, dan tata letak folder hasil pengambilan gambar.
+* [Pengaturan & Mode Pengambilan Gambar](capture.md) — Pengambilan Semua, pengambilan Tunggal / Berkelanjutan / Interval, jenis ekspor, dan tata letak folder hasil pengambilan gambar.
 * [Susunan Multi-Kamera](arrays.md) — wizard koneksi susunan, probe kabel sinkronisasi, bandwidth, PTP, dan tampilan susunan langsung.
-* [Kamera Mono &amp; Indeks Vegetasi](mono-indices.md) — Kamera M3M serta alur kerja selaraskan → tumpuk → indeks.
+* [Kamera Mono & Indeks Vegetasi](mono-indices.md) — Kamera M3M serta alur kerja selaraskan → tumpuk → indeks.
 
 Daftar perintah lengkap tersedia di [Referensi CLI](../reference/cli-reference.md) dan [Referensi SDK](../reference/sdk-reference.md).

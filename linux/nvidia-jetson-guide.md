@@ -1,8 +1,6 @@
 # Panduan NVIDIA Jetson
 
-Chloros
-pada NVIDIA Jetson memungkinkan pemrosesan gambar multispektral di tepi jaringan — di lapangan, pada UAV, dan di instalasi terpencil. Chloros
-1.3.0 mendeteksi model Jetson Anda saat startup dan mengoptimalkan strategi pemrosesannya sesuai dengan perangkat keras yang terdeteksi. **Tidak diperlukan penyesuaian manual.**
+Chloros pada NVIDIA Jetson memungkinkan pemrosesan gambar multispektral di tepi jaringan — di lapangan, pada UAV, dan di instalasi terpencil. Chloros 1.3.0 mendeteksi model Jetson Anda saat startup dan mengoptimalkan strategi pemrosesannya sesuai dengan perangkat keras yang terdeteksi. **Tidak diperlukan penyesuaian manual.**
 {% hint style="info" %}
 **Paket Jetson 1.3.0 diproses pada GPU Jetson.** `chloros_1.3.0_arm64_jp6.deb` dikembangkan untuk JetPack 6 dan menggunakan build CUDA PyTorch dari JetPack 6, sehingga pemrosesan — termasuk Texture Aware debayer — berjalan di GPU Orin. Paket ini tidak menyertakan CUDA itu sendiri: paket ini menggunakan pustaka CUDA dan cuDNN yang diinstal oleh JetPack 6 (`sudo apt install nvidia-jetpack` pada gambar yang tidak memiliki pustaka tersebut). Jika tidak ada GPU CUDA yang dapat digunakan, pemrosesan berjalan di CPU dan Texture Aware menggunakan debayer Standar.
 {% endhint %}
@@ -18,8 +16,7 @@ pada NVIDIA Jetson memungkinkan pemrosesan gambar multispektral di tepi jaringan
 | **Jetson Orin Nano** | 8 GB bersama     | `GPU_SINGLE` (1 pekerja, sekuensial)                     | Komputasi tepi tingkat pemula                                 |
 
 {% hint style="info" %}
-Paket Linux
-arm64 memerlukan **JetPack 6**, yang tersedia pada keluarga Jetson Orin. Model yang lebih lama (Nano, TX2, Xavier NX) tidak dapat menjalankan JetPack 6 dan tidak didukung oleh paket saat ini.
+Paket Linux arm64 memerlukan **JetPack 6**, yang tersedia pada keluarga Jetson Orin. Model yang lebih lama (Nano, TX2, Xavier NX) tidak dapat menjalankan JetPack 6 dan tidak didukung oleh paket saat ini.
 {% endhint %}
 
 ***
@@ -28,10 +25,7 @@ arm64 memerlukan **JetPack 6**, yang tersedia pada keluarga Jetson Orin. Model y
 
 * **JetPack 6.x** (disarankan versi terbaru)
 * **NVIDIA CUDA dan cuDNN** dari JetPack 6 (`sudo apt install nvidia-jetpack` jika gambar sistem Anda tidak menyertakannya)
-* **Paket Chloros
-+ berbayar** — tingkatan Copper atau lebih tinggi (diperlukan untuk semua akses CLI
-/SDK
-; diberlakukan di sisi server)
+* **Paket Chloros+ berbayar** — tingkatan Copper atau lebih tinggi (diperlukan untuk semua akses CLI/SDK; diberlakukan di sisi server)
 
 ## Instalasi
 
@@ -48,15 +42,10 @@ python3 -c "import chloros_sdk; print(chloros_sdk.__version__)"   # the .deb ins
 chloros-cli selftest
 ```
 
-`.deb` menginstal SDK
-Python Python
-untuk sistem `python3`, yang sesuai dengan build ini. Hanya virtualenv yang memerlukan wheel yang disertakan untuk diinstal di dalamnya: `pip install /usr/lib/chloros/sdk/chloros_sdk-*.whl` (sepenuhnya offline). Untuk detail umum instalasi Linux
-, lokasi berkas, dan pemecahan masalah, lihat [Instalasi Linux
-](linux-installation.md).
+`.deb` menginstal SDK Python Python untuk sistem `python3`, yang sesuai dengan build ini. Hanya virtualenv yang memerlukan wheel yang disertakan untuk diinstal di dalamnya: `pip install /usr/lib/chloros/sdk/chloros_sdk-*.whl` (sepenuhnya offline). Untuk detail umum instalasi Linux, lokasi berkas, dan pemecahan masalah, lihat [Instalasi Linux](linux-installation.md).
 
 {% hint style="info" %}
-**Tidak perlu lagi mengekstrak saat diluncurkan.** Mulai versi 1.3.0, backend dan CLI
-diinstal dalam bentuk yang sudah diekstrak di bawah `/usr/lib/chloros/`, sehingga keduanya tidak lagi mengekstrak diri ke direktori sementara setiap kali dijalankan. File sementara tetap disimpan ke `/mnt/ssd/tmp` secara otomatis jika folder tersebut ada; jika tidak, Anda dapat mengatur `TMPDIR` ke jalur di NVMe Anda (`export TMPDIR=/mnt/nvme/tmp`).
+**Tidak perlu lagi mengekstrak saat diluncurkan.** Mulai versi 1.3.0, backend dan CLI diinstal dalam bentuk yang sudah diekstrak di bawah `/usr/lib/chloros/`, sehingga keduanya tidak lagi mengekstrak diri ke direktori sementara setiap kali dijalankan. File sementara tetap disimpan ke `/mnt/ssd/tmp` secara otomatis jika folder tersebut ada; jika tidak, Anda dapat mengatur `TMPDIR` ke jalur di NVMe Anda (`export TMPDIR=/mnt/nvme/tmp`).
 {% endhint %}
 
 ***
@@ -65,8 +54,7 @@ diinstal dalam bentuk yang sudah diekstrak di bawah `/usr/lib/chloros/`, sehingg
 
 ### Cara Kerjanya
 
-Saat startup, Chloros
-akan membuat profil sistem Anda:
+Saat startup, Chloros akan membuat profil sistem Anda:
 
 1. **Mendeteksi model Jetson** melalui `/proc/device-tree/model`
 2. **Membaca memori GPU/CPU bersama yang tersedia** (Jetson menggunakan memori terpadu)
@@ -110,13 +98,10 @@ Untuk referensi adaptasi komputasi lengkap, lihat [Adaptasi Komputasi Dinamis](.
 
 ## Batas Frekuensi GPU untuk Texture Aware pada Nano dan Orin Nano
 
-Proses debayer Texture Aware menjalankan inferensi jaringan saraf GPU, yang dapat memicu **peringatan arus berlebih**pada model Jetson berdaya rendah (kelas 10–15 W) saat kecepatan clock GPU berada pada level maksimum. Saat Anda menjalankan perintah `--debayer texture-aware` pada**Jetson Nano atau Orin Nano**, CLI
-akan memeriksa frekuensi maksimum GPU dan membatasinya hingga **510 MHz** (510000000) jika frekuensi saat ini lebih tinggi:
+Proses debayer Texture Aware menjalankan inferensi jaringan saraf GPU, yang dapat memicu **peringatan arus berlebih**pada model Jetson berdaya rendah (kelas 10–15 W) saat kecepatan clock GPU berada pada level maksimum. Saat Anda menjalankan perintah `--debayer texture-aware` pada**Jetson Nano atau Orin Nano**, CLI akan memeriksa frekuensi maksimum GPU dan membatasinya hingga **510 MHz** (510000000) jika frekuensi saat ini lebih tinggi:
 
-* Jika CLI
-dapat menulis node sysfs frekuensi GPU, pembatasan tersebut **diterapkan secara otomatis** dan konfirmasi akan ditampilkan.
-* Jika tidak (membutuhkan akses root), CLI
-akan menampilkan perintah `sudo` yang tepat untuk menerapkan pembatasan secara manual, menunggu sejenak agar Anda dapat membacanya, lalu melanjutkan — pemrosesan tetap berjalan tetapi mungkin menampilkan peringatan arus berlebih.
+* Jika CLI dapat menulis node sysfs frekuensi GPU, pembatasan tersebut **diterapkan secara otomatis** dan konfirmasi akan ditampilkan.
+* Jika tidak (membutuhkan akses root), CLI akan menampilkan perintah `sudo` yang tepat untuk menerapkan pembatasan secara manual, menunggu sejenak agar Anda dapat membacanya, lalu melanjutkan — pemrosesan tetap berjalan tetapi mungkin menampilkan peringatan arus berlebih.
 
 Untuk menerapkan batasan ini sendiri sebelum pemrosesan:
 
@@ -127,20 +112,18 @@ echo 510000000 | sudo tee /sys/devices/platform/bus@0/17000000.gpu/devfreq/17000
 Model berdaya tinggi (Orin NX 25W, AGX Orin 60W) berjalan pada kecepatan GPU penuh; tidak ada batasan yang diterapkan. Debayer Standar tidak pernah memicu batasan pada model mana pun.
 
 {% hint style="info" %}
-**Texture Aware pada Jetson selalu memproses satu gambar pada satu waktu.** Setiap worker memerlukan konteks CUDA tersendiri (~1GB) ditambah salinan model denoiser tersendiri, yang tidak dapat ditangani oleh memori terpadu — sehingga pada Jetson, jalur Texture Aware dibatasi pada satu worker dengan akses GPU yang diserialisasikan. Diharapkan Texture Aware akan jauh lebih lambat daripada Standard pada semua perangkat Jetson. Texture Aware berlaku untuk gambar Survey3
-: hasil tangkapan LATTICE selalu menggunakan debayer Standard. Tanpa GPU CUDA yang dapat digunakan, proses akan menggunakan mode Standard, dan backend mencatat satu baris `[DEBAYER] … needs a CUDA GPU …` yang menjelaskan alasannya (ditampilkan bersama `chloros-cli --verbose`).
+**Texture Aware pada Jetson selalu memproses satu gambar pada satu waktu.** Setiap worker memerlukan konteks CUDA tersendiri (~1GB) ditambah salinan model denoiser tersendiri, yang tidak dapat ditangani oleh memori terpadu — sehingga pada Jetson, jalur Texture Aware dibatasi pada satu worker dengan akses GPU yang diserialisasikan. Diharapkan Texture Aware akan jauh lebih lambat daripada Standard pada semua perangkat Jetson. Texture Aware berlaku untuk gambar Survey3: hasil tangkapan LATTICE selalu menggunakan debayer Standard. Tanpa GPU CUDA yang dapat digunakan, proses akan menggunakan mode Standard, dan backend mencatat satu baris `[DEBAYER] … needs a CUDA GPU …` yang menjelaskan alasannya (ditampilkan bersama `chloros-cli --verbose`).
 {% endhint %}
 
 ***
 
 ## Manajemen Termal
 
-Perangkat Jetson memiliki ruang termal yang terbatas, terutama dalam penerapan tertutup atau di udara. Chloros
-memantau suhu SoC dan secara otomatis membatasi ukuran batch:
+Perangkat Jetson memiliki ruang termal yang terbatas, terutama dalam penerapan tertutup atau di udara. Chloros memantau suhu SoC dan secara otomatis membatasi ukuran batch:
 
 | Suhu                | Tindakan                                            |
 | ------------------- | ------------------------------------------------- |
-| **&lt; 70°C**          | Operasi normal — kecepatan pemrosesan penuh          |
+| **< 70°C**          | Operasi normal — kecepatan pemrosesan penuh          |
 | **70°C** (Peringatan) | Ukuran batch berkurang secara bertahap (100% → 50% antara 70°C dan 80°C) |
 | **80°C** (Kritis) | Pembatasan agresif (50% → 0% antara 80°C dan 90°C) |
 | **90°C** (Mati) | Hentikan pemrosesan GPU sepenuhnya — diperlukan pendinginan |
@@ -157,8 +140,7 @@ Perangkat Jetson menggunakan **memori terpadu** — GPU dan CPU berbagi RAM fisi
 
 ### Peringatan dan Rekomendasi Terkait Swap
 
-Sebelum melakukan pemrosesan di Jetson, CLI
-akan menghitung jumlah gambar RAW di folder input Anda (`.tif`, `.tiff`, `.raw`, `.dng` — pratinjau JPG tidak dihitung), memperkirakan kebutuhan memori puncak yang diperlukan untuk proses tersebut, dan **memberikan peringatan sebelum memulai** jika RAM + swap kemungkinan tidak mencukupi. Peringatan tersebut berjudul `LOW MEMORY WARNING - Jetson Detected`, menampilkan jumlah gambar Anda, RAM, swap saat ini, dan perkiraan puncak, lalu memberikan perintah tepat `fallocate` / `chmod` / `mkswap` / `swapon` yang disesuaikan dengan ukuran proyek Anda (tidak pernah kurang dari 8 GB). Sistem akan berhenti sejenak selama beberapa detik agar pesan tersebut tidak hilang saat layar bergulir ke atas, kemudian pemrosesan dilanjutkan.**Perkiraan memori yang digunakan oleh peringatan ini:**
+Sebelum melakukan pemrosesan di Jetson, CLI akan menghitung jumlah gambar RAW di folder input Anda (`.tif`, `.tiff`, `.raw`, `.dng` — pratinjau JPG tidak dihitung), memperkirakan kebutuhan memori puncak yang diperlukan untuk proses tersebut, dan **memberikan peringatan sebelum memulai** jika RAM + swap kemungkinan tidak mencukupi. Peringatan tersebut berjudul `LOW MEMORY WARNING - Jetson Detected`, menampilkan jumlah gambar Anda, RAM, swap saat ini, dan perkiraan puncak, lalu memberikan perintah tepat `fallocate` / `chmod` / `mkswap` / `swapon` yang disesuaikan dengan ukuran proyek Anda (tidak pernah kurang dari 8 GB). Sistem akan berhenti sejenak selama beberapa detik agar pesan tersebut tidak hilang saat layar bergulir ke atas, kemudian pemrosesan dilanjutkan.**Perkiraan memori yang digunakan oleh peringatan ini:**
 
 | Mode Debayer | Dasar | Per gambar |
 | --- | --- | --- |
@@ -188,8 +170,7 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
 ### Penanganan OOM (Out of Memory)
 
-Selama pemrosesan, Chloros
-memantau memori GPU dan mengurangi beban secara bertahap alih-alih mengalami crash:
+Selama pemrosesan, Chloros memantau memori GPU dan mengurangi beban secara bertahap alih-alih mengalami crash:
 
 1. Ketika pemanfaatan memori GPU melebihi **85%**, ukuran batch dikurangi secara preventif
 2. Jika kejadian kehabisan memori (OOM) tetap terjadi, ukuran batch **dipotong setengah**, dan dipotong setengah lagi pada setiap kejadian OOM berikutnya; setiap batch yang berhasil selanjutnya akan mengurangi penalti tersebut satu langkah
@@ -220,9 +201,7 @@ Rencanakan anggaran daya Anda untuk pemrosesan berkelanjutan — konsumsi daya p
 ### Operasi Tanpa Antarmuka Grafis (Headless) melalui SSH
 
 
-Chloros
-CLI
-sangat ideal untuk implementasi Jetson tanpa antarmuka grafis:
+Chloros CLI sangat ideal untuk implementasi Jetson tanpa antarmuka grafis:
 
 ```bash
 # SSH into the Jetson
@@ -237,16 +216,14 @@ chloros-cli export-status
 
 ### Backend Selalu Aktif untuk Sinkronisasi Waktu LATTICE / DAQ-E
 
-Jika Jetson Anda mengontrol kamera LATTICE atau sensor cahaya DAQ-E tanpa antarmuka grafis, aktifkan layanan sistemd backend **sebagai pengguna Anda** agar grandmaster PTP berjalan terus-menerus dan skrip SDK
-dapat menemukan backend yang sedang berjalan (unit ini terpasang tetapi tidak diaktifkan secara default):
+Jika Jetson Anda mengontrol kamera LATTICE atau sensor cahaya DAQ-E tanpa antarmuka grafis, aktifkan layanan sistemd backend **sebagai pengguna Anda** agar grandmaster PTP berjalan terus-menerus dan skrip SDK dapat menemukan backend yang sedang berjalan (unit ini terpasang tetapi tidak diaktifkan secara default):
 
 ```bash
 sudo systemctl enable --now chloros-backend@$USER.service    # $USER expands to your user name
 chloros-cli time-sync status
 ```
 
-Backend tersebut kemudian berjalan sebagai Anda: data tangkapan yang ditulisnya adalah milik Anda, dan backend tersebut menggunakan `chloros-cli login` Anda. Lihat [Instalasi Linux
-](linux-installation.md#always-on-ptp-for-headless-hosts) untuk detailnya, termasuk akun root `chloros-backend.service` dan cara paket ini membuat port PTP 319/320 dapat diikat tanpa hak akses root.
+Backend tersebut kemudian berjalan sebagai Anda: data tangkapan yang ditulisnya adalah milik Anda, dan backend tersebut menggunakan `chloros-cli login` Anda. Lihat [Instalasi Linux](linux-installation.md#always-on-ptp-for-headless-hosts) untuk detailnya, termasuk akun root `chloros-backend.service` dan cara paket ini membuat port PTP 319/320 dapat diikat tanpa hak akses root.
 
 ### Pemrosesan Otomatis dengan systemd
 
@@ -306,9 +283,7 @@ chloros-cli process /data/flights/flight_042 \
     --indices NDVI GNDVI OSAVI
 ```
 
-### SDK
-Python
-di Jetson
+### SDK Python di Jetson
 
 ```python
 from chloros_sdk import ChlorosLocal
@@ -352,26 +327,18 @@ Untuk penerapan di lapangan dan di udara, pertimbangkan opsi papan induk Jetson 
 * **Lapangan yang berat**: Casing tahan air IP67/IP69K dengan konektivitas kamera GigE PoE
 * **Minimal/hemat biaya**: Kit pengembang dengan casing tambahan
 
-Hubungi [Dukungan MAPIR
-](https://www.mapir.camera/community/contact) untuk rekomendasi perangkat keras khusus sesuai skenario penerapan Anda.
+Hubungi [Dukungan MAPIR](https://www.mapir.camera/community/contact) untuk rekomendasi perangkat keras khusus sesuai skenario penerapan Anda.
 
 ***
 
 ## Langkah Selanjutnya
 
-* [Instalasi Linux
-](linux-installation.md) — Detail umum instalasi Linux
+* [Instalasi Linux](linux-installation.md) — Detail umum instalasi Linux
 
 * [Adaptasi Komputasi Dinamis](../processing-architecture/dynamic-compute-adaptation.md) — Referensi lengkap strategi komputasi
 * [Pipa Pemrosesan](../processing-architecture/processing-pipeline.md) — Memahami pipa 4-thread
 * [CLI : Baris Perintah](../CLI.md) — Panduan CLI
 
-* [API
-: Python
-SDK
-](../api-python-sdk.md) — Panduan SDK
+* [API: Python SDK](../api-python-sdk.md) — Panduan SDK
 
-* [Referensi CLI
-](../reference/cli-reference.md) dan [Referensi SDK
-](../reference/sdk-reference.md) — Daftar lengkap perintah/API
-untuk versi 1.3.0
+* [Referensi CLI](../reference/cli-reference.md) dan [Referensi SDK](../reference/sdk-reference.md) — Daftar lengkap perintah/API untuk versi 1.3.0

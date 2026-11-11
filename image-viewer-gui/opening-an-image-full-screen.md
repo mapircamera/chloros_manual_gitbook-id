@@ -33,7 +33,7 @@ Perbesaran dan pergeseran tetap berlaku saat Anda berpindah antar gambar, sehing
 
 ### Perbesaran
 
-Perbesaran dikendalikan oleh **roda mouse**, dengan langkah 15%, dengan titik acuan pada kursor — titik di bawah penunjuk tetap berada di bawah penunjuk. Rentang zoom dibatasi oleh ukuran gambar dan jendela: Anda tidak dapat memperkecil hingga melebihi batas &quot;sesuai jendela&quot;, dan batas atas ditentukan oleh resolusi asli gambar.
+Perbesaran dikendalikan oleh **roda mouse**, dengan langkah 15%, dengan titik acuan pada kursor — titik di bawah penunjuk tetap berada di bawah penunjuk. Rentang zoom dibatasi oleh ukuran gambar dan jendela: Anda tidak dapat memperkecil hingga melebihi batas "sesuai jendela", dan batas atas ditentukan oleh resolusi asli gambar.
 
 Tidak ada tombol zoom khusus di penampil layar penuh. (Di kisi, **Ctrl + `+` / `−`** mengubah ukuran thumbnail — kontrol yang berbeda.)
 
@@ -45,7 +45,7 @@ Klik dan tahan tombol kiri mouse di atas gambar, lalu seret. Pergerakan horizont
 
 Setelah pembesaran efektif melebihi **60×**, Chloros menampilkan kotak sorotan di sekitar piksel yang ditampilkan di bawah kursor serta nilai mengambang di sebelahnya.
 
-Pembesaran &quot;efektif&quot; menghitung ukuran blok GSD: dengan ukuran blok 8, sorotan muncul pada pembesaran 7,5×, bukan 60×, karena satu piksel yang ditampilkan sudah terdiri dari 8 × 8 piksel sumber. Kecilkan kembali pembesaran hingga di bawah ambang batas tersebut dan sorotan akan menghilang.
+Pembesaran "efektif" menghitung ukuran blok GSD: dengan ukuran blok 8, sorotan muncul pada pembesaran 7,5×, bukan 60×, karena satu piksel yang ditampilkan sudah terdiri dari 8 × 8 piksel sumber. Kecilkan kembali pembesaran hingga di bawah ambang batas tersebut dan sorotan akan menghilang.
 
 ### Pintasan keyboard
 
@@ -138,7 +138,7 @@ Kontrol ini memperkasar gambar yang _ditampilkan_ dengan merata-ratakan blok N �
 * Tampilan kursor melaporkan blok, bukan piksel sumber, setiap kali ukuran blok melebihi 1 — nilai yang ditampilkan adalah rata-rata blok di bawah kursor Anda.
 
 {% hint style="info" %}
-**Mengapa &quot;ukuran blok&quot; dan bukan sentimeter per piksel?** Angka cm/px memerlukan ketinggian di atas permukaan tanah. EXIF pada satu bingkaiEXIF hanya memuat ketinggian GPS di atas permukaan laut rata-rata, bukan di atas medan yang menjadi sasaran, sehingga Chloros tidak akan menampilkan jarak ke permukaan tanah yang tidak dapat dihitung secara akurat. Ukuran blok dalam piksel sumber merupakan alternatif yang sama yang digunakan oleh alat awan MAPIR ketika jarak sampel permukaan tanah tidak diketahui.
+**Mengapa "ukuran blok" dan bukan sentimeter per piksel?** Angka cm/px memerlukan ketinggian di atas permukaan tanah. EXIF pada satu bingkaiEXIF hanya memuat ketinggian GPS di atas permukaan laut rata-rata, bukan di atas medan yang menjadi sasaran, sehingga Chloros tidak akan menampilkan jarak ke permukaan tanah yang tidak dapat dihitung secara akurat. Ukuran blok dalam piksel sumber merupakan alternatif yang sama yang digunakan oleh alat awan MAPIR ketika jarak sampel permukaan tanah tidak diketahui.
 {% endhint %}
 
 ***
@@ -197,7 +197,7 @@ Terapkan indeks multispektral dan Tabel Pencarian Warna (Look-Up Tables) dari bi
 
 ### Gambar berwarna hitam, putih, atau berwarna-warni secara tidak wajar
 
-**Kemungkinan penyebab**: fitur &quot;display stretch&quot; tidak memiliki data untuk diproses (frame yang hampir konstan); lapisan float32 dengan nilai yang tidak biasa; indeks yang tidak menghasilkan data yang valid.**Apa yang harus dilakukan**:
+**Kemungkinan penyebab**: fitur "display stretch" tidak memiliki data untuk diproses (frame yang hampir konstan); lapisan float32 dengan nilai yang tidak biasa; indeks yang tidak menghasilkan data yang valid.**Apa yang harus dilakukan**:
 
 1. Periksa nilai kursor — jika setiap kanal bernilai nol atau mendekati nol, masalahnya ada pada data, bukan tampilan
 2. Periksa histogram: lonjakan tunggal di salah satu ujung menandakan bingkai terpotong atau kosong

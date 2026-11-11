@@ -1,8 +1,6 @@
-# Jaringan &amp; Sinkronisasi Waktu DAQ-E
+# Jaringan & Sinkronisasi Waktu DAQ-E
 
-> Pengaturan jaringan fisik untuk sensor — pemasangan kabel, PoE, penetapan alamat IP, dan pengaturan jaringan perangkat itu sendiri — dijelaskan dalam **[panduan pengguna DAQ](https://mapir.gitbook.io/daq/daq-e/network-setup)**. Halaman ini membahas sisi Chloros
-
-: koneksi, sinkronisasi waktu, dan langkah-langkah yang harus diambil jika proses pencarian perangkat tidak menemukan apa pun.
+> Pengaturan jaringan fisik untuk sensor — pemasangan kabel, PoE, penetapan alamat IP, dan pengaturan jaringan perangkat itu sendiri — dijelaskan dalam **[panduan pengguna DAQ](https://mapir.gitbook.io/daq/daq-e/network-setup)**. Halaman ini membahas sisi Chloros: koneksi, sinkronisasi waktu, dan langkah-langkah yang harus diambil jika proses pencarian perangkat tidak menemukan apa pun.
 
 DAQ-E adalah anggota keluarga DAQ yang menggunakan Ethernet: diberi daya melalui PoE, terdeteksi melalui mDNS (layanan `_daq-e._tcp`), dan dapat dialamatkan dengan nama host yang berasal dari ID sensornya — `daq-e-<6 hex>.local`, misalnya `daq-e-def330.local`. Halaman ini membahas cara perangkat ini mentransfer data di jaringan dan cara perangkat ini berpartisipasi dalam sinkronisasi waktu PTP.
 
@@ -13,35 +11,17 @@ DAQ-E adalah anggota keluarga DAQ yang menggunakan Ethernet: diberi daya melalui
 | **Multicast** (default) | UDP `239.10.10.10:5002` | Berapa pun jumlah perangkat di LAN yang sama akan menerima aliran yang sama | Setiap datagram diverifikasi menggunakan CRC-16/CCITT |
 | **Raw** | Port TCP `5000` | Tepat satu klien (eksklusif) | Kompatibel byte-per-byte dengan DAQ-U |
 
-Chloros
-
-menggunakan multicast secara default, yang memungkinkan GUI, CLI
-
-, dan SDK
-
-untuk memantau satu sensor secara bersamaan.
+Chloros menggunakan multicast secara default, yang memungkinkan GUI, CLI, dan SDK untuk memantau satu sensor secara bersamaan.
 
 ## Persyaratan jaringan
 
-* **Domain siaran yang sama.** Mesin yang menjalankan Chloros
-
-harus berada di segmen jaringan L2 yang sama dengan sensor — penemuan mDNS tidak menembus router.
-* **Firewall.** Di Windows
-
-, penginstal menambahkan aturan firewall **Chloros
-
-Backend (UDP-In)**untuk backend, pada setiap profil jaringan, yang mencakup data DAQ-E (UDP 5002), mDNS (UDP 5353), dan PTP (UDP 319/320), serta aturan**Chloros
-
-Backend (TCP-In)**, yang dibatasi pada subnet lokal, untuk koneksi yang dibuat DAQ-E kembali ke komputer selama pembaruan firmware. Di Linux
-
-, `.deb` membuka port UDP di `ufw` atau `firewalld` ketika firewall tersebut aktif pada saat instalasi. Firewall pihak ketiga, atau yang diaktifkan kemudian, memerlukan izin untuk port yang sama.
+* **Domain siaran yang sama.** Mesin yang menjalankan Chloros harus berada di segmen jaringan L2 yang sama dengan sensor — penemuan mDNS tidak menembus router.
+* **Firewall.** Di Windows, penginstal menambahkan aturan firewall **Chloros Backend (UDP-In)**untuk backend, pada setiap profil jaringan, yang mencakup data DAQ-E (UDP 5002), mDNS (UDP 5353), dan PTP (UDP 319/320), serta aturan**Chloros Backend (TCP-In)**, yang dibatasi pada subnet lokal, untuk koneksi yang dibuat DAQ-E kembali ke komputer selama pembaruan firmware. Di Linux, `.deb` membuka port UDP di `ufw` atau `firewalld` ketika firewall tersebut aktif pada saat instalasi. Firewall pihak ketiga, atau yang diaktifkan kemudian, memerlukan izin untuk port yang sama.
 * **Daya PoE, tanpa LED status.** DAQ-E tidak memiliki LED sendiri — periksa daya melalui indikator link/PoE pada switch atau port injektor, dan tunggu beberapa detik setelah dinyalakan agar perangkat dapat boot dan bergabung dengan jaringan.
 
 ## Menghubungkan
 
-**GUI:** Tab Sensor Cahaya → Hubungkan Sensor → Tipe Perangkat &quot;DAQ-E (Ethernet)&quot;. Proses pencarian hanya berjalan selama dialog koneksi muncul di layar (penelusuran mDNS ditambah pemindaian ARP di Windows
-
-), berulang setiap 15 detik; tombol Refresh akan melakukan pemindaian ulang secara langsung. Sensor yang terdeteksi akan muncul di menu tarik-turun; sensor pertama yang terdeteksi akan dipilih secara otomatis.
+**GUI:** Tab Sensor Cahaya → Hubungkan Sensor → Tipe Perangkat "DAQ-E (Ethernet)". Proses pencarian hanya berjalan selama dialog koneksi muncul di layar (penelusuran mDNS ditambah pemindaian ARP di Windows), berulang setiap 15 detik; tombol Refresh akan melakukan pemindaian ulang secara langsung. Sensor yang terdeteksi akan muncul di menu tarik-turun; sensor pertama yang terdeteksi akan dipilih secara otomatis.
 
 <!-- SCREENSHOT-NEEDED: DAQ connect dialog with Device Type set to "DAQ-E (Ethernet)" and at least one discovered sensor listed in the Hostname/IP dropdown (e.g. daq-e-xxxxxx.local), Connect button enabled. -->
 
@@ -67,31 +47,17 @@ chloros-cli daq pool-connect --eth-host daq-e-def330.local
 
 ## Pengaturan perangkat dan firmware
 
-Sensor itu sendiri menyimpan pengaturan jaringannya: DHCP (pengaturan pabrik, yang akan beralih ke alamat link-local 169.254.x.x jika tidak ada server DHCP yang merespons) atau alamat statis. Sensor juga menyimpan pengaturan apakah akan mulai melakukan streaming saat dinyalakan. Ubah pengaturan tersebut di antarmuka grafis (ikon roda gigi pengaturan sensor, **Jaringan**:**Ubah…**,**Streaming saat dinyalakan**,**Mulai ulang sensor**; lihat [Tab DAQ](gui.md)), atau melalui CLI
+Sensor itu sendiri menyimpan pengaturan jaringannya: DHCP (pengaturan pabrik, yang akan beralih ke alamat link-local 169.254.x.x jika tidak ada server DHCP yang merespons) atau alamat statis. Sensor juga menyimpan pengaturan apakah akan mulai melakukan streaming saat dinyalakan. Ubah pengaturan tersebut di antarmuka grafis (ikon roda gigi pengaturan sensor, **Jaringan**:**Ubah…**,**Streaming saat dinyalakan**,**Mulai ulang sensor**; lihat [Tab DAQ](gui.md)), atau melalui CLI dan SDK dengan perintah `pool-set-network`, `pool-set-auto-stream` dan `pool-reboot` (`DAQSensorSession.set_network()`, `set_auto_stream()`, `reboot()`; lihat [Referensi CLI](../reference/cli-reference.md#daq-e-device-settings)). Sensor akan restart untuk menerapkan perubahan jaringan, dan Chloros akan menghubungkannya kembali. Alamat statis harus berada di jaringan komputer yang menjalankan Chloros: Chloros akan menolak alamat yang tidak dapat dijangkau setelah restart. ID sensor dan nama host `daq-e-<id>.local`-nya tidak pernah berubah. Baru di versi 1.3.0.
 
-dan SDK
+**Pembaruan firmware terintegrasi ke dalam antarmuka pengguna grafis (GUI).** Ketika DAQ-E yang terhubung menjalankan firmware yang lebih lama daripada gambar firmware yang disertakan dalam build Chloros Anda, baris sensornya akan menampilkan ikon **Pembaruan Tersedia** berwarna kuning, dan jendela pengaturan roda gigi menawarkan <version>tombol</version>
 
-dengan perintah `pool-set-network`, `pool-set-auto-stream` dan `pool-reboot` (`DAQSensorSession.set_network()`, `set_auto_stream()`, `reboot()`; lihat [Referensi CLI
-
-](../reference/cli-reference.md#daq-e-device-settings)). Sensor akan restart untuk menerapkan perubahan jaringan, dan Chloros
-
-akan menghubungkannya kembali. Alamat statis harus berada di jaringan komputer yang menjalankan Chloros
-
-: Chloros
-
-akan menolak alamat yang tidak dapat dijangkau setelah restart. ID sensor dan nama host `daq-e-<id>.local`-nya tidak pernah berubah. Baru di versi 1.3.0.
-
-**Pembaruan firmware terintegrasi ke dalam antarmuka pengguna grafis (GUI).** Ketika DAQ-E yang terhubung menjalankan firmware yang lebih lama daripada gambar firmware yang disertakan dalam build Chloros
-
-Anda, baris sensornya akan menampilkan ikon **Pembaruan Tersedia** berwarna kuning, dan jendela pengaturan roda gigi menawarkan <version>tombol</version>
-
-&quot;Perbarui ke <version>&quot;. Pembaruan akan dikirim melalui jaringan dalam waktu sekitar 30 detik; sensor akan restart dan terhubung kembali secara otomatis, dan jika transfer terputus, firmware saat ini akan tetap utuh. Dari CLI atau SDK, serta di Linux yang tidak memiliki antarmuka grafis (GUI), jalankan perintah `chloros-cli daq pool-update-firmware --sensor-id <id>` (`DAQSensorSession.update_firmware()`).
+"Perbarui ke <version>". Pembaruan akan dikirim melalui jaringan dalam waktu sekitar 30 detik; sensor akan restart dan terhubung kembali secara otomatis, dan jika transfer terputus, firmware saat ini akan tetap utuh. Dari CLI atau SDK, serta di Linux yang tidak memiliki antarmuka grafis (GUI), jalankan perintah `chloros-cli daq pool-update-firmware --sensor-id <id>` (`DAQSensorSession.update_firmware()`).
 
 <!-- SCREENSHOT-NEEDED: DAQ-E per-sensor settings modal showing the DAQ-E-only rows: Hostname/IP, Firmware row with the "Update to <ver>" button (or "Up to date"), and the PTP Sync row with a live state value. -->
 
 ## Sinkronisasi waktu PTP
 
-Firmware DAQ-E v1.2.0+ berpartisipasi dalam IEEE 1588 PTPv2 sebagai jam biasa (hanya slave). **Backend host Chloros adalah grandmaster PTP** — setiap DAQ-E dan setiap kamera LATTICE di jaringan LAN menjadi slave terhadapnya di domain 0, menjaga agar semua cap waktu perangkat tetap dalam toleransi ~1 ms. Jam bersama itulah yang membuat pembacaan DAQ dapat disesuaikan cap waktunya dengan eksposur kamera (lihat [Perekaman &amp; Format .daq](recording.md)).
+Firmware DAQ-E v1.2.0+ berpartisipasi dalam IEEE 1588 PTPv2 sebagai jam biasa (hanya slave). **Backend host Chloros adalah grandmaster PTP** — setiap DAQ-E dan setiap kamera LATTICE di jaringan LAN menjadi slave terhadapnya di domain 0, menjaga agar semua cap waktu perangkat tetap dalam toleransi ~1 ms. Jam bersama itulah yang membuat pembacaan DAQ dapat disesuaikan cap waktunya dengan eksposur kamera (lihat [Perekaman & Format .daq](recording.md)).
 
 Periksa sinkronisasi dari CLI:
 
@@ -114,7 +80,7 @@ Rincian untuk pengguna yang memerlukan penyelarasan ketat:
 
 * Setiap datagram yang dikirimkan membawa bidang bendera; **bit ke-2 disetel pada frame yang cap waktunya disinkronkan dengan PTP**. Jalur pemrosesan yang memerlukan penyelarasan ketat antara kamera dan DAQ harus menggunakan bit tersebut sebagai kondisi penyaringan.
 * Sebelum melakukan pengambilan data yang disinkronkan, pastikan sensor tersebut muncul di `chloros-cli time-sync peers` dan bahwa `chloros-cli daq pool-list` tidak menandai PTP-nya sebagai dimatikan. (Perangkat lunak internal MAPIR yang terintegrasi langsung dengan perangkat keras juga dapat membatasi perekaman berdasarkan kunci PTP dengan bendera `--wait-ptp` yang menunggu hingga 15 detik hingga sensor mencapai status SLAVE; perangkat lunak tersebut tidak termasuk dalam CLI yang disertakan.)
-* Saat PTP sedang aktif sebagai slave, sensor menolak pengiriman clock manual (&quot;PTP menyediakan clock&quot;). Hal ini sesuai desain — percayalah pada PTP.
+* Saat PTP sedang aktif sebagai slave, sensor menolak pengiriman clock manual ("PTP menyediakan clock"). Hal ini sesuai desain — percayalah pada PTP.
 
 ## Catatan Linux
 
@@ -128,7 +94,7 @@ Rincian untuk pengguna yang memerlukan penyelarasan ketat:
 
   Tanpa itu, PTP hanya berjalan selama ada yang telah memulai layanan backend — perintah `chloros-cli` atau skrip SDK. Lihat [Instalasi Linux](../linux/linux-installation.md#always-on-ptp-for-headless-hosts) untuk akun root `chloros-backend.service` dan cara beralih darinya.
 
-## Pemecahan Masalah: &quot;Tidak ditemukan perangkat DAQ-E&quot;
+## Pemecahan Masalah: "Tidak ditemukan perangkat DAQ-E"
 
 | Periksa | Detail |
 | --- | --- |

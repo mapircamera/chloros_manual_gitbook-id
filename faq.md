@@ -19,7 +19,7 @@ Tidak, Chloros hanya mendukung pemrosesan gambar dari kamera MAPIR — seri Surv
 
 <summary>Apakah Chloros mendukung kamera LATTICE?</summary>
 
-Ya. Chloros 1.3.0 mendukung modul kamera LATTICE M3C dan M3M secara menyeluruh: **kontrol langsung**— temukan, sambungkan, pratinjau, dan ambil gambar dari tab &quot;Kamera&quot; di antarmuka pengguna (GUI), `chloros-cli lattice`, atau SDK SDK, termasuk susunan multi-kamera yang disinkronkan dengan sinkronisasi waktu PTP — serta**pemrosesan radiometrik lengkap** dari hasil pengambilan gambar (mentah → debayered → radian → reflektansi → indeks). Lihat [Kamera yang Didukung](supported-cameras.md) dan [panduan LATTICE](lattice/README.md).
+Ya. Chloros 1.3.0 mendukung modul kamera LATTICE M3C dan M3M secara menyeluruh: **kontrol langsung**— temukan, sambungkan, pratinjau, dan ambil gambar dari tab "Kamera" di antarmuka pengguna (GUI), `chloros-cli lattice`, atau SDK SDK, termasuk susunan multi-kamera yang disinkronkan dengan sinkronisasi waktu PTP — serta**pemrosesan radiometrik lengkap** dari hasil pengambilan gambar (mentah → debayered → radian → reflektansi → indeks). Lihat [Kamera yang Didukung](supported-cameras.md) dan [panduan LATTICE](lattice/README.md).
 
 </details>
 
@@ -27,15 +27,9 @@ Ya. Chloros 1.3.0 mendukung modul kamera LATTICE M3C dan M3M secara menyeluruh: 
 
 <summary>Bisakah saya mengkalibrasi gambar saya untuk reflektansi tanpa target kalibrasi?</summary>
 
-**Survey3
+**Survey3:** Tidak. Tanpa gambar target kalibrasi yang diambil bersamaan dengan gambar non-target, Anda tidak akan dapat mengaitkan nilai piksel gambar dengan persentase reflektansi yang diketahui. Jika Anda juga tidak menyertakan log dari sensor cahaya MAPIR, maka spektrum cahaya sekitar tidak akan terukur, dan hasil reflektansi tidak akan akurat.
 
-:** Tidak. Tanpa gambar target kalibrasi yang diambil bersamaan dengan gambar non-target, Anda tidak akan dapat mengaitkan nilai piksel gambar dengan persentase reflektansi yang diketahui. Jika Anda juga tidak menyertakan log dari sensor cahaya MAPIR
-
-, maka spektrum cahaya sekitar tidak akan terukur, dan hasil reflektansi tidak akan akurat.
-
-**LATTICE:** Ya. Reflektansi dapat dirujuk ke irradiansi turun yang diukur oleh sensor cahaya DAQ, bukan panel (ρ = π·L/E). Ketika target dalam bingkai yang lulus QA *memang* ada, target tersebut secara default menjadi referensi absolut (`--reflectance-source auto`), kecuali jika target tersebut lulus dengan bendera, di mana target dan rantai DAQ bersaing berdasarkan skor yang diukur. Satu pengecualian: “Reflektansi F988 dikalibrasi menggunakan panel reflektansi dalam adegan: rentang band tersebut berada di luar rentang kalibrasi sensor cahaya DAQ, sehingga Chloros
-
-menerapkan penangkapan panel terbaru Anda dan mempertahankannya di antara pengamatan panel.” Lihat [Target Kalibrasi](calibration-targets.md).
+**LATTICE:** Ya. Reflektansi dapat dirujuk ke irradiansi turun yang diukur oleh sensor cahaya DAQ, bukan panel (ρ = π·L/E). Ketika target dalam bingkai yang lulus QA *memang* ada, target tersebut secara default menjadi referensi absolut (`--reflectance-source auto`), kecuali jika target tersebut lulus dengan bendera, di mana target dan rantai DAQ bersaing berdasarkan skor yang diukur. Satu pengecualian: “Reflektansi F988 dikalibrasi menggunakan panel reflektansi dalam adegan: rentang band tersebut berada di luar rentang kalibrasi sensor cahaya DAQ, sehingga Chloros menerapkan penangkapan panel terbaru Anda dan mempertahankannya di antara pengamatan panel.” Lihat [Target Kalibrasi](calibration-targets.md).
 
 </details>
 
@@ -43,9 +37,7 @@ menerapkan penangkapan panel terbaru Anda dan mempertahankannya di antara pengam
 
 <summary>Apakah saya memerlukan sensor cahaya DAQ?</summary>
 
-Tidak untuk radian: Ekspor radian LATTICE berasal dari kalibrasi radiometrik pabrik masing-masing kamera dan tidak memerlukan sensor DAQ maupun target. Untuk **reflektansi**, Anda memerlukan referensi untuk cahaya ambient — baik pengukuran cahaya yang turun dari sensor cahaya DAQ maupun target kalibrasi dalam bingkai. Sensor DAQ memungkinkan Anda menghasilkan reflektansi yang dikalibrasi**tanpa menempatkan panel apa pun di dalam adegan**. File `.daq` yang direkam secara otomatis dicocokkan dengan citra Anda berdasarkan cap waktu. Lihat [Target Kalibrasi](calibration-targets.md) dan [Referensi CLI
-
-](reference/cli-reference.md).
+Tidak untuk radian: Ekspor radian LATTICE berasal dari kalibrasi radiometrik pabrik masing-masing kamera dan tidak memerlukan sensor DAQ maupun target. Untuk **reflektansi**, Anda memerlukan referensi untuk cahaya ambient — baik pengukuran cahaya yang turun dari sensor cahaya DAQ maupun target kalibrasi dalam bingkai. Sensor DAQ memungkinkan Anda menghasilkan reflektansi yang dikalibrasi**tanpa menempatkan panel apa pun di dalam adegan**. File `.daq` yang direkam secara otomatis dicocokkan dengan citra Anda berdasarkan cap waktu. Lihat [Target Kalibrasi](calibration-targets.md) dan [Referensi CLI](reference/cli-reference.md).
 
 </details>
 
@@ -92,7 +84,7 @@ Mask-mask ini bukanlah gambar dari adegan: proses impor Chloros sendiri melewatk
 
 <details>
 
-<summary>Mengapa Chloros menampilkan pesan &quot;Folder proyek terlalu dalam untuk komputer ini&quot;?</summary>
+<summary>Mengapa Chloros menampilkan pesan "Folder proyek terlalu dalam untuk komputer ini"?</summary>
 
 Ini hanya berlaku untuk Windows. Windows secara default menonaktifkan jalur panjang, sehingga jalur file tidak boleh lebih panjang dari 260 karakter. Produk Chloros berada hingga sekitar 130 karakter di bawah folder proyek, sehingga Chloros menolak folder proyek yang lebih dalam sebelum pemrosesan — alih-alih berjalan dan tidak menulis apa pun, seperti yang mungkin terjadi sebelum versi 1.3.0. Pesan tersebut menunjukkan folder proyek terpanjang yang masih sesuai.
 
@@ -143,9 +135,7 @@ Di tabel penjelajah file, dengan memilih terlebih dahulu gambar target di kolom 
 
 <summary>Jika saya akan mengunggah gambar saya ke <a href="https://www.mapir.camera/collections/software/products/mapir-cloud-subscription">MAPIR Cloud,</a> apakah saya harus memprosesnya di Chloros terlebih dahulu sebelum mengunggahnya?</summary>
 
-Jika Anda berencana mengunggah ke platform pemrosesan online kami [MAPIR
-
-Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), jangan mengedit gambar sebelum mengunggahnya. Cloud akan melakukan semua pemrosesan yang sama dan bahkan lebih.
+Jika Anda berencana mengunggah ke platform pemrosesan online kami [MAPIR Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscription), jangan mengedit gambar sebelum mengunggahnya. Cloud akan melakukan semua pemrosesan yang sama dan bahkan lebih.
 
 </details>
 
@@ -153,7 +143,7 @@ Cloud](https://www.mapir.camera/collections/software/products/mapir-cloud-subscr
 
 <summary>Apakah MAPIR akan mendukung fitur X? Saya sangat berharap MAPIR menawarkan fitur X.</summary>
 
-Kami selalu tertarik menerima masukan mengenai produk kami. Jika Anda menemukan masalah dengan produk kami, atau memiliki saran tentang cara kami dapat meningkatkan produk kami, silakan [HUBUNGI KAMI](https://www.mapir.camera/community/contact) untuk berbagi pemikiran Anda. Sebagian besar penelitian dan pengembangan (R&amp;D) kami dipandu oleh mendengarkan kebutuhan terbesar pelanggan kami.
+Kami selalu tertarik menerima masukan mengenai produk kami. Jika Anda menemukan masalah dengan produk kami, atau memiliki saran tentang cara kami dapat meningkatkan produk kami, silakan [HUBUNGI KAMI](https://www.mapir.camera/community/contact) untuk berbagi pemikiran Anda. Sebagian besar penelitian dan pengembangan (R&D) kami dipandu oleh mendengarkan kebutuhan terbesar pelanggan kami.
 
 </details>
 
@@ -185,9 +175,7 @@ Ya! Chloros dilengkapi dengan [Dynamic Compute Adaptation](processing-architectu
 
 <summary>Apa itu pipa pemrosesan 4-thread?</summary>
 
-Chloros
-menggunakan arsitektur pipelined 4-thread untuk pengguna Chloros
-+: Thread 1 (Deteksi) memuat gambar dan mendeteksi target kalibrasi, Thread 2 (Kalibrasi) menghitung kalibrasi reflektansi, Thread 3 (Pemrosesan) melakukan debayering yang dipercepat GPU dan perhitungan indeks, serta Thread 4 (Ekspor) menulis file keluaran. Beberapa gambar dapat berada di thread yang berbeda secara bersamaan untuk throughput maksimum. Lihat [Pipa Pemrosesan](processing-architecture/processing-pipeline.md) untuk detailnya.
+Chloros menggunakan arsitektur pipelined 4-thread untuk pengguna Chloros+: Thread 1 (Deteksi) memuat gambar dan mendeteksi target kalibrasi, Thread 2 (Kalibrasi) menghitung kalibrasi reflektansi, Thread 3 (Pemrosesan) melakukan debayering yang dipercepat GPU dan perhitungan indeks, serta Thread 4 (Ekspor) menulis file keluaran. Beberapa gambar dapat berada di thread yang berbeda secara bersamaan untuk throughput maksimum. Lihat [Pipa Pemrosesan](processing-architecture/processing-pipeline.md) untuk detailnya.
 
 </details>
 

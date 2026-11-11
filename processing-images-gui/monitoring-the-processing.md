@@ -1,10 +1,6 @@
 # Memantau Proses Pemrosesan
 
-Setelah proses pemrosesan dimulai, Chloros
-
-menyediakan beberapa cara untuk memantau kemajuan, memeriksa adanya masalah, dan memahami apa yang terjadi pada dataset Anda. Halaman ini menjelaskan cara melacak proses pemrosesan Anda dan menafsirkan informasi yang disediakan oleh Chloros
-
-.
+Setelah proses pemrosesan dimulai, Chloros menyediakan beberapa cara untuk memantau kemajuan, memeriksa adanya masalah, dan memahami apa yang terjadi pada dataset Anda. Halaman ini menjelaskan cara melacak proses pemrosesan Anda dan menafsirkan informasi yang disediakan oleh Chloros.
 
 ## Gambaran Umum Bilah Kemajuan
 
@@ -12,9 +8,7 @@ Bilah kemajuan di bagian atas header menampilkan status pemrosesan secara real-t
 
 ### Bilah Kemajuan Mode Gratis
 
-Untuk pengguna tanpa lisensi Chloros
-
-+:
+Untuk pengguna tanpa lisensi Chloros+:
 
 **Tampilan Kemajuan 2 Tahap:**
 
@@ -25,13 +19,9 @@ Untuk pengguna tanpa lisensi Chloros
 * Nama tahap saat ini
 * Visualisasi bilah horizontal sederhana
 
-### Bilah Kemajuan Chloros
+### Bilah Kemajuan Chloros+
 
-+
-
-Untuk pengguna dengan lisensi Chloros
-
-+:
+Untuk pengguna dengan lisensi Chloros+:
 
 **Tampilan Kemajuan 4 Tahap:**
 
@@ -44,9 +34,7 @@ Untuk pengguna dengan lisensi Chloros
 * Setiap tahap menampilkan kemajuan masing-masing (0-100%)
 
 {% hint style="info" %}
-**Kesetaraan CLI**: selama proses `chloros-cli process` berjalan, keempat utas tersebut melaporkan status sebagai &quot;Mendeteksi&quot;, &quot;Menganalisis&quot;, &quot;Memproses&quot;, dan &quot;Mengekspor&quot;, sedangkan `chloros-cli export-status` menampilkan kemajuan ekspor Utas-4 secara langsung dari terminal lain. Lihat [Referensi CLI
-
-](../reference/cli-reference.md).
+**Kesetaraan CLI**: selama proses `chloros-cli process` berjalan, keempat utas tersebut melaporkan status sebagai "Mendeteksi", "Menganalisis", "Memproses", dan "Mengekspor", sedangkan `chloros-cli export-status` menampilkan kemajuan ekspor Utas-4 secara langsung dari terminal lain. Lihat [Referensi CLI](../reference/cli-reference.md).
 {% endhint %}
 
 ***
@@ -61,9 +49,7 @@ Untuk pengguna dengan lisensi Chloros
 
 **Apa yang terjadi:**
 
-* Chloros
-
-memindai gambar-gambar yang Anda centang dengan kotak centang Target (semua gambar jika tidak ada yang dicentang)
+* Chloros memindai gambar-gambar yang Anda centang dengan kotak centang Target (semua gambar jika tidak ada yang dicentang)
 * Algoritma penglihatan komputer mengidentifikasi panel kalibrasi
 * Nilai reflektansi diekstraksi dari setiap panel
 * Cap waktu target dicatat untuk penjadwalan kalibrasi yang tepat
@@ -83,7 +69,7 @@ memindai gambar-gambar yang Anda centang dengan kotak centang Target (semua gamb
 
 * Seharusnya selesai dengan cepat jika target ditandai dengan benar
 * Jika memakan waktu terlalu lama, mungkin target tidak ditandai
-* Periksa Log Debug untuk pesan &quot;Target ditemukan&quot;
+* Periksa Log Debug untuk pesan "Target ditemukan"
 
 ### Tahap 2: Analisis
 
@@ -92,9 +78,7 @@ memindai gambar-gambar yang Anda centang dengan kotak centang Target (semua gamb
 * Membaca metadata EXIF gambar (cap waktu, pengaturan eksposur)
 * Menentukan strategi kalibrasi berdasarkan cap waktu target dan data DAQ downwelling yang tersedia
 * Mengatur antrian pemrosesan gambar
-* Mempersiapkan pekerja pemrosesan paralel (hanya Chloros
-
-+)
+* Mempersiapkan pekerja pemrosesan paralel (hanya Chloros+)
 
 **Durasi:** 5–30 detik**Indikator kemajuan:**
 
@@ -121,9 +105,7 @@ memindai gambar-gambar yang Anda centang dengan kotak centang Target (semua gamb
 * Gambar yang telah selesai / Total gambar
 
 **Perilaku pemrosesan:*** **Mode bebas**: Memproses satu gambar pada satu waktu secara berurutan
-* **Mode Chloros
-
-+**: Menjalankan kumpulan pekerja yang adaptif terhadap perangkat keras — 1–4 pekerja secara bersamaan pada sistem GPU (tergantung VRAM), satu pekerja per inti fisik (dikurangi satu) pada sistem berbasis CPU saja. Lihat [Adaptasi Komputasi Dinamis](../processing-architecture/dynamic-compute-adaptation.md)
+* **Mode Chloros+**: Menjalankan kumpulan pekerja yang adaptif terhadap perangkat keras — 1–4 pekerja secara bersamaan pada sistem GPU (tergantung VRAM), satu pekerja per inti fisik (dikurangi satu) pada sistem berbasis CPU saja. Lihat [Adaptasi Komputasi Dinamis](../processing-architecture/dynamic-compute-adaptation.md)
 * **Akselerasi GPU**: Secara signifikan mempercepat tahap ini**Hal yang perlu diperhatikan:**
 
 * Kemajuan yang stabil berdasarkan jumlah gambar
@@ -169,17 +151,13 @@ di bilah sisi kiri
 
 ### Memahami Pesan Log Baris log
 
-Chloros
-
-diawali dengan tag dalam kurung yang menamai subsistem — misalnya `[PROCESSING]`, `[RUN-SUMMARY]`, `[LATTICE-EXPORT]`, `[EXPORT-CHECK]`, `[IMPORT-LEVEL]`. Yang paling penting untuk diketahui adalah **ringkasan eksekusi**, yang ditampilkan di akhir setiap eksekusi (termasuk eksekusi yang dihentikan):
+Chloros diawali dengan tag dalam kurung yang menamai subsistem — misalnya `[PROCESSING]`, `[RUN-SUMMARY]`, `[LATTICE-EXPORT]`, `[EXPORT-CHECK]`, `[IMPORT-LEVEL]`. Yang paling penting untuk diketahui adalah **ringkasan eksekusi**, yang ditampilkan di akhir setiap eksekusi (termasuk eksekusi yang dihentikan):
 
 ```
 [RUN-SUMMARY] 49 image(s) in 2 camera group(s); 4 target(s) detected; 45 image(s) calibrated; 180 file(s) written.
 ```
 
-Baris petunjuk tambahan `[RUN-SUMMARY]` akan muncul setiap kali ada hal yang perlu dijelaskan — misalnya, proses yang tidak menghasilkan apa-apa, atau kamera yang produk yang diminta dilewati karena tidak berlaku. Baris `[EXPORT-CHECK]` menjelaskan alasan dilewati per kamera (misalnya, mengapa kamera RGB
-
-tidak mendapatkan produk radian).
+Baris petunjuk tambahan `[RUN-SUMMARY]` akan muncul setiap kali ada hal yang perlu dijelaskan — misalnya, proses yang tidak menghasilkan apa-apa, atau kamera yang produk yang diminta dilewati karena tidak berlaku. Baris `[EXPORT-CHECK]` menjelaskan alasan dilewati per kamera (misalnya, mengapa kamera RGB tidak mendapatkan produk radian).
 
 Tingkat keparahan pesan secara umum (contoh di bawah ini bersifat ilustratif, bukan kata demi kata):
 
@@ -193,9 +171,7 @@ Masalah non-kritis yang tidak menghentikan pemrosesan — misalnya data GPS hila
 
 **Tindakan:** Periksa peringatan setelah pemrosesan selesai, tetapi jangan hentikan
 
-#### Pesan Kesalahan (Warna Red
-
-)
+#### Pesan Kesalahan (Warna Red)
 
 Masalah kritis yang dapat menyebabkan kegagalan pemrosesan — misalnya, disk penuh, file gambar rusak, atau tidak ada target yang terdeteksi saat kalibrasi reflektansi diminta.
 
@@ -210,17 +186,9 @@ Masalah kritis yang dapat menyebabkan kegagalan pemrosesan — misalnya, disk pe
 | Tidak ditemukan target                      | Tidak terdeteksi target kalibrasi               | Tandai gambar target atau nonaktifkan kalibrasi reflektansi |
 | Ruang disk tidak mencukupi               | Penyimpanan tidak cukup untuk hasil                 | Kosongkan ruang disk                                    |
 | Melewati berkas yang rusak               | Berkas gambar rusak                         | Salin ulang berkas dari kartu SD                             |
-| `[IMPORT-LEVEL] Skipping ... no raw source` | Pengambilan gambar tanpa bingkai mentah tidak dapat diproses | Ambil ulang dengan bingkai mentah, atau gunakan CLI
-
-`--input-level`  |
+| `[IMPORT-LEVEL] Skipping ... no raw source` | Pengambilan gambar tanpa bingkai mentah tidak dapat diproses | Ambil ulang dengan bingkai mentah, atau gunakan CLI `--input-level`  |
 | `[RUN-SUMMARY] ... 0 file(s) written` | Proses tidak menghasilkan produk gambar — dilaporkan sebagai kegagalan dengan petunjuk | Baca baris petunjuk; periksa apa yang dilewati dan alasannya |
-| `[PROCESS] refused: The project folder is too deep for this computer…` | Jalur panjang Windows
-
-dinonaktifkan dan folder proyek terlalu dalam untuk batas jalur 260 karakter; tidak ada yang diproses | Gunakan folder proyek yang lebih pendek (pesan tersebut menunjukkan panjang maksimum yang masih bisa muat), atau aktifkan jalur panjang Windows
-
-dan mulai ulang Chloros
-
-— lihat [Memulai Pemrosesan](starting-the-processing.md#the-project-folder-is-too-deep-for-this-computer) |
+| `[PROCESS] refused: The project folder is too deep for this computer…` | Jalur panjang Windows dinonaktifkan dan folder proyek terlalu dalam untuk batas jalur 260 karakter; tidak ada yang diproses | Gunakan folder proyek yang lebih pendek (pesan tersebut menunjukkan panjang maksimum yang masih bisa muat), atau aktifkan jalur panjang Windows dan mulai ulang Chloros — lihat [Memulai Pemrosesan](starting-the-processing.md#the-project-folder-is-too-deep-for-this-computer) |
 | `[unmix-clamp-mask] …` | Masker clamp produk LATTICE tidak dapat ditulis; produknya sendiri baik-baik saja dan menampilkan pesan `Chloros:UnmixClampMask=unavailable` | Periksa ruang disk dan izin folder, lalu proses ulang jika Anda memerlukan masker tersebut |
 
 ### Menyalin Data Log
@@ -230,32 +198,18 @@ Untuk menyalin log guna pemecahan masalah atau dukungan:
 1. Buka panel Debug Log
 2. Klik tombol **Salin**(menyalin log ke clipboard), atau**Unduh** untuk menyimpannya sebagai berkas teks
 3. Tempelkan ke berkas teks atau email
-4. Kirim ke dukungan MAPIR
-
-jika diperlukan
+4. Kirim ke dukungan MAPIR jika diperlukan
 
 ### Melaporkan bug dari tab log
 
-Baru di versi 1.3.0: ikon bug (**Laporkan bug**) di bagian atas tab Log Debug akan mengirimkan laporan langsung ke MAPIR
-
-.
+Baru di versi 1.3.0: ikon bug (**Laporkan bug**) di bagian atas tab Log Debug akan mengirimkan laporan langsung ke MAPIR.
 
 1. Klik ikon bug di bagian atas tab Log Debug
 2. Jelaskan masalahnya: apa yang sedang Anda lakukan, apa yang Anda harapkan, dan apa yang terjadi sebaliknya (wajib diisi)
 3. Secara opsional, centang **Tambahkan beberapa gambar (maksimal 10)**dan pilih gambar dari proyek yang terbuka, atau gunakan**Telusuri...** untuk file gambar lainnya
 4. Klik **Kirim**
 
-Laporan tersebut mencakup deskripsi Anda, gambar yang Anda lampirkan, log Chloros
-
-, dan detail sistem (versi Chloros
-
-, OS, GPU, dan pengaturan proyek). Anda harus masuk ke Chloros
-
-(tab Pengguna) untuk mengirim laporan. Anda dapat menutup jendela saat proses pengiriman berlangsung; setelah selesai, referensi seperti `Bug report sent. Reference: BR-…` akan tercatat dalam log — cantumkan referensi tersebut saat Anda menghubungi MAPIR
-
-. Jika laporan tidak dapat diunggah (misalnya, tidak ada koneksi internet), Chloros
-
-akan menyimpannya di komputer Anda dan menampilkan jalurnya sehingga Anda dapat mengirimkannya melalui email ke support@mapir.camera.
+Laporan tersebut mencakup deskripsi Anda, gambar yang Anda lampirkan, log Chloros, dan detail sistem (versi Chloros, OS, GPU, dan pengaturan proyek). Anda harus masuk ke Chloros (tab Pengguna) untuk mengirim laporan. Anda dapat menutup jendela saat proses pengiriman berlangsung; setelah selesai, referensi seperti `Bug report sent. Reference: BR-…` akan tercatat dalam log — cantumkan referensi tersebut saat Anda menghubungi MAPIR. Jika laporan tidak dapat diunggah (misalnya, tidak ada koneksi internet), Chloros akan menyimpannya di komputer Anda dan menampilkan jalurnya sehingga Anda dapat mengirimkannya melalui email ke support@mapir.camera.
 
 ***
 
@@ -269,33 +223,25 @@ akan menyimpannya di komputer Anda dan menampilkan jalurnya sehingga Anda dapat 
 * Inti lainnya dalam keadaan idle atau tersedia
 * Sistem tetap responsif
 
-**Mode Paralel Chloros
-
-+:**
+**Mode Paralel Chloros+:**
 
 * Beberapa inti CPU dengan pemanfaatan tinggi — jumlahnya tergantung pada strategi yang dipilih oleh [Adaptasi Komputasi Dinamis](../processing-architecture/dynamic-compute-adaptation.md)
 * Sistem mungkin terasa kurang responsif
 
 **Untuk memantau:**
 
-* Task Manager Windows
-
-(Ctrl+Shift+Esc)
+* Task Manager Windows (Ctrl+Shift+Esc)
 * Tab Kinerja → Bagian CPU
-* Cari proses &quot;Chloros
-
-&quot; atau &quot;chloros-backend&quot;
+* Cari proses "Chloros" atau "chloros-backend"
 
 ### Penggunaan Memori (RAM)
 
 **Penggunaan umum:**
 
-* Proyek kecil (&lt; 100 gambar): 2–4 GB
+* Proyek kecil (< 100 gambar): 2–4 GB
 * Proyek sedang (100–500 gambar): 4–8 GB
 * Proyek besar (500+ gambar): 8–16 GB
-* Mode paralel Chloros
-
-+ menggunakan lebih banyak RAM
+* Mode paralel Chloros+ menggunakan lebih banyak RAM
 
 **Jika memori rendah:**
 
@@ -303,9 +249,7 @@ akan menyimpannya di komputer Anda dan menampilkan jalurnya sehingga Anda dapat 
 * Tutup aplikasi lain
 * Tingkatkan kapasitas RAM jika sering memproses dataset besar
 
-### Penggunaan GPU (Chloros
-
-+ dengan CUDA)
+### Penggunaan GPU (Chloros+ dengan CUDA)
 
 Saat akselerasi GPU diaktifkan:
 
@@ -343,9 +287,7 @@ Saat akselerasi GPU diaktifkan:
 
 * Periksa Log Debug untuk mencari kesalahan
 * Pastikan ruang disk masih tersedia
-* Periksa Task Manager untuk memastikan Chloros
-
-sedang berjalan
+* Periksa Task Manager untuk memastikan Chloros sedang berjalan
 
 **Pesan kesalahan sering muncul:**
 
@@ -355,9 +297,7 @@ sedang berjalan
 
 **Sistem menjadi tidak responsif:**
 
-* Mode paralel Chloros
-
-+ menggunakan terlalu banyak sumber daya
+* Mode paralel Chloros+ menggunakan terlalu banyak sumber daya
 * Pertimbangkan untuk mengurangi tugas yang berjalan bersamaan atau meningkatkan perangkat keras
 * Mode bebas lebih hemat sumber daya
 
@@ -365,7 +305,7 @@ sedang berjalan
 
 Hentikan pemrosesan jika Anda melihat:
 
-* ❌ Kesalahan &quot;Disk penuh&quot; atau &quot;Tidak dapat menulis file&quot;
+* ❌ Kesalahan "Disk penuh" atau "Tidak dapat menulis file"
 * ❌ Kesalahan file gambar rusak yang berulang
 * ❌ Sistem benar-benar macet (tidak merespons)
 * ❌ Menyadari bahwa pengaturan yang salah telah dikonfigurasi
@@ -374,7 +314,7 @@ Hentikan pemrosesan jika Anda melihat:
 **Cara menghentikan:**
 
 1. Klik tombol**Stop** (menggantikan tombol Start) — sekali saja sudah cukup
-2. Bilah kemajuan akan menampilkan &quot;Sedang dihentikan...&quot; sementara gambar yang sedang diproses diselesaikan, lalu proses berakhir dalam keadaan terhenti
+2. Bilah kemajuan akan menampilkan "Sedang dihentikan..." sementara gambar yang sedang diproses diselesaikan, lalu proses berakhir dalam keadaan terhenti
 3. Produk yang sudah diekspor tetap tersimpan di disk; log mencatat kode kesalahan `[RUN-SUMMARY]` yang menunjukkan proses yang telah selesai
 4. Perbaiki masalah dan mulai ulang — proses akan dimulai dari awal
 
@@ -396,11 +336,9 @@ Hentikan pemrosesan jika Anda melihat:
 
 1. Jika baru dimulai dan masih dalam tahap Deteksi: Hentikan, tandai target, lalu mulai ulang
 2. Untuk ke depannya: Gunakan SSD, kurangi jumlah indeks, tingkatkan perangkat keras
-3. Pertimbangkan penggunaan antarmuka baris perintah (CLI
+3. Pertimbangkan penggunaan antarmuka baris perintah (CLI) untuk pemrosesan batch dataset besar
 
-) untuk pemrosesan batch dataset besar
-
-### Peringatan &quot;Ruang Disk&quot;
+### Peringatan "Ruang Disk"
 
 **Solusi:**
 
@@ -408,11 +346,9 @@ Hentikan pemrosesan jika Anda melihat:
 2. Pindahkan proyek ke drive dengan ruang yang lebih besar
 3. Kurangi jumlah indeks yang akan diekspor
 4. Nonaktifkan produk ekspor LATTICE yang tidak Anda butuhkan (Pengaturan Proyek → Pemrosesan)
-5. Gunakan format JPG alih-alih TIFF
+5. Gunakan format JPG alih-alih TIFF (ukuran file lebih kecil)
 
-(ukuran file lebih kecil)
-
-### Pesan &quot;File Rusak&quot; yang Sering Muncul
+### Pesan "File Rusak" yang Sering Muncul
 
 **Solusi:**
 
@@ -427,9 +363,7 @@ Hentikan pemrosesan jika Anda melihat:
 
 1. Pastikan ventilasi yang memadai
 2. Bersihkan debu dari ventilasi komputer
-3. Kurangi beban pemrosesan (gunakan mode Free alih-alih Chloros
-
-+)
+3. Kurangi beban pemrosesan (gunakan mode Free alih-alih Chloros+)
 4. Lakukan pemrosesan pada waktu-waktu yang lebih sejuk dalam sehari
 
 ***

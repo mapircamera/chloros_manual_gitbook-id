@@ -77,7 +77,7 @@ Fitur baru di versi 1.3.0: produk indeks mendeskripsikan **dirinya sendiri** ali
 | `Chloros:IlluminationInvariant` | `True` untuk indeks yang dihitung dari reflektansi, `False` dari radian atau nilai sensor |
 | `Chloros:ChlorosPipelineVersion` | versi Chloros yang menulis indeks tersebut |
 
-`Chloros:PixelScale` dihapus dari produk indeks — gunakan `IndexMin` / `IndexMax` di atas. Resep pembacaan lengkap terdapat di bawah &quot;Raster indeks bilangan bulat adalah peregangan kontras per gambar&quot; dalam [Referensi CLI](reference/cli-reference.md).
+`Chloros:PixelScale` dihapus dari produk indeks — gunakan `IndexMin` / `IndexMax` di atas. Resep pembacaan lengkap terdapat di bawah "Raster indeks bilangan bulat adalah peregangan kontras per gambar" dalam [Referensi CLI](reference/cli-reference.md).
 
 ## Membaca nilai piksel reflektansi
 
@@ -94,4 +94,4 @@ Reflektansi disimpan sebagai angka digital bilangan bulat, dan **DN yang berarti
 **Pengambilan data 8-bit.** Ekspor dari pengambilan data 8-bit berformat 8-bit. Reflektansinya diskalakan ulang dan diberi label `Chloros:PixelScale=32768`, sehingga skalanya tetap terjaga; Produk DN 8-bit, serta berkas reflektansi yang ditulis sebelum versi 1.3.0, dipotong menjadi rentang 0–255 dan tidak menyertakan tag skala. Jika tag tersebut tidak ada pada berkas reflektansi LATTICE, jangan mengasumsikan adanya skala; ekspor ulang dalam format 16-bit atau 32-bit sebagai gantinya.
 {% endhint %}
 
-Untuk aturan lengkap (termasuk tag yang kompatibel dengan MicaSense), lihat **&quot;Membaca piksel reflektansi&quot;** dalam [Referensi CLI](reference/cli-reference.md).
+Untuk aturan lengkap (termasuk tag yang kompatibel dengan MicaSense), lihat **"Membaca piksel reflektansi"** dalam [Referensi CLI](reference/cli-reference.md).

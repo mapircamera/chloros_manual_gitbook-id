@@ -1,6 +1,6 @@
 # GUI: Navigasi
 
-Saat Anda pertama kali menjalankan Chloros, sistem akan memulai proses backend-nya. Setelah backend siap, ikon menu utama di pojok kiri atas akan muncul <img src=".gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> dan tab &quot;Kamera&quot; serta &quot;Sensor Cahaya&quot; di bilah sisi kiri akan aktif (sebelumnya keduanya dalam keadaan tidak aktif).
+Saat Anda pertama kali menjalankan Chloros, sistem akan memulai proses backend-nya. Setelah backend siap, ikon menu utama di pojok kiri atas akan muncul <img src=".gitbook/assets/image (1) (1) (1) (1).png" alt="" data-size="line"> dan tab "Kamera" serta "Sensor Cahaya" di bilah sisi kiri akan aktif (sebelumnya keduanya dalam keadaan tidak aktif).
 
 <figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
@@ -14,7 +14,7 @@ Dari kiri ke kanan, bilah atas berisi:
 
 * **Proyek Baru**— membuat proyek baru. Jika Anda telah menyimpan templat proyek, menu tarik-turun**Pilih Templat** akan muncul sehingga proyek baru dimulai dari pengaturan templat tersebut.
 * **Buka Proyek**— membuka proyek yang sudah ada. Daftar tersebut mencakup tombol**Buka Folder Proyek** yang membuka folder proyek di penjelajah file Anda.
-* **Duplikat Proyek** — menyalin proyek yang sedang terbuka dengan nama baru (disarankan menggunakan nama bebas seperti &quot;MyProject (2)&quot;) dan membuka salinannya. _(tampak setelah proyek dibuka)_
+* **Duplikat Proyek** — menyalin proyek yang sedang terbuka dengan nama baru (disarankan menggunakan nama bebas seperti "MyProject (2)") dan membuka salinannya. _(tampak setelah proyek dibuka)_
 * **Tambahkan File** — tambahkan file gambar satu per satu ke proyek saat ini _(tampak setelah proyek dibuka)_
 * **Tambahkan Folder** — tambahkan satu atau lebih folder gambar ke proyek saat ini _(tampak setelah proyek dibuka)_
 * **Mulai Pemrosesan / Hentikan Pemrosesan** — mulai atau hentikan alur pemrosesan gambar _(diaktifkan setelah berkas ditambahkan)_
@@ -22,19 +22,7 @@ Dari kiri ke kanan, bilah atas berisi:
 * **Hubungkan ke Sensor Cahaya** — beralih ke [tab Sensor Cahaya](daq/) untuk menghubungkan sensor cahaya DAQ. Dapat digunakan tanpa harus membuka proyek.
 
 {% hint style="info" %}
-**Hanya Windows**: Antarmuka Pengguna Grafis (GUI) Chloros
-
-Desktop tersedia di Windows
-
-. Pengguna Linux
-
-disarankan untuk melihat dokumentasi [CLI
-
-](CLI.md) dan [Python
-
-SDK
-
-](api-python-sdk.md) untuk pemrosesan tanpa antarmuka grafis.
+**Hanya Windows**: Antarmuka Pengguna Grafis (GUI) Chloros Desktop tersedia di Windows. Pengguna Linux disarankan untuk melihat dokumentasi [CLI](CLI.md) dan [Python SDK](api-python-sdk.md) untuk pemrosesan tanpa antarmuka grafis.
 {% endhint %}
 
 ### <img src=".gitbook/assets/image (2) (1) (1).png" alt="" data-size="line">
@@ -49,15 +37,9 @@ Bilah Kemajuan <img src=".gitbook/assets/image (5).png" alt="" data-size="line">
 
 
 
-Dalam mode Chloros
+Dalam mode Chloros gratis, yang memproses semua file secara berurutan, bilah kemajuan akan menampilkan 2 tahap: Deteksi Target dan Pemrosesan.
 
-gratis, yang memproses semua file secara berurutan, bilah kemajuan akan menampilkan 2 tahap: Deteksi Target dan Pemrosesan.
-
-Dalam mode berlisensi Chloros
-
-+ berbayar, yang memproses semua file secara bersamaan, bilah kemajuan menampilkan 4 tahap: Deteksi, Analisis, Kalibrasi, dan Ekspor. Jika Anda mengarahkan kursor mouse ke atas bilah kemajuan Chloros
-
-+, panel bilah kemajuan yang diperluas akan muncul sehingga Anda dapat memantau prosesnya. Mengklik bilah kemajuan bagian atas akan membekukan panel dropdown tersebut, sedangkan mengkliknya lagi akan mencairkannya.
+Dalam mode berlisensi Chloros+ berbayar, yang memproses semua file secara bersamaan, bilah kemajuan menampilkan 4 tahap: Deteksi, Analisis, Kalibrasi, dan Ekspor. Jika Anda mengarahkan kursor mouse ke atas bilah kemajuan Chloros+, panel bilah kemajuan yang diperluas akan muncul sehingga Anda dapat memantau prosesnya. Mengklik bilah kemajuan bagian atas akan membekukan panel dropdown tersebut, sedangkan mengkliknya lagi akan mencairkannya.
 
 <figure><img src=".gitbook/assets/plus_prog.JPG" alt=""><figcaption></figcaption></figure>
 
@@ -83,7 +65,7 @@ Lihat gambar-gambar Anda pada peta 2D interaktif berdasarkan koordinat GPS-nya. 
 
 #### <img src=".gitbook/assets/image (17).png" alt="" data-size="line"> [Kamera](lattice/)
 
-Hubungkan dan kendalikan kamera LATTICE secara langsung — satu per satu atau sebagai susunan multi-kamera yang tersinkronisasi. Tab ini menampilkan ubin pratinjau langsung dengan overlay dan histogram, pengaturan per-kamera dan per-susunan, serta Pengaturan Pengambilan yang menentukan kamera dan jenis ekspor mana yang dihasilkan oleh &quot;Capture All&quot;. Tersedia setelah backend siap; lihat [bagian LATTICE](lattice/) untuk panduan lengkapnya.
+Hubungkan dan kendalikan kamera LATTICE secara langsung — satu per satu atau sebagai susunan multi-kamera yang tersinkronisasi. Tab ini menampilkan ubin pratinjau langsung dengan overlay dan histogram, pengaturan per-kamera dan per-susunan, serta Pengaturan Pengambilan yang menentukan kamera dan jenis ekspor mana yang dihasilkan oleh "Capture All". Tersedia setelah backend siap; lihat [bagian LATTICE](lattice/) untuk panduan lengkapnya.
 
 #### <img src=".gitbook/assets/image (23).png" alt="" data-size="line"> [Sensor Cahaya](daq/)
 

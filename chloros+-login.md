@@ -16,49 +16,21 @@ Setelah masuk, detail akun Anda akan ditampilkan:
 | Paket | `plan_id` | Jenis |
 | --- | --- | --- |
 | Iron | `0` | Gratis |
-| Copper | `1` | Berbayar (Chloros
-
-+) |
-| Bronze | `2` | Berbayar (Chloros
-
-+) |
-| Silver | `3` | Berbayar (Chloros
-
-+) |
-| Emas | `4` | Berbayar (Chloros
-
-+) |
+| Copper | `1` | Berbayar (Chloros+) |
+| Bronze | `2` | Berbayar (Chloros+) |
+| Silver | `3` | Berbayar (Chloros+) |
+| Emas | `4` | Berbayar (Chloros+) |
 
 Lihat [paket dan harga](https://cloud.mapir.camera/pricing) untuk mengetahui apa saja yang termasuk dalam setiap tingkatan berbayar.
 
-### Akses CLI
+### Akses CLI/SDK memerlukan tingkatan berbayar
 
-/SDK
+Akses CLI dan Python SDK memerlukan **tingkatan Chloros+ berbayar apa pun (Copper atau lebih tinggi)**. Hal ini diterapkan**di sisi server** — setiap permintaan CLI/SDK harus menyertakan sesi aktif dan paket berbayar:
 
-memerlukan tingkatan berbayar
-
-Akses CLI
-
-dan Python
-
-SDK
-
-memerlukan **tingkatan Chloros
-
-+ berbayar apa pun (Copper atau lebih tinggi)**. Hal ini diterapkan**di sisi server** — setiap permintaan CLI
-
-/SDK
-
-harus menyertakan sesi aktif dan paket berbayar:
-
-| Status HTTP
-
-| `error_code` | Arti | Solusi |
+| Status HTTP | `error_code` | Arti | Solusi |
 | --- | --- | --- | --- |
 | `401` | `AUTH_REQUIRED` | Belum masuk (login) di mesin ini | `chloros-cli login <email> <password>` |
-| `403` | `PLAN_UPGRADE_REQUIRED` | Telah masuk, tetapi tingkatan paket terlalu rendah (tingkatan Iron gratis) | Tingkatkan ke paket Chloros
-
-+ berbayar apa pun |
+| `403` | `PLAN_UPGRADE_REQUIRED` | Telah masuk, tetapi tingkatan paket terlalu rendah (tingkatan Iron gratis) | Tingkatkan ke paket Chloros+ berbayar apa pun |
 
 `chloros-cli status` tetap dapat diakses pada tingkatan gratis, sehingga Anda selalu dapat melihat paket Anda saat ini dan alasan mengapa akses ditolak.
 
@@ -77,13 +49,7 @@ Setiap paket membatasi jumlah kamera LATTICE dan sensor cahaya DAQ yang dapat te
 
 
 
-Masuk menggunakan kredensial Chloros
-
-+ Anda untuk mengaktifkan pemrosesan CLI
-
-. Di Linux
-
-(tanpa GUI), ini adalah satu-satunya cara untuk mengaktifkan lisensi Anda.
+Masuk menggunakan kredensial Chloros+ Anda untuk mengaktifkan pemrosesan CLI. Di Linux (tanpa GUI), ini adalah satu-satunya cara untuk mengaktifkan lisensi Anda.
 
 **Sintaks:**
 
@@ -92,13 +58,7 @@ chloros-cli login <email> <password>
 ```
 
 {% hint style="info" %}
-**Pengguna SDK**: Python
-
-SDK
-
-juga menyediakan metode `logout()` untuk menghapus kredensial yang tersimpan dalam cache. Lihat [Referensi SDK
-
-](reference/sdk-reference.md) untuk detailnya.
+**Pengguna SDK**: Python SDK juga menyediakan metode `logout()` untuk menghapus kredensial yang tersimpan dalam cache. Lihat [Referensi SDK](reference/sdk-reference.md) untuk detailnya.
 {% endhint %}
 
 **Contoh:**
@@ -125,23 +85,13 @@ Kredensial dan konfigurasi yang disimpan dalam cache disimpan di folder `.chloro
 | **Windows** | `%USERPROFILE%\.chloros\` |
 | **Linux** | `~/.chloros/` |
 
-Menginstal versi yang lebih baru di atas versi yang sudah ada akan mempertahankan kredensial login Anda, baik di Windows
-
-(penginstal) maupun di Linux
-
-(folder `.deb`, termasuk `chloros-cli update`). Menghapus instalasi Chloros
-
-— atau menghapus paket Linux
-
-— akan menghapus data login yang tersimpan dalam cache, sehingga Anda harus masuk kembali setelah instalasi baru.
+Menginstal versi yang lebih baru di atas versi yang sudah ada akan mempertahankan kredensial login Anda, baik di Windows (penginstal) maupun di Linux (folder `.deb`, termasuk `chloros-cli update`). Menghapus instalasi Chloros — atau menghapus paket Linux — akan menghapus data login yang tersimpan dalam cache, sehingga Anda harus masuk kembali setelah instalasi baru.
 
 ### Kedaluwarsa Paket dan Masa Tenggang Offline
 
 Tanggal kedaluwarsa paket yang ditampilkan di antarmuka pengguna (GUI) menunjukkan kapan lisensi Anda akan menjadi tidak valid. Untuk langganan bulanan berulang, masa berlaku berakhir pada akhir bulan; sedangkan untuk langganan tahunan, masa berlaku berakhir satu tahun setelah Anda memulai langganan.
 
- Chloros
-
-memvalidasi lisensi Anda secara online, tetapi penggunaan offline didukung selama masa tenggang:
+ Chloros memvalidasi lisensi Anda secara online, tetapi penggunaan offline didukung selama masa tenggang:
 
 * Validasi server yang berhasil disimpan dalam cache selama **5 menit**, sehingga penggunaan normal hanya memerlukan sedikit panggilan lisensi.
 * Cache lisensi yang ditandatangani dan terikat pada perangkat mencakup periode offline yang lebih lama: **30 hari untuk paket bulanan**, dan**hingga tanggal kedaluwarsa langganan Anda (maksimal 365 hari) untuk paket tahunan**.
@@ -149,13 +99,7 @@ memvalidasi lisensi Anda secara online, tetapi penggunaan offline didukung selam
 
 ### Batas Perangkat
 
-Setiap paket Chloros
-
-+ menawarkan jumlah perangkat terdaftar yang berbeda-beda. Setiap perangkat yang Anda gunakan untuk masuk ke akun Chloros
-
-+ akan dihitung sebagai bagian dari jumlah perangkat terdaftar Anda. Anda dapat mengganti nama dan menghapus perangkat di halaman akun MAPIR
-
-Cloud Anda.
+Setiap paket Chloros+ menawarkan jumlah perangkat terdaftar yang berbeda-beda. Setiap perangkat yang Anda gunakan untuk masuk ke akun Chloros+ akan dihitung sebagai bagian dari jumlah perangkat terdaftar Anda. Anda dapat mengganti nama dan menghapus perangkat di halaman akun MAPIR Cloud Anda.
 
 <table><thead><tr><th width="168.5999755859375" align="right">Paket Chloros</th><th align="center">COPPER</th><th align="center">BRONZE</th><th align="center">SILVER</th><th align="center">GOLD</th></tr></thead><tbody><tr><td align="right">Perangkat yang Didukung</td><td align="center">2</td><td align="center">2</td><td align="center">5</td><td align="center">10</td></tr></tbody></table>
 

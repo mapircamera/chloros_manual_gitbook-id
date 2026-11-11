@@ -156,7 +156,7 @@ chloros-cli daq pool-disconnect --all                      # everything in the p
 chloros-cli daq pool-enable-ptp --sensor-id daq-e-def330
 ```
 
-Sebuah DAQ-E menyimpan pengaturan PTP (on/off) di memorinya sendiri, sehingga unit yang PTP-nya telah dimatikan akan tetap mati — dan cap waktunya tidak disinkronkan dengan PTP — hingga diaktifkan kembali. `pool-list` menandai unit tersebut dan menampilkan perintah ini untuknya. `Chloros` tidak pernah mengaktifkan kembali unit secara otomatis, karena status &quot;mati&quot; bisa jadi disengaja. Baru di versi 1.3.0.
+Sebuah DAQ-E menyimpan pengaturan PTP (on/off) di memorinya sendiri, sehingga unit yang PTP-nya telah dimatikan akan tetap mati — dan cap waktunya tidak disinkronkan dengan PTP — hingga diaktifkan kembali. `pool-list` menandai unit tersebut dan menampilkan perintah ini untuknya. `Chloros` tidak pernah mengaktifkan kembali unit secara otomatis, karena status "mati" bisa jadi disengaja. Baru di versi 1.3.0.
 
 ## Pengaturan perangkat DAQ-E
 

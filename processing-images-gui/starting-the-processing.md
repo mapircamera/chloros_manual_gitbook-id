@@ -62,7 +62,7 @@ Chloros beroperasi dalam dua mode pemrosesan yang berbeda tergantung pada lisens
 2. **Pemrosesan** - Menerapkan kalibrasi dan mengekspor gambar**Waktu pemrosesan:**
 
 * Jauh lebih lambat daripada mode paralel Chloros+
-* Cocok untuk kumpulan data kecil hingga menengah (&lt; 200 gambar)
+* Cocok untuk kumpulan data kecil hingga menengah (< 200 gambar)
 
 ### Mode Chloros+ (Pemrosesan Paralel)
 
@@ -202,7 +202,7 @@ Jika Anda perlu menghentikan pemrosesan:
 ### Cara Menghentikan
 
 1. Temukan **tombol Stop** (menggantikan tombol Mulai selama pemrosesan)
-2. Klik sekali — bilah akan menampilkan **&quot;Sedang dihentikan...&quot;** sementara gambar yang sedang diproses selesai
+2. Klik sekali — bilah akan menampilkan **"Sedang dihentikan..."** sementara gambar yang sedang diproses selesai
 3. Pemrosesan berakhir dalam keadaan terhenti sepenuhnya dan log mencatat laporan `[RUN-SUMMARY]` yang jujur mengenai apa yang telah diselesaikan
 
 ### Kapan Harus Menghentikan
@@ -305,9 +305,9 @@ Lihat [Referensi CLI](../reference/cli-reference.md#a-run-that-writes-no-images-
 **Solusi:**
 
 1. Simpan proyek di folder yang lebih pendek — ubah**Working Directory** di [Project Settings](../project-settings/project-settings.md) dan buat proyek tersebut kembali, atau
-2. Aktifkan jalur panjang Windows dan mulai ulang Chloros: jalankan kembali penginstal Chloros dengan opsi **Aktifkan jalur panjang Windows** dicentang (secara default sudah dicentang), atau gunakan Kebijakan Grup: *Konfigurasi Komputer &gt; Template Administratif &gt; Sistem &gt; Sistem Berkas &gt; Aktifkan jalur panjang Win32*.
+2. Aktifkan jalur panjang Windows dan mulai ulang Chloros: jalankan kembali penginstal Chloros dengan opsi **Aktifkan jalur panjang Windows** dicentang (secara default sudah dicentang), atau gunakan Kebijakan Grup: *Konfigurasi Komputer > Template Administratif > Sistem > Sistem Berkas > Aktifkan jalur panjang Win32*.
 
-### Peringatan &quot;Tidak Ada Target yang Terdeteksi&quot;
+### Peringatan "Tidak Ada Target yang Terdeteksi"
 
 **Kemungkinan penyebab:**
 

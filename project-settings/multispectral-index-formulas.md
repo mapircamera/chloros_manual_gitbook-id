@@ -12,7 +12,7 @@ Rumus-rumus indeks di bawah ini menggunakan kombinasi rentang transmisi rata-rat
 
 <table><thead><tr><th align="center">Warna Filter Survey3</th><th width="196.199951171875" align="center">Nama Filter Survey3</th><th width="159.800048828125" align="center">Rentang Transmisi (FWHM)</th><th align="center">Transmisi Rata-rata</th></tr></thead><tbody><tr><td align="center">Blue</td><td align="center">NGB - Blue</td><td align="center">468-483 nm</td><td align="center">475 nm</td></tr><tr><td align="center">Cyan</td><td align="center">OCN- Cyan</td><td align="center">476–512 nm</td><td align="center">494 nm</td></tr><tr><td align="center">Green</td><td align="center">RGN | NGB - Green</td><td align="center">543–558 nm</td><td align="center">547 nm</td></tr><tr><td align="center">Orange</td><td align="center">OCN - Orange</td><td align="center">598–640 nm</td><td align="center">619 nm</td></tr><tr><td align="center">Red</td><td align="center">RGN - Red</td><td align="center">653–668 nm</td><td align="center">661 nm</td></tr><tr><td align="center">RedEdge</td><td align="center">Re-RedEdge</td><td align="center">712–735 nm</td><td align="center">724 nm</td></tr><tr><td align="center">NIR1</td><td align="center">OCN - NIR1</td><td align="center">798–848 nm</td><td align="center">823 nm</td></tr><tr><td align="center">NIR2</td><td align="center">RGN | NGB | NIR - NIR2</td><td align="center">835–865 nm</td><td align="center">850 nm</td></tr></tbody></table>
 
-Saat rumus-rumus ini digunakan, nama tersebut mungkin diakhiri dengan &quot;\_1&quot; atau &quot;\_2&quot;, yang menunjukkan filter NIR mana yang digunakan, yaitu NIR1 atau NIR2.
+Saat rumus-rumus ini digunakan, nama tersebut mungkin diakhiri dengan "\_1" atau "\_2", yang menunjukkan filter NIR mana yang digunakan, yaitu NIR1 atau NIR2.
 
 Untuk kamera LATTICE M3C (Bayer triple-bandpass), mesin indeks yang sama menggunakan pita filter M3C:
 
@@ -118,7 +118,7 @@ Saat Anda memasukkan nama tanpa ekstensi seperti `NDVI`, Chloros harus menentuka
 | RE | RE 0 |
 | NIR | NIR 0 |
 
-**Filter default** preset (kolom &quot;Default filter&quot; di atas) digunakan jika proyek berisi gambar dengan filter tersebut. Jika tidak, Chloros akan memindai filter yang sebenarnya ada dalam proyek sesuai urutan `RGN, OCN, NGB, RGB, RE, NIR` dan memilih yang pertama yang dapat menyediakan setiap kanal yang dibutuhkan preset tersebut. Jika tidak ada yang memenuhi syarat, preset tersebut akan diabaikan untuk proses tersebut. Inilah sebabnya mengapa `NDVI` yang diminta pada dataset yang hanya berisi OCN tetap menghasilkan hasil yang masuk akal — preset ini terikat pada posisi Orange dan NIR dari OCN.
+**Filter default** preset (kolom "Default filter" di atas) digunakan jika proyek berisi gambar dengan filter tersebut. Jika tidak, Chloros akan memindai filter yang sebenarnya ada dalam proyek sesuai urutan `RGN, OCN, NGB, RGB, RE, NIR` dan memilih yang pertama yang dapat menyediakan setiap kanal yang dibutuhkan preset tersebut. Jika tidak ada yang memenuhi syarat, preset tersebut akan diabaikan untuk proses tersebut. Inilah sebabnya mengapa `NDVI` yang diminta pada dataset yang hanya berisi OCN tetap menghasilkan hasil yang masuk akal — preset ini terikat pada posisi Orange dan NIR dari OCN.
 
 String model LATTICE M3C membawa filter dengan awalan `F` (`LATT-M3C-L41-FRGN`), namun awalan tersebut dihilangkan saat kode filter dibaca dari gambar, sehingga kamera FRGN dapat mengidentifikasi melalui baris `RGN` di atas dan tidak memerlukan penanganan khusus.
 
@@ -165,7 +165,7 @@ $$
 
 Di antarmuka grafis (GUI) dan daftar preset CLI/SDK, rumus simbolnya adalah `(z/y)*(x/y)` dengan x=Red, y=Green, z=NIR (pita spektral kamera RGN); preset mesin indeks LATTICE adalah `nir * red / green**2`. Setiap permukaan menghitung indeks yang sama.
 
-_Referensi: Vincini, M., E. Frazzi, dan P. D&#x27;Alessio. &quot;Indeks Vegetasi Klorofil Daun Pita Lebar pada Skala Kanopi.&quot; Precision Agriculture 9 (2008): 303-319._
+_Referensi: Vincini, M., E. Frazzi, dan P. D'Alessio. "Indeks Vegetasi Klorofil Daun Pita Lebar pada Skala Kanopi." Precision Agriculture 9 (2008): 303-319._
 
 ***
 
@@ -191,7 +191,7 @@ $$
 
 Nilai EVI seharusnya berkisar antara 0 hingga 1 untuk piksel vegetasi. Fitur-fitur terang seperti awan dan bangunan putih, serta fitur-fitur gelap seperti perairan, dapat menyebabkan nilai piksel yang tidak normal pada citra EVI. Sebelum membuat citra EVI, Anda sebaiknya menyaring awan dan fitur-fitur terang dari citra reflektansi, serta secara opsional menetapkan ambang batas nilai piksel dari 0 hingga 1.
 
-_Referensi: Huete, A., dkk. &quot;Tinjauan Kinerja Radiometrik dan Biofisik Indeks Vegetasi MODIS.&quot; Remote Sensing of Environment 83 (2002):195–213._
+_Referensi: Huete, A., dkk. "Tinjauan Kinerja Radiometrik dan Biofisik Indeks Vegetasi MODIS." Remote Sensing of Environment 83 (2002):195–213._
 
 ***
 
@@ -207,7 +207,7 @@ $$
 
 Kawasan berhutan akan memiliki nilai FCI1 yang lebih rendah karena reflektansi pohon yang lebih rendah dan adanya bayangan di dalam kanopi.
 
-_Referensi: Becker, Sarah J., Craig S.T. Daughtry, dan Andrew L. Russ. &quot;Indeks tutupan hutan yang andal untuk citra multispektral.&quot; Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Referensi: Becker, Sarah J., Craig S.T. Daughtry, dan Andrew L. Russ. "Indeks tutupan hutan yang andal untuk citra multispektral." Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -223,7 +223,7 @@ $$
 
 Kawasan berhutan akan memiliki nilai FCI2 yang lebih rendah karena reflektansi pohon yang lebih rendah dan adanya bayangan di dalam kanopi.
 
-_Referensi: Becker, Sarah J., Craig S.T. Daughtry, dan Andrew L. Russ. &quot;Indeks tutupan hutan yang andal untuk citra multispektral.&quot; Photogrammetric Engineering &amp; Remote Sensing 84.8 (2018): 505-512._
+_Referensi: Becker, Sarah J., Craig S.T. Daughtry, dan Andrew L. Russ. "Indeks tutupan hutan yang andal untuk citra multispektral." Photogrammetric Engineering & Remote Sensing 84.8 (2018): 505-512._
 
 ***
 
@@ -259,7 +259,7 @@ $$
 
 Konstanta gamma adalah fungsi pembobotan yang bergantung pada kondisi aerosol di atmosfer. ENVI menggunakan nilai 1,7, yang merupakan nilai yang direkomendasikan oleh Gitelson, Kaufman, dan Merzylak (1996, halaman 296).
 
-_Referensi: Gitelson, A., Y. Kaufman, dan M. Merzylak. &quot;Penggunaan Saluran Hijau (Green) dalam Penginderaan Jauh Vegetasi Global dari EOS-MODIS.&quot; Remote Sensing of Environment 58 (1996): 289–298._
+_Referensi: Gitelson, A., Y. Kaufman, dan M. Merzylak. "Penggunaan Saluran Hijau (Green) dalam Penginderaan Jauh Vegetasi Global dari EOS-MODIS." Remote Sensing of Environment 58 (1996): 289–298._
 
 ***
 
@@ -273,7 +273,7 @@ $$
 
 Ketersediaan panjang gelombang NIR dan hijau yang luas memberikan prediksi kandungan klorofil yang lebih baik sekaligus memungkinkan sensitivitas yang lebih tinggi dan rasio sinyal-ke-bising yang lebih baik.
 
-_Referensi: Gitelson, A., Y. Gritz, dan M. Merzlyak. &quot;Hubungan Antara Kandungan Klorofil Daun dan Reflektansi Spektral serta Algoritma untuk Penilaian Klorofil Tanpa Merusak pada Daun Tumbuhan Tinggi.&quot; Journal of Plant Physiology 160 (2003): 271-282._
+_Referensi: Gitelson, A., Y. Gritz, dan M. Merzlyak. "Hubungan Antara Kandungan Klorofil Daun dan Reflektansi Spektral serta Algoritma untuk Penilaian Klorofil Tanpa Merusak pada Daun Tumbuhan Tinggi." Journal of Plant Physiology 160 (2003): 271-282._
 
 ***
 
@@ -287,7 +287,7 @@ $$
 
 Nilai GLI berkisar antara -1 hingga +1. Nilai negatif mewakili tanah dan fitur tak hidup, sedangkan nilai positif mewakili daun dan batang hijau.
 
-_Referensi: Louhaichi, M., M. Borman, dan D. Johnson. &quot;Platform Berbasis Lokasi dan Fotografi Udara untuk Dokumentasi Dampak Penggembalaan terhadap Gandum.&quot; Geocarto International 16, No. 1 (2001): 65-70._
+_Referensi: Louhaichi, M., M. Borman, dan D. Johnson. "Platform Berbasis Lokasi dan Fotografi Udara untuk Dokumentasi Dampak Penggembalaan terhadap Gandum." Geocarto International 16, No. 1 (2001): 65-70._
 
 ***
 
@@ -299,7 +299,7 @@ $$
 GNDVI = {(NIR - Green) \over (NIR + Green)  }
 $$
 
-_Referensi: Gitelson, A., dan M. Merzlyak. &quot;Penginderaan Jauh Konsentrasi Klorofil pada Daun Tumbuhan Tinggi.&quot; Advances in Space Research 22 (1998): 689-692._
+_Referensi: Gitelson, A., dan M. Merzlyak. "Penginderaan Jauh Konsentrasi Klorofil pada Daun Tumbuhan Tinggi." Advances in Space Research 22 (1998): 689-692._
 
 ***
 
@@ -311,7 +311,7 @@ $$
 GOSAVI = {NIR - Green \over NIR + Green + 0.16)  }
 $$
 
-_Referensi: Sripada, R., dkk. &quot;Penentuan Kebutuhan Nitrogen Selama Musim Tanam untuk Jagung Menggunakan Fotografi Warna-Inframerah dari Udara.&quot; Disertasi Doktor, Universitas Negeri Carolina Utara, 2005._
+_Referensi: Sripada, R., dkk. "Penentuan Kebutuhan Nitrogen Selama Musim Tanam untuk Jagung Menggunakan Fotografi Warna-Inframerah dari Udara." Disertasi Doktor, Universitas Negeri Carolina Utara, 2005._
 
 ***
 
@@ -323,7 +323,7 @@ $$
 GRVI = {NIR \over Green }
 $$
 
-_Referensi: Sripada, R., dkk. &quot;Fotografi Warna-Inframerah dari Udara untuk Menentukan Kebutuhan Nitrogen Awal Musim pada Jagung.&quot; Agronomy Journal 98 (2006): 968-977._
+_Referensi: Sripada, R., dkk. "Fotografi Warna-Inframerah dari Udara untuk Menentukan Kebutuhan Nitrogen Awal Musim pada Jagung." Agronomy Journal 98 (2006): 968-977._
 
 ***
 
@@ -335,7 +335,7 @@ $$
 GSAVI = 1.5 * {(NIR - Green) \over (NIR + Green + 0.5)  }
 $$
 
-_Referensi: Sripada, R., dkk. &quot;Penentuan Kebutuhan Nitrogen Selama Musim Tanam pada Jagung Menggunakan Fotografi Warna-Inframerah dari Udara.&quot; Disertasi Doktor, Universitas Negeri Carolina Utara, 2005._
+_Referensi: Sripada, R., dkk. "Penentuan Kebutuhan Nitrogen Selama Musim Tanam pada Jagung Menggunakan Fotografi Warna-Inframerah dari Udara." Disertasi Doktor, Universitas Negeri Carolina Utara, 2005._
 
 ***
 
@@ -355,7 +355,7 @@ $$
 
 Nilai LAI yang tinggi biasanya berkisar antara sekitar 0 hingga 3,5. Namun, ketika pemandangan mengandung awan dan fitur terang lainnya yang menghasilkan piksel jenuh, nilai LAI dapat melebihi 3,5. Idealnya, Anda harus menyaring awan dan fitur terang dari pemandangan Anda sebelum membuat citra LAI.
 
-_Referensi: Boegh, E., H. Soegaard, N. Broge, C. Hasager, N. Jensen, K. Schelde, dan A. Thomsen. &quot;Data Multispektral dari Udara untuk Mengukur Indeks Luas Daun, Konsentrasi Nitrogen, dan Efisiensi Fotosintesis dalam Pertanian.&quot; Remote Sensing of Environment 81, no. 2-3 (2002): 179-193._
+_Referensi: Boegh, E., H. Soegaard, N. Broge, C. Hasager, N. Jensen, K. Schelde, dan A. Thomsen. "Data Multispektral dari Udara untuk Mengukur Indeks Luas Daun, Konsentrasi Nitrogen, dan Efisiensi Fotosintesis dalam Pertanian." Remote Sensing of Environment 81, no. 2-3 (2002): 179-193._
 
 ***
 
@@ -369,7 +369,7 @@ $$
 LCI = {NIR2 - RedEdge \over NIR2 + Red}
 $$
 
-_Referensi: Datt, B. &quot;Penginderaan Jauh Kandungan Air pada Daun Eucalyptus.&quot; Journal of Plant Physiology 154, no. 1 (1999): 30-36._
+_Referensi: Datt, B. "Penginderaan Jauh Kandungan Air pada Daun Eucalyptus." Journal of Plant Physiology 154, no. 1 (1999): 30-36._
 
 ***
 
@@ -381,7 +381,7 @@ $$
 MNLI = {(NIR^{2} - Red) * (1 + L) \over (NIR^{2} + Red + L)  }
 $$
 
-_Referensi: Yang, Z., P. Willis, dan R. Mueller. &quot;Dampak Citra AWIFS yang Ditingkatkan dengan Rasio Pita terhadap Akurasi Klasifikasi Tanaman.&quot; Prosiding Simposium Penginderaan Jauh Pecora 17 (2008), Denver, CO._
+_Referensi: Yang, Z., P. Willis, dan R. Mueller. "Dampak Citra AWIFS yang Ditingkatkan dengan Rasio Pita terhadap Akurasi Klasifikasi Tanaman." Prosiding Simposium Penginderaan Jauh Pecora 17 (2008), Denver, CO._
 
 ***
 
@@ -393,7 +393,7 @@ $$
 MSAVI2 = {2 * NIR + 1 - \sqrt{(2 * NIR + 1)^{2} - 8(NIR - Red)} \over 2}
 $$
 
-_Referensi: Qi, J., A. Chehbouni, A. Huete, Y. Kerr, dan S. Sorooshian. &quot;A Modified Soil Adjusted Vegetation Index.&quot; Remote Sensing of Environment 48 (1994): 119-126._
+_Referensi: Qi, J., A. Chehbouni, A. Huete, Y. Kerr, dan S. Sorooshian. "A Modified Soil Adjusted Vegetation Index." Remote Sensing of Environment 48 (1994): 119-126._
 
 ***
 
@@ -405,7 +405,7 @@ $$
 MSR = {(NIR / Red) - 1 \over \sqrt{NIR / Red} + 1}
 $$
 
-_Referensi: Chen, J. &quot;Evaluasi Indeks Vegetasi dan Rasio Sederhana yang Dimodifikasi untuk Aplikasi di Kawasan Boreal.&quot; Canadian Journal of Remote Sensing 22 (1996): 229-242._
+_Referensi: Chen, J. "Evaluasi Indeks Vegetasi dan Rasio Sederhana yang Dimodifikasi untuk Aplikasi di Kawasan Boreal." Canadian Journal of Remote Sensing 22 (1996): 229-242._
 
 ***
 
@@ -441,7 +441,7 @@ $$
 NLI = {NIR^{2} - Red \over NIR^{2} + Red  }
 $$
 
-_Referensi: Goel, N., dan W. Qin. &quot;Pengaruh Arsitektur Kanopi terhadap Hubungan Antara Berbagai Indeks Vegetasi dengan LAI dan Fpar: Simulasi Komputer.&quot; Remote Sensing Reviews 10 (1994): 309-347._
+_Referensi: Goel, N., dan W. Qin. "Pengaruh Arsitektur Kanopi terhadap Hubungan Antara Berbagai Indeks Vegetasi dengan LAI dan Fpar: Simulasi Komputer." Remote Sensing Reviews 10 (1994): 309-347._
 
 ***
 
@@ -453,7 +453,7 @@ $$
 OSAVI = {(NIR - Red) \over (NIR + Red + 0.16)  }
 $$
 
-_Referensi: Rondeaux, G., M. Steven, dan F. Baret. &quot;Optimization of Soil-Adjusted Vegetation Indices.&quot; Remote Sensing of Environment 55 (1996): 95-107._
+_Referensi: Rondeaux, G., M. Steven, dan F. Baret. "Optimization of Soil-Adjusted Vegetation Indices." Remote Sensing of Environment 55 (1996): 95-107._
 
 ***
 
@@ -465,7 +465,7 @@ $$
 RDVI = {(NIR- Red) \over \sqrt{(NIR + Red)}  }
 $$
 
-_Referensi: Roujean, J., dan F. Breon. &quot;Estimasi PAR yang Diserap Vegetasi dari Pengukuran Reflektansi Dua Arah.&quot; Remote Sensing of Environment 51 (1995): 375-384._
+_Referensi: Roujean, J., dan F. Breon. "Estimasi PAR yang Diserap Vegetasi dari Pengukuran Reflektansi Dua Arah." Remote Sensing of Environment 51 (1995): 375-384._
 
 ***
 
@@ -477,7 +477,7 @@ $$
 SAVI = {1.5 * (NIR- Red) \over (NIR + Red + 0.5)  }
 $$
 
-_Referensi: Huete, A. &quot;A Soil-Adjusted Vegetation Index (SAVI).&quot; Remote Sensing of Environment 25 (1988): 295-309._
+_Referensi: Huete, A. "A Soil-Adjusted Vegetation Index (SAVI)." Remote Sensing of Environment 25 (1988): 295-309._
 
 ***
 
@@ -489,7 +489,7 @@ $$
 TDVI = 1.5 * {(NIR- Red) \over \sqrt{NIR^{2} + Red + 0.5}  }
 $$
 
-_Referensi: Bannari, A., H. Asalhi, dan P. Teillet. &quot;Indeks Vegetasi Perbedaan yang Ditransformasikan (TDVI) untuk Pemetaan Tutupan Vegetasi&quot; Dalam Prosiding Simposium Geosains dan Penginderaan Jauh, IGARSS &#x27;02, IEEE International, Jilid 5 (2002)._
+_Referensi: Bannari, A., H. Asalhi, dan P. Teillet. "Indeks Vegetasi Perbedaan yang Ditransformasikan (TDVI) untuk Pemetaan Tutupan Vegetasi" Dalam Prosiding Simposium Geosains dan Penginderaan Jauh, IGARSS '02, IEEE International, Jilid 5 (2002)._
 
 ***
 
@@ -501,7 +501,7 @@ $$
 VARI = {Green - Red \over Green + Red - Blue  }
 $$
 
-_Referensi: Gitelson, A., dkk. &quot;Garis Vegetasi dan Tanah dalam Ruang Spektral Cahaya Tampak: Sebuah Konsep dan Teknik untuk Estimasi Jarak Jauh Fraksi Vegetasi.&quot; Jurnal Internasional Penginderaan Jauh 23 (2002): 2537−2562._
+_Referensi: Gitelson, A., dkk. "Garis Vegetasi dan Tanah dalam Ruang Spektral Cahaya Tampak: Sebuah Konsep dan Teknik untuk Estimasi Jarak Jauh Fraksi Vegetasi." Jurnal Internasional Penginderaan Jauh 23 (2002): 2537−2562._
 
 ***
 
@@ -517,6 +517,6 @@ Koefisien bobot (_a_) dapat berkisar antara 0,1 hingga 0,2. Nilai 0,2 direkomend
 
 _Referensi_
 
-_Gitelson, A. &quot;Indeks Vegetasi Rentang Dinamis Luas untuk Kuantifikasi Jarak Jauh Karakteristik Biofisik Vegetasi.&quot; Journal of Plant Physiology 161, No. 2 (2004): 165-173._
+_Gitelson, A. "Indeks Vegetasi Rentang Dinamis Luas untuk Kuantifikasi Jarak Jauh Karakteristik Biofisik Vegetasi." Journal of Plant Physiology 161, No. 2 (2004): 165-173._
 
-_Henebry, G., A. Viña, dan A. Gitelson. &quot;Indeks Vegetasi Rentang Dinamis Luas dan Potensi Kegunaannya untuk Analisis Kesenjangan.&quot; Gap Analysis Bulletin 12: 50-56._
+_Henebry, G., A. Viña, dan A. Gitelson. "Indeks Vegetasi Rentang Dinamis Luas dan Potensi Kegunaannya untuk Analisis Kesenjangan." Gap Analysis Bulletin 12: 50-56._

@@ -195,7 +195,7 @@ Chloros menyimpan kredensial dan konfigurasi CLI-nya dalam satu direktori lintas
 | `/lib/systemd/system/chloros-backend@.service` | Layanan backend selalu aktif (opt-in) yang menjalankan backend sebagai pengguna yang Anda tentukan (terpasang, **belum diaktifkan**) — layanan yang perlu diaktifkan, lihat [Always-On PTP](#always-on-ptp-for-headless-hosts) |
 | `/lib/systemd/system/chloros-backend.service` | Layanan yang sama yang menjalankan backend sebagai **root**(terpasang,**belum diaktifkan**), dipertahankan agar mesin yang mengaktifkannya tetap berjalan |
 | `/var/log/chloros/` | Log terperinci layanan root, dapat dibaca oleh grup `adm` (dihapus saat paket dihapus sepenuhnya) |
-| `/usr/share/applications/chloros-cli.desktop` | Entri menu aplikasi &quot;Chloros CLI&quot; yang membuka terminal |
+| `/usr/share/applications/chloros-cli.desktop` | Entri menu aplikasi "Chloros CLI" yang membuka terminal |
 
 **Firewall (baru di versi 1.3.0).** Jika `ufw` atau `firewalld` aktif saat instalasi, paket ini akan membuka port UDP `5002` (data DAQ-E), `5353` (penemuan mDNS), `319`, dan `320` (PTP), serta menghapus aturan-aturan tersebut saat paket dihapus. Jika firewall terpasang tetapi tidak aktif, firewall tersebut tidak menambahkan apa pun dan mencantumkan port-port yang harus diizinkan jika Anda mengaktifkannya nanti. Firewall tersebut tidak membuka port TCP apa pun: pembaruan firmware DAQ-E, di mana sensor terhubung kembali ke komputer ini melalui TCP untuk mengumpulkan gambar, akan gagal dengan kode kesalahan `… device never connected back on TCP <port> …` jika firewall yang aktif memblokir koneksi tersebut.
 
@@ -274,7 +274,7 @@ sudo systemctl disable --now chloros-backend.service
 sudo systemctl enable --now chloros-backend@$USER.service
 ```
 
-**Backend layanan bersifat bersama, tidak pernah dihentikan oleh klien.** `chloros-cli` dan skrip SDK menggunakannya apa adanya: `process` berjalan di atasnya, memuat proyeknya sendiri menggantikan proyek terakhir. Di mana CLI biasanya akan me-restart backend (`--restart`, atau `process` yang impornya tidak menemukan apa pun), CLI tersebut menyebutkan nama unit, menampilkan pesan &quot;`sudo systemctl restart <unit>`&quot;, dan keluar dari &quot;`1`&quot;, karena backend yang dihentikan dengan cara tersebut akan tetap mati. Mulai ulang sendiri dengan perintah &quot;`sudo systemctl restart chloros-backend@$USER.service`&quot;. Backend layanan tidak pernah menghentikan dirinya sendiri saat idle, dan `chloros-cli backend stop` menolaknya, dengan menyebutkan perintah `systemctl stop`.**Bagaimana PTP mendapatkan port-nya.** PTP menggunakan UDP 319/320, keduanya berada di bawah batas port istimewa normal 1024. Paket `postinst` menulis `/etc/sysctl.d/60-chloros-ptp.conf` dengan `net.ipv4.ip_unprivileged_port_start = 319`, yang memungkinkan backend mengikat port tersebut saat berjalan sebagai pengguna Anda. Sejak versi 1.3.0, paket ini tidak menetapkan kemampuan berkas (`setcap`) pada backend, dan `libcap2-bin` tidak lagi menjadi dependensi: pada backend yang telah diekstrak, kemampuan berkas akan menghentikan prosesnya agar tidak dapat dimulai, jadi jangan tambahkan sendiri.***
+**Backend layanan bersifat bersama, tidak pernah dihentikan oleh klien.** `chloros-cli` dan skrip SDK menggunakannya apa adanya: `process` berjalan di atasnya, memuat proyeknya sendiri menggantikan proyek terakhir. Di mana CLI biasanya akan me-restart backend (`--restart`, atau `process` yang impornya tidak menemukan apa pun), CLI tersebut menyebutkan nama unit, menampilkan pesan "`sudo systemctl restart <unit>`", dan keluar dari "`1`", karena backend yang dihentikan dengan cara tersebut akan tetap mati. Mulai ulang sendiri dengan perintah "`sudo systemctl restart chloros-backend@$USER.service`". Backend layanan tidak pernah menghentikan dirinya sendiri saat idle, dan `chloros-cli backend stop` menolaknya, dengan menyebutkan perintah `systemctl stop`.**Bagaimana PTP mendapatkan port-nya.** PTP menggunakan UDP 319/320, keduanya berada di bawah batas port istimewa normal 1024. Paket `postinst` menulis `/etc/sysctl.d/60-chloros-ptp.conf` dengan `net.ipv4.ip_unprivileged_port_start = 319`, yang memungkinkan backend mengikat port tersebut saat berjalan sebagai pengguna Anda. Sejak versi 1.3.0, paket ini tidak menetapkan kemampuan berkas (`setcap`) pada backend, dan `libcap2-bin` tidak lagi menjadi dependensi: pada backend yang telah diekstrak, kemampuan berkas akan menghentikan prosesnya agar tidak dapat dimulai, jadi jangan tambahkan sendiri.***
 
 ## Contoh Skrip Bash
 
@@ -389,7 +389,7 @@ chloros-cli time-sync status
 chloros-cli time-sync peers
 ```
 
-### Perintah `lattice` Gagal dengan Pesan &quot;Driver kamera LATTICE tidak ditemukan&quot;
+### Perintah `lattice` Gagal dengan Pesan "Driver kamera LATTICE tidak ditemukan"
 
 Backend tidak dapat memuat runtime kamera LATTICE yang terpasang bersamanya. Setiap perintah `lattice` dijalankan di backend; CLI itu sendiri tidak memuat driver kamera. Instal ulang Chloros (`sudo apt install --reinstall ./chloros_1.3.0_<arch>.deb`): perintah `.deb` menginstal runtime di samping backend, di dalam `/usr/lib/chloros/arena_runtime`, dan mendaftarkannya ke pemuat dinamis. Untuk memeriksa pendaftaran tersebut:
 

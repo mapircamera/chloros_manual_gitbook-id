@@ -84,7 +84,7 @@ Setiap gambar dengan data GPS akan memiliki penanda pada koordinatnya.
 
 Pilih jenis lapisan peta dengan tombol-tombol berikut (dari kiri ke kanan):
 
-![](&lt;../.gitbook/assets/image (14).png&gt;)
+![](<../.gitbook/assets/image (14).png>)
 
 | Jenis                 | Menampilkan                                                                |
 | -------------------- | -------------------------------------------------------------------- |

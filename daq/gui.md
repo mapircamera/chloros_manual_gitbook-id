@@ -21,7 +21,7 @@ Klik **Connect Sensor** di bagian atas bilah samping. Kotak dialog koneksi akan 
 | **↻ Refresh** | Segera memindai ulang transportasi yang dipilih (dinonaktifkan saat pemindaian BLE/Ethernet sedang berlangsung). |
 | **Connect Sensor** | Diaktifkan setelah perangkat dipilih; mengganti label menjadi `Connecting...` saat koneksi sedang dibuat. |
 
-Proses pencarian hanya berjalan **selama dialog koneksi muncul di layar**, dan diulang setiap 15 detik hanya untuk transportasi yang dipilih — sekadar membuka tab tidak akan memicu pemindaian. Jika terjadi kegagalan, dialog akan menampilkan: *&quot;Koneksi gagal. Coba cabut dan pasang kembali sensor, lalu klik &#x27;Connect&#x27; lagi.&quot;*
+Proses pencarian hanya berjalan **selama dialog koneksi muncul di layar**, dan diulang setiap 15 detik hanya untuk transportasi yang dipilih — sekadar membuka tab tidak akan memicu pemindaian. Jika terjadi kegagalan, dialog akan menampilkan: *"Koneksi gagal. Coba cabut dan pasang kembali sensor, lalu klik 'Connect' lagi."*
 
 Bilah samping akan terbuka secara otomatis saat sensor pertama Anda terhubung.
 
@@ -43,9 +43,7 @@ Setiap sensor yang terhubung mendapatkan satu baris (ditambah satu baris per gru
 | Lencana transportasi | `DAQ-U` / `DAQ-M` / `DAQ-E`, atau lencana hijau `REF` untuk kelompok reflektansi Ambient+Objek. |
 | Nama perangkat | Secara default menggunakan nomor seri sensor (identitas tetapnya untuk kalibrasi, nama file `.daq`, dan pencocokan impor); nama khusus tetap berlaku per proyek. |
 | Pil **Terkalibrasi** (hijau) | Ditampilkan saat paket kalibrasi pabrik sensor dimuat, yaitu spektrumnya benar-benar dalam satuan W/m²/nm. |
-| Pil **Pembaruan Tersedia** (kuning, hanya DAQ-E) | Firmware yang sedang berjalan lebih lama daripada gambar yang disertakan dalam build Chloros
-
-ini. Selama pembaruan, pil ini menampilkan kemajuan secara langsung (`Flashing… N%`, `Restarting sensor…`, lalu `Updated X → Y` atau `Failed`). |
+| Pil **Pembaruan Tersedia** (kuning, hanya DAQ-E) | Firmware yang sedang berjalan lebih lama daripada gambar yang disertakan dalam build Chloros ini. Selama pembaruan, pil ini menampilkan kemajuan secara langsung (`Flashing… N%`, `Restarting sensor…`, lalu `Updated X → Y` atau `Failed`). |
 | Mata | Mengaktifkan/menonaktifkan tampilan sensor ini pada grafiknya. |
 | Roda Gigi | Membuka jendela pengaturan per-sensor (di bawah). |
 | ✕ (merah) | Memutuskan koneksi sensor, atau menghapus grup Ambient+Object. |
@@ -53,9 +51,9 @@ ini. Selama pembaruan, pil ini menampilkan kemajuan secara langsung (`Flashing�
 Di atas baris-baris tersebut terdapat dua tombol:
 
 * **Hubungkan Sensor** — membuka dialog koneksi (berubah menjadi `Connecting...` saat sedang aktif).
-* **Rekam Semua / Hentikan Semua**— memulai atau menghentikan perekaman `.daq` pada**setiap**sensor yang terhubung. Membutuhkan setidaknya satu sensor**dan proyek yang terbuka** (tooltip: &quot;Buka proyek untuk merekam&quot;); tombol ini berubah menjadi merah saat perekaman sedang berjalan.
+* **Rekam Semua / Hentikan Semua**— memulai atau menghentikan perekaman `.daq` pada**setiap**sensor yang terhubung. Membutuhkan setidaknya satu sensor**dan proyek yang terbuka** (tooltip: "Buka proyek untuk merekam"); tombol ini berubah menjadi merah saat perekaman sedang berjalan.
 
-Dalam keadaan kosong, tertulis &quot;Tidak ada sensor yang terhubung&quot;.
+Dalam keadaan kosong, tertulis "Tidak ada sensor yang terhubung".
 
 <!-- SCREENSHOT-NEEDED: sensor sidebar with three rows — a DAQ-E showing both the green Calibrated pill and the amber Update Available pill, a DAQ-U row, and a green REF group row — plus the Connect Sensor and Record All buttons -->
 
@@ -84,15 +82,9 @@ Buka dengan ikon roda gigi pada baris sensor. Isi secara berurutan:
 
 tombol</version\>
 
-**Perbarui ke \<version\>** akan muncul jika build Chloros
-
-ini menyertakan gambar firmware DAQ-E yang lebih baru. Pembaruan dikirim melalui jaringan dalam waktu sekitar 30 detik; sensor akan restart dan terhubung kembali secara otomatis, dan jika transfer terputus, firmware saat ini tetap utuh. Progres ditampilkan secara langsung (`Flashing… N%` → `Restarting sensor…` → `Updated X → Y`), dan sel tersebut menampilkan `Up to date` saat versi terbaru.
-* **Sinkronisasi PTP** — status PTP secara langsung (kembali ke `unknown`). Firmware DAQ-E v1.2.0+ berpartisipasi dalam IEEE 1588 PTPv2 sebagai jam yang hanya berfungsi sebagai slave; backend host Chloros
-
-adalah grandmaster PTP, dan setiap DAQ-E serta kamera LATTICE di LAN menjadi slave-nya di domain 0, menjaga cap waktu tetap dalam rentang sekitar 1 ms.
-* **Jaringan**— alamat yang digunakan unit dan cara mendapatkannya (DHCP, link-local, atau statis), serta pengaturan yang disimpan dan berlaku setelah restart.**Ubah…**membuka formulir:**Otomatis (DHCP)**atau**IP Statis**dengan alamat IP, masker subnet, dan gerbang (gateway) opsional.**Terapkan dan restart** menyimpan pengaturan, me-restart sensor, dan menghubungkannya kembali. Alamat statis di luar jaringan komputer ini ditolak, karena Chloros
-
-tidak dapat menjangkau sensor setelah restart; kotak centang untuk mengizinkannya tetap muncul, untuk komputer yang akan dialihkan alamatnya atau diarahkan ke jaringan tersebut. **Streaming saat dinyalakan**menentukan apakah sensor mulai melakukan streaming segera setelah dinyalakan, sebelum perangkat lunak apa pun terhubung.**Restart sensor** akan me-restart sensor dan menghubungkannya kembali dengan pengaturan saat ini. Restart akan ditolak saat sensor sedang merekam. Fitur baru di versi 1.3.0.
+**Perbarui ke \<version\>** akan muncul jika build Chloros ini menyertakan gambar firmware DAQ-E yang lebih baru. Pembaruan dikirim melalui jaringan dalam waktu sekitar 30 detik; sensor akan restart dan terhubung kembali secara otomatis, dan jika transfer terputus, firmware saat ini tetap utuh. Progres ditampilkan secara langsung (`Flashing… N%` → `Restarting sensor…` → `Updated X → Y`), dan sel tersebut menampilkan `Up to date` saat versi terbaru.
+* **Sinkronisasi PTP** — status PTP secara langsung (kembali ke `unknown`). Firmware DAQ-E v1.2.0+ berpartisipasi dalam IEEE 1588 PTPv2 sebagai jam yang hanya berfungsi sebagai slave; backend host Chloros adalah grandmaster PTP, dan setiap DAQ-E serta kamera LATTICE di LAN menjadi slave-nya di domain 0, menjaga cap waktu tetap dalam rentang sekitar 1 ms.
+* **Jaringan**— alamat yang digunakan unit dan cara mendapatkannya (DHCP, link-local, atau statis), serta pengaturan yang disimpan dan berlaku setelah restart.**Ubah…**membuka formulir:**Otomatis (DHCP)**atau**IP Statis**dengan alamat IP, masker subnet, dan gerbang (gateway) opsional.**Terapkan dan restart** menyimpan pengaturan, me-restart sensor, dan menghubungkannya kembali. Alamat statis di luar jaringan komputer ini ditolak, karena Chloros tidak dapat menjangkau sensor setelah restart; kotak centang untuk mengizinkannya tetap muncul, untuk komputer yang akan dialihkan alamatnya atau diarahkan ke jaringan tersebut. **Streaming saat dinyalakan**menentukan apakah sensor mulai melakukan streaming segera setelah dinyalakan, sebelum perangkat lunak apa pun terhubung.**Restart sensor** akan me-restart sensor dan menghubungkannya kembali dengan pengaturan saat ini. Restart akan ditolak saat sensor sedang merekam. Fitur baru di versi 1.3.0.
 
 Untuk grup Ambient+Object, jendela pengaturan (gear modal) hanya menampilkan sensor sumber grup tersebut, Nama Perangkat, dan Warna Garis Grafik.
 
@@ -102,9 +94,7 @@ Untuk grup Ambient+Object, jendela pengaturan (gear modal) hanya menampilkan sen
 
 ### Pemilihan tutup
 
-Menu tarik-turun **Tutup** memberitahu Chloros
-
-tutup fisik mana yang terpasang di atas difuser sensor, dan menerapkan profil koreksi yang diukur di pabrik dari tutup tersebut ke setiap spektrum. Pilihan bergantung pada model:
+Menu tarik-turun **Tutup** memberitahu Chloros tutup fisik mana yang terpasang di atas difuser sensor, dan menerapkan profil koreksi yang diukur di pabrik dari tutup tersebut ke setiap spektrum. Pilihan bergantung pada model:
 
 | Model | Pilihan tutup |
 | --- | --- |
@@ -112,16 +102,14 @@ tutup fisik mana yang terpasang di atas difuser sensor, dan menerapkan profil ko
 | DAQ-M | Tidak ada (sensor telanjang), Sunshine (korektor kosinus) |
 | DAQ-E | Tidak ada (sensor telanjang), FOV 15°, FOV 45°, FOV 90°, Sunshine (korektor kosinus) |
 
-**Pengaturan default untuk setiap model adalah Sunshine (korektor kosinus)** — MAPIR
-
-mengirimkan setiap DAQ dengan penutup Sunshine terpasang, dan ini merupakan konfigurasi luar ruangan standar: pandangan hemisferik 180° dengan kesalahan kosinus ≤ ±4 % hingga 60° dan ≤ ±4,5 % hingga 70° (tidak disarankan di bawah ketinggian matahari ~15°), dengan peredaman sesuai desain (~12×). Pilihan Anda akan tetap berlaku di proyek.
+**Pengaturan default untuk setiap model adalah Sunshine (korektor kosinus)** — MAPIR mengirimkan setiap DAQ dengan penutup Sunshine terpasang, dan ini merupakan konfigurasi luar ruangan standar: pandangan hemisferik 180° dengan kesalahan kosinus ≤ ±4 % hingga 60° dan ≤ ±4,5 % hingga 70° (tidak disarankan di bawah ketinggian matahari ~15°), dengan peredaman sesuai desain (~12×). Pilihan Anda akan tetap berlaku di proyek.
 
 {% hint style="warning" %}
-**Pilihan penutup harus sesuai dengan penutup fisik yang terpasang.**Baik sensor maupun perangkat lunak tidak dapat mendeteksi penutup mana yang terpasang. Pilihan ini menentukan baik koreksi real-time maupun cap yang ditulis ke dalam setiap berkas `.daq` — dengan atenuasi ~12× dari penutup Sunshine, perubahan penutup yang tidak dilaporkan akan menyebabkan koreksi spektrum yang salah kira-kira sebesar faktor tersebut. (Melepas dan memasang kembali penutup yang sama menghasilkan pengulangan hingga sekitar 1,5 %.) Pilih**None (sensor telanjang)** hanya ketika penutup telah dilepas secara fisik; pada DAQ-E, &quot;None&quot; tetap menerapkan profil geometri pabrik untuk difuser kaca yang tersembunyi — ini bukan operasi kosong — dan DAQ-E tanpa penutup merupakan konfigurasi meja kerja, bukan konfigurasi lapangan yang didukung.
+**Pilihan penutup harus sesuai dengan penutup fisik yang terpasang.**Baik sensor maupun perangkat lunak tidak dapat mendeteksi penutup mana yang terpasang. Pilihan ini menentukan baik koreksi real-time maupun cap yang ditulis ke dalam setiap berkas `.daq` — dengan atenuasi ~12× dari penutup Sunshine, perubahan penutup yang tidak dilaporkan akan menyebabkan koreksi spektrum yang salah kira-kira sebesar faktor tersebut. (Melepas dan memasang kembali penutup yang sama menghasilkan pengulangan hingga sekitar 1,5 %.) Pilih**None (sensor telanjang)** hanya ketika penutup telah dilepas secara fisik; pada DAQ-E, "None" tetap menerapkan profil geometri pabrik untuk difuser kaca yang tersembunyi — ini bukan operasi kosong — dan DAQ-E tanpa penutup merupakan konfigurasi meja kerja, bukan konfigurasi lapangan yang didukung.
 {% endhint %}
 
 {% hint style="info" %}
-Pembaruan dari panduan sebelumnya: tombol pengalih &quot;Sunshine Diffuser Terpasang&quot; di sisi browser dari versi 1.1.0 telah dihapus. Pengelolaan penutup kini dilakukan melalui profil penutup per-sensor ini, yang diterapkan di sisi server.
+Pembaruan dari panduan sebelumnya: tombol pengalih "Sunshine Diffuser Terpasang" di sisi browser dari versi 1.1.0 telah dihapus. Pengelolaan penutup kini dilakukan melalui profil penutup per-sensor ini, yang diterapkan di sisi server.
 {% endhint %}
 
 ***
@@ -150,13 +138,7 @@ Sebuah bilah atas yang tetap menempel menampilkan **tombol pengalih tampilan daf
 Di bawah grafik dalam tampilan daftar, diperbarui setiap 500 ms:
 
 * **Semua model**: Sampel Warna Cahaya (sRGB dari CIE XYZ), Jenuh (Ya/Tidak), CIE 1931 X/Y/Z, Kromatisitas x/y, CIE u′/v′, CCT (K), CRI (Ra), Panjang Gelombang Dominan (nm), Panjang Gelombang Puncak (nm), Kemurnian Eksitasi, Duv, CIE L\*/a\*/b\*, dan Munsell H/V/C.
-* **Hanya sensor yang telah dikalibrasi**(DAQ-U / DAQ-M / DAQ-E setelah paket kalibrasi pabriknya dimuat — tanda**Terkalibrasi** berwarna hijau pada baris sensor menjadi penanda): Daya Total (W/m²), Lux Fotopik (lx), Lux Skotopik (lx), Rasio S/P, PPFD serta PPFD Red
-
-/Green
-
-/Blue
-
-(µmol/m²/s), dan irradiansi opik — S-cone, Melanopic, Rhodopic, M-cone, L-cone (semua dalam satuan W/m²).
+* **Hanya sensor yang telah dikalibrasi**(DAQ-U / DAQ-M / DAQ-E setelah paket kalibrasi pabriknya dimuat — tanda**Terkalibrasi** berwarna hijau pada baris sensor menjadi penanda): Daya Total (W/m²), Lux Fotopik (lx), Lux Skotopik (lx), Rasio S/P, PPFD serta PPFD Red /Green /Blue (µmol/m²/s), dan irradiansi opik — S-cone, Melanopic, Rhodopic, M-cone, L-cone (semua dalam satuan W/m²).
 
 <!-- SCREENSHOT-NEEDED: list view live data table for a DAQ-E showing both the colorimetric rows and the power-calibrated rows (Total Power, Photopic/Scotopic Lux, PPFD, opic irradiances) -->
 
@@ -169,12 +151,10 @@ Dua sensor yang terhubung dapat digabungkan menjadi tampilan reflektansi real-ti
 1. Dalam tampilan kisi, klik **+**pada ubin grafik dan pilih**Gabungkan Lingkungan + Objek**.
 2. Pilih sensor **Sumber Cahaya Sekitar**dan sensor**Pemindai Objek**(dua sensor yang berbeda), lalu**Buat**.
 
-Chloros
+Chloros menghitung R(λ) = objek(λ) / sekitar(λ) per panjang gelombang dari dua aliran data langsung (0 jika sekitar ≤ 0). Label grup mengikuti kelas kalibrasi sensor:
 
-menghitung R(λ) = objek(λ) / sekitar(λ) per panjang gelombang dari dua aliran data langsung (0 jika sekitar ≤ 0). Label grup mengikuti kelas kalibrasi sensor:
-
-* Kedua sensor telah dikalibrasi (bundel dimuat) → **&quot;Reflektansi Tampak&quot;**.
-* Salah satu sensor belum dikalibrasi → **&quot;Reflektansi Relatif&quot;**.
+* Kedua sensor telah dikalibrasi (bundel dimuat) → **"Reflektansi Tampak"**.
+* Salah satu sensor belum dikalibrasi → **"Reflektansi Relatif"**.
 
 Grup ini muncul sebagai baris hijau `REF` di bilah samping dan grafiknya sendiri (isi pelangi, nilai saat kursor melayang hingga 4 desimal, zoom dengan menyeret).
 
@@ -186,34 +166,10 @@ Menu **+**juga menawarkan opsi**Tambahkan Sensor Baru** dengan tiga pilihan pene
 
 ### Tabel indeks vegetasi
 
-Dalam tampilan daftar, tabel indeks vegetasi terletak di bawah grafik kelompok reflektansi, yang dihitung dari reflektansi real-time pada pusat pita **biru 450 / hijau 550 / merah 670 / NIR
+Dalam tampilan daftar, tabel indeks vegetasi terletak di bawah grafik kelompok reflektansi, yang dihitung dari reflektansi real-time pada pusat pita **biru 450 / hijau 550 / merah 670 / NIR 800 nm** (nilai hingga 4 desimal, `---` jika tidak dapat dihitung; arahkan kursor ke nama indeks untuk melihat nama lengkapnya):
 
-800 nm** (nilai hingga 4 desimal, `---` jika tidak dapat dihitung; arahkan kursor ke nama indeks untuk melihat nama lengkapnya):
-
-* **Selalu ditampilkan** (tidak bergantung pada skala, kombinasi sensor apa pun): NDVI
-
-, GNDVI
-
-, ENDVI, WDRVI
-
-, GRVI
-
-, CVI
-
-, GCI
-
-, MSR.
-* **Hanya jika kedua sensor telah dikalibrasi daya** (kedua paket telah dimuat): EVI
-
-, SAVI
-
-, OSAVI
-
-, GSAVI, GOSAVI, MSAVI2, RDVI, TDVI, LAI
-
-, NLI, MNLI, FCI, GEMI
-
-.
+* **Selalu ditampilkan** (tidak bergantung pada skala, kombinasi sensor apa pun): NDVI, GNDVI, ENDVI, WDRVI, GRVI, CVI, GCI, MSR.
+* **Hanya jika kedua sensor telah dikalibrasi daya** (kedua paket telah dimuat): EVI, SAVI, OSAVI, GSAVI, GOSAVI, MSAVI2, RDVI, TDVI, LAI, NLI, MNLI, FCI, GEMI.
 
 <!-- SCREENSHOT-NEEDED: an Ambient+Object reflectance group in list view — reflectance chart labeled "Apparent Reflectance" with the vegetation index table below it showing live NDVI etc. -->
 
@@ -221,7 +177,7 @@ Dalam tampilan daftar, tabel indeks vegetasi terletak di bawah grafik kelompok r
 
 ## Merekam berkas `.daq`
 
-* Perekaman memerlukan **proyek yang terbuka** — jika tidak, tombol &quot;Record All&quot; (di bilah samping) dan tombol &quot;Record&quot; per sensor akan dinonaktifkan.
+* Perekaman memerlukan **proyek yang terbuka** — jika tidak, tombol "Record All" (di bilah samping) dan tombol "Record" per sensor akan dinonaktifkan.
 * File ditulis ke **`<project folder>/light_sensor/`**; nama file berisi ID sensor dan cap waktu, serta nama perangkat disimpan bersama rekaman.
 * Saat perekaman berhenti (Stop, Stop All, atau terputus di tengah perekaman), berkas `.daq` yang telah selesai **ditambahkan ke proyek yang terbuka secara otomatis** — berkas tersebut muncul dalam daftar berkas proyek tanpa perlu ditambahkan secara manual, siap digunakan sebagai data radiasi turun untuk [pemrosesan reflektansi](README.md).
 * Indikator merah `REC` akan muncul di baris langsung pada jendela pengaturan selama perekaman.
@@ -237,13 +193,9 @@ Untuk angka irradiansi kuantitatif, ambil rata-rata data setidaknya selama 15 de
 ## Tata letak multi-sensor dan penyimpanan proyek
 
 * Gabungkan beberapa sensor dalam satu grafik (sumbu bersama), pertahankan grafik terpisah (tata letak kisi otomatis), pindahkan sensor antar grafik, seret dan atur ulang baris/kotak, serta sembunyikan sensor individu dengan tombol mata.
-* Per proyek, Chloros
-
-menyimpan: nama perangkat, warna grafik, ukuran grafik, mode tampilan, dan pengaturan setiap sensor (waktu integrasi, rata-rata bingkai, status AE, pemilihan penutup).
+* Per proyek, Chloros menyimpan: nama perangkat, warna grafik, ukuran grafik, mode tampilan, dan pengaturan setiap sensor (waktu integrasi, rata-rata bingkai, status AE, pemilihan penutup).
 * **Membuka kembali proyek akan menghubungkan kembali sensor-sensornya secara otomatis** berdasarkan alamat — port COM untuk DAQ-U, perangkat BLE untuk DAQ-M, nama host mDNS untuk DAQ-E (tetap terdeteksi meskipun IP unit berubah) — serta menerapkan kembali profil cap yang disimpan, rata-rata bingkai, status AE, dan waktu integrasi manual masing-masing sensor.***
 
 ## Pemasangan kamera (DLS)
 
-Tidak ada yang perlu dipasangkan. Berbeda dengan alur kerja DLS drone yang mengikat sensor cahaya ke kamera sejak awal, Chloros
-
-mencocokkan data DAQ dengan citra pada tahap selanjutnya: saat impor/pemrosesan, pembacaan `.daq` diinterpolasi ke cap waktu eksposur setiap pengambilan gambar. Rekam dengan sensor apa pun yang terhubung (`.daq` akan masuk ke proyek secara otomatis), dan pemrosesan reflektansi akan menemukan pembacaan yang tepat berdasarkan waktu — lihat [Sensor Cahaya DAQ](README.md) untuk mengetahui bagaimana data downwelling digunakan. Untuk pengambilan gambar LATTICE **langsung**, pilih sensor pada menu tarik-turun**Light Sensor** di tab Cameras; setiap perekaman kemudian menyimpan pembacaan yang digunakannya, yang hanya disesuaikan dengan kamera pada perekaman tersebut (lihat [Alur Kerja Reflektansi](reflectance.md)).</version\>
+Tidak ada yang perlu dipasangkan. Berbeda dengan alur kerja DLS drone yang mengikat sensor cahaya ke kamera sejak awal, Chloros mencocokkan data DAQ dengan citra pada tahap selanjutnya: saat impor/pemrosesan, pembacaan `.daq` diinterpolasi ke cap waktu eksposur setiap pengambilan gambar. Rekam dengan sensor apa pun yang terhubung (`.daq` akan masuk ke proyek secara otomatis), dan pemrosesan reflektansi akan menemukan pembacaan yang tepat berdasarkan waktu — lihat [Sensor Cahaya DAQ](README.md) untuk mengetahui bagaimana data downwelling digunakan. Untuk pengambilan gambar LATTICE **langsung**, pilih sensor pada menu tarik-turun**Light Sensor** di tab Cameras; setiap perekaman kemudian menyimpan pembacaan yang digunakannya, yang hanya disesuaikan dengan kamera pada perekaman tersebut (lihat [Alur Kerja Reflektansi](reflectance.md)).</version\>

@@ -26,18 +26,18 @@ Ada dua cara utama untuk menambahkan gambar ke proyek Anda:
 
 Gunakan opsi ini untuk mengimpor file gambar tunggal atau sejumlah kecil file.
 
-1. Klik tombol **&quot;Tambahkan File&quot;** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> di bagian atas panel Penjelajah File
+1. Klik tombol **"Tambahkan File"** <img src="../.gitbook/assets/image (3).png" alt="" data-size="line"> di bagian atas panel Penjelajah File
 2. Buka folder yang berisi gambar Anda
 3. Pilih satu atau lebih berkas gambar (tahan tombol **Ctrl** untuk memilih beberapa berkas)
-4. Klik **&quot;Buka&quot;** untuk mengimpor berkas yang dipilih
+4. Klik **"Buka"** untuk mengimpor berkas yang dipilih
 
 ### Metode 2: Tambahkan Folder
 
 Gunakan opsi ini untuk mengimpor semua gambar dari sebuah folder sekaligus. Anda dapat memilih **beberapa folder** dalam satu jendela dialog.
 
-1. Klik tombol **&quot;Tambahkan Folder&quot;** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> di bagian atas panel Penjelajah File
+1. Klik tombol **"Tambahkan Folder"** <img src="../.gitbook/assets/image (1) (1).png" alt="" data-size="line"> di bagian atas panel Penjelajah File
 2. Buka dan pilih folder yang berisi gambar sesi pengambilan Anda
-3. Klik **&quot;Pilih Folder&quot;** untuk mengimpor semua gambar yang didukung
+3. Klik **"Pilih Folder"** untuk mengimpor semua gambar yang didukung
 
 {% hint style="info" %}
 **File yang gagal dimuat akan dilaporkan.** Jika sebuah folder berisi file yang dikenali oleh Chloros tetapi tidak dapat dimuat, peringatan akan muncul — gambar tidak akan hilang begitu saja dari kisi.
@@ -62,7 +62,7 @@ output/
 * Folder pengambilan gambar yang disimpan **tanpa** impor mentah akan ditampilkan secara normal, tetapi pemrosesan akan melewatkannya dan mencatatnya dalam log. (Bendera CLI `--input-level` dapat memaksa titik masuk untuk kasus ini — lihat [Referensi CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * Mulai versi 1.3.0, folder tangkapan juga dapat berisi folder `clamp_masks/` (topeng per-piksel untuk tingkat radian dan reflektansi — lihat [Format Gambar Keluaran](../output-image-formats.md#clamp-masks)). Masker bukanlah gambar dari adegan, dan Chloros akan mengabaikannya saat impor di mana pun lokasinya.
 
-**Sesi LATTICE hub** diimpor dengan cara yang sama: klik &quot;Tambahkan Folder&quot; pada folder sesi yang disalin dari hub (folder tersebut berisi `raw/` dan `previews/`), beserta log downwelling DAQ-M `.csv` apa pun. Jika kalibrasi kamera atau DAQ belum disimpan dalam cache di komputer Anda, Chloros akan mengambilnya secara otomatis berdasarkan nomor seri saat proses impor (membutuhkan koneksi internet sekali saja).***
+**Sesi LATTICE hub** diimpor dengan cara yang sama: klik "Tambahkan Folder" pada folder sesi yang disalin dari hub (folder tersebut berisi `raw/` dan `previews/`), beserta log downwelling DAQ-M `.csv` apa pun. Jika kalibrasi kamera atau DAQ belum disimpan dalam cache di komputer Anda, Chloros akan mengambilnya secara otomatis berdasarkan nomor seri saat proses impor (membutuhkan koneksi internet sekali saja).***
 
 ## Memahami Tabel Penjelajah File
 
@@ -113,7 +113,7 @@ Mengklik tombol toggle di sudut kanan atas di atas tabel akan menampilkan metada
 Untuk menghapus gambar yang tidak diinginkan dari proyek Anda:
 
 1. Pilih satu atau lebih gambar di tabel Penjelajah File
-2. Klik tombol **&quot;Hapus yang Dipilih&quot;** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
+2. Klik tombol **"Hapus yang Dipilih"** <img src="../.gitbook/assets/image (2) (1).png" alt="" data-size="line">
 3. Konfirmasikan penghapusan (file tidak dihapus dari disk, hanya dihapus dari proyek)
 
 ### Mengurutkan dan Memfilter

@@ -159,7 +159,7 @@ Jika Chloros tidak mendeteksi target Anda dengan benar, sesuaikan pengaturan ber
 **Penyebab yang mungkin:**
 
 * Gambar target tidak ditandai di File Browser
-* Target terlalu kecil dalam bingkai (&lt; 30% dari gambar)
+* Target terlalu kecil dalam bingkai (< 30% dari gambar)
 * Pencahayaan buruk (bayangan, silau)
 * Pengaturan deteksi target terlalu ketat
 
@@ -217,7 +217,7 @@ Jika sensor cahaya DAQ merekam irradiansi turun selama pengambilan gambar LATTIC
 Anda juga dapat melakukan pemrosesan tanpa target dan tanpa DAQ:
 
 1. Biarkan semua kotak centang kolom Target tidak dicentang
-2. **Nonaktifkan** &quot;Kalibrasi reflektansi / white balance&quot; di Pengaturan Proyek — deteksi target kemudian dilewati sepenuhnya
+2. **Nonaktifkan** "Kalibrasi reflektansi / white balance" di Pengaturan Proyek — deteksi target kemudian dilewati sepenuhnya
 3. Koreksi vignette tetap akan diterapkan
 4. Hasil keluaran tidak akan dikalibrasi untuk reflektansi absolut (LATTICE multispektral tetap mengekspor produk debayered, pratinjau, dan radian)
 

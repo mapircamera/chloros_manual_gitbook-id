@@ -32,7 +32,7 @@ Bilah samping menampilkan, dari atas ke bawah:
 * panel **Nilai Kursor** dengan pembacaan, histogram, dan kontrol GSD
 
 {% hint style="warning" %}
-**Tidak tersedia untuk kamera mono.** Pada gambar LATTICE M3M pita tunggal, kedua kotak centang tersebut dinonaktifkan, dengan keterangan _&quot;Tidak tersedia untuk sensor mono (M3M)&quot;_ — indeks multi-pita tidak terdefinisi pada satu pita. Untuk menghitung indeks dari kamera M3M, gabungkan dua atau lebih menjadi tumpukan multi-pita yang disejajarkan dan gunakan mesin indeks LATTICE.
+**Tidak tersedia untuk kamera mono.** Pada gambar LATTICE M3M pita tunggal, kedua kotak centang tersebut dinonaktifkan, dengan keterangan _"Tidak tersedia untuk sensor mono (M3M)"_ — indeks multi-pita tidak terdefinisi pada satu pita. Untuk menghitung indeks dari kamera M3M, gabungkan dua atau lebih menjadi tumpukan multi-pita yang disejajarkan dan gunakan mesin indeks LATTICE.
 {% endhint %}
 
 ***
@@ -79,7 +79,7 @@ Sebuah **Tabel Pencarian** memetakan nilai indeks ke warna: masukan NDVI 0,65, k
 
 ### Menambahkan LUT
 
-1. Klik tombol **&quot;+ Add LUT&quot;** di bawah rumus <img src="../.gitbook/assets/image (1) (1) (1).png" alt="" data-size="line">
+1. Klik tombol **"+ Add LUT"** di bawah rumus <img src="../.gitbook/assets/image (1) (1) (1).png" alt="" data-size="line">
 2. Pilih gradien warna
 3. Atur batas minimum dan maksimum pemotongan
 4. Pilih Mode Pemotongan
@@ -101,7 +101,7 @@ Arahkan kursor ke **bilah gradien**untuk membuka daftar preset — Chloros menye
 | 6 | Ungu → Blue → Green → Kuning      | Berurutan, dari gelap ke terang                                           |
 | 7 | Orange → Putih → Ungu             | Bercabang di sekitar titik tengah terang                                   |
 
-Gradien **bercabang**menempatkan warna netral di tengah jendela Anda, yang mudah dibaca ketika titik tengah memiliki arti tertentu (ambang batas, tanggal dasar). Gradien**berurutan** berjalan secara monoton dari gelap ke terang, yang mudah dibaca untuk kuantitas yang hanya memiliki &quot;lebih&quot; dan &quot;kurang&quot;.
+Gradien **bercabang**menempatkan warna netral di tengah jendela Anda, yang mudah dibaca ketika titik tengah memiliki arti tertentu (ambang batas, tanggal dasar). Gradien**berurutan** berjalan secara monoton dari gelap ke terang, yang mudah dibaca untuk kuantitas yang hanya memiliki "lebih" dan "kurang".
 
 Setiap preset memiliki tujuh titik warna. Klik sebuah preset dan gambar akan segera diperbarui (jika kotak LUT dicentang).
 
@@ -143,14 +143,14 @@ Ketika nilai indeks piksel berada di luar jendela min/maks, Mode Pemotongan mene
 
 | Label menu tarik-turun                  | Nilai yang disimpan      | Piksel di luar rentang digambar sebagai                                                                                                |
 | ------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| **Minimum &amp; Maksimum** (default) | `clip`            | Warna ujung terdekat dari gradien — nilai di bawah minimum akan mengambil warna pertama, nilai di atas maksimum akan mengambil warna terakhir |
+| **Minimum & Maksimum** (default) | `clip`            | Warna ujung terdekat dari gradien — nilai di bawah minimum akan mengambil warna pertama, nilai di atas maksimum akan mengambil warna terakhir |
 | **Latar Belakang Transparan**      | `transparent`     | Sepenuhnya transparan (alpha sebenarnya)                                                                                                  |
 | **Latar Belakang Indeks**| `indexColor`      | Skala abu-abu, direntangkan melintasi rentang indeks**penuh** gambar, sehingga struktur di luar rentang tetap terlihat dalam warna abu-abu                |
 | **Latar Belakang Asli**         | `backgroundColor` | Gambar dasarnya sendiri, sehingga lapisan warna berada di atas pemandangan asli                                                |
 
 | Mode                       | Cocok untuk                               | Tampilan                                      |
 | -------------------------- | -------------------------------------- | ----------------------------------------- |
-| **Minimum &amp; Maksimum**      | Tampilan data lengkap, analisis ilmiah | Setiap piksel diberi warna                      |
+| **Minimum & Maksimum**      | Tampilan data lengkap, analisis ilmiah | Setiap piksel diberi warna                      |
 | **Latar Belakang Transparan** | Lapisan GIS, mengisolasi rentang nilai   | Warna di dalam jendela, kosong di luar |
 | **Latar Belakang Indeks**       | Penekanan sambil mempertahankan konteks data    | Berwarna di dalam, abu-abu di luar               |
 | **Latar Belakang Asli**    | Laporan dan presentasi              | Berwarna di dalam, foto di luar         |
@@ -222,7 +222,7 @@ Ekspor seluruh proyek hanya memakan waktu beberapa menit, sehingga proses ini me
 
 * Sebuah bilah kemajuan menampilkan `current / total` dan file yang sedang ditulis
 * Saat selesai, panel tersebut melaporkan berapa banyak gambar yang diekspor, berapa banyak yang dilewati, dan jalur folder keluaran
-* Gambar yang dilewati dicantumkan beserta alasannya (ditampilkan hingga lima, lalu diikuti baris &quot;+N lagi&quot;). Alasan umumnya adalah lapisan yang tidak memiliki saluran yang dibutuhkan oleh indeks ini
+* Gambar yang dilewati dicantumkan beserta alasannya (ditampilkan hingga lima, lalu diikuti baris "+N lagi"). Alasan umumnya adalah lapisan yang tidak memiliki saluran yang dibutuhkan oleh indeks ini
 * Jika **tidak ada** gambar dalam proyek yang dapat menggunakan indeks tersebut, proses akan melaporkan kegagalan alih-alih meninggalkan folder kosong
 
 Hanya satu proses ekspor sandbox yang dapat berjalan pada satu waktu. Memulai proses kedua saat proses pertama masih berjalan akan ditolak dengan pesan yang jelas, alih-alih membiarkan dua proses berebut file proyek yang sama.
@@ -254,18 +254,18 @@ Squared ratio:                  (y/x)^2
 ```
 
 {% hint style="warning" %}
-**Rumus kustom hanya tersedia di antarmuka pengguna (GUI).** Opsi CLI/SDK `--indices` memperluas 22 nama preset bawaan dan secara otomatis melewati yang lainnya, termasuk rumus kustom Anda. Untuk memproses rumus kustom secara massal, konfigurasikan di Pengaturan Proyek dan jalankan pemrosesan, atau gunakan ekspor &quot;Terapkan ke semua gambar proyek&quot; di Sandbox.
+**Rumus kustom hanya tersedia di antarmuka pengguna (GUI).** Opsi CLI/SDK `--indices` memperluas 22 nama preset bawaan dan secara otomatis melewati yang lainnya, termasuk rumus kustom Anda. Untuk memproses rumus kustom secara massal, konfigurasikan di Pengaturan Proyek dan jalankan pemrosesan, atau gunakan ekspor "Terapkan ke semua gambar proyek" di Sandbox.
 {% endhint %}
 
 ***
 
 ## Pemecahan Masalah
 
-### &quot;Lapisan ini tidak memiliki saluran yang dibutuhkan oleh indeks ini&quot;
+### "Lapisan ini tidak memiliki saluran yang dibutuhkan oleh indeks ini"
 
 Rumus tersebut membaca posisi saluran yang tidak dimiliki oleh lapisan saat ini — misalnya, indeks tiga slot pada file satu atau dua saluran. Beralihlah ke lapisan multi-band (reflektansi atau debayered), atau pilih indeks yang sesuai dengan filter kamera Anda.
 
-### &quot;Tidak dapat menghubungi backend pemrosesan gambar&quot;
+### "Tidak dapat menghubungi backend pemrosesan gambar"
 
 Backend tidak merespons. Periksa tab Log; jika backend sedang dimulai ulang, Sandbox akan pulih dengan sendirinya begitu backend kembali aktif.
 
