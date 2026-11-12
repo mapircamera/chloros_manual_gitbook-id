@@ -17,7 +17,9 @@ MAPIR mengukur cahaya sekitar sebagai spektrum yang dikalibrasi secara radiometr
 | --- | --- | --- |
 | **DAQ-U** | USB (serial) | pemindaian port serial |
 | **DAQ-M** | Bluetooth Low Energy | pemindaian BLE berdasarkan nama |
-| **DAQ-E** | Ethernet (IPv4, bertenaga PoE) | mDNS `_daq-e._tcp` (nama host `daq-e-<id>.local`) |**DAQ-E-S (baru di versi 1.3.0).** DAQ-E dengan diffuser permanen dan sensor kemiringan. Chloros mencantumkannya sebagai `DAQ-E-S` dan menjalankannya persis seperti DAQ-E, kecuali bahwa perangkat ini tidak memerlukan koreksi cap dan setiap pembacaan menyertakan data kemiringan, roll, dan pitch unit. Lihat [DAQ-E-S: difuser tetap dan kemiringan](caps-and-range.md#daq-e-s-fixed-diffuser-and-tilt).
+| **DAQ-E** | Ethernet (IPv4, bertenaga PoE) | mDNS `_daq-e._tcp` (nama host `daq-e-<id>.local`) |
+
+**DAQ-E-S (baru di versi 1.3.0).** DAQ-E dengan diffuser permanen dan sensor kemiringan. Chloros mencantumkannya sebagai `DAQ-E-S` dan menjalankannya persis seperti DAQ-E, kecuali bahwa perangkat ini tidak memerlukan koreksi cap dan setiap pembacaan menyertakan data kemiringan, roll, dan pitch unit. Lihat [DAQ-E-S: difuser tetap dan kemiringan](caps-and-range.md#daq-e-s-fixed-diffuser-and-tilt).
 
 Ketiga perangkat tersebut menggunakan protokol kabel yang sama dan menghasilkan data yang identik:
 

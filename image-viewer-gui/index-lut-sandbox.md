@@ -71,7 +71,9 @@ Untuk referensi rumus lengkap — ketiga daftar preset dan nama mana yang berfun
 
 ### Dengan opsi Indeks dicentang tetapi tanpa LUT
 
-Gambar ditampilkan dalam **skala abu-abu**, diregangkan di antara dua nilai ambang batas. Hal ini disengaja: gambar indeks merupakan data skalar, dan skala abu-abu adalah representasi yang sebenarnya dari data tersebut. Tambahkan LUT jika Anda menginginkan warna.***
+Gambar ditampilkan dalam **skala abu-abu**, diregangkan di antara dua nilai ambang batas. Hal ini disengaja: gambar indeks merupakan data skalar, dan skala abu-abu adalah representasi yang sebenarnya dari data tersebut. Tambahkan LUT jika Anda menginginkan warna.
+
+***
 
 ## Bekerja dengan LUT (Tabel Pencarian)
 
@@ -135,7 +137,9 @@ Contoh jendela NDVI:
 | Hanya vegetasi sehat                 | 0.5  | 0.9 |
 | Tonjolkan stres                        | 0.2  | 0.5 |
 
-Memperkecil jendela akan meningkatkan kontras di dalam area yang Anda minati dan mendorong semua elemen lain ke luar rentang — di mana **Mode Pemotongan** menentukan apa yang terjadi pada elemen tersebut.***
+Memperkecil jendela akan meningkatkan kontras di dalam area yang Anda minati dan mendorong semua elemen lain ke luar rentang — di mana **Mode Pemotongan** menentukan apa yang terjadi pada elemen tersebut.
+
+***
 
 ## Mode Pemotongan
 

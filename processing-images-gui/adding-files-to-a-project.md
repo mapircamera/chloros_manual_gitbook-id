@@ -62,7 +62,9 @@ output/
 * Folder pengambilan gambar yang disimpan **tanpa** impor mentah akan ditampilkan secara normal, tetapi pemrosesan akan melewatkannya dan mencatatnya dalam log. (Bendera CLI `--input-level` dapat memaksa titik masuk untuk kasus ini — lihat [Referensi CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * Mulai versi 1.3.0, folder tangkapan juga dapat berisi folder `clamp_masks/` (topeng per-piksel untuk tingkat radian dan reflektansi — lihat [Format Gambar Keluaran](../output-image-formats.md#clamp-masks)). Masker bukanlah gambar dari adegan, dan Chloros akan mengabaikannya saat impor di mana pun lokasinya.
 
-**Sesi LATTICE hub** diimpor dengan cara yang sama: klik "Tambahkan Folder" pada folder sesi yang disalin dari hub (folder tersebut berisi `raw/` dan `previews/`), beserta log downwelling DAQ-M `.csv` apa pun. Jika kalibrasi kamera atau DAQ belum disimpan dalam cache di komputer Anda, Chloros akan mengambilnya secara otomatis berdasarkan nomor seri saat proses impor (membutuhkan koneksi internet sekali saja).***
+**Sesi LATTICE hub** diimpor dengan cara yang sama: klik "Tambahkan Folder" pada folder sesi yang disalin dari hub (folder tersebut berisi `raw/` dan `previews/`), beserta log downwelling DAQ-M `.csv` apa pun. Jika kalibrasi kamera atau DAQ belum disimpan dalam cache di komputer Anda, Chloros akan mengambilnya secara otomatis berdasarkan nomor seri saat proses impor (membutuhkan koneksi internet sekali saja).
+
+***
 
 ## Memahami Tabel Penjelajah File
 
@@ -104,7 +106,9 @@ Mengklik tombol toggle di sudut kanan atas di atas tabel akan menampilkan metada
 
 * Berkas `.daq` dan `.csv` muncul dalam daftar Penjelajah Berkas tetapi bukan gambar yang dapat diklik — berkas-berkas ini menyediakan irradiansi turun untuk kalibrasi reflektansi.
 * Setiap berkas `.daq`/`.csv` yang diimpor tercantum di **Pengaturan Proyek → Sensor Cahaya DAQ**, di mana Anda dapat memeriksa koreksi tutup difuser yang berlaku untuk setiap berkas. Lihat [Menyesuaikan Pengaturan Proyek](adjusting-project-settings.md).
-* Rekaman yang Anda buat di tab **Sensor Cahaya** akan ditambahkan ke proyek yang terbuka secara otomatis — tidak perlu mengimpor secara manual.***
+* Rekaman yang Anda buat di tab **Sensor Cahaya** akan ditambahkan ke proyek yang terbuka secara otomatis — tidak perlu mengimpor secara manual.
+
+***
 
 ## Mengelola Berkas dalam Proyek Anda
 
@@ -221,7 +225,9 @@ Jika proyek Anda berisi gambar dari beberapa kamera MAPIR:
 
 ### Proyek yang Dibuka Kembali Melaporkan File Hilang
 
-Jika file sumber dipindahkan atau dihapus sejak proyek terakhir kali dibuka, Chloros akan memberi tahu Anda **file mana**yang hilang, alih-alih membuka proyek pada kisi kosong. Jika folder proyek itu sendiri dipindahkan, Chloros akan mengarahkan ulang jalur sumbernya ke folder tempat `project.json` berada saat ini, dan menyimpan cadangan (`project.json.before-relink-<date>-<time>`). Jika berkas-berkas tersebut tidak ditemukan, jendela**Berkas Sumber Tidak Ditemukan**akan menampilkan opsi**Telusuri**ke lokasi baru, lalu pilih**Proyek Baru**atau**Hapus Proyek**. Dari antarmuka baris perintah (CLI), gunakan `chloros-cli project open PATH --relink FOLDER`; dari SDK, gunakan `open_project(path, relink=...)`.***
+Jika file sumber dipindahkan atau dihapus sejak proyek terakhir kali dibuka, Chloros akan memberi tahu Anda **file mana**yang hilang, alih-alih membuka proyek pada kisi kosong. Jika folder proyek itu sendiri dipindahkan, Chloros akan mengarahkan ulang jalur sumbernya ke folder tempat `project.json` berada saat ini, dan menyimpan cadangan (`project.json.before-relink-<date>-<time>`). Jika berkas-berkas tersebut tidak ditemukan, jendela**Berkas Sumber Tidak Ditemukan**akan menampilkan opsi**Telusuri**ke lokasi baru, lalu pilih**Proyek Baru**atau**Hapus Proyek**. Dari antarmuka baris perintah (CLI), gunakan `chloros-cli project open PATH --relink FOLDER`; dari SDK, gunakan `open_project(path, relink=...)`.
+
+***
 
 ## Langkah Selanjutnya
 

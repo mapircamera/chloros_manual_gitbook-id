@@ -10,7 +10,9 @@ Gunakan bilah geser zoom di pojok kanan atas untuk menyesuaikan ukuran gambar mi
 * **Ctrl + `+`**/**Ctrl + `=`**dan**Ctrl + `−`** mengubah ukuran secara bertahap sebesar 4 px setiap kali ditekan. Rentang ukuran yang dapat diatur melalui keyboard berhenti pada 64 px di ujung terkecil dan, di ujung terbesar, pada ukuran apa pun yang pas untuk menampung tepat dua thumbnail per baris di jendela saat ini.
 * Ukuran yang Anda tentukan akan disimpan bersama proyek (`UI → Grid thumbnail size` di `project.json`, default `160`), sehingga membuka kembali proyek akan mengembalikannya.
 
-<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>*Resolusi* thumbnail adalah pengaturan yang terpisah dari *ukuran* thumbnail: lihat **Tampilan → Resolusi Thumbnail Gambar** di [Pengaturan Proyek](../project-settings/project-settings.md) (default 512 px pada sisi terpanjang). Ukuran menunjukkan seberapa besar ubin digambar; resolusi menunjukkan seberapa banyak detail yang diambil untuk mengisinya.***
+<figure><img src="../.gitbook/assets/chloros_grid_zoom.gif" alt=""><figcaption></figcaption></figure>*Resolusi* thumbnail adalah pengaturan yang terpisah dari *ukuran* thumbnail: lihat **Tampilan → Resolusi Thumbnail Gambar** di [Pengaturan Proyek](../project-settings/project-settings.md) (default 512 px pada sisi terpanjang). Ukuran menunjukkan seberapa besar ubin digambar; resolusi menunjukkan seberapa banyak detail yang diambil untuk mengisinya.
+
+***
 
 ## Bilah alat kisi
 

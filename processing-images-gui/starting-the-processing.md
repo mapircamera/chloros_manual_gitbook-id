@@ -180,7 +180,9 @@ Setelah dimulai, seluruh jalur pemrosesan berjalan secara otomatis:
 * Proses yang dihentikan akan melaporkan secara jujur apa yang telah diselesaikannya (lihat baris `[RUN-SUMMARY]` dalam log)
 * Proses baru akan memulai alur kerja dari awal
 
-**Tips perencanaan:** Untuk proyek yang sangat besar, pertimbangkan untuk memproses secara bertahap atau menggunakan CLI untuk kontrol yang lebih baik.***
+**Tips perencanaan:** Untuk proyek yang sangat besar, pertimbangkan untuk memproses secara bertahap atau menggunakan CLI untuk kontrol yang lebih baik.
+
+***
 
 ## Memantau Proses Anda
 

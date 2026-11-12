@@ -64,7 +64,9 @@ Panduan lengkap: [Menggunakan Chloros dengan Asisten AI](ai-assistants.md).
 * **Semantik kegagalan yang jujur.** Eksekusi `chloros-cli process` yang meminta produk tetapi tidak menulis satupun kini gagal dengan jelas dan keluar dengan nilai non-nol; eksekusi yang berhasil melaporkan berapa banyak produk gambar yang telah ditulis.
 * **Tata letak keluaran baru.** Produk disimpan dalam folder `<project>/<camera>/<format>/<Product>_Images/` dan mempertahankan nama file sumber — folder, bukan sufiks nama file, yang mengidentifikasi produk. Lihat [Format Gambar Keluaran](output-image-formats.md).
 * **Lebih banyak input, rencana, dan bahasa.** Dukungan input `.dng`; semua 38 bahasa antarmuka telah tersedia sepenuhnya; batasan perangkat keras per rencana dengan penggunaan gratis (tanpa login) hingga 4 kamera dan 2 sensor cahaya.
-* **Keandalan.** Fitur “Stop Processing” berhenti dengan rapi disertai ringkasan eksekusi yang jelas, proyek multi-kamera mengekspor data dari setiap kamera, dan pembaruan melalui penginstal tidak lagi membuat Anda keluar dari akun.***
+* **Keandalan.** Fitur “Stop Processing” berhenti dengan rapi disertai ringkasan eksekusi yang jelas, proyek multi-kamera mengekspor data dari setiap kamera, dan pembaruan melalui penginstal tidak lagi membuat Anda keluar dari akun.
+
+***
 
 Chloros tersedia dalam 3 antarmuka aplikasi:
 

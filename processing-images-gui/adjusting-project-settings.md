@@ -153,7 +153,9 @@ Bagian ini **hanya** muncul jika setidaknya satu gambar dalam proyek memiliki tr
 
 * **Terapkan penyelarasan array** (default: aktif): menyesuaikan setiap produk yang diproses (debayered / pratinjau / radiance / reflektansi / indeks) ke dalam geometri referensi bersama array. Nonaktif = mengekspor dalam geometri sensor asli.
 * **Pangkas ke tumpang tindih bersama** (default: aktif): memotong ekspor yang telah diselaraskan ke wilayah yang dimiliki bersama oleh semua modul, sehingga setiap pita memiliki area cakupan yang sama. Nonaktif mempertahankan kanvas sensor penuh (diisi hitam di luar sumber).
-* **Resampling**:**Bilinear (halus, default)**,**Nearest (mempertahankan nilai tepat)**— tanpa pencampuran antar-piksel, untuk analisis radiometrik yang ketat — atau**Cubic (paling tajam)**.***
+* **Resampling**:**Bilinear (halus, default)**,**Nearest (mempertahankan nilai tepat)**— tanpa pencampuran antar-piksel, untuk analisis radiometrik yang ketat — atau**Cubic (paling tajam)**.
+
+***
 
 ## Menyimpan dan Memuat Pengaturan
 

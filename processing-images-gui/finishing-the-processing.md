@@ -111,7 +111,9 @@ Reflektansi disimpan sebagai bilangan bulat DN, dan **nilai DN yang berarti ρ =
 | LATTICE (M3C/M3M) | **32768** (ruang kosong hingga ρ 2,0) | Tag XMP `Chloros:PixelScale=32768` tercantum pada berkas |
 | Survey3          | **65535** (dipotong pada ρ 1,0)     | Tidak ada tag `Chloros:PixelScale` — ketiadaan tersebut adalah petunjuknya (produk Survey3 memang memiliki tag pemrosesan `Chloros:*` lainnya) |
 
-**Baca tag `Chloros:PixelScale` dan bagi dengan nilainya** daripada mengasumsikan nilai 65535 secara seragam — membagi reflektansi LATTICE dengan 65535 secara diam-diam akan membagi dua setiap nilai. File reflektansi dari versi sebelum 1.3.0 yang ditulis sebagai 8-bit telah dipotong (clipped), bukan diskalakan ulang, dan tidak memiliki tag skala: ekspor ulang file tersebut dalam format 16-bit atau 32-bit alih-alih membaginya. Lihat [Format Gambar Keluaran](../output-image-formats.md) untuk penjelasan selengkapnya.***
+**Baca tag `Chloros:PixelScale` dan bagi dengan nilainya** daripada mengasumsikan nilai 65535 secara seragam — membagi reflektansi LATTICE dengan 65535 secara diam-diam akan membagi dua setiap nilai. File reflektansi dari versi sebelum 1.3.0 yang ditulis sebagai 8-bit telah dipotong (clipped), bukan diskalakan ulang, dan tidak memiliki tag skala: ekspor ulang file tersebut dalam format 16-bit atau 32-bit alih-alih membaginya. Lihat [Format Gambar Keluaran](../output-image-formats.md) untuk penjelasan selengkapnya.
+
+***
 
 ## Metadata yang Dibawa ke dalam Ekspor
 
@@ -167,7 +169,9 @@ Untuk menyimpan catatan pemrosesan atau mengirimkannya ke Dukungan MAPIR:
 3. Sertakan dalam dokumentasi proyek
 4. Kirim ke dukungan MAPIR jika menemui masalah
 
-Untuk melaporkan masalah langsung ke MAPIR, gunakan ikon bug (**Laporkan bug**) di bagian atas tab Log Debug — lihat [Melaporkan bug dari tab log](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).***
+Untuk melaporkan masalah langsung ke MAPIR, gunakan ikon bug (**Laporkan bug**) di bagian atas tab Log Debug — lihat [Melaporkan bug dari tab log](monitoring-the-processing.md#reporting-a-bug-from-the-log-tab).
+
+***
 
 ## Masalah Keluaran Umum dan Solusinya
 

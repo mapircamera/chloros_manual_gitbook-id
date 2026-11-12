@@ -193,7 +193,9 @@ Buka fitur-fitur lanjutan dengan berlangganan Chloros+:
 * **🐻 Metode Debayer Canggih yang Memperhatikan Tekstur** - metode debayer berkualitas tinggi yang memperhatikan tepi, dikombinasikan dengan model penghilang noise berbasis AI/ML yang menghilangkan hampir semua noise debayer.
 * 🧮 **Rumus Kustom** - Buat indeks multispektral kustom
 
-<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Lihat Paket & Harga Chloros+</a></p>***
+<p align="center"><a href="https://cloud.mapir.camera/pricing" class="button primary">Lihat Paket & Harga Chloros+</a></p>
+
+***
 
 ## Bantuan Instalasi
 
@@ -234,7 +236,9 @@ Butuh bantuan untuk instalasi atau pengaturan?
 * 📧 **Email**: info@mapir.camera
 * 🌐 **Situs Web**: [https://www.mapir.camera/community/contact](https://www.mapir.camera/community/contact)
 * 📚 **Dokumentasi**: [Memulai](./)
-* ❓ **FAQ**: [Pertanyaan yang Sering Diajukan](faq.md)***
+* ❓ **FAQ**: [Pertanyaan yang Sering Diajukan](faq.md)
+
+***
 
 ## Pembaruan Perangkat Lunak
 

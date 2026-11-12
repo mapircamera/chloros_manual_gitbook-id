@@ -15,7 +15,9 @@ Images In → [Thread 1: Detection] → [Thread 2: Calibration] → [Thread 3: P
 
 Setiap gambar mengalir melalui keempat thread secara berurutan. Dengan pemrosesan multi-thread Chloros+, beberapa gambar dapat ditangani oleh thread yang berbeda secara bersamaan — saat Thread 3 memproses satu gambar, Thread 1 dapat mendeteksi gambar berikutnya, Thread 2 mengkalibrasi gambar lain, dan Thread 4 menyimpan gambar yang sudah selesai ke disk.
 
-Kemajuan dilaporkan per thread dan dikirim melalui Server-Sent Events (backend menerbitkannya di `/api/events`). Pada tampilan kemajuan langsung di CLI, keempat tahap tersebut diberi label **Deteksi, Analisis, Pemrosesan, Ekspor**.***
+Kemajuan dilaporkan per thread dan dikirim melalui Server-Sent Events (backend menerbitkannya di `/api/events`). Pada tampilan kemajuan langsung di CLI, keempat tahap tersebut diberi label **Deteksi, Analisis, Pemrosesan, Ekspor**.
+
+***
 
 ## Detail Thread
 

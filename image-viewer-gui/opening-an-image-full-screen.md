@@ -55,7 +55,9 @@ Pembesaran "efektif" menghitung ukuran blok GSD: dengan ukuran blok 8, sorotan m
 | **←**                           | Layar Penuh | Gambar sebelumnya                      |
 | **Ctrl + R**                    | Layar Penuh | Atur ulang kotak pasir indeks/LUT         |
 | **Ctrl + `+`**/**Ctrl + `=`** | Kisi            | Gambar mini yang lebih besar (4 piksel per tekan)  |
-| **Ctrl + `−`**                  | Kisi        | Gambar mini yang lebih kecil (4 piksel per tekan) |***
+| **Ctrl + `−`**                  | Kisi        | Gambar mini yang lebih kecil (4 piksel per tekan) |
+
+***
 
 ## Nilai Kursor
 
@@ -98,7 +100,9 @@ Penampil, kotak pasir indeks/LUT, dan ekspor indeks semuanya menyelesaikan skala
 Dua konsekuensi yang perlu diketahui:
 
 * Sebuah **persentase 32-bit**TIFF menyimpan DN/65535 sebagai bilangan floating-point, sedangkan ekspor**8-bit** PNG/JPG menyimpan DN × 255/65535 — penampil akan mengonversi keduanya kembali sebelum menampilkan persentase.
-* Satu kasus tidak dapat dipulihkan: **ekspor 8-bit TIFF dari tangkapan sumber 8-bit** dipotong menjadi 0–255 alih-alih diskalakan ulang, dan secara sengaja tidak menyertakan tag skala. Untuk file-file tersebut, panel hanya mencetak DN, tanpa kolom persentase. Ini adalah jawaban yang jujur, bukan bug.***
+* Satu kasus tidak dapat dipulihkan: **ekspor 8-bit TIFF dari tangkapan sumber 8-bit** dipotong menjadi 0–255 alih-alih diskalakan ulang, dan secara sengaja tidak menyertakan tag skala. Untuk file-file tersebut, panel hanya mencetak DN, tanpa kolom persentase. Ini adalah jawaban yang jujur, bukan bug.
+
+***
 
 ## Histogram lapisan
 
@@ -124,7 +128,9 @@ Tiga tombol terletak di atas histogram:
 | **INDEX**| Aktif      | Hanya muncul saat indeks aktif. Mengalihkan histogram dari pita sumber ke**distribusi nilai indeks**, dengan dua ambang batas klip digambar sebagai garis putus-putus oranye dan nilai indeks kursor sebagai garis putih                                                          |
 | **RGB**| Nonaktif     | Beralih dari kurva gabungan ke kurva per kanal. Pada sensor mono, tombol ini bertuliskan**MONO** dan dinonaktifkan — hanya ada satu kanal yang ditampilkan                                                                                                                                  |
 
-Histogram dihitung berdasarkan **blok yang terlihat**, bukan piksel sumber di belakangnya: ubah ukuran blok GSD dan distribusinya akan dihitung ulang, sehingga histogram, penanda kursor, dan gambar yang ditampilkan selalu sesuai.***
+Histogram dihitung berdasarkan **blok yang terlihat**, bukan piksel sumber di belakangnya: ubah ukuran blok GSD dan distribusinya akan dihitung ulang, sehingga histogram, penanda kursor, dan gambar yang ditampilkan selalu sesuai.
+
+***
 
 ## Ukuran blok GSD
 
@@ -183,7 +189,9 @@ Terapkan indeks multispektral dan Tabel Pencarian Warna (Look-Up Tables) dari bi
 
 3. Pilih filter kamera Anda dan rumus indeks, lalu seret lingkaran kanal ke slot rumus tersebut
 4. Tambahkan LUT dan pilih gradien, ambang batas, serta mode pemotongan
-5. Baca nilai di posisi kursor, lalu simpan hasilnya dengan **Export/Save Image(s)**Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk panduan lengkapnya.***
+5. Baca nilai di posisi kursor, lalu simpan hasilnya dengan **Export/Save Image(s)**Lihat [Index/LUT Sandbox](index-lut-sandbox.md) untuk panduan lengkapnya.
+
+***
 
 ## Pemecahan Masalah
 

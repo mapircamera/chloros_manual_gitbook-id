@@ -136,7 +136,9 @@ Ada dua aturan yang mengatur angka-angka ini:
 * Sebuah thread yang merupakan **satu-satunya** yang aktif akan diberikan alokasi maksimum sesuai profilnya.
 * Ketika lebih dari satu tugas GPU *berat* aktif, alokasi dasar setiap tugas berat tersebut dibagi di antara mereka (tidak pernah di bawah batas minimum yang dikonfigurasi).
 
-Nilai yang sebenarnya digunakan saat runtime adalah nilai **terendah** antara alokasi profil platform dan rekomendasi real-time dari pemantau memori GPU, sehingga kartu yang sibuk selalu diutamakan daripada profil yang terlalu optimis.***
+Nilai yang sebenarnya digunakan saat runtime adalah nilai **terendah** antara alokasi profil platform dan rekomendasi real-time dari pemantau memori GPU, sehingga kartu yang sibuk selalu diutamakan daripada profil yang terlalu optimis.
+
+***
 
 ## Pemrosesan yang Mempertimbangkan Tekstur
 

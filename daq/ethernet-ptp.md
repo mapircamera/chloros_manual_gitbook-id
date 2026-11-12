@@ -102,4 +102,4 @@ Rincian untuk pengguna yang memerlukan penyelarasan ketat:
 | Domain siaran | Host dan sensor berada di segmen L2 yang sama; mDNS tidak merutekan |
 | Firewall | Windows: aturan **Chloros Backend (UDP-In)** pada penginstal mengizinkan aliran DAQ-E (UDP 5002), mDNS (5353), dan PTP (319/320) masuk; firewall pihak ketiga memerlukan pengaturan yang sama. Linux: `.deb` membuka port-port ini di `ufw` / `firewalld` hanya jika firewall aktif saat instalasi — izinkan sendiri jika firewall diaktifkan kemudian |
 | Host dengan beberapa NIC | Penemuan menjelajahi mDNS dengan cadangan ARP; `--eth-host <ip-or-hostname>` melewati proses penemuan dan terhubung langsung |
-| Pemindaian ulang GUI | Penemuan hanya berjalan saat dialog koneksi terbuka; gunakan Refresh |</version>
+| Pemindaian ulang GUI | Penemuan hanya berjalan saat dialog koneksi terbuka; gunakan Refresh |

@@ -78,7 +78,9 @@ Setiap gambar dengan data GPS akan memiliki penanda pada koordinatnya.
 | Penyedia        | Catatan                                                                                                                                                             |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Google Maps** | Cakupan luas di seluruh dunia; mendukung keempat jenis ubin                                                                                                            |
-| **Esri ArcGIS**| Seringkali memiliki citra udara beresolusi lebih tinggi di wilayah tertentu. Jenis ubin**Terrain** tidak ditawarkan untuk Esri dan tombolnya dinonaktifkan saat Esri dipilih |***
+| **Esri ArcGIS**| Seringkali memiliki citra udara beresolusi lebih tinggi di wilayah tertentu. Jenis ubin**Terrain** tidak ditawarkan untuk Esri dan tombolnya dinonaktifkan saat Esri dipilih |
+
+***
 
 ## Jenis Ubin Peta
 
@@ -93,7 +95,9 @@ Pilih jenis lapisan peta dengan tombol-tombol berikut (dari kiri ke kanan):
 | **Satelit**        | Citra satelit terperinci, tanpa label — opsi dengan bandwidth tertinggi |
 | **Hibrida** (default) | Citra satelit dengan jalan dan label yang ditampilkan di atasnya                |
 
-Tab Peta terbuka pada mode **Hibrida**. Pilihan Anda akan diterapkan saat berpindah penyedia, jika penyedia tersebut mendukungnya.***
+Tab Peta terbuka pada mode **Hibrida**. Pilihan Anda akan diterapkan saat berpindah penyedia, jika penyedia tersebut mendukungnya.
+
+***
 
 ## Navigasi Peta
 
@@ -141,7 +145,9 @@ Tab Peta terbuka pada mode **Hibrida**. Pilihan Anda akan diterapkan saat berpin
 
 ### Peta kosong atau ubin berhenti dimuat
 
-Penyedia ubin adalah layanan daring. Jika ubin berhenti masuk, periksa koneksi jaringan perangkat, lalu coba ganti penyedia. Jika Anda sedang memperbesar peta secara ekstrem, tekan tombol reset **×** untuk kembali ke tingkat zoom normal dan biarkan peta meminta ulang ubin.***
+Penyedia ubin adalah layanan daring. Jika ubin berhenti masuk, periksa koneksi jaringan perangkat, lalu coba ganti penyedia. Jika Anda sedang memperbesar peta secara ekstrem, tekan tombol reset **×** untuk kembali ke tingkat zoom normal dan biarkan peta meminta ulang ubin.
+
+***
 
 ## Halaman terkait
 

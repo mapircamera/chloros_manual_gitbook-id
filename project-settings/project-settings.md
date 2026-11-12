@@ -34,7 +34,9 @@ di bilah samping kiri
 * **Opsi**: `Default (512 px)`, `1024 px`, `2048 px`, `Full resolution`
 * **Default**: Default (512 px)
 * **Deskripsi**: Resolusi (sisi terpanjang, dalam piksel) yang digunakan untuk menampilkan thumbnail dalam kisi gambar. Nilai yang lebih tinggi akan terlihat lebih tajam saat diperbesar, tetapi memuat lebih lambat dan menggunakan lebih banyak memori. Resolusi penuh menampilkan ukuran gambar asli.
-* **Catatan**: Hanya untuk tampilan — ini tidak pernah memengaruhi pemrosesan atau file yang diekspor.***
+* **Catatan**: Hanya untuk tampilan — ini tidak pernah memengaruhi pemrosesan atau file yang diekspor.
+
+***
 
 ## Deteksi Target
 
@@ -186,7 +188,9 @@ Pemindaian target **terukur** per unit dicari berdasarkan nomor seri/QR unit tar
   * Satu kamera + satu pin: Pin 2 secara otomatis diatur ke "Jangan Gunakan"
   * Satu kamera + dua pin: Pin 2 secara otomatis diatur ke "Jangan Gunakan"
   * Beberapa kamera: Diperlukan pemilihan manual
-* **Catatan**: Kamera yang sama tidak dapat ditetapkan ke Pin 1 dan Pin 2 secara bersamaan.***
+* **Catatan**: Kamera yang sama tidak dapat ditetapkan ke Pin 1 dan Pin 2 secara bersamaan.
+
+***
 
 ## Sensor Cahaya DAQ
 
@@ -207,7 +211,9 @@ Setiap baris menampilkan berkas, model sensor, dan koreksi penutup difuser yang 
 * **Deskripsi**: `Auto` menggunakan penutup yang tercatat pada setiap berkas (penutup Sunshine diasumsikan jika tidak ada yang tercatat, namun DAQ-U, DAQ-M, dan DAQ-E dikirim tanpa penutup, dan Chloros tidak dapat mendeteksi penutup yang terpasang, sehingga pemrosesan akan memberikan peringatan terkait batas yang diasumsikan: pilih batas yang dipasang). Memilih batas tertentu akan menggantikan **semua** file downwelling dalam proyek kecuali milik DAQ-E-S, di mana difusornya merupakan bagian dari kalibrasinya; proyek yang hanya berisi DAQ-E-S tidak menampilkan menu dropdown: rekaman mentah dikoreksi menggunakan batas tersebut, dan rekaman yang sudah memiliki penutup akan direferensikan ulang (koreksi yang terekam dibatalkan dan yang dipilih diterapkan).
 * **Penting**: Penutup yang dipilih harus sesuai dengan penutup yang secara fisik terpasang selama perekaman. Baik sensor maupun perangkat lunak tidak dapat mendeteksi penutup fisik — ID penutup yang tidak cocok akan mengoreksi spektrum secara salah.
 
-Secara sengaja disediakan **satu** pengaturan yang berlaku untuk seluruh proyek, bukan menu dropdown per file: pengaturan ini berlaku untuk setiap sumber downwelling dalam proyek.***
+Secara sengaja disediakan **satu** pengaturan yang berlaku untuk seluruh proyek, bukan menu dropdown per file: pengaturan ini berlaku untuk setiap sumber downwelling dalam proyek.
+
+***
 
 ## Penyelarasan Array
 

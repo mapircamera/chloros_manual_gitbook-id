@@ -10,7 +10,8 @@ Chloros 1.3.0 menyediakan dukungan Linux bawaan untuk **CLI**dan**Python SDK** �
 
 ## Matriks Dukungan Platform
 
-| Fitur | Windows (GUI) | Windows (CLI/SDK) | Linux amd64 (CLI/ --- | --- | --- | --- |
+| Fitur | Windows (GUI) | Windows (CLI/SDK) | Linux amd64 (CLI/SDK) | Linux arm64 / Jetson (CLI/SDK) |
+| --- | --- | --- | --- | --- |
 | **GUI Desktop** | Ya | N/A | Tidak | Tidak |
 | **Antarmuka Baris Perintah (CLI)** (`chloros-cli`) | Ya | Ya | Ya | Ya |
 | **Python SDK** (`chloros-sdk`) | Ya | Ya | Ya | Ya |
@@ -22,7 +23,9 @@ Chloros 1.3.0 menyediakan dukungan Linux bawaan untuk **CLI**dan**Python SDK** �
 | **Debayer yang mendukung tekstur** (membutuhkan GPU CUDA) | Ya (Chloros+) | Ya (Chloros+) | Ya (Chloros+) | Ya (Chloros+) |
 | **Adaptasi Komputasi Dinamis** | Ya | Ya | Ya | Ya |
 | **Backend sebagai layanan sistem** (`chloros-backend@<user>.service`) | Tidak | Tidak | Ya (pilihan) | Ya (pilihan) |
-| **Pembaruan di tempat** (`chloros-cli update`) | Tidak (jalankan penginstal) | Tidak (jalankan penginstal) | Ya | Ya |***
+| **Pembaruan di tempat** (`chloros-cli update`) | Tidak (jalankan penginstal) | Tidak (jalankan penginstal) | Ya | Ya |
+
+***
 
 ## Arsitektur yang Didukung
 
@@ -35,7 +38,9 @@ Chloros 1.3.0 menyediakan dukungan Linux bawaan untuk **CLI**dan**Python SDK** �
 
 * **Ubuntu 22.04 LTS atau yang lebih baru** (amd64)
 * **Debian 12 atau yang lebih baru** (amd64)
-* **NVIDIA JetPack 6** (arm64 — platform Jetson Orin)***
+* **NVIDIA JetPack 6** (arm64 — platform Jetson Orin)
+
+***
 
 ## Apa yang Didapatkan Pengguna Linux
 
@@ -54,7 +59,9 @@ Chloros 1.3.0 menyediakan dukungan Linux bawaan untuk **CLI**dan**Python SDK** �
 
 * **Antarmuka Grafis Desktop** — tidak ada antarmuka grafis; semua interaksi dilakukan melalui CLI atau Python SDK
 * **Penampil Gambar** — tidak ada penampil gambar interaktif, tampilan kisi, atau penanda peta
-* **Manajemen proyek visual** — proyek dibuat dan dijalankan melalui perintah CLI dan panggilan SDK (perangkat keras itu sendiri — kamera, sensor, pengambilan data — tetap dapat dikendalikan sepenuhnya dari terminal)***
+* **Manajemen proyek visual** — proyek dibuat dan dijalankan melalui perintah CLI dan panggilan SDK (perangkat keras itu sendiri — kamera, sensor, pengambilan data — tetap dapat dikendalikan sepenuhnya dari terminal)
+
+***
 
 ## Persyaratan Lisensi
 

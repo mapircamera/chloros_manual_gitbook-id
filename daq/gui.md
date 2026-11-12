@@ -194,7 +194,9 @@ Untuk angka irradiansi kuantitatif, ambil rata-rata data setidaknya selama 15 de
 
 * Gabungkan beberapa sensor dalam satu grafik (sumbu bersama), pertahankan grafik terpisah (tata letak kisi otomatis), pindahkan sensor antar grafik, seret dan atur ulang baris/kotak, serta sembunyikan sensor individu dengan tombol mata.
 * Per proyek, Chloros menyimpan: nama perangkat, warna grafik, ukuran grafik, mode tampilan, dan pengaturan setiap sensor (waktu integrasi, rata-rata bingkai, status AE, pemilihan penutup).
-* **Membuka kembali proyek akan menghubungkan kembali sensor-sensornya secara otomatis** berdasarkan alamat — port COM untuk DAQ-U, perangkat BLE untuk DAQ-M, nama host mDNS untuk DAQ-E (tetap terdeteksi meskipun IP unit berubah) — serta menerapkan kembali profil cap yang disimpan, rata-rata bingkai, status AE, dan waktu integrasi manual masing-masing sensor.***
+* **Membuka kembali proyek akan menghubungkan kembali sensor-sensornya secara otomatis** berdasarkan alamat — port COM untuk DAQ-U, perangkat BLE untuk DAQ-M, nama host mDNS untuk DAQ-E (tetap terdeteksi meskipun IP unit berubah) — serta menerapkan kembali profil cap yang disimpan, rata-rata bingkai, status AE, dan waktu integrasi manual masing-masing sensor.
+
+***
 
 ## Pemasangan kamera (DLS)
 

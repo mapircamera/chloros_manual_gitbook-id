@@ -196,7 +196,9 @@ Semua yang ada di bagian ini **hanya berlaku di sisi tampilan**— ini mengubah 
 | **Saturasi** | 0–200 (100 = netral) | 100 | Hanya RGB | Saturasi HSV pada pratinjau langsung. |
 | **Kontras** | 0–200 (100 = netral) | 100 | Hanya RGB | Kontras linier di sekitar abu-abu tengah pada pratinjau langsung. |
 | **Cerminkan H / Cerminkan V** | Kotak centang | Nonaktif | Semua | Membalik pratinjau secara horizontal / vertikal. |
-| **Rotasi**| 0° / 90° / 180° / 270° | 0° | Semua | Memutar pratinjau. Orientasi diterapkan pada akhir rantai pratinjau backend.**Tangkapan yang disimpan (1.3.0):**produk Preview, Radiance, Reflectance, dan Index dari kamera mandiri diputar oleh Mirror/Rotation, sedangkan**Raw dan Debayered tetap dalam orientasi asli kamera**; setiap file tangkapan merekam pengaturan tersebut dalam XMP-nya, sehingga saat memproses file raw nanti, pengaturan tersebut diterapkan dengan cara yang sama.**File anggota array tetap dalam orientasi asli** (pengaturan direkam, tidak diterapkan), dan tampilan komposit array mengabaikannya. |**Semantik profil warna** (kamera RGB):
+| **Rotasi**| 0° / 90° / 180° / 270° | 0° | Semua | Memutar pratinjau. Orientasi diterapkan pada akhir rantai pratinjau backend.**Tangkapan yang disimpan (1.3.0):**produk Preview, Radiance, Reflectance, dan Index dari kamera mandiri diputar oleh Mirror/Rotation, sedangkan**Raw dan Debayered tetap dalam orientasi asli kamera**; setiap file tangkapan merekam pengaturan tersebut dalam XMP-nya, sehingga saat memproses file raw nanti, pengaturan tersebut diterapkan dengan cara yang sama.**File anggota array tetap dalam orientasi asli** (pengaturan direkam, tidak diterapkan), dan tampilan komposit array mengabaikannya. |
+
+**Semantik profil warna** (kamera RGB):
 
 * **Raw** — melewati rantai pemrosesan sepenuhnya.
 * **Linear** — sinyal gelap + flat-field + keseimbangan putih; tanpa matriks warna, tanpa gamma.
