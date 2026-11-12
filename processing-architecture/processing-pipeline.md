@@ -45,7 +45,11 @@ Benang komputasi yang dibatasi oleh CPU. Pada eksekusi Survey3 atau campuran, Be
 
 ### Thread 3: Pemrosesan (GPU)
 
-**Tujuan**: Menerapkan koreksi dan menghitung indeks vegetasi.**Ini adalah thread yang paling intensif dalam hal komputasi.*** **Debayering**: mengubah data RAW Bayer menjadi gambar multi-saluran
+**Tujuan**: Menerapkan koreksi dan menghitung indeks vegetasi.
+
+**Ini adalah thread yang paling intensif dalam hal komputasi.**
+
+* **Debayering**: mengubah data RAW Bayer menjadi gambar multi-saluran
   * Standar (Cepat, Kualitas Sedang) — default, `--debayer standard`
   * Sensitif Tekstur (Lambat, Kualitas Tertinggi) — hanya untuk Chloros+, `--debayer texture-aware`, menggunakan model penghilang noise berbasis AI/ML
   * Pengambilan gambar LATTICE mono (M3M) bersifat single-band: langkah demosaic dan white-balance dilewati untuk gambar-gambar tersebut (dengan pesan log satu baris), sementara gambar M3C/Bayer dalam proses yang sama tetap menjalani langkah-langkah tersebut

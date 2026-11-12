@@ -57,7 +57,11 @@ output/
 └── *.daq          the downwelling reading matched to the capture
 ```
 
-**Arahkan Folder ke direktori akar captures** (`output/` di atas). Jika folder yang dipilih tidak berisi gambar apa pun tetapi memiliki subfolder, Chloros akan menelusuri subfolder tersebut secara otomatis — subfolder di tingkat tersebut dan folder akar `.daq` semuanya diambil sekaligus.**Cara impor tangkapan:*** Setiap tangkapan diimpor sebagai **satu gambar**, dikelompokkan berdasarkan tangkapan (bukan satu entri per tingkat). Tingkat-tingkat lain dari tangkapan yang sama muncul sebagai mode tampilan dari gambar tersebut.
+**Arahkan Folder ke direktori akar captures** (`output/` di atas). Jika folder yang dipilih tidak berisi gambar apa pun tetapi memiliki subfolder, Chloros akan menelusuri subfolder tersebut secara otomatis — subfolder di tingkat tersebut dan folder akar `.daq` semuanya diambil sekaligus.
+
+**Cara impor tangkapan:**
+
+* Setiap tangkapan diimpor sebagai **satu gambar**, dikelompokkan berdasarkan tangkapan (bukan satu entri per tingkat). Tingkat-tingkat lain dari tangkapan yang sama muncul sebagai mode tampilan dari gambar tersebut.
 * **Pemrosesan selalu dimulai dari bingkai mentah.** Tingkat-tingkat lainnya dapat dilihat, tetapi hanya `raw` yang diproses melalui alur kerja — memproses ulang produk yang sudah diproses akan menerapkan koreksi dua kali, sehingga Chloros menolaknya. Ekspor yang diimpor ulang tidak akan pernah dapat mengambil slot mentah dari suatu pengambilan gambar.
 * Folder pengambilan gambar yang disimpan **tanpa** impor mentah akan ditampilkan secara normal, tetapi pemrosesan akan melewatkannya dan mencatatnya dalam log. (Bendera CLI `--input-level` dapat memaksa titik masuk untuk kasus ini — lihat [Referensi CLI](../reference/cli-reference.md#what-a-captures-folder-looks-like).)
 * Mulai versi 1.3.0, folder tangkapan juga dapat berisi folder `clamp_masks/` (topeng per-piksel untuk tingkat radian dan reflektansi — lihat [Format Gambar Keluaran](../output-image-formats.md#clamp-masks)). Masker bukanlah gambar dari adegan, dan Chloros akan mengabaikannya saat impor di mana pun lokasinya.

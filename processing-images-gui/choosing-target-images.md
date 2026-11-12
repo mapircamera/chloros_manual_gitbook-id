@@ -32,7 +32,9 @@ Jika **tidak ada** gambar yang dicentang, Chloros akan kembali memindai setiap g
 
 Telusuri gambar yang telah diimpor di File Browser dan identifikasi gambar mana yang berisi target kalibrasi.
 
-**Skenario umum:*** **Target pra-pengambilan**: Diambil sebelum memulai sesi
+**Skenario umum:**
+
+* **Target pra-pengambilan**: Diambil sebelum memulai sesi
 * **Target pasca-pengambilan**: Diambil setelah sesi selesai
 * **Target di lapangan**: Target yang ditempatkan di dalam area pengambilan
 * **Beberapa target**: 2–3 gambar target per sesi (disarankan)
@@ -140,9 +142,17 @@ Gunakan kolom ini untuk memverifikasi bahwa Anda telah menandai target untuk set
 
 ### Menyesuaikan Sensitivitas Deteksi
 
-Jika Chloros tidak mendeteksi target Anda dengan benar, sesuaikan pengaturan berikut di [Pengaturan Proyek](adjusting-project-settings.md):**Luas sampel kalibrasi minimum (px):*** **Default**: 25 piksel
+Jika Chloros tidak mendeteksi target Anda dengan benar, sesuaikan pengaturan berikut di [Pengaturan Proyek](adjusting-project-settings.md):
+
+**Luas sampel kalibrasi minimum (px):**
+
+* **Default**: 25 piksel
 * **Tingkatkan** jika terjadi deteksi palsu pada artefak kecil
-* **Kurangi** jika target tidak terdeteksi**Pengelompokan Target Minimum (0-100):*** **Default**: 60
+* **Kurangi** jika target tidak terdeteksi
+
+**Pengelompokan Target Minimum (0-100):**
+
+* **Default**: 60
 * **Tingkatkan** jika target terpecah menjadi beberapa deteksi
 * **Kurangi** jika target dengan variasi warna tidak terdeteksi sepenuhnya
 

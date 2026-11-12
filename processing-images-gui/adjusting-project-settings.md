@@ -44,7 +44,9 @@ Panel Pengaturan Proyek disusun ke dalam bagian-bagian di bawah ini. Dua bagian 
 
 Mengontrol cara Chloros mengidentifikasi target kalibrasi dalam gambar Anda.
 
-**Pengaturan utama:*** **Luas sampel kalibrasi minimum (px)**: Ambang batas ukuran untuk deteksi target (default:**25**, rentang 0–10.000)
+**Pengaturan utama:**
+
+* **Luas sampel kalibrasi minimum (px)**: Ambang batas ukuran untuk deteksi target (default:**25**, rentang 0–10.000)
 * **Pengelompokan Target Minimum (0–100)**: Ambang batas kemiripan untuk mengelompokkan wilayah target (default:**60**)**Kapan harus menyesuaikan:**
 
 * Tingkatkan luas sampel jika terjadi deteksi palsu
@@ -59,19 +61,26 @@ Pengaturan ini tidak dapat diubah (berwarna abu-abu) saat **Kalibrasi reflektans
 
 Opsi pemrosesan gambar utama dan kalibrasi.
 
-**Pengaturan utama:*** **Koreksi vignette**: Mengkompensasi penggelapan lensa di tepi ✅ Direkomendasikan
+**Pengaturan utama:**
+
+* **Koreksi vignette**: Mengkompensasi penggelapan lensa di tepi ✅ Direkomendasikan
 * **Kalibrasi reflektansi / keseimbangan putih**: Mengkalibrasi gambar menggunakan target yang terdeteksi (Survey3) dan/atau data sensor cahaya DAQ (LATTICE) ✅ Direkomendasikan
 * **Metode debayer**: Algoritma untuk mengonversi RAW menjadi multispektral 3-saluran
 * **Interval kalibrasi ulang minimum**: Waktu minimum dalam detik antara penggunaan target kalibrasi (default:**0** = gunakan semua, rentang 0–3600)**Produk cadangan yang tidak dikalibrasi:**Ketika sebuah bingkai tidak dapat dikalibrasi reflektansinya (tidak ada target yang tersedia, atau kalibrasi dinonaktifkan), bingkai tersebut diekspor sebagai salah satu dari dua produk cadangan —**hanya satu dari pasangan tersebut yang ada per proses**, dipilih oleh tombol koreksi Vignette:
 
-* **Ekspor respons sensor**: menulis `Sensor_Response_Images` — digunakan saat koreksi Vignette**dinonaktifkan*** **Ekspor dengan koreksi vignette**: menulis `Vignette_Corrected_Images` — digunakan saat koreksi Vignette**aktif**Kotak centang yang tidak aktif akan berwarna abu-abu. Mencabut centang pada kotak yang aktif akan menghentikan penulisan file tersebut sama sekali.**Produk ekspor LATTICE** (ditampilkan untuk setiap proyek; berlaku untuk pengambilan gambar LATTICE):
+* **Ekspor respons sensor**: menulis `Sensor_Response_Images` — digunakan saat koreksi Vignette**dinonaktifkan**
+* **Ekspor dengan koreksi vignette**: menulis `Vignette_Corrected_Images` — digunakan saat koreksi Vignette**aktif**Kotak centang yang tidak aktif akan berwarna abu-abu. Mencabut centang pada kotak yang aktif akan menghentikan penulisan file tersebut sama sekali.**Produk ekspor LATTICE** (ditampilkan untuk setiap proyek; berlaku untuk pengambilan gambar LATTICE):
 
 * **Ekspor gambar yang telah di-debayered**: gambar yang telah melalui proses debayering linier (`Debayered_Images`): offset gelap dari paket kalibrasi dihilangkan, kemudian dilakukan demosaicing, tanpa flat field atau unmix — file yang sama dengan yang disimpan oleh penangkapan pada tingkat debayeringnya — dalam orientasi asli sensor. Berlaku untuk modul RGB dan multispektral.
 * **Ekspor pratinjau**: pratinjau tampilan (`Preview_Images`). RGB = keseimbangan putih (sumber cahaya DAQ jika tersedia, jika tidak maka gray-world) + gamma; multispektral = peregangan warna palsu.
 * **Ekspor radian**: radian spektral float32 (`Radiance_Images`, W/m²/sr/nm). Hanya untuk modul multispektral — tidak berlaku untuk master RGB.
 * **Ekspor reflektansi**: reflektansi tipe uint16 (`Reflectance_Calibrated_Images`, DN 32768 = ρ 1,0) jika pembacaan sinar turun (downwelling) `.daq` atau target dalam bingkai mencakup seluruh bingkai. Hanya modul multispektral.
 
-Keempatnya **aktif secara default**— satu bingkai mentah LATTICE yang diimpor akan dibagi ke setiap produk yang diaktifkan dan berlaku dalam satu proses pemrosesan. Kotak centang**Ekspor reflektansi** akan dinonaktifkan (berwarna abu-abu) jika kalibrasi reflektansi dimatikan. Pengaturan yang tidak dapat diaktifkan karena sakelar induknya selalu dinonaktifkan dengan tooltip yang menyebutkan sakelar yang harus diubah.**Pengaturan lanjutan:*** **Pergeseran zona waktu sensor cahaya**: Jam dari UTC untuk penyesuaian waktu sensor cahaya (default: 0, rentang −12 hingga +12)
+Keempatnya **aktif secara default**— satu bingkai mentah LATTICE yang diimpor akan dibagi ke setiap produk yang diaktifkan dan berlaku dalam satu proses pemrosesan. Kotak centang**Ekspor reflektansi** akan dinonaktifkan (berwarna abu-abu) jika kalibrasi reflektansi dimatikan. Pengaturan yang tidak dapat diaktifkan karena sakelar induknya selalu dinonaktifkan dengan tooltip yang menyebutkan sakelar yang harus diubah.
+
+**Pengaturan lanjutan:**
+
+* **Pergeseran zona waktu sensor cahaya**: Jam dari UTC untuk penyesuaian waktu sensor cahaya (default: 0, rentang −12 hingga +12)
 * **Terapkan koreksi PPK**: Menggunakan data GPS/pin eksposur dari berkas `.daq` (default: nonaktif)
 * **Pin Eksposur 1/2**: Menetapkan kamera ke pin eksposur untuk konfigurasi dua kamera
 
@@ -105,7 +114,9 @@ Konfigurasikan indeks vegetasi mana yang akan dihitung dan diekspor. Menu tarik-
 3. Konfigurasikan pengaturan visualisasi (warna LUT, rentang nilai)
 4. Tambahkan beberapa indeks sesuai kebutuhan
 
-**Indeks populer:*** **NDVI**: Kesehatan vegetasi secara umum (paling umum)
+**Indeks populer:**
+
+* **NDVI**: Kesehatan vegetasi secara umum (paling umum)
 * **NDRE**: Deteksi stres dini dengan RedEdge
 * **GNDVI**: Sensitif terhadap konsentrasi klorofil
 * **OSAVI**: Berfungsi baik pada tanah yang terlihat
@@ -215,7 +226,11 @@ Jika menggunakan perekam DAQ MAPIR dengan GPS untuk geolokasi yang akurat:
 3. Atur**"Light sensor timezone offset"** jika diperlukan (default: 0 untuk UTC)
 4. Tetapkan kamera ke pin eksposur:
    * **Kamera tunggal**: Secara otomatis ditetapkan ke Pin 1
-   * **Kamera ganda**: Tetapkan setiap kamera secara manual ke pin yang benar**Penetapan Pin Eksposur:*** **Pin Eksposur 1**: Pilih model kamera dari menu tarik-turun
+   * **Kamera ganda**: Tetapkan setiap kamera secara manual ke pin yang benar
+
+**Penetapan Pin Eksposur:**
+
+* **Pin Eksposur 1**: Pilih model kamera dari menu tarik-turun
 * **Pin Eksposur 2**: Pilih kamera kedua atau "Jangan Digunakan"
 * Kamera yang sama tidak dapat ditetapkan ke kedua pin
 

@@ -78,7 +78,11 @@ Chloros beroperasi dalam dua mode pemrosesan yang berbeda tergantung pada lisens
 1. **Deteksi** (Utas 1) - Mencari target kalibrasi
 2. **Menganalisis** (Thread 2) - Memeriksa metadata gambar dan menghitung kalibrasi
 3. **Mengkalibrasi** (Thread 3) - Debayering, koreksi vignette, kalibrasi, perhitungan indeks
-4. **Mengekspor** (Thread 4) - Menyimpan gambar yang telah diproses dan indeks**Interaksi bilah kemajuan:*** **Arahkan kursor mouse** ke bilah untuk melihat panel dropdown 4 tahap yang terperinci
+4. **Mengekspor** (Thread 4) - Menyimpan gambar yang telah diproses dan indeks
+
+**Interaksi bilah kemajuan:**
+
+* **Arahkan kursor mouse** ke bilah untuk melihat panel dropdown 4 tahap yang terperinci
 * **Klik** bilah kemajuan untuk membekukan panel dropdown di tempatnya
 * **Klik lagi** untuk mencairkan pembekuan dan menyembunyikan panel**Waktu pemrosesan:**
 
@@ -116,7 +120,9 @@ Chloros beroperasi dalam dua mode pemrosesan yang berbeda tergantung pada lisens
 
 ### Tahap 3: Kalibrasi
 
-**Apa yang dilakukan Chloros:*** **Koreksi vignette**: Menghilangkan penggelapan lensa di tepi
+**Apa yang dilakukan Chloros:**
+
+* **Koreksi vignette**: Menghilangkan penggelapan lensa di tepi
 * **Kalibrasi reflektansi**: Menormalkan menggunakan nilai reflektansi target dan/atau data downwelling DAQ
 * Menerapkan koreksi pada semua band/saluran
 * Menggunakan referensi kalibrasi yang sesuai untuk setiap gambar berdasarkan cap waktu

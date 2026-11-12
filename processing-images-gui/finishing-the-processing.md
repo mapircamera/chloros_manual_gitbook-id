@@ -81,7 +81,9 @@ Jangan menghitung berdasarkan rumus — jumlah keluaran bergantung pada produk m
 
 ### Pratinjau di Penampil Gambar Eksternal
 
-**Penampil yang direkomendasikan:*** **QGIS** - Perangkat lunak GIS gratis (paling cocok untuk analisis multispektral yang direferensikan secara geografis)
+**Penampil yang direkomendasikan:**
+
+* **QGIS** - Perangkat lunak GIS gratis (paling cocok untuk analisis multispektral yang direferensikan secara geografis)
 * **IrfanView** - Penampil gambar yang cepat dan ringan (mendukung TIFF)
 * **Adobe Photoshop** - Pengeditan profesional (mendukung TIFF)
 * **GIMP** - Alternatif gratis untuk Photoshop
@@ -224,7 +226,9 @@ Untuk melaporkan masalah langsung ke MAPIR, gunakan ikon bug (**Laporkan bug**) 
 
 ### Masalah: Nilai NDVI Tampak Salah
 
-**Rentang NDVI yang diharapkan:*** **Air, batu, tanah**: -0,1 hingga 0,2
+**Rentang NDVI yang diharapkan:**
+
+* **Air, batu, tanah**: -0,1 hingga 0,2
 * **Vegetasi jarang/tidak sehat**: 0,2 hingga 0,4
 * **Vegetasi sedang**: 0,4 hingga 0,6
 * **Vegetasi sehat dan lebat**: 0,6 hingga 0,9**Jika nilai berada di luar rentang ini:**
@@ -278,12 +282,18 @@ Untuk melaporkan masalah langsung ke MAPIR, gunakan ikon bug (**Laporkan bug**) 
 
 ### Strategi Pencadangan yang Direkomendasikan
 
-**Yang perlu disimpan:*** ✅ **Gambar RAW/JPG asli atau tangkapan mentah LATTICE** - Arsipkan di drive terpisah/cloud; data mentah adalah sumber alur kerja dan semua yang lain dapat dihasilkan kembali darinya
+**Yang perlu disimpan:**
+
+* ✅ **Gambar RAW/JPG asli atau tangkapan mentah LATTICE** - Arsipkan di drive terpisah/cloud; data mentah adalah sumber alur kerja dan semua yang lain dapat dihasilkan kembali darinya
 * ✅ **File sensor cahaya `.daq` / `.csv`** - Diperlukan untuk menghitung ulang reflektansi di kemudian hari
 * ✅ **Hasil pemrosesan** - Simpan gambar yang telah dikalibrasi dan indeks
 * ✅ **Folder proyek** (`project.json` dan berkas terkait) - Berisi semua pengaturan untuk pemrosesan ulang jika diperlukan
 * ✅ **Log Debug** - Mendokumentasikan detail pemrosesan
-* ✅ **Gambar target kalibrasi** - Untuk verifikasi dan pemrosesan ulang**Rekomendasi penyimpanan:*** **Pencadangan segera**: Hard disk eksternal
+* ✅ **Gambar target kalibrasi** - Untuk verifikasi dan pemrosesan ulang
+
+**Rekomendasi penyimpanan:**
+
+* **Pencadangan segera**: Hard disk eksternal
 * **Arsip jangka panjang**: Penyimpanan awan (Google Drive, Dropbox, dll.)
 * **Data penting**: Simpan 2–3 salinan di lokasi yang berbeda***
 

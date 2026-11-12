@@ -375,7 +375,7 @@ Panel baca-saja yang diperbarui setiap 5 detik:
 
 * **Label tingkatan**: "Perekaman simultan" (hijau) · "Perekaman simultan (emisi FTD-staggered)" (hijau) · "Perekaman staggered (drift 100 ms)" (kuning) · "Konfigurasi terlalu besar" (merah).
 * **Kondisi bingkai**: "x.xx % belum lengkap" — hijau di bawah 1 %, kuning di bawah 5 %, merah pada 5 % atau lebih.
-* ****Baris tautan**: "NIC {mbps} Mbps - berkelanjutan {MB/s} MB/s".
+* **Baris tautan**: "NIC {mbps} Mbps - berkelanjutan {MB/s} MB/s".
 
 Ini adalah anggaran bandwidth real-time dari array. Untuk fps dasar dan model jaringan — serta apa yang harus diubah saat tingkatan berubah menjadi kuning atau merah — lihat [Array Multi-Kamera](arrays.md) dan [Referensi CLI](../reference/cli-reference.md).
 
@@ -401,7 +401,7 @@ Referensi cepat mengenai letak pengaturan saat sebuah kamera merupakan anggota a
 Perilaku lintas-fungsi lainnya:
 
 * **Tampilan gabungan vs terpisah** dipilih saat menghubungkan array: gabungan = satu ubin komposit yang sejajar (umpan anggota hanya melalui Tampilan Terpisah); terpisah = setiap anggota menampilkan ubinnya sendiri yang tersinkronisasi. Sebuah kamera tidak pernah menampilkan umpan mandiri dan ubin array secara bersamaan.
-* ****Koneksi Otomatis**: membuka proyek yang disimpan akan memulihkan kamera dan array-nya serta menerapkan kembali setiap pengaturan yang disimpan ke backend sebelum aliran dilanjutkan.
+* **Koneksi Otomatis**: membuka proyek yang disimpan akan memulihkan kamera dan array-nya serta menerapkan kembali setiap pengaturan yang disimpan ke backend sebelum aliran dilanjutkan.
 * **Pembatasan perekaman**: kamera yang disembunyikan atau dijeda dikecualikan dari Capture All; sebuah array sepenuhnya diblokir hanya jika SEMUA anggota disembunyikan/dijeda. Lihat [Pengaturan & Mode Capture](capture.md).
 
 ## Bagaimana pengaturan disimpan

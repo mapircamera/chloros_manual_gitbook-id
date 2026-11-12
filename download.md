@@ -256,10 +256,15 @@ Chloros memeriksa ketersediaan pembaruan, mengumumkan saat versi baru tersedia, 
 
 **Tanggal Rilis: 10 Februari 2026**
 
-**Fitur Baru*** **Metode Debayer yang Memperhatikan Tekstur \[Hanya Chloros+] -** Metode ini menggunakan debayer berkualitas tinggi yang peka terhadap tepi, dikombinasikan dengan model penghilang noise berbasis AI/ML yang menghilangkan hampir seluruh noise debayering.
-* **Dukungan untuk Target Kalibrasi T4P*** **Pemrosesan GPU Chloros+ yang lebih cepat, pengelolaan memori yang lebih baik**
+**Fitur Baru**
 
-**Perbaikan Bug*** Antarmuka pengguna (GUI) yang sepenuhnya baru, kini seharusnya berfungsi di semua komputer Windows.
+* **Metode Debayer yang Memperhatikan Tekstur \[Hanya Chloros+] -** Metode ini menggunakan debayer berkualitas tinggi yang peka terhadap tepi, dikombinasikan dengan model penghilang noise berbasis AI/ML yang menghilangkan hampir seluruh noise debayering.
+* **Dukungan untuk Target Kalibrasi T4P**
+* **Pemrosesan GPU Chloros+ yang lebih cepat, pengelolaan memori yang lebih baik**
+
+**Perbaikan Bug**
+
+* Antarmuka pengguna (GUI) yang sepenuhnya baru, kini seharusnya berfungsi di semua komputer Windows.
 
 </details>
 
@@ -269,14 +274,18 @@ Chloros memeriksa ketersediaan pembaruan, mengumumkan saat versi baru tersedia, 
 
 **Tanggal Rilis: 5 Januari 2026**
 
-**Fitur Baru*** **Toggle Gambar/Metadata**: Ditambahkan tombol toggle di File Browser untuk menampilkan metadata gambar yang dipilih dalam bentuk tabel, bukan dalam kisi gambar
+**Fitur Baru**
+
+* **Toggle Gambar/Metadata**: Ditambahkan tombol toggle di File Browser untuk menampilkan metadata gambar yang dipilih dalam bentuk tabel, bukan dalam kisi gambar
 * **Penggeser Zoom Kisi Gambar**: Penggeser UI baru untuk menyesuaikan ukuran thumbnail (juga mendukung CTRL + roda mouse)
 * **Tombol Ekspor Kisi Gambar**: Tombol di baris atas untuk mengganti thumbnail dari JPG ke ekspor yang telah diproses (Target, Reflektansi, Indeks, LUT)
 * **Tab Peta**: Peta 2D interaktif baru yang menampilkan penanda lokasi GPS gambar
   * Mendukung Google Maps dan ubin peta ESRI (secara otomatis memilih layanan ubin terbaik berdasarkan ketersediaan tingkat zoom)
   * Pratinjau thumbnail saat mengarahkan kursor ke penanda peta
 
-**Perbaikan Bug*** Peningkatan dukungan untuk menginstal Chloros pada komputer dengan bahasa selain bahasa Inggris
+**Perbaikan Bug**
+
+* Peningkatan dukungan untuk menginstal Chloros pada komputer dengan bahasa selain bahasa Inggris
 
 </details>
 
@@ -286,13 +295,21 @@ Chloros memeriksa ketersediaan pembaruan, mengumumkan saat versi baru tersedia, 
 
 **Tanggal Rilis: 20 Desember 2025**
 
-**Fitur Baru*** Peluncuran Awal
+**Fitur Baru**
 
-**Peningkatan*** Peluncuran Awal
+* Peluncuran Awal
 
-**Perbaikan Bug*** Peluncuran Awal
+**Peningkatan**
 
-**Masalah yang Diketahui*** Peluncuran Awal
+* Peluncuran Awal
+
+**Perbaikan Bug**
+
+* Peluncuran Awal
+
+**Masalah yang Diketahui**
+
+* Peluncuran Awal
 
 </details>
 

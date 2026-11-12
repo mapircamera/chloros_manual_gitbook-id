@@ -28,7 +28,11 @@ Untuk pengguna dengan lisensi Chloros+:
 1.**Deteksi** - Mencari target kalibrasi
 2. **Analisis** - Memeriksa gambar dan mempersiapkan pipeline
 3. **Kalibrasi** - Menerapkan koreksi vignette dan reflektansi
-4. **Ekspor** - Menyimpan file yang telah diproses**Fitur Interaktif:*** **Arahkan kursor** ke bilah kemajuan untuk melihat panel 4 tahap yang diperluas
+4. **Ekspor** - Menyimpan file yang telah diproses
+
+**Fitur Interaktif:**
+
+* **Arahkan kursor** ke bilah kemajuan untuk melihat panel 4 tahap yang diperluas
 * **Klik** bilah kemajuan untuk membekukan/menancapkan panel yang diperluas
 * **Klik lagi** untuk melepaskan pembekuan dan menyembunyikan secara otomatis saat kursor mouse berpindah
 * Setiap tahap menampilkan kemajuan masing-masing (0-100%)
@@ -92,7 +96,9 @@ Untuk pengguna dengan lisensi Chloros+:
 
 ### Tahap 3: Kalibrasi
 
-**Proses yang terjadi:*** **Debayering**: Mengonversi pola RAW Bayer menjadi 3 kanal (dilewati untuk modul mono LATTICE, dengan catatan)
+**Proses yang terjadi:**
+
+* **Debayering**: Mengonversi pola RAW Bayer menjadi 3 kanal (dilewati untuk modul mono LATTICE, dengan catatan)
 * **Koreksi vignette**: Menghilangkan penggelapan tepi lensa
 * **Kalibrasi reflektansi**: Menormalkan dengan nilai target dan/atau downwelling DAQ
 * **Perhitungan indeks**: Menghitung indeks multispektral
@@ -104,7 +110,9 @@ Untuk pengguna dengan lisensi Chloros+:
 * Gambar saat ini sedang diproses
 * Gambar yang telah selesai / Total gambar
 
-**Perilaku pemrosesan:*** **Mode bebas**: Memproses satu gambar pada satu waktu secara berurutan
+**Perilaku pemrosesan:**
+
+* **Mode bebas**: Memproses satu gambar pada satu waktu secara berurutan
 * **Mode Chloros+**: Menjalankan kumpulan pekerja yang adaptif terhadap perangkat keras — 1–4 pekerja secara bersamaan pada sistem GPU (tergantung VRAM), satu pekerja per inti fisik (dikurangi satu) pada sistem berbasis CPU saja. Lihat [Adaptasi Komputasi Dinamis](../processing-architecture/dynamic-compute-adaptation.md)
 * **Akselerasi GPU**: Secara signifikan mempercepat tahap ini**Hal yang perlu diperhatikan:**
 

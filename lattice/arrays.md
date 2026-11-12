@@ -196,7 +196,7 @@ Tampilan fps ubin array juga melaporkan status streaming:**"Menerapkan pengatura
 Fakta berguna mengenai mode gabungan:
 
 * Gambar gabungan disinkronkan dengan bingkai kamera **utama**. Penargetan AE-ROI dan pengukuran titik pada gambar gabungan bersifat tepat untuk kamera utama dan perkiraan untuk kamera bawahan; gunakan**Split View** (pengaturan array → "Tampilkan kamera anggota") untuk ubin per-kamera yang tepat hingga tingkat piksel tanpa membuka koneksi kamera tambahan.
-* ****Lapisan Tampilan**(pengaturan array; default nonaktif) memungkinkan Anda memilih lapisan latar depan dan latar belakang — kamera anggota mana pun atau**Indeks**. Jika latar depan = Indeks, piksel di luar batas Min/Max LUT akan menampilkan lapisan latar belakang.
+* **Lapisan Tampilan** (pengaturan array; default nonaktif) memungkinkan Anda memilih lapisan latar depan dan latar belakang — kamera anggota mana pun atau**Indeks**. Jika latar depan = Indeks, piksel di luar batas Min/Max LUT akan menampilkan lapisan latar belakang.
 * **Resolusi render** (default 720p) mengatur tinggi siaran langsung *dan* ukuran ekspor komposit yang disimpan. Gambar per kamera selalu diekspor pada resolusi penuh.
 * Penyelarasan dihitung per sesi dan tidak pernah disimpan. Chloros menyelaraskan **setiap array secara otomatis setelah terhubung, di kedua mode tampilan**, setelah eksposur otomatis anggota stabil (proses ini terus dicoba hingga 5 menit). Bagian**Penjajaran**pada panel pengaturan array menampilkan sisa RMS dan tombol**Kalibrasi Ulang Penjajaran** — juga untuk array terpisah yang tidak memiliki ubin komposit.
 
